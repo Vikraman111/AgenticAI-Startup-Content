@@ -76,6 +76,71 @@ class Registry:
         cols = [description[0] for description in cursor.description]
         return [dict(zip(cols, row)) for row in cursor.fetchall()]
 
+    def fetch_smart_batch(self, status, limit=10):
+        """
+        Fetch articles ranked by heuristic quality signals (no LLM cost).
+        Prioritizes: content length, source reliability, recency.
+        Perfect for selecting top articles before expensive LLM processing.
+        """
+        cursor = self.conn.cursor()
+        
+        # Fetch all articles with this status
+        cursor.execute("SELECT * FROM artifacts WHERE status = ? ORDER BY created_at DESC", (status,))
+        cols = [description[0] for description in cursor.description]
+        all_articles = [dict(zip(cols, row)) for row in cursor.fetchall()]
+        
+        if not all_articles:
+            return []
+        
+        # Rank by heuristics (no LLM calls)
+        def heuristic_score(article):
+            score = 0
+            
+            # 1. Content Length (longer = more substance) - Max 30 points
+            content_len = len(article.get('raw_content', '')) or 0
+            score += min(30, (content_len // 100))
+            
+            # 2. Source Reliability - Max 25 points
+            source = article.get('source_module', '').lower()
+            reliable_sources = {
+                'techcrunch': 25,
+                'crunchbase': 25,
+                'venturebeat': 23,
+                'fastcompany': 20,
+                'afterschool': 18,
+                'businessinsider': 20,
+            }
+            for src, pts in reliable_sources.items():
+                if src in source:
+                    score += pts
+                    break
+            
+            # 3. Recency - Max 20 points
+            if article.get('published_date'):
+                try:
+                    pub_date = parser.parse(article['published_date'])
+                    days_old = (datetime.now() - pub_date).days
+                    score += max(0, 20 - (days_old // 2))  # Decay over time
+                except:
+                    pass
+            
+            # 4. Content Quality signals - Max 25 points
+            title = article.get('title', '').lower()
+            business_keywords = [
+                'market', 'trend', 'growth', 'strategy', 'innovation', 'billion',
+                'revenue', 'startup', 'founder', 'acquisition', 'raise', 'series',
+                'expansion', 'launch', 'partnership', 'investment'
+            ]
+            keyword_matches = sum(1 for kw in business_keywords if kw in title)
+            score += min(25, keyword_matches * 3)
+            
+            return score
+        
+        # Sort by heuristic score
+        ranked = sorted(all_articles, key=heuristic_score, reverse=True)
+        
+        return ranked[:limit]
+
     def update_artifact(self, uid, updates: dict):
         cursor = self.conn.cursor()
         set_clause = ", ".join([f"{k} = ?" for k in updates.keys()])

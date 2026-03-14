@@ -7,7 +7,8 @@ class SmartFilter:
         # Fast-kill list to save CPU/Time
         self.blacklist = [
             "mattress", "sunscreen", "shaver", "exfoliator", "skincare", 
-            "gift guide", "best deals", "shopping", "walmart", "target"
+            "gift guide", "best deals", "shopping", "walmart", "target",
+            "sports", "celebrity", "entertainment", "recipe", "diet"
         ]
 
     def is_relevant(self, title, summary=""):
@@ -18,14 +19,15 @@ class SmartFilter:
 
         # STAGE 2: LLM Validation (Contextual Intelligence)
         prompt = f"""
-        TASK: Is this news article relevant to Startups, Venture Capital, or Entrepreneurship?
+        TASK: Is this article relevant to BUSINESS TRENDS, MARKET ANALYSIS, or INDUSTRY INSIGHTS?
         
         ARTICLE TITLE: {title}
         SUMMARY: {summary[:200]}
         
         CRITERIA:
-        - YES: Funding rounds, startup launches, founder interviews, tech pivots, VC news.
-        - NO: Product reviews (shaves, mattresses), general retail news, politics, sports.
+        - YES: Market trends, industry shifts, company strategy changes, consumer behavior patterns, economic analysis, business innovations.
+        - YES: Startup news, funding, business partnerships (relevant to business trends).
+        - NO: Lifestyle products, sports, entertainment, politics, general celebrity news.
         
         ANSWER ONLY in JSON format: {{"relevant": true/false, "reason": "short explanation"}}
         """

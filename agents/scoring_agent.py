@@ -12,15 +12,15 @@ class ScoringAgent:
 
         print(f"⚖️  SCORING AGENT: Filtering {len(tasks)} items...")
         for task in tasks:
-            # STRICT Prompt
+            # BUSINESS TREND ANALYSIS Prompt
             prompt = f"""
-            You are a strict VC Analyst. Score this article (0-100) on relevance to STARTUP INNOVATION and ENTREPRENEURSHIP.
+            You are a Business Analyst. Score this article (0-100) on quality of BUSINESS TRENDS, MARKET INSIGHTS, and ACTIONABLE ANALYSIS.
             
-            STRICT SCORING CRITERIA:
-            - 90-100: Groundbreaking startup news, major VC funding >$10M, or new tactical framework for founders.
-            - 70-89: Good startup advice or interesting seed round.
-            - 50-69: General tech news (e.g., Apple released a phone) -> PENALIZE.
-            - 0-49: Fluff, politics, general news, or "Top 10" lists.
+            SCORING CRITERIA:
+            - 90-100: Game-changing market trends, novel industry shift, deep analysis with implications, patterns that affect multiple sectors.
+            - 70-89: Solid market analysis, interesting business patterns, good industry insights, startup strategy lessons.
+            - 50-69: Basic business news but limited insight, generic commentary.
+            - 0-49: Fluff, no real analysis, predictions without backing.
             
             Title: {task['title']}
             Summary: {task['summary']}
@@ -28,10 +28,10 @@ class ScoringAgent:
             Return JSON ONLY: {{"score": <int>, "reason": "<string>"}}
             """
             
-            result = self.brain.think_json(prompt, "You are a critical VC analyst.")
+            result = self.brain.think_json(prompt, "You are a business analyst focused on market trends.")
             score = result.get('score', 0)
             
-            print(f"   Draft Score: {score} | {task['title'][:30]}...")
+            print(f"   Score: {score} | {task['title'][:40]}...")
             
             self.registry.update_artifact(task['id'], {
                 "score": score,

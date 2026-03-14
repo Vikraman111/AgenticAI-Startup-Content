@@ -7,8 +7,10 @@ class UnderstandingAgent:
         self.brain = LLMBrain()
 
     def run(self):
-        tasks = self.registry.fetch_batch(status='DISCOVERED')
-        if not tasks: return
+        tasks = self.registry.fetch_smart_batch(status='DISCOVERED', limit=10)
+        if not tasks: 
+            print("No articles to understand.")
+            return
 
         print(f"🧠 UNDERSTANDING AGENT: Processing {len(tasks)} items...")
         for task in tasks:
