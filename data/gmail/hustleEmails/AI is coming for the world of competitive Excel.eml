@@ -1,0 +1,1966 @@
+Delivered-To: shyams07@gmail.com
+Received: by 2002:a17:522:4ac5:b0:62f:b21f:6b57 with SMTP id b5csp1246807pvm;
+        Sun, 23 Nov 2025 02:45:55 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHCe9YG4xV4gECD3TF77HPP5G7ko7EGnh8b44tO8rQGn6sKdo37ZmPcjghXJ5q/1NPmCNVs
+X-Received: by 2002:ac8:5e52:0:b0:4d1:2fe4:1ba9 with SMTP id d75a77b69052e-4ee588e0a4bmr97896291cf.43.1763894754544;
+        Sun, 23 Nov 2025 02:45:54 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763894754; cv=none;
+        d=google.com; s=arc-20240605;
+        b=L09uEIluowHDxe2nKbRMaGA5FDjTeEvm1Ddc8ET9KbMLcPumEU6hWS28r3Oql+RUx2
+         JRkS4fwkZOQL8XxiPpVwBVnLjvSC+cXSf6qtfnRrJ0Fsxv+OvZNDupJB4ina13mOcS5y
+         y6vtXlOkeweWTTViYqdxt+QOxFQTm0DY2/b5JP7BCLu7JqeInOAsk7xbjUWbmPSx7Lqz
+         ujTpvWfFmSJcYnbIUd/xkw+kBCiv9SP0rLAmFSbt98pxUiwcXNojRAEL24VyXSbsV7RC
+         64wlVSUQ1SKmHmwZOiRLwuNweFYHGBHEPyBVs/JLP6qMZjP1/WKtRJvXaV1XQ96V0wBw
+         7aQw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:precedence:mime-version:subject
+         :message-id:to:reply-to:from:date:list-unsubscribe:dkim-signature
+         :dkim-signature;
+        bh=PQqRGRVHnx/jCmOhmTFLdng5uNChlMKRdA9JY5BpPwQ=;
+        fh=L9Pq+drjbGeEtrAQNZSRmpxQ+ME9iXW0EGrUbR1eMas=;
+        b=JniYyaPXL1P3BdWTRUeMfHsfP9DEbKPINHoa+J8bvRMVP6zKNbD144RAgjmzpzfSzS
+         bGCgP44djUwbD69WUfr/XtIvhZytAKH4vgchKEuvIAVN+HN8xh3gGOs9OEmNamvwVckT
+         KElYmD4ByiXGumrwYQIO3ImT8XPKimr7gSlBpeJAruavvFmfHknQ9lbyZxTAYJqVr6Nw
+         aZ75pMjh8IrNDNkw1kjy6xuBYh17cADB/vLhPatsI6AZoKgj3YXdeZOZugpVJXg+LB0x
+         wT66JD4ZUke5Qjrf4XiYjOMilBJjgYL0qpdc3dis2edDfMAK4VXeJRhDewXbBSl1bF6F
+         ZS8A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs2 header.b=BfD8IIxt;
+       dkim=pass header.i=@thehustle.co header.s=hs2-20627419 header.b=kpNgXYdk;
+       spf=pass (google.com: domain of 1axbi2vhubuaoh9vjqbsu967sfnwsk14id91jq-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.248 as permitted sender) smtp.mailfrom="1axbi2vhubuaoh9vjqbsu967sfnwsk14id91jq-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Return-Path: <1axbi2vhubuaoh9vjqbsu967sfnwsk14id91jq-shyams07=gmail.com@20627419m.thehustle.co>
+Received: from bid49ca.20627419m.thehustle.co (bid49ca.20627419m.thehustle.co. [158.247.31.248])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ee4c608817si30604081cf.446.2025.11.23.02.45.54
+        for <shyams07@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 23 Nov 2025 02:45:54 -0800 (PST)
+Received-SPF: pass (google.com: domain of 1axbi2vhubuaoh9vjqbsu967sfnwsk14id91jq-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.248 as permitted sender) client-ip=158.247.31.248;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs2 header.b=BfD8IIxt;
+       dkim=pass header.i=@thehustle.co header.s=hs2-20627419 header.b=kpNgXYdk;
+       spf=pass (google.com: domain of 1axbi2vhubuaoh9vjqbsu967sfnwsk14id91jq-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.248 as permitted sender) smtp.mailfrom="1axbi2vhubuaoh9vjqbsu967sfnwsk14id91jq-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Received: by 172.16.128.26 with SMTP id a0h5nnp5ez4m1sdj73ubn0ppzimhflutbulx2b2z67;
+        Sun, 23 Nov 2025 10:45:47 GMT
+DKIM-Signature: v=1; s=hs2; d=20627419m.thehustle.co; 
+        i=@20627419m.thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=PQqRGRVHnx/jCmOhmTFLdng5uNChlMKRdA9JY5BpPwQ=; 
+        b=BfD8IIxtAPwPahQIpXLHnM3fGq6Y7njJwQlTmzxmAm7hWPiKI2SRVxEopc5FN3
+         h8P7O6+U2RDQgS6emtanUR3GPe/ax1WSWEAE6OkKqVALaqLhw/51lOd1KOBP4sD
+         DxIqNe998mX3sjts6SK6puCz0OqCX5vwzNEImB0XpX5JCMVtswPS4aEGWsGf/Hy
+         /47huZHm35bVPzhpaFvqGIsJ2S9avVv4NkswI2czPtdxwIArd42DOXk+1d0+Un6
+         p/UyzHV9Q1E+wGaHELQyBpKpT7TyzAWSBezSUArf273YTUYzbGQBLU4bkptDOGV
+         pNwzW2A7BWr1JFpLDmvQWca6Jqqw==; q=dns/txt; t=1763894747; 
+        x=1764157547;
+DKIM-Signature: v=1; s=hs2-20627419; d=thehustle.co; 
+        i=@thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=PQqRGRVHnx/jCmOhmTFLdng5uNChlMKRdA9JY5BpPwQ=; 
+        b=kpNgXYdkITQFzdokfaDOpBYXW/3LW1PvqIeoXrQ0rKt822C0ZTRa9/txuKfrrm
+         trT2N4TRp1Uqqtz9lGKq6ScoA8w9qfCp4hLF/gjBJz8aRHZlYW9s+xYhzT2L/g+
+         IhM9yH5o5QfpnAeiLVLnHyu7Nwu19mcjpulNc0J4XMzxYdtcs67i08Fs2S3AfKb
+         AyYEfdkNTjMwHtnmjGu2UutG6Ao0jqPVOnvh8wniE64R7zAHap0H0WPjoETwIdn
+         YzZ+7R2fUV/AHKCc9Cq7bv9oWQrUCIqMZjInnlOmM+Mp1JKMWBWjX6gE6Xgc84l
+         coihaOCUdFyTC4b5K0ESQH0RRPSw==; q=dns/txt; t=1763894747; 
+        x=1764157547;
+Return-Path: <1axbi2vhubuaoh9vjqbsu967sfnwsk14id91jq-shyams07=gmail.com@20627419m.thehustle.co>
+X-HS-Cid: 1axfb4ydnyxkxp2w9y2hf9yxzfwri32ks4vgba
+List-Unsubscribe: <mailto:1axctsy78r6y268iu2x7tctduc1v4pnekntyr6-shyams07=gmail.com@20627419m.thehustle.co?subject=unsubscribe>, <https://media.hubspot.com/hs/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-MjW45vMty3gg6SyW43sw8N255q0YW3S_fhQ3P0QTtW4kt5pC3_XwftW30DVZ03H65vfW1Sw9yx49jTZPW23kLGc1Lw41mW1XgkP72CHyx6W3LVF5P3LWSTtW2Yf2ns4hF5wZW2KY5Hs212rLnW1BxH692CZ6pyW2KqFZN1_vqM8W1Xc25M1ZcBdJW45GVZ33jdf5kW2Yx1X82KPd84W3Y26H91--5wHW1YX2c53XL5RSW32qQ_F3JFS15W1Lq2Yh1XxSY7W1Nf3m12WGNR1W21n1cg2Pz7XcW4hqTZk4txvMxW43qqZV4cQKRlW3K2Xpp3y_zS-W1W-_cP3FdtF3W4p5B9r1-VwNvW1BFSRg2RjG7fW21jgSW47VnhGW3Q-9hd32wWCjW3QLHJy45PFWfW2KyN2k21bR1SW3ZCDDW1BrgcYW2KpMvD2Px2H9W1Zll-k30l0GnW1Qg9vl2zK42JW4fJ82234vsbTW2FFHKk45N0kxW2Yn4T-3JDfllW3ZZlyg3M5djJW2PzBW22HHCYbW4mH93q2p0qHQW4fK2wy2KP9BvW3R4nh_38DvcVW2sRTfB2qCB9hW23pWf21LBf2SW1Nj2hq2w3xjGW4mlMRS4hMMGXW3y-Nj330pQnZ0>
+Date: Sun, 23 Nov 2025 05:45:47 -0500
+From: The Hustle <news@thehustle.co>
+Reply-To: news@thehustle.co
+To: shyams07@gmail.com
+Message-ID: <1763894730000.9b867ed0-472d-4960-920d-6bd1b93ed971@20627419m.thehustle.co>
+Subject: AI is coming for the world of competitive Excel
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_758410_1532259246.1763894747294"
+Precedence: bulk
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: aemkeh5:aigq5kpk:aidf:HubSpot
+
+------=_Part_758410_1532259246.1763894747294
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Or is it?
+
+You've got 3 referrals, just 2 away from earning a Hustle candle. Check out=
+ all of our prizes here (https://store.thehustle.co/?_hsenc=3Dp2ANqtz-9xlT_=
+VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-=
+HzqM5BtDliGQ&_hsmi=3D391130758 ) .
+
+Share your link:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7p=
+qQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDli=
+GQ&_hsmi=3D391130758
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7=
+pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDl=
+iGQ&_hsmi=3D391130758 )
+
+Share The Hustle:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7p=
+qQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDli=
+GQ&_hsmi=3D391130758
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7=
+pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDl=
+iGQ&_hsmi=3D391130758 )
+
+Check your referral progress & prizes here (https://thehustle.co/refer-the-=
+hustle?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9=
+U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 )
+
+View in browser (https://media.hubspot.com/ai-is-coming-for-the-world-of-co=
+mpetitive-excel?ecid=3DACsprvvESXyivPAHTPQTWrU47J9pjE3Y4rjs6vvr018BPTMaLMNC=
+5scPRjeYeVDV_4Chz7OKNcE0&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxs=
+TkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D3911307=
+58 )
+
+The Hustle by HubSpot Media (https://thehustle.co/?_hsenc=3Dp2ANqtz-9xlT_VL=
+7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-Hz=
+qM5BtDliGQ&_hsmi=3D391130758 )
+
+Issue #372
+
+A composite illustration of the Microsoft Excel World Championship (MEWC) s=
+howing a human competitor on the left and a silver robot (AI) on the right,=
+ both typing on keyboards in front of monitors displaying Excel sheets. (ht=
+tps://thehustle.co/originals/ai-is-coming-for-the-world-of-competitive-exce=
+l?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9Qil=
+Gtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 )
+
+Sunday, November 23, 2025
+
+AI is coming for the world of competitive Excel
+
+Or is it?
+
+BY SHIKHAR SACHDEV (https://x.com/shikhar_sachdev?_hsenc=3Dp2ANqtz-9xlT_VL7=
+A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-Hzq=
+M5BtDliGQ&_hsmi=3D391130758 )
+
+Michael Jarman froze. In his first five minutes at the HyperX Esports Arena=
+ in Las Vegas, he forgot everything he knew about Microsoft Excel.
+
+This was problematic, because Jarman was participating in the 2023 Microsof=
+t Excel World Championship (MEWC). The arena was packed with hundreds of fa=
+ns (with millions watching the YouTube (https://www.youtube.com/watch?v=3DU=
+DGdPE_C9u8&t=3D39s&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBB=
+dRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) s=
+tream), all screaming their favorite competitor=E2=80=99s name, egging them=
+ on to solve the creative puzzle =E2=80=94 known as a case =E2=80=94 broadc=
+ast on the big screen. Every five minutes, the last ranked competitor would=
+ be eliminated, until only one remained.
+
+As things stood at the outset of the event, it was Jarman, feeling pressure=
+d by the big stage and making silly mistakes, who was ready to be axed.
+
+=E2=80=9CWhen your spreadsheet isn=E2=80=99t working, that=E2=80=99s when i=
+t gets very stressful that thousands of people are watching you," he told T=
+he Hustle.
+
+Semi-finalists focus on their cases at last year=E2=80=99s championships. (=
+Courtesy of the Microsoft Excel World Championship)
+
+Competitive Excel is like Formula One: Top athletes keep it light off the c=
+ircuit, often sharing learnings and grabbing dinner when in town. But this =
+camaraderie doesn=E2=80=99t prevent a burning desire to drive each other of=
+f the track when a golden belt is at stake.
+
+Luckily for Jarman, he wasn=E2=80=99t the only one who froze. He settled do=
+wn and finished second at the competition. Over the next few months, hunche=
+d at a laptop even while on holiday, he prepared for the 2024 world champio=
+nship. He wanted that darn belt.
+
+This year, with the 2025 Microsoft Excel World Championships set to take pl=
+ace in December, Jarman has to worry about more than Excel guys. A new cont=
+ender threatens to spell the end for not just professional Excel competitor=
+s but also office workers who specialize in Excel in millions of offices ac=
+ross the world.
+
+It=E2=80=99s AI. And, unlike Jarman, it doesn=E2=80=99t tend to freeze.
+
+The weird and wonderful world of competitive Excel
+
+Elite athletes hate losing. The world of competitive Microsoft Excel is no =
+different. Just ask Jarman=E2=80=99s wife.
+
+On their second date, at a boardgame cafe, Jarman told her that =E2=80=9Che=
+ wouldn=E2=80=99t just let her win to be nice.=E2=80=9D And he didn=E2=80=
+=99t.
+
+It was at university where Jarman, who=E2=80=99s now 30 and lives in Toront=
+o, first developed a reputation as an Excel savant. Then, while working as =
+an analyst at the project finance firm Operis, his daily life revolved arou=
+nd the software. He accumulated thousands of hours tinkering with spreadshe=
+ets, climbing to a director position at Operis.
+
+One of his bosses suggested he check out the competitive Microsoft Excel sp=
+ace, a deeply niche set of tournaments focused on solving real-life financi=
+al modeling cases, such as forecasting the amount of money fans might spend=
+ at a tournament or building a three-statement model for a manufacturing co=
+mpany. Jarman would have some initial success, winning ModelOff (https://fm=
+worldcup.com/history/?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkN=
+oBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 =
+) in 2018.
+
+Michael Jarman strolls through the hype tunnel in seasonally appropriate Ex=
+cel attire. (Courtesy of the Microsoft Excel World Championship)
+
+Over time, the contests would evolve into a full-blown eSport: The Microsof=
+t Excel World Championship, launched in 2021, focuses on solving cases that=
+ are =E2=80=9Csexier=E2=80=9D than, say, modeling debt.
+
+Sample cases at the MEWC include ones like =E2=80=9CLana banana (https://ww=
+w.youtube.com/watch?v=3DSjUglZr81x4&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8L=
+M4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsm=
+i=3D391130758 ) ,=E2=80=9D where one must write formulas to help an ice-ska=
+ting monkey named Lana collect as many bananas as possible, beginning on th=
+e starting cell. Because Lana is said to be standing on a steep hill, she c=
+an only move down, diagonally left-down and diagonally right-down.
+
+Jarman has competed in every MEWC. After back-to-back podium finishes in 20=
+22 and 2023, he got an early lead in 2024, racking up 100 points for modeli=
+ng the stats of World of Warcraft-themed characters to help them progress t=
+hrough different levels. Three-time consecutive world champion Andrew Ngai =
+was following closely behind.
+
+Halfway through, the two were tied at 705 points. =E2=80=9CThis is crazy, t=
+his is crazy,=E2=80=9D the commentators exclaimed.
+
+Curiously, between rounds, Microsoft showed off Copilot, its AI companion f=
+or Excel. The contestants found this funny because Copilot only seemed to b=
+e answering the easy questions.
+
+But was this really a laughing matter?
+
+Sufficient seniority
+
+One of the biggest differences between a Formula One driver and an Excel Wo=
+rld Champion, outside of the relative risks involved in both professions (t=
+hough many will attest that a debt model can get quite dangerous), is that =
+the latter still has a day job.
+
+The day job, of course, is where one=E2=80=99s Excel apprenticeship begins.
+
+Excel1-v1 (1) (https://www.youtube.com/watch?v=3Dkl1eJmw295g&_hsenc=3Dp2ANq=
+tz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdW=
+ntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 )
+
+Olivia Heller/The Hustle
+
+For the longest time, listing Excel on your resum=C3=A9 meant strong job pr=
+ospects. As the world=E2=80=99s most popular piece of white-collar software=
+, going strong for over 40 years, its dominance has never been disputed.
+
+This has meant that the Excel guy has always commanded the respect of his p=
+eers.
+
+Diarmuid Early, dubbed the =E2=80=9CLebron James=E2=80=9D of competitive Ex=
+cel, remembers it well. When he worked at the Boston Consulting Group in 20=
+08, he=E2=80=99d have a steady stream of people by his desk every Friday wa=
+iting to ask him questions about Excel and peek at any custom formulas he m=
+ight have handy.
+
+Now, things appear to be changing.
+
+Major Wall Street banks are expected (https://www.forbes.com/sites/jackkell=
+y/2025/01/09/200000-wall-street-jobs-may-be-slashed-by-ai/?_hsenc=3Dp2ANqtz=
+-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWnt=
+ZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) to slash up to 200k jobs over the ne=
+xt three to five years due to AI adoption. And recent research (https://www=
+.cnbc.com/2025/08/28/generative-ai-reshapes-us-job-market-stanford-study-sh=
+ows-entry-level-young-workers.html?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM=
+4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=
+=3D391130758 ) , utilizing payroll data, estimates there has been a 13% dec=
+line in entry-level jobs in the most AI-exposed fields.
+
+Excel Athletes will descend on Vegas Dec. 1 for this year=E2=80=99s world c=
+hampionship. (Courtesy of the Microsoft Excel World Championship
+
+It seems like this surge in AI adoption might threaten the advantage of kno=
+wing so much about Excel =E2=80=94 why bother walking over to someone=E2=80=
+=99s desk when you can simply ask ChatGPT?
+
+Early believes he=E2=80=99ll still have value, most importantly in bringing=
+ =E2=80=9Cclarity on what model we should be building,=E2=80=9D rather than=
+ =E2=80=9Cbuilding the model itself.=E2=80=9D
+
+He considers himself to be =E2=80=9Csufficiently senior=E2=80=9D to charge =
+roughly the same in a world with AI.
+
+Jarman=E2=80=99s unconvinced, too. =E2=80=9CIt's not just about being good =
+at Excel. It=E2=80=99s about a combination of being good at Excel but also =
+being able to look at the spreadsheet, spot where things are wrong, and be =
+able to stitch different pieces together.=E2=80=9D
+
+=E2=80=9CI don=E2=80=99t think an AI will ever be as good as me or another =
+director here [at Operus] who=E2=80=99s competent at Excel with 10-15 years=
+ of experience,=E2=80=9D he adds.
+
+But the same might not be true for everyone.
+
+Excel monkeys
+
+Earlier this year, the team behind the startup Shortcut AI, dubbed as a =E2=
+=80=9Csuperhuman Excel agent,=E2=80=9D said (https://x.com/nicochristie/sta=
+tus/1949862432077484396?ref_src=3Dtwsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwter=
+m%5E1949862432077484396%7Ctwgr%5E8d1e0a01dc6c832200011f46f301e6530641720a%7=
+Ctwcon%5Es1_&ref_url=3Dhttps%3A%2F%2Ftechcrunch.com%2F2025%2F08%2F01%2Ffund=
+amental-research-labs-nabs-33-million-from-prosus-to-build-ai-agents-for-mu=
+ltiple-verticals%2F&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoB=
+BdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) =
+its agent could outperform a McKinsey or Goldman Sachs analyst 89.1% of the=
+ time, and do it 10x faster.
+
+This was no Microsoft Copilot. This was a tool that could do real damage. N=
+ews spread, along with fears that tools like Shortcut AI could replace youn=
+g analysts who lacked the skill of Excel world champions.
+
+Jarman, though, doesn't think that it=E2=80=99s prudent to fire your first-=
+year analyst class.
+
+=E2=80=9CIf we sacked all the analysts tomorrow, the company would immediat=
+ely be more profitable,=E2=80=9D he says. =E2=80=9CBut that would be dumb, =
+because who would then check the work of the AI in five to ten years time?=
+=E2=80=9D
+
+Competitors ham it up off-screen. (Courtesy of the Microsoft Excel World Ch=
+ampionship)
+
+Indeed, even though AI might be an upgrade on a junior analyst, there are l=
+onger term implications to getting rid of newer talent. The entry-level rol=
+es aren=E2=80=99t just about immediate gains; they're about identifying and=
+ developing future leaders.
+
+Further, it=E2=80=99s only by doing the =E2=80=9Cmonkey work=E2=80=9D to bu=
+ild something that one can truly understand it.
+
+=E2=80=9CUntil you have built a three-statement model for the first time, y=
+ou don=E2=80=99t intuitively understand the point of what you=E2=80=99re tr=
+ying to do,=E2=80=9D Jarman says.
+
+But we don=E2=80=99t have to look too far to find an example of technology =
+replacing workers: When Excel first came out in the 1980s, a Morgan Stanley=
+ (https://www.spglobal.com/en/research-insights/special-reports/look-forwar=
+d/can-generative-ai-create-a-productivity-boom?utm_source=3Dchatgpt.com&_hs=
+enc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2=
+BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) analysis using BLS data=
+ found that the number of Americans employed as bookkeepers and accounting =
+clerks fell from about 2m to 1.5m between 1987 and 2002.
+
+However, more analytical roles like those of financial managers and managem=
+ent analysts went up (from 600k to 1.5m) over that same time period.
+
+In other words, Excel didn=E2=80=99t eliminate jobs so much as create deman=
+d for new ones.
+
+Olivia Heller/The Hustle
+
+Under this view, a leap in AI might just raise the bar: clients will expect=
+ more complex models, longer decks, and deeper analysis.
+
+=E2=80=9CThere are probably more people working on analyzing data now than =
+there were 40 years ago, even though one person can do what a team of 50 co=
+uld do back then,=E2=80=9D Early says.
+
+In a similar scenario, AI might augment rather than automate. But there=E2=
+=80=99s no guarantee that it doesn=E2=80=99t get worse before it gets bette=
+r.
+
+The next formula
+
+As the 2024 Excel championship neared its end, Jarman anxiously watched the=
+ countdown timer on a big screen. With about 15 seconds to go, his opponent=
+, Ngai, threw a hail mary, using the RANDBETWEEN function to attempt an edu=
+cated guess that could score the 50 points he needed to catch up to Jarman.
+
+It didn=E2=80=99t work. The belt went from Australia to Canada, from Ngai t=
+o Jarman.
+
+When the clock reached zero seconds, Jarman leaped out of his chair. You co=
+uld hear his huge sigh of relief, immediately followed by a triumphant =E2=
+=80=9CCOME ON!=E2=80=9D
+
+The belt was finally his.
+
+The same tournament where Microsoft had shown off its AI assistant was stil=
+l, ultimately, a contest of human instinct and nerve. But the tide had turn=
+ed.
+
+Michael Jarman takes home last year=E2=80=99s championship belt. (Courtesy =
+of the Microsoft Excel World Championship)
+
+In the months since, AI tools have advanced so rapidly that the MEWC has ba=
+nned (https://www.linkedin.com/posts/financial-modeling-world-cup_artificia=
+l-intelligence-updates-to-the-competition-activity-7356080038317899776-lt7R=
+/?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9Qil=
+Gtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) their use entirely=
+. Until recently, competitors were allowed to use whatever software they li=
+ked =E2=80=94 including AI =E2=80=94 because it simply wasn=E2=80=99t fast =
+or accurate enough to compete with humans.
+
+That=E2=80=99s no longer true. Shortcut recently (https://www.pymnts.com/ar=
+tificial-intelligence-2/2025/is-shortcut-the-new-excel-mit-startup-behind-v=
+iral-tool-thinks-so/?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNo=
+BBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758#:=
+~:text=3DChristie%2C%20who%20has%20a%20background,10%20times%20faster%20tha=
+n%20humans .) put out more evidence showcasing that its agent scored over 8=
+0% on cases presented at the Microsoft Excel World Championship in around 1=
+0 minutes. These problems usually take a trained human an hour or more.
+
+Confident as Jarman is about his Excel skills, he still jokes that in the f=
+uture his day job might be typing in six-digit authentication codes to let =
+different AIs talk to each other.
+
+For now, though, he=E2=80=99s set to keep doing what he loves in Vegas. Tha=
+t is, of course, if future Excel championships can still find enough compet=
+itors in a world where their day jobs may no longer involve much traditiona=
+l Excel usage at all.
+
+But as the MEWC=E2=80=99s LinkedIn account recently put it:
+
+=E2=80=9CJust because humans invented the car doesn=E2=80=99t make it less =
+fun to run a marathon.=E2=80=9D
+
+Share & discuss this story on:
+
+Site (https://thehustle.co/originals/ai-is-coming-for-the-world-of-competit=
+ive-excel?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMe=
+hm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 )
+
+YouTube (https://www.youtube.com/@TheHustleChannel?_hsenc=3Dp2ANqtz-9xlT_VL=
+7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-Hz=
+qM5BtDliGQ&_hsmi=3D391130758 )
+
+LinkedIn (https://www.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz-9xlT=
+_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb=
+-HzqM5BtDliGQ&_hsmi=3D391130758 )
+
+Instagram (https://www.instagram.com/thehustledaily/?hl=3Den&_hsenc=3Dp2ANq=
+tz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdW=
+ntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 )
+
+Today's email was brought to you by Shikhar Sachdev (https://x.com/shikhar_=
+sachdev?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm=
+9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) , Katherine =
+Laidlaw (https://x.com/klaidlaw?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qe=
+b-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D=
+391130758 ) , Mark Dent (https://x.com/mdent05?_hsenc=3Dp2ANqtz-9xlT_VL7A5i=
+yI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5B=
+tDliGQ&_hsmi=3D391130758 ) , and Zachary Crockett (https://x.com/zzcrockett=
+?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilG=
+twk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) , with help from Ka=
+ylee Jenzen.
+
+Was this email forwarded to you? Sign up here (https://thehustle.co/join/?u=
+tm_source=3Dthehustle&utm_medium=3Demail&utm_campaign=3Dfooter&_hsenc=3Dp2A=
+Nqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3W=
+dWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) .
+
+Subscribe to our other newsletters
+
+Expert insights: Masters in Marketing (https://blog.hubspot.com/masters-in-=
+marketing-subscribe?utm_source=3Demail&utm_campaign=3Dhustle&utm_medium=3Df=
+ooter&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U=
+9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 )   |   Stay up-=
+to-date on AI:  Mindstream
+
+(https://www.mindstream.news/?utm_channel=3Demail&utm_source=3Dhustle&utm_m=
+edium=3Dfooter&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF5=
+7WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 )
+
+Follow The Hustle on YouTube (https://www.youtube.com/@TheHustleChannel?_hs=
+enc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2=
+BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) , LinkedIn (https://www=
+.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4q=
+eb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=
+=3D391130758 ) , and Instagram (https://www.instagram.com/thehustledaily/?h=
+l=3Den&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9=
+U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ&_hsmi=3D391130758 ) .
+
+HubSpot Media, 2 Canal Park, Cambridge, MA, 02141, USA, +1 888.482.7768
+
+Never want to hear from us again? Break our hearts and Unsubscribe (https:/=
+/media.hubspot.com/hs/preferences-center/en/page?data=3DW2nXS-N30h-B9W1BMh2=
+C3zdylsW1S4lvS4tvnJsW38z9ts2t49gLW3XN_Nn3M0d9WW4hMgMR3grmkbW23psxB4p9LS7W2F=
+XG5_2Myyy0W47N73S3R1xpxW2nQ8b83X-Sv_W2RLVHW1VvdkJW3SCnBf32zRmgW36mxf_2PlYvZ=
+W2xMMMr4fsmzHW4fpQQy4mbrCkW2YxtDw49tb4gW2Hqmk_4hJ3yWW4tBrp72w0BNFW4chhZF1Bm=
+Xs6W3_JnSq4fNQh_W2v-Z661Bq2gVW1_5dSf2MqSc_W3gdq3d3z0Vq-W3F6j5R49SC2hW2CHZsx=
+239KCrW1XhzC53V_0yZW3XYF_G1Vnm3-W2xLVf72YwBSWW47ywgJ2CP0zSW3C12bQ383tqtW3XX=
+5XL3QRCCLW2w141m2xWB9TW3SN4VG3_JRj1W1Xx3K53XXtBBW2sZ7pn3FgD9nW1_vqjR2w3zPpW=
+2nPmgJ3G_QnLW2FrXyw4kNmcLW3ZwdJH21qSg1W3j0z7q3jpT0KW1S3wtz3C0CYyW34BsN23SKJ=
+2kW45kh4M2FMB27W2xywGc2CXQQqW3K2zTJ1XvnYJW3blJL-2RLTnlW3gmwlR3d84JYW1NDxGn3=
+jtDxJW3QQP504hHdwxW2MLwxm4rGmvNf36k1Y_04&_hsenc=3Dp2ANqtz-9xlT_VL7A5iyI7pqQ=
+8O-8LM4qeb-fHxxsTkNoBBdRF57WKMehm9U9QilGtwk2BiqhwHW3WdWntZmUSb-HzqM5BtDliGQ=
+&_hsmi=3D391130758 ) .
+------=_Part_758410_1532259246.1763894747294
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>AI is coming for the world of competitive Excel</title>
+    <meta property=3D"og:title" content=3D"AI is coming for the world of co=
+mpetitive Excel">
+    <meta name=3D"twitter:title" content=3D"AI is coming for the world of c=
+ompetitive Excel">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #FFFFFF;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://media.hubspot.com/ai-is-coming-for-the-world-of-competitiv=
+e-excel"><meta name=3D"robots" content=3D"noindex,follow"><!--[if !((mso)|(=
+IE))]><!-- --><style type=3D"text/css">@media only screen and (max-width:63=
+9px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stretch-cta =
+.hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #eaf0f6 !important;border-right:1px solid #eaf0f6 !important;box-sizing:=
+border-box}
+.hse-border-bottom-m{border-bottom:1px solid #eaf0f6 !important}.hse-border=
+-top-m{border-top:1px solid #eaf0f6 !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-4{max-width:200px !important;width:200px !impor=
+tant}
+.moz-text-html .hse-section .hse-size-8{max-width:400px !important;width:40=
+0px !important}
+.moz-text-html .hse-section .hse-size-12{max-width:600px !important;width:6=
+00px !important}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-4{=
+max-width:200px !important;width:200px !important}
+.hse-section .hse-size-8{max-width:400px !important;width:400px !important}=
+.hse-section .hse-size-12{max-width:600px !important;width:600px !important=
+}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section_1763758533908 .hse-column-container{background-color:transparent !=
+important}
+#section_1763758533908 .hse-column-container{background-color:transparent !=
+important}
+}@media only screen and (max-width:639px){ #section-0 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-0 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-1 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-1 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-2 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-2 .hse-column-container{background-color:#fff !important} }@media =
+screen and (max-width:639px){.social-network-cell{display:inline-block}
+}@media only screen and (max-width:639px){ #section-3 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-3 .hse-column-container{background-color:#fff !important} }@media =
+only screen and (max-width:639px){.hse-body-wrapper-td{padding-bottom:20px =
+!important}
+#section-4 .hse-column-container{padding-top:0px !important;padding-bottom:=
+0px !important}
+#section-4 .hse-column-container{background-color:#fff !important} }</style=
+><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_main a[x=
+-apple-data-detectors]{color:inherit !important;text-decoration:none !impor=
+tant;font-size:inherit !important;font-family:inherit !important;font-weigh=
+t:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}
+.ShadowHTML p,.sh-modified-inline p{margin:0}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#FFFFFF" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Helvetica, Arial, sans-serif; font-size:16p=
+x; color:#192733; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#FFF=
+FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">Or is it?</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#ffffff" bgcolor=3D"#ffffff">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-brea=
+k:break-word; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1763758533908" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1763758533908_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17637586309032" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hm" style=3D"color: inh=
+erit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div style=3D"font-size: 14px; text=
+-align: center; line-height: 140%;">
+  <em>
+ =20
+    <span>You've got 3 referrals, just 2 away from earning a Hustle candle.=
+ Check out all of our <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d=
+2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Ss2-ZW0W50kgx26lZ3pzW6GJr=
+ZS7r_97HW6LfC3Z1HzVK2W6tbHgS5qPlxxW5Jb9gk8sVcGkW6F0z9Q2hT07gW8qhfXx6hGP39W9=
+923jP39TV72W5kbRYf3dl97QN5sWljhhXsFnN8ydMYVp9d99W9gw9zB8ysskmW5-wqf05LJh1JW=
+2qxWmk4HLd1zW23yZtS1HB6skW50sgss8htbGkN3DYZFkQjlWcf1F-P_b04" style=3D"color=
+:#192733; text-decoration:underline !important" data-hs-link-id=3D"2" data-=
+hs-link-id-v2=3D"v9PpzLyj" target=3D"_blank">prizes here</a>.</span>
+ =20
+ =20
+  <br>
+    <span style=3D"font-weight: bold; color: #bf2434;">Share your link:</sp=
+an>
+   =20
+      <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7C=
+ZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ3pZW8bB01z5XkwgrW6prYF41=
+XJvt_W34t22n41PM2CW39LS-K4DVsdTW9bdQl4142LV3V4Prjg7HWvHMN1RZsDcHykhdMw34SHb=
+bXwpN6SZg_B605v2W35lnhp59MlNVW54Q9Rj7Bx9BtW8tzcmG6t562QW81RqG_245rmhT5k2L5V=
+JxyRW1_ZgMP2S2kpbW3g8jb47cbSFMW1SXTx81p9LlVW72V3Bd9d51zkf48J6KR04" style=3D=
+"color:#192733; text-decoration:underline !important" data-hs-link-id=3D"1"=
+ data-hs-link-id-v2=3D"Zygo4LuM" target=3D"_blank" data-contains-exactly-on=
+e-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+ =20
+  </em>
+</div></div>
+<!--[if !mso]><!--><div id=3D"hs_cos_wrapper_module_17637586188501" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hd" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;display:n=
+one" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div s=
+tyle=3D"font-size: 11px; text-align: center; line-height: 130%">
+  <em>
+   =20
+      <span style=3D"font-weight: bold; color: #bf2434">Share The Hustle:</=
+span>
+      <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7C=
+ZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ3lDW5GCkD55r2fJfW6ypSTt7=
+HSjyvW5_N5wh4sMhSTW6V6PCh37LR-0W4DWFkC6S_GhVW6QLdjn4DCRl-W3W_Wg23-JQsMW2PZT=
+qy2M0CSQW6YqnGC15ZY-6N9jPpMSD6TGYW3yxqmc5LSLSjW4pX-Z-5V74V2W4SqS2v1S4vLZW97=
+nn1f8dlNF_W4z8zxj55f-FlN7wMhz3jn7GYN1ShgvjHyJ0PVPPZ307mKF28f1J1lsC04" style=
+=3D"color:#192733; text-decoration:underline !important" data-hs-link-id=3D=
+"2" data-hs-link-id-v2=3D"dQWh244K" target=3D"_blank" data-contains-exactly=
+-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+  </em>
+  <br>
+  <span>
+    Check your referral progress &amp; prizes <a href=3D"https://media.hubs=
+pot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8S=
+M2-ZW0W5BW0B06lZ3pxVZbD9710sYVNW712FQL3rJl0TW8nVxvy2VL6mYW6zmNc35_Pp6YW87wJ=
+Y16qfBK5W7hZjPj96pJDkW3PYG0d6qxn9yW1jqZj67w913VW4v7KTz5Qwd9VW3fjD-_5vXSQQW3=
+HTs9S4znrqsW2tLFtk86ggQbMdNfM16sVNBW97DFVZ8Z9M14VJB4Yg7b3msbMh4npt7YpjGW5Z0=
+xjn29D2BWW3k_1px81wmfjd3sZq004" style=3D"color:#192733; text-decoration:und=
+erline !important" data-hs-link-id=3D"3" data-hs-link-id-v2=3D"T/hBDVGM" ta=
+rget=3D"_blank">here</a>
+  </span>
+</div></div><!--<![endif]-->
+<div id=3D"hs_cos_wrapper_module_17637585339062" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><div style=3D"overflow:hidden">
+  <table role=3D"presentation" class=3D"hse-pre-header hse-secondary" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"text-align:right; fo=
+nt-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496=
+d; margin-bottom:0; padding:0" align=3D"right">
+    <tbody>
+      <tr>
+        <td align=3D"right" valign=3D"top" style=3D"color:#192733; word-bre=
+ak:break-word; text-align:right; font-family:Arial, sans-serif; font-size:1=
+2px; padding:10px 0; margin-bottom:0; line-height:135%">
+          <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWyS=
+sF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Ss4ZwpbW50kH_H6lZ3mHW1qV8F06ZXn_-N8mz=
+KH6BhrvmVmD_Bn980GwLW88BCLD6CG0LmN47l-58TJP5wW6fdCdb3n45D9W5r04tV5G7Q5QW24b=
+5LY541GzXW4tNS_F55xn-dN8CWHNYNc_JCW6K9Ydc77bYSXW2HByYH4CYd-dW39C9_W2FXMx5W4=
+6LPQ45dMg4LN7BdlGq72DhkW3yBcdY1h-YbYW640lh08nFDB2W2DGn3n4f41xhW6bwsd_81PljY=
+W4sfN5G8Q6mZgW3BMfBk5NRf2HW8KlDW-2-Ct2qVbnBy_5HL4sqW6d-vDw62bxMbW53c8MF7Frv=
+X5W52KPl81X2CXnW1y1N-z7v4ZVrW3gG2Gx4zNc3GW2BdDnn5SxzB8W8wQmy267FDj1VdmccZ73=
+LJ0fW5qbQcv82dF-df6-l1cv04" style=3D"color:#192733; font-weight:normal; tex=
+t-decoration:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-li=
+nk-id-v2=3D"TTSnV8pM" target=3D"_blank">View in browser</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-0" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container hse-no-stack-row" style=3D"min-wid=
+th:280px; max-width:600px; margin:0 auto; border-collapse:separate; display=
+:table; width:100%; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" class=3D"hse-no-stack-row" width=3D"600=
+" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"400" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:400px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-8 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:400px; width:66.66%">
+  <div id=3D"hs_cos_wrapper_module-0-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;table-layout:fixed" data-hs-cos-general-typ=
+e=3D"widget" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper"=
+ role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"left" valign=3D"top" style=3D"font-family:Helvetica, Ari=
+al, sans-serif; color:#192733; word-break:break-word; text-align:left; padd=
+ing:10px 20px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF=
+7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Ss2-ZW0W50kgx26lZ3q6W7ddFwB3C0D57W8b73v=
+m114HCwW1yRym29dv2sWW2DVwQW8qqTzzW37YcrL34ylf9W4t8bFg86BF5bN4CP7QMSS08XW81j=
+h6p4n09p4W7nDNfk5J2QBBW15gzb27HR5K-W9h7lNt4300X6N4nN397xl1s9W5hYT-s2fzQF4N7=
+73kWXbcYgNVx3krs8wHJFVW9hZsv_6P_Y5pf8mFlk204" target=3D"_blank" style=3D"co=
+lor:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"lAmjrZBz">
+        <img alt=3D"The Hustle by HubSpot Media" src=3D"https://media.hubsp=
+ot.com/hs-fs/hubfs/Critical_Template_Imagery/TheHustle_HSMedia_white_logo-p=
+ng-1.jpeg?width=3D360&amp;upscale=3Dtrue&amp;name=3DTheHustle_HSMedia_white=
+_logo-png-1.jpeg" style=3D"outline:none; text-decoration:none; border:none;=
+ max-width:100%; font-size:16px" width=3D"180" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"200" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:200px">
+<![endif]-->
+<div id=3D"column-0-1" class=3D"hse-column hse-size-4 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:200px; width:33.33%">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D"table-layout:fixed"><tbody><tr><td style=3D"f=
+ont-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; wor=
+d-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-0-1=
+-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module-0-1-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_=
+cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; li=
+ne-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"line-height:125%; font-weight:bold; text-align:r=
+ight" align=3D"right"><span style=3D"color: #ffffff;">Issue #372</span></p>=
+</div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-1-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentat=
+ion" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; color:#192733; word-break:break-word; text-align:center; =
+padding:0px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF=
+7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Tl2-ZW0W6N1vHY6lZ3ltW4QHlsQ6MW-2tW5ySfZ=
+r5cVR1tW1ld5W85yCyf-W8XyDXh39tbGpW28bS9H1SFzYWW3k8g3S8gYqpzW2g1HHP5LR8yLW1W=
+RGk_6lCf7zW2jcGXK3FvHSpVFzk9x8lcthTN1H58WhNgbpVW3BTS6K5J5RXDF6JDn0YvxQPW4bC=
+rhm4CDC_0W63zzwH9c8dJMVzbYf4727lBJW1JdjfN4_JGSDW7PfgVG4CmsTqW6rTd1R860MwyW5=
+zYz1Y5LFqGlW3g-XLC72QWy7W8t15mM989MpqdgrRC804" target=3D"_blank" style=3D"c=
+olor:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"RzYWj/jJ">
+        <img alt=3D"A composite illustration of the Microsoft Excel World C=
+hampionship (MEWC) showing a human competitor on the left and a silver robo=
+t (AI) on the right, both typing on keyboards in front of monitors displayi=
+ng Excel sheets." src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%20News=
+letter%20Images/Daily%20Images/Nov%2023%202025/excel-world-champ-gif.gif?wi=
+dth=3D1200&amp;upscale=3Dtrue&amp;name=3Dexcel-world-champ-gif.gif" style=
+=3D"outline:none; text-decoration:none; border:none; max-width:100%; font-s=
+ize:16px" width=3D"600" align=3D"middle" class=3D"stretch-on-mobile">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-1-0-=
+1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_co=
+s_wrapper_module-1-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_c=
+os_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; lin=
+e-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D=
+"rich_text"><p style=3D"line-height:125%; text-align:center; font-weight:bo=
+ld" align=3D"center"><span style=3D"color: #ffffff;">Sunday, November 23, 2=
+025</span></p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-2" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-2-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-2-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module-2-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos=
+_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-=
+height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"r=
+ich_text"><h1 style=3D"margin:0; font-size:30px; line-height:125%">&nbsp;</=
+h1>
+<h1 style=3D"margin:0; font-size:30px; line-height:125%"><span style=3D"col=
+or: #192733;">AI is coming for the world of competitive Excel</span></h1>
+<p style=3D"font-size:18px; line-height:125%">&nbsp;</p>
+<p style=3D"font-size:18px; line-height:125%"><span style=3D"color: #192733=
+;"><em>Or is it?</em></span></p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold">&nbsp;</p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold"><br><span s=
+tyle=3D"color: #192733;">BY <a href=3D"https://media.hubspot.com/e3t/Ctc/UB=
++113/d2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Ss2-ZW0W50kgx26lZ3k=
+DN1lRW0X9Gp3bW4xcNPC6qStfXW99D8Bx6pZ-ttN1p_gH8DTZQlW4gBkTV6TZJrSN45PBjBWGMf=
+5W6ygyjX5Glkx3Vh4Z5g8Rm4q_W8dGYrd2qyCPWW3FYFhV6LnHmPF2sRZ7sXpm0W1DGnRM3P--P=
+jW1bggYp26Nwy8W4jZP1P2-YjQQW24LQzc6YBbZPW198NWK59kzRjf3TlfL204" style=3D"fo=
+nt-weight:bold; color:#192733; text-decoration:none !important" rel=3D"noop=
+ener" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"7h9Kicw2" target=3D"_blan=
+k">SHIKHAR SACHDEV</a></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Michael Jarman</strong> froze. In his=
+ first five minutes at the HyperX Esports Arena in Las Vegas, he forgot eve=
+rything he knew about Microsoft Excel.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">This was problematic, because Jarman was part=
+icipating in the 2023 Microsoft Excel World Championship (MEWC). The arena =
+was packed with hundreds of fans (with millions watching the <a  href=3D"ht=
+tps://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W4=
+6ZLVZ5GcxdfMBB8T22-ZW0W69sMD-6lZ3m3VX7HzH6y7HzbW5bM-ns7Vn_lbW4ZH-wb6nG-bWW7=
+CvfnX10yMMxW29pMkK6f2VVXW7DSCPx7GYM_jW3sp0Yj1kwVNmW5-hP-D61cpy1W4NlzJP87QZz=
+pW8vTyfB5vrrcqW4v0W0Z7ZT2s6VZrTX593S69RW2BLYnF7CRxnWN3k8pnj676xBW4mVTj35kPB=
+wnW3_YCzp4YKz9gW315-zC3sQHHPW8jVKZx5G-wxsW645cC41kJtGtW6gw3bk8-1F1Sf8spFWC0=
+4" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"vH5c=
+euGQ" target=3D"_blank">YouTube</a> stream), all screaming their favorite c=
+ompetitor=E2=80=99s name, egging them on to solve the creative puzzle =E2=
+=80=94 known as a case =E2=80=94 broadcast on the big screen. Every five mi=
+nutes, the last ranked competitor would be eliminated, until only one remai=
+ned.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">As things stood at the outset of the event, i=
+t was Jarman, feeling pressured by the big stage and making silly mistakes,=
+ who was ready to be axed.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CWhen your spreadsheet isn=E2=80=99t =
+working, that=E2=80=99s when it gets very stressful that thousands of peopl=
+e are watching you," he told <em>The Hustle</em>.</p></div></div></td></tr>=
+</tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-1" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A photo showing numerous competitors in a dimly lit are=
+na, intensely focusing on their computer monitors during the semi-finals of=
+ an Excel championship." src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily=
+%20Newsletter%20Images/Daily%20Images/Nov%2023%202025/excel-world-champ-com=
+peting.jpg?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dexcel-world-champ-com=
+peting.jpg" style=3D"outline:none; text-decoration:none; max-width:100%; fo=
+nt-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-2_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Semi-finalists focus on their cases=
+ at last year=E2=80=99s championships. (Courtesy of the Microsoft Excel Wor=
+ld Championship)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Competitive Excel is like Formula One: Top at=
+hletes keep it light off the circuit, often sharing learnings and grabbing =
+dinner when in town. But this camaraderie doesn=E2=80=99t prevent a burning=
+ desire to drive each other off the track when a golden belt is at stake.</=
+p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Luckily for Jarman, he wasn=E2=80=99t the onl=
+y one who froze. He settled down and finished second at the competition. Ov=
+er the next few months, hunched at a laptop even while on holiday, he prepa=
+red for the 2024 world championship. He wanted that darn belt.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">This year, with the 2025 Microsoft Excel Worl=
+d Championships set to take place in December, Jarman has to worry about mo=
+re than Excel guys. A new contender threatens to spell the end for not just=
+ professional Excel competitors but also office workers who specialize in E=
+xcel in millions of offices across the world.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It=E2=80=99s AI. And, unlike Jarman, it doesn=
+=E2=80=99t tend to freeze.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>The weird and wonderful world of comp=
+etitive Excel</strong></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Elite athletes hate losing. The world of comp=
+etitive Microsoft Excel is no different. Just ask Jarman=E2=80=99s wife.</p=
+>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">On their second date, at a boardgame cafe, Ja=
+rman told her that =E2=80=9Che wouldn=E2=80=99t just let her win to be nice=
+.=E2=80=9D And he didn=E2=80=99t.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It was at university where Jarman, who=E2=80=
+=99s now 30 and lives in Toronto, first developed a reputation as an Excel =
+savant. Then, while working as an analyst at the project finance firm Operi=
+s, his daily life revolved around the software. He accumulated thousands of=
+ hours tinkering with spreadsheets, climbing to a director position at Oper=
+is.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">One of his bosses suggested he check out the =
+competitive Microsoft Excel space, a deeply niche set of tournaments focuse=
+d on solving real-life financial modeling cases, such as forecasting the am=
+ount of money fans might spend at a tournament or building a three-statemen=
+t model for a manufacturing company. Jarman would have some initial success=
+, winning <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWyS=
+sF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ3kwN81dh01CwGHLW92y0=
+_H6Y_tZ3W3gJW2C3NcQGvW94X3vp5VlBdtN1_6sL5H5382N2HvnKHz08yZW6Ksq2x5GJK-CW7FQ=
+N_q7qcdwTW4z6TgR77HvKwW36f7wZ2XHW4NVFHKzS6bHDFfVftYdQ3NLTS0W8r1cWp5GGTCBW1X=
+x15y5CVYLmW8np0_w8DB066W7SBdkk2QQxnJW3kTHR37ymG_-W7BX34F2g5Mvqd3Gh3b04" sty=
+le=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"l5D2ITTv" =
+target=3D"_blank">ModelOff</a> in 2018.</p></div></div></td></tr></tbody></=
+table>
+<div id=3D"hs_cos_wrapper_module-2-0-3" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Competitive Excel champion Michael Jarman, a man with a=
+ beard, walks down a staircase from a tunnel labeled &quot;HYPERX HYPE TUNN=
+EL&quot; while pointing one finger up." src=3D"https://media.hubspot.com/hs=
+-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Nov%2023%202025/excel-=
+world-champ-hyper_Tunnel.jpg?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dexc=
+el-world-champ-hyper_Tunnel.jpg" style=3D"outline:none; text-decoration:non=
+e; max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-4" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-4_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Michael Jarman strolls through the =
+hype tunnel in seasonally appropriate Excel attire. (Courtesy of the Micros=
+oft Excel World Championship)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Over time, the contests would evolve into a f=
+ull-blown eSport: The Microsoft Excel World Championship, launched in 2021,=
+ focuses on solving cases that are =E2=80=9Csexier=E2=80=9D than, say, mode=
+ling debt.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Sample cases at the MEWC include ones like =
+=E2=80=9C<a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySs=
+F7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ3pbW8NfB-M3SgPsRW8YfZ=
+J_6-T_HDW6BxSf37-QZp3W4sCxqF4d00BxW6t3qHH3M6WLLW3ZXjbY6rD6sGW3039Bp4cXS8MW2=
+vdW9H77_yhyW4D1H7590KT-dW84GfFV2sWjnlW1zWW2L8-wYbQN8W7JlMRSXKBV6xgTh21KgrvW=
+7snNFM3CjBS4W2Wgq_Q7MFvb3N59NLWvCwX3JW6ZgQyR4y7_f4W4125BH3sNqHHdnctC-04" st=
+yle=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"4bYnJY7b"=
+ target=3D"_blank">Lana banana</a>,=E2=80=9D where one must write formulas =
+to help an ice-skating monkey named Lana collect as many bananas as possibl=
+e, beginning on the starting cell. Because Lana is said to be standing on a=
+ steep hill, she can only move down, diagonally left-down and diagonally ri=
+ght-down.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Jarman has competed in every MEWC. After back=
+-to-back podium finishes in 2022 and 2023, he got an early lead in 2024, ra=
+cking up 100 points for modeling the stats of World of Warcraft-themed char=
+acters to help them progress through different levels. Three-time consecuti=
+ve world champion Andrew Ngai was following closely behind.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Halfway through, the two were tied at 705 poi=
+nts. =E2=80=9CThis is crazy, this is crazy,=E2=80=9D the commentators excla=
+imed.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Curiously, between rounds, Microsoft showed o=
+ff Copilot, its AI companion for Excel. The contestants found this funny be=
+cause Copilot only seemed to be answering the easy questions.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But was this <em>really</em> a laughing matte=
+r?</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Sufficient seniority</strong></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">One of the biggest differences between a Form=
+ula One driver and an Excel World Champion, outside of the relative risks i=
+nvolved in both professions (though many will attest that a debt model can =
+get quite dangerous), is that the latter still has a day job.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The day job, of course, is where one=E2=80=99=
+s Excel apprenticeship begins.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-5" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF=
+7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ3pzW4Vd6tV804LgyW9bKVr=
+S1Nj36RN1Dlg3VlBy9wN2KhCRN_Kyl7W97BMvB58zYtXW6sSLK62y5834W6hFx858WJg0SW4tPR=
+7n7_zbMWW8qT7K24rXBTnN1G1dWztbx4JW7wjj-Q2fXpgYVD9BHM8RPJm5W40T_kc4WlLrTW85Q=
+cQp3F3SS-W1nDbZr8Js1k3V6mdB54vCJV9W10HTb91rVRsMW3nbz2S3ypTZSf4_46RW04" targ=
+et=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id=
+-v2=3D"8cbhhUdd">
+        <img alt=3D"Excel1-v1 (1)" src=3D"https://media.hubspot.com/hs-fs/h=
+ubfs/Excel1-v1%20(1).png?width=3D1160&amp;upscale=3Dtrue&amp;name=3DExcel1-=
+v1%20(1).png" style=3D"outline:none; text-decoration:none; border:none; max=
+-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-6" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-6_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;"><span style=3D"font-size: 11px; col=
+or: #000000;">Olivia Heller/The Hustle</span></span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">For the longest time, listing Excel on your r=
+esum=C3=A9 meant strong job prospects. As the world=E2=80=99s most popular =
+piece of white-collar software, going strong for over 40 years, its dominan=
+ce has never been disputed.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">This has meant that the Excel guy has always =
+commanded the respect of his peers.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Diarmuid Early</strong>, dubbed the =
+=E2=80=9CLebron James=E2=80=9D of competitive Excel, remembers it well. Whe=
+n he worked at the Boston Consulting Group in 2008, he=E2=80=99d have a ste=
+ady stream of people by his desk every Friday waiting to ask him questions =
+about Excel and peek at any custom formulas he might have handy.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Now, things appear to be changing.</p>
+<p style=3D"line-height:125%"><br>Major Wall Street banks are <a href=3D"ht=
+tps://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W4=
+6ZLVZ5GcxdfMBB8TY2-ZW0W7Y8-PT6lZ3pgW8YscVp642qBhVqb0kg7M2YCMW8lSHfc77Zj97W1=
+GqRX-301n9HW7XPNQJ85ysWlN5mPxZ4mWNjDW8Z2yYL28TbDxW7z9jpD30kfGWW2qzfYL3FVxPm=
+N983R875r37QMw0nXdPdbF0W4LYk8N2k8TxDW130R7797FpvJW8Wt74x99vGCvW4RsWY55BNgLh=
+W3VYW442YP5b2W2Y-v553c4GGkW2FRXTh5zN8JxN4plngkjJLhyW1Zqsf68rkpnzW18V2wq3SG7=
+RxW3_1_Mb7t4JQTN6XWQ1xkzZb5W8m34841m_fyHW1bXjxS1Y7ZkTW6wVpBx1Rdm02f4Pxzvd04=
+" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"RJMcX=
+066" target=3D"_blank">expected</a> to slash up to <span style=3D"font-weig=
+ht: bold;">200k</span> jobs over the next three to five years due to AI ado=
+ption. And recent <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-V=
+f04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Vd2-ZW0W8wLKSR6lZ3l-W71mwY940=
+Gtl9N4XvhLC5-RbHW3Snr_R5FxlhBW4QvnVV2clY2yW4hC6wd34xbZzW7rpPkV38-sQBW3Cng7Z=
+5w3R6cW2Mrcql4RYMj4W7Wt1_J6-ptZWN1TThLmKNvyxW6DFF8N7CRpqXW5Hw49-79JXYHVWnsq=
+C1xJdL7W3qGLRw71qTBrW6flTWv57WfQrW4_z2jr9h5bycW3cvZMN42yyt2W7LDyjk2GJPfhW29=
+ktDY7lsYzQW68Sxh01wrjJ4W3CDMnX7V5Pz7W1y52mT7n7Z1dN3_r_6X4nCxmW1LmTFX80g06BW=
+4nJ1Y15g-zCWW5lGT1v67WVjTW8sp1yQ6hTj7rVsj7sx2MQ_Zlf1blqqn04" style=3D"color=
+:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"WMnHWplj" target=3D"_=
+blank">research</a>, utilizing payroll data, estimates there has been a <sp=
+an style=3D"font-weight: bold;">13%</span> decline in entry-level jobs in t=
+he most AI-exposed fields.<span style=3D"font-size: 11px; color: #000000;">=
+ </span></p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-7" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"An overhead photo of an Excel competitor wearing a red =
+jersey that reads &quot;EXCEL ATHLETE&quot; on the back, focused on a compu=
+ter screen." src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%20Newslette=
+r%20Images/Daily%20Images/Nov%2023%202025/Excel_Athlete_Jersey.jpg?width=3D=
+1160&amp;upscale=3Dtrue&amp;name=3DExcel_Athlete_Jersey.jpg" style=3D"outli=
+ne:none; text-decoration:none; max-width:100%; font-size:16px" width=3D"580=
+" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-8" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-8_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Excel Athletes will descend on Vega=
+s Dec. 1 for this year=E2=80=99s world championship. (Courtesy of the Micro=
+soft Excel World Championship</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It seems like this surge in AI adoption might=
+ threaten the advantage of knowing so much about Excel =E2=80=94 why bother=
+ walking over to someone=E2=80=99s desk when you can simply ask ChatGPT?</p=
+>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Early believes he=E2=80=99ll still have value=
+, most importantly in bringing =E2=80=9Cclarity on what model we should be =
+building,=E2=80=9D rather than =E2=80=9Cbuilding the model itself.=E2=80=9D=
+</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">He considers himself to be =E2=80=9Csufficien=
+tly senior=E2=80=9D to charge roughly the same in a world with AI.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Jarman=E2=80=99s unconvinced, too. =E2=80=9CI=
+t's not just about being good at Excel. It=E2=80=99s about a combination of=
+ being good at Excel but also being able to look at the spreadsheet, spot w=
+here things are wrong, and be able to stitch different pieces together.=E2=
+=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CI don=E2=80=99t think an AI will eve=
+r be as good as me or another director here [at Operus] who=E2=80=99s compe=
+tent at Excel with 10-15 years of experience,=E2=80=9D he adds.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But the same might not be true for everyone.<=
+/p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Excel monkeys</strong></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Earlier this year, the team behind the startu=
+p Shortcut AI, dubbed as a =E2=80=9Csuperhuman Excel agent,=E2=80=9D <a hre=
+f=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3xydQk7=
+GQhy7W46ZLVZ5GcxdfMBB8TF6Y2WnW7lD3J86lZ3nMW5GHHf76FwRmSW73GpxL4RqMZ0W4XymPf=
+9hjqB2V65MbQ4NmfLkW39ZwRD1T053fW7fmBtR8vGv4wN2zhZ9_xwv7sW1_3tRc3r82MSW1Xd0V=
+s18NDvWW6wr4kc5Z-b_zW6Pbq-j5DWKMkVfhsLm45N5mgW17zsBN3Yg9DSN9dPP0hKkcDCW4xcK=
+cK3RWrt5W8KRBdz8Y3W2jW4lRv2t8p559MF4hxmlftjH8W6V7Q_X51YsyCW24J1MP37nTFlW39c=
+xCC3RnvymW1pmv3j8FpxmQW6yS0G_1yFs70W4nfnW03JNlHHW31TJNQ2N_CVfVQrxfy1q2vTLMM=
+NPHnWxvJgTNL6J89HM8fW3Zq_dZ5LZ0hzW8LpJ9713l-yNW1VL93F3BPDw2W1-WKN67jClRsW1j=
+w0LH1CNYDhW4cvGX51p0RLkW34P6-Q5mPLs9W8KVGVg3yCkGNW4MmWsR90NQn0W1T2Lrc8pKZ_l=
+W3x8sj34yTf1yW7Gfr2W2Sry0tW7TNvYD26zSnjW8VqWvY67gGPcV8Q7dR79HMs0W4W6Q9c4DwF=
+PhW4mS2r929lg-JW3WsJDW70TXsNW5nJk7X6l3Mp3W5pWbnh13yRY4W5nGtTr2pfPVsW23KjJZ7=
+t8DNpW1g2yQV4M_97JW4bvqh85zSgNXW1Jd4R43n_qv2N40m0_FmJ4dDW7m2h5T8Jt146W17g1J=
+f9ftpysf6tfYRM04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-lin=
+k-id-v2=3D"4fjwe4Ua" target=3D"_blank">said</a> its agent could outperform =
+a McKinsey or Goldman Sachs analyst <strong>89.1%</strong> of the time, and=
+ do it <strong>10x</strong> faster.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">This was no Microsoft Copilot. This was a too=
+l that could do real damage. News spread, along with fears that tools like =
+Shortcut AI could replace young analysts who lacked the skill of Excel worl=
+d champions.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Jarman, though, doesn't think that it=E2=80=
+=99s prudent to fire your first-year analyst class.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CIf we sacked all the analysts tomorr=
+ow, the company would immediately be more profitable,=E2=80=9D he says. =E2=
+=80=9CBut that would be dumb, because who would then check the work of the =
+AI in five to ten years time?=E2=80=9D</p></div></div></td></tr></tbody></t=
+able>
+<div id=3D"hs_cos_wrapper_module-2-0-9" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"excel-world-champ-group-photo" src=3D"https://media.hub=
+spot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Nov%2023%20=
+2025/excel-world-champ-group-photo.jpg?width=3D1160&amp;upscale=3Dtrue&amp;=
+name=3Dexcel-world-champ-group-photo.jpg" style=3D"outline:none; text-decor=
+ation:none; max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-10" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-10_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Competitors ham it up off-screen.=
+ (Courtesy of the Microsoft Excel World Championship)</span></em></span></p=
+>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Indeed, even though AI might be an upgrade on=
+ a junior analyst, there are longer term implications to getting rid of new=
+er talent. The entry-level roles aren=E2=80=99t just about immediate gains;=
+ they're about identifying and developing future leaders.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Further, it=E2=80=99s only by doing the =E2=
+=80=9Cmonkey work=E2=80=9D to build something that one can truly understand=
+ it.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CUntil you have built a three-stateme=
+nt model for the first time, you don=E2=80=99t intuitively understand the p=
+oint of what you=E2=80=99re trying to do,=E2=80=9D Jarman says.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But we don=E2=80=99t have to look too far to =
+find an example of technology replacing workers: When Excel first came out =
+in the 1980s, a <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Vx2-Z-MW95jsWP6lZ3l1W77-TT64sbc=
+ZTW4MJ6Vp17R_Z5W228CZx3y8PgFW4Rf4K63jDNjzW97gMlB2tYlwwW6_SyQZ6SHNF5W76NZg45=
+x48VnN6wrqZ9xpNnLW5zDmkS8cjpTbW8sj5nd2LG7v-N6JyBkXV4HC-W1_50Wy10P5DyN4D2jrD=
+Js5vcW2pj0mV56Nx_5W4T9XG14RGc-RW82wsZS7QSH89N442pf44ZBzJW6Nv0bJ4FLx1RW9chM1=
+G7vbVs_W3CwDSM6CsFpxW66zB4P2WmmWCN8h8dKHb8L-rN1mG4KBJp1q5W9gsNSD5zJZZmW7cx1=
+_B1yjLRXW3mwxFx6lRNJhW3nyMDj4Qd6lmW4G-rc_1q5Y9vN2YSlD5yckjkW2yxv0K24SQzjf1W=
+Ytyg04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D=
+"LskPn4mJ" target=3D"_blank">Morgan Stanley</a> analysis using BLS data fou=
+nd that the number of Americans employed as bookkeepers and accounting cler=
+ks fell from about <strong>2m</strong> to <strong>1.5m</strong> between 198=
+7 and 2002.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">However, more analytical roles like those of =
+financial managers and management analysts went up (from <strong>600k</stro=
+ng> to <strong>1.5m</strong>) over that same time period.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In other words, Excel didn=E2=80=99t eliminat=
+e jobs so much as create demand for new ones.</p></div></div></td></tr></tb=
+ody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-11" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Excel2-v1" src=3D"https://media.hubspot.com/hs-fs/hubfs=
+/Excel2-v1.png?width=3D1160&amp;upscale=3Dtrue&amp;name=3DExcel2-v1.png" st=
+yle=3D"outline:none; text-decoration:none; max-width:100%; font-size:16px" =
+width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-12" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-12_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Olivia Heller/The Hustle</span></=
+em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Under this view, a leap in AI might just rais=
+e the bar: clients will expect more complex models, longer decks, and deepe=
+r analysis.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CThere are probably more people worki=
+ng on analyzing data now than there were 40 years ago, even though one pers=
+on can do what a team of 50 could do back then,=E2=80=9D Early says.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In a similar scenario, AI might augment rathe=
+r than automate. But there=E2=80=99s no guarantee that it doesn=E2=80=99t g=
+et worse before it gets better.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>The next formula</strong></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">As the 2024 Excel championship neared its end=
+, Jarman anxiously watched the countdown timer on a big screen. With about =
+15 seconds to go, his opponent, Ngai, threw a hail mary, using the RANDBETW=
+EEN function to attempt an educated guess that could score the 50 points he=
+ needed to catch up to Jarman.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It didn=E2=80=99t work. The belt went from Au=
+stralia to Canada, from Ngai to Jarman.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">When the clock reached zero seconds, Jarman l=
+eaped out of his chair. You could hear his huge sigh of relief, immediately=
+ followed by a triumphant =E2=80=9CCOME ON!=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The belt was finally his.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The same tournament where Microsoft had shown=
+ off its AI assistant was still, ultimately, a contest of human instinct an=
+d nerve. But the tide had turned.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-13" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"excel-world-champ-winner" src=3D"https://media.hubspot.=
+com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Nov%2023%202025/=
+excel-world-champ-winner.jpg?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dexc=
+el-world-champ-winner.jpg" style=3D"outline:none; text-decoration:none; max=
+-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-14" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-14_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Michael Jarman takes home last ye=
+ar=E2=80=99s championship belt. (Courtesy of the Microsoft Excel World Cham=
+pionship)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In the months since, AI tools have advanced s=
+o rapidly that the MEWC has <a href=3D"https://media.hubspot.com/e3t/Ctc/UB=
++113/d2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Ss4ZwpbW50kH_H6lZ3m=
+XF3dfV-tj-9SW7LFWMj4Tk3sjW4WyGcr5995M7W684qdZ2DjkhhW6_FFrJ3SpBp3W6LLS9n7_c8=
+0RW22tSvS8RSCKQW2gbs3n71NF7JW3YrHfq8DgJWyW6c9wXY3Psc6_Vfsh1Y72YPr_VW4npQ4S4=
+cmDW7m18JJ2cw-m2N8mVs30wQYpsV_CQxx8bG3lkW4LJQ_t5N-SHTW3Xk5t-2WHdMtW52yVXl88=
+BMjxW3lK8vX8MC_G3VxgQkQ6vxtnkW84WyRk4ffByRN1jpw98RcP04W6jBGnF4hF1rXW5QslfS5=
+2vHjkW2w2GK762JJYdW3G0tF27B5LcjW5cF2qN3RmWBBW3jqZ625zPftNVPQrLq8jKzf2W3S_vR=
+p6zM8MsW84qdvZ5GqGMQW8fMx9J3dsk38f9lRrtz04" style=3D"color:#192733" data-hs=
+-link-id=3D"0" data-hs-link-id-v2=3D"UMhzobY9" target=3D"_blank">banned</a>=
+ their use entirely. Until recently, competitors were allowed to use whatev=
+er software they liked =E2=80=94 including AI =E2=80=94 because it simply w=
+asn=E2=80=99t fast or accurate enough to compete with humans.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">That=E2=80=99s no longer true. Shortcut <a hr=
+ef=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3xydQk=
+7GQhy7W46ZLVZ5GcxdfMBB8TF4ZwpbW7lCGcx6lZ3n8W5PRZFn8hswfSW2v_ZJV8J06wFW7s5B7=
+F7Cw3RRW3YbbS194CpL_W5Tjj426T1DGdW4GCWg-6tFhRlW27Nztn6YB27yW3N8gCX3xcPdjW2q=
+9rrf2T5Hg8W4RgZcR3L1qHtN74sVJWyPvYzW63pjS04SHzbKW4tV1Bw36c5BVW6FYmr54Fnt22W=
+3Fgrg_1dxslpW6JC6gy3rlk10W6YMbsq4ssNHbV1JKbN5T0fkzW4W_Pjj5ytNr3W1kTwJb48zpm=
+rW843XM_4KXb18W1wC1Gq7twXFmW9g0lrf5j2Y7KW2bQZTq8n0p8qVSc1B-7cc4fzN4p8jZq8qr=
+flW6Mn-jB63lq5mW4XK6p-6z1JVzVNw6_V8zm8qXN5vCWcvlrPBwW6g87tX1Rrc1rW2FX11D3_d=
+mqfW6Fb2482HDMd8W1RKkj58-06yQW3qsgnx6Gz7GlW8hdGtY1tT_9dW4kH0rr97wRR5N3sySdr=
+CcM07W5029_R6LZXf-W8FHn-32359fLf7qbGG204" style=3D"color:#192733" data-hs-l=
+ink-id=3D"0" data-hs-link-id-v2=3D"E2LqQrRL" target=3D"_blank">recently</a>=
+ put out more evidence showcasing that its agent scored over 80% on cases p=
+resented at the Microsoft Excel World Championship in around 10 minutes. Th=
+ese problems usually take a trained human an hour or more.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Confident as Jarman is about his Excel skills=
+, he still jokes that in the future his day job might be typing in six-digi=
+t authentication codes to let different AIs talk to each other.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">For now, though, he=E2=80=99s set to keep doi=
+ng what he loves in Vegas. That is, of course, if future Excel championship=
+s can still find enough competitors in a world where their day jobs may no =
+longer involve much traditional Excel usage at all.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But as the MEWC=E2=80=99s LinkedIn account re=
+cently put it:&nbsp;</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CJust because humans invented the car=
+ doesn=E2=80=99t make it less fun to run a marathon.=E2=80=9D</p></div></di=
+v></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-3" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-3-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"non=
+e" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align=
+:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px"><div id=3D"hs_cos_wrapper_module-3-0-1" cla=
+ss=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" styl=
+e=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos=
+-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrap=
+per_module-3-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wra=
+pper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-heig=
+ht: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_=
+text"><p style=3D"text-align:center; font-size:26px; line-height:150%" alig=
+n=3D"center">Share &amp; discuss this story on:</p></div></div></td></tr></=
+tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-3-0-=
+2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"p=
+resentation" align=3D"center" style=3D"width: auto; text-align: center; mar=
+gin: 0 auto; " class=3D"hs_cos_wrapper_type_social_module">
+  <tbody>
+    <tr>
+      <td class=3D"social-network-cell" align=3D"center" style=3D"font-fami=
+ly:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-break:=
+break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Tl2-ZW0W6N1vHY6lZ3p-W2qppfh3ypw=
+1cW16J2-K8MLfmCN50xNThhCzSLN7sHdPR9lLhhW4dC3FW4L-vJ0W5sz1fm4LQ7QDW5YJsTl2dd=
+fl_VbPPRj806CG3W6rb_-44QpSdnW7QTLw_7Ffb32W1m6sd-7S2ZLvW4r1k303C9xg_W81-80M6=
+qhffwMsMNYhxjHxsVZ35bf50WW0rVmc5ss4LfqKYW4D2bt72WffKZW6XKrc050pyKdW5f6S-z38=
+d_VKW6yCylg4_5PL6MdkNLKJgjZBW2mvN-q6VQ06fdVLSTC04" style=3D"color:#00a4bd; =
+text-decoration:none !important" data-hs-link-id=3D"1" data-hs-link-id-v2=
+=3D"OJBv/tEK" target=3D"_blank"><img src=3D"https://media.hubspot.com/hs-fs=
+/hubfs/Critical_Template_Imagery/H.png?height=3D80&amp;upscale=3Dtrue&amp;n=
+ame=3DH.png" alt=3D"Site" height=3D"40" style=3D"outline:none; text-decorat=
+ion:none; border:none; width:auto!important; height:40px!important; vertica=
+l-align:middle" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ3pwW1DCw4Q6jXd=
+vLW6klrGM7GMlHgW6cxJYR8DLcfGW5Y7w7V4VjTw_W1XZsBg1MnRVRW6rS3nP6gD-TWW4fdNdM6=
+2__dcW2NywQv41_rJJW5jmCbc5Hp68HW4mrkqx2b3kCTW5sg9876dkBRgW3Vn_Dz1Y7yZ6N23tW=
+vwKWGjtW1ZgNCw8WbpTkW1DV3kL8FsDtRW3hVmST7Ldth7N7qjf7tr4TF9W1ZX6qn6tMM89f52R=
+mjn04" style=3D"color:#00a4bd; text-decoration:none !important" data-hs-lin=
+k-id=3D"0" data-hs-link-id-v2=3D"BhKHpnJa" target=3D"_blank"><img src=3D"ht=
+tps://media.hubspot.com/hs/hsstatic/TemplateAssets/static-1.262/img/hs_defa=
+ult_template_images/modules/Follow+Me+-+Email/youtube_circle_color.png" alt=
+=3D"YouTube" height=3D"40" style=3D"outline:none; text-decoration:none; bor=
+der:none; width:auto!important; height:40px!important; vertical-align:middl=
+e" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ3mzW7x9gf95B7S=
+SVW6WmtzQ191BZBW7M68dK5Z51GjF58T9B5ynjZW2_0cDB7nqJDfW4j6BjF2YRgPSW8cH2lY1zh=
+Fj2W6RbnyD2lSDjDVYvlyd8vcxg5W966CZn9lKlK4W3srsxG808ZK8W4sSZQg75HdxCN6bR_R0c=
+N6F_W8y7XL91KrS4vN1dlFnCpncB2W2RpD8F8MJ1z0W5mtWR01W65LNW894-fg3SHq04f74x44s=
+04" style=3D"color:#00a4bd; text-decoration:none !important" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"hMx6vuQx" target=3D"_blank"><img src=3D"https=
+://media.hubspot.com/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default=
+_template_images/modules/Follow+Me+-+Email/linkedin_circle_color.png" alt=
+=3D"LinkedIn" height=3D"40" style=3D"outline:none; text-decoration:none; bo=
+rder:none; width:auto!important; height:40px!important; vertical-align:midd=
+le" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8T22-ZW0W69sMD-6lZ3n2N88KgrD4Z-Z=
+0W7bZgWj1wSJZ3W7SS-RL8vKB-WV2pk1g31q4znW5k3mfM7lv9GPW2j01--8z5MyKW7VPbYY3xr=
+p9XW2nqWQt4Yh5NpW8NJSXl2SWccwW89DpCJ8pzQQ0N6FH_KCBq7mKN1FTqbLh6-kpW1X6QlX31=
+y5MPW9k6s_x6kHVZRW5dDyXJ45-C5mW8kVrG-5mjBq1W8KMkkY4kyrfZW2SbksT6FWz5FW8kJ0V=
+51kFv5HW5FBghT957rzSf61dfv004" style=3D"color:#00a4bd; text-decoration:none=
+ !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Bzlwbvlf" target=
+=3D"_blank"><img src=3D"https://media.hubspot.com/hs/hsstatic/TemplateAsset=
+s/static-1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/ins=
+tagram_circle_color.png" alt=3D"Instagram" height=3D"40" style=3D"outline:n=
+one; text-decoration:none; border:none; width:auto!important; height:40px!i=
+mportant; vertical-align:middle" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-3" cl=
+ass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" sty=
+le=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-co=
+s-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"none" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align:to=
+p" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-4" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-4-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:5px 10px"><div id=3D"hs_cos_wrapper_module-4-=
+0-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modu=
+le" style=3D"color: inherit; font-size: inherit; line-height: inherit;" dat=
+a-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_=
+cos_wrapper_module-4-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs=
+_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; l=
+ine-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"text-align:center; font-size:14px; line-height:1=
+25%" align=3D"center"><span style=3D"font-family: Helvetica, Arial, sans-se=
+rif;"><span style=3D"color: #192733;">Today's email was brought to you by <=
+a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3x=
+ydQk7GQhy7W46ZLVZ5GcxdfMBB8Ss2-ZW0W50kgx26lZ3p0V96WYp7Pg285W7TMhR66Bcy8kVHY=
+svL4MgDyZW44PFGR8_lhCWW8BVCNZ7XwhpFW6F1--w1H2PQLW4nqpjQ1ywG2VN21qNH7wgLLsW1=
+Tqr-S7x8HdPW1hw7Rk6Bg8VzN2Pt_58zNDl9W4dQRC45WtLNPW6bwXVl6LdNHLN6nqqwzp9z7yW=
+5sfS9K3hCxyxW4vtMsm7YDxl4f6Yn5H-04" rel=3D"noopener" style=3D"color:#192733=
+" data-hs-link-id=3D"1" data-hs-link-id-v2=3D"IpjnXtf8" target=3D"_blank">S=
+hikhar Sachdev</a>, </span></span><span style=3D"font-family: Helvetica, Ar=
+ial, sans-serif;"><span style=3D"color: #192733;"><a href=3D"https://media.=
+hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfM=
+BB8Ss2-ZW0W50kgx26lZ3lSVlP4_m8wbxYzW6dsKmH3_cL5pN8XmVsCz3JHbW4589sT3Mtb7_N2=
+sS0b5lpH0mW4__hhp2h1G8NW4yQ2RT1t7r6_W4Q7MC743PLvvW6lvwnJ8v2qWfW890b6174Whnd=
+VrWvYZ8rkhVmW5RvWVB7TV2kmW6m-3Kq4zL9C8W2Q7jtr34YFB4W6cDfQJ3gqQqmW8rtWxX1cyY=
+s1f3MTrVP04" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"0"=
+ data-hs-link-id-v2=3D"oE73l/qS" target=3D"_blank">Katherine Laidlaw</a>, <=
+a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3x=
+ydQk7GQhy7W46ZLVZ5GcxdfMBB8Ss2-ZW0W50kgx26lZ3lJW6MZ3hQ6l4Px-VCZNkS83tyYZW9d=
+gZFn4l7c-WVBkqBH3Q6SHRN37fGHpWcJ0CW5nqydX1n_2fJW1vxLZN72-rRKN2-whbb_wTqXW4z=
+jNdv8Y1ZV2N3TwCgQNrsGrW1lDVHG2B-V9NW45J-GK97w_6ZW2QnTMr612-kqV9nqNW7pvMr5W6=
+GwtqT1fTVDQW84lSD_52FLZ3f5YNCvR04" rel=3D"noopener" style=3D"color:#192733"=
+ data-hs-link-id=3D"0" data-hs-link-id-v2=3D"dEMdBBbn" target=3D"_blank">Ma=
+rk Dent</a>, and <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf=
+04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8Ss2-ZW0W50kgx26lZ3nhVHS7-j5Zmj=
+7vW8VRNCv3GS0zXW8glnbN6vvMz3W4zf4-T66pLcVW8qPh5v99pjtBW5NGz848K2gBQW1HlDW03=
+QlFL8W1zhKtR3ks9-LN6Dsc8mDBb79W79kM3-3kC-jzW4br7p45D9X-GW2cjZcQ6TkKGjW63bp6=
+w7k306CW8G6jR513y0plW3tx7_33CCT5gW79NmHm3pT5Bmf5wtGjd04" rel=3D"noopener" s=
+tyle=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"CAzB/nO2=
+" target=3D"_blank">Zachary Crockett</a>, with help from Kaylee Jenzen.</sp=
+an></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter">&nbsp;</p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-family: Helvetica, Arial, sans-serif; color: #00=
+0000;"><span style=3D"color: #192733;">Was this email forwarded to you? Sig=
+n up <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZ=
+gnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8TF2-Z-MW7lCdLW6lZ3q6W3x-n_k8XNMzHW1BmyzM3s=
+sGfGN1DMBL8VyjwMV-MhBX7H68jMN4Zqp2-SDJPpW2-xMqk5qF-2_N93cBdvFTjW0W8q6tzF6pF=
+CKTW6-VRHx6qVMv7W1Y3G0t73k5k5W5fCJmw1qrsp8W2R_xh314QhsgVp_G8_106DXyW56kvWn2=
+JCg6WW2kJbQY5D-WRpW4Mm3pY2-kqghW4R4-8p4f_qZ8W3htnp-6FnnT2W3qdz4532r5LbW20qV=
+RZ7c1fTXW1CkzGd6rxYcMW2qtcJs6RzHvDW1RWlnS7n5Y1-W9kK1Tc5v0wQJf3PD4H004" rel=
+=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id=
+-v2=3D"nmcX5Hpp" target=3D"_blank">here</a>.</span></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;"><br><strong>Subscri=
+be to our other newsletters</strong><strong><br></strong>Expert insights: <=
+a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3x=
+ydQk7GQhy7W46ZLVZ5GcxdfMBB8Tl3hCZYW6N1vHY6lZ3nQW1JgPvl2T2szHW1y2vHV2BWbBzW6=
+dstDz33KcJtW488hvY4Dt-kTVHgBP-12cnbQVGP0g41nk89yW3C9FQH4JyQ-sN3HHPmYJnJdWW2=
+wzptv8XDnyxVt3TTF5cmrY5W285rb9192pSJW5GNVDW1zl2nxW3VZtmp43MyXbW6y546B4QvNcf=
+W44KC7d6GJyXZW7G9bSf5yYBsgW2QfGkn63t7k3W8MyBcZ4pw6bpN3vXfBb4D05lW4fP1th2Fhg=
+RgN4YxV-hh4dFTW3vqc9j6sK-Yhf50S96C04" style=3D"color:#192733" rel=3D"noopen=
+er" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"x5vRlAoK" target=3D"_blank"=
+><em><span style=3D"text-decoration: underline;">Masters in Marketing</span=
+></em></a>&nbsp; | &nbsp; Stay up-to-date on AI: <a href=3D"https://media.h=
+ubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMB=
+B8T23dh8WW69sMD-6lZ3nVW3lXWDx2ZK6wfW57Yl2m3bMLKCW1K6rkQ3Kj_C-VzMr__76rmhKW6=
+8FW9b8QLltlW4LKGKB1758_SW1yknFp3MxrTcVcTvf_1JWwTHVSYP3Q6fbS0HW6l8Vqn1nntBtM=
+Kl2MMtj4tJW8F43jH8bWTs4W4F_50D2hMQhzW3N-Dcn1W5NL5W8-7T0N54pG_rW5w-lzx51z3dF=
+W7C36JG86jvPtW5T4CMh7Jbn7bVlRbzM6RT7B4W6xCkjC7pxyshf7Nw_7v04" style=3D"colo=
+r:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"fB+Qb5IE" target=3D"=
+_blank"> <em><span style=3D"text-decoration: underline;">Mindstream</span><=
+/em><em><span style=3D"text-decoration: underline;"><br><br></span></em></a=
+></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;">Follow <em>The Hust=
+le</em> on <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWy=
+SsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ3nxW5YQSy87b1HJQW42=
+55P96pQH6KW5-D9fy2BF-WtW53Cy-v2Pt125W1GtR9N7bw6VcW4nPvTs93DdFbW2FZFzT8PJWDk=
+TzQ-01MDSV3W1ThXr679WLkRVMmkLg989TQBW6-STSj77DrxFW5Lb0Ty5QysVrW77-zrt7qCpTN=
+W5NNszB4X15QbMhmWhBGN_jNW8PWwLw1b30HZW3tSMXv9kCyj3W5gHPFF92Lxj3d-pbfF04" st=
+yle=3D"color:#192733" rel=3D"noopener" data-hs-link-id=3D"1" data-hs-link-i=
+d-v2=3D"e97Sa5iX" target=3D"_blank"><span style=3D"text-decoration: underli=
+ne;">YouTube</span></a>,&nbsp;<a href=3D"https://media.hubspot.com/e3t/Ctc/=
+UB+113/d2q-Vf04/VWySsF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8SM2-ZW0W5BW0B06lZ=
+3pWW6mdl532tq3fvW3SBbBt3b5q06W3kdwVk79x8gXW5HPjXc4qgyC6W7SNkKL97dtcCW4blZZm=
+4tGTxXW1h1G3R1g9MbtVYxZH-7HvlVYN7kd47GZCVH1W18hjBZ4C0rDnW4G8qg729RXfLW9kPZ4=
+w7lTjsdW5Xj8kz5hgzC5W2NL-zc2CfpzqVNTMKT39DmxpW1FHBwf3Q70HXN6nYdQhYMQvDV4XzM=
+k8vP3FSf4c012004" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=
+=3D"1" data-hs-link-id-v2=3D"w0Kb7DPn" target=3D"_blank">LinkedIn</a>,&nbsp=
+;and&nbsp;<a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VWyS=
+sF7CZgnXW3xydQk7GQhy7W46ZLVZ5GcxdfMBB8T22-ZW0W69sMD-6lZ3nqW51TzkV7np3pMW40-=
+RrQ15QrvvMPBTf84Cm4yW67X5LB2Hdb27W3WmvsZ1gYJmLW7nsxDZ3SnZ7NW36JVFb3Xvd__W50=
+Rp-q1q9VMWMlwPwgXW9YgW2Msly28ZDFSbW5pyyRk2Jz72SVYHNBZ23mvSHW17pSzZ1GsR5pW8S=
+67S15pYbSZW7TTQQs3f3W8WW405rkv866tCdW72Y_q-7ghJQgW6cLWzs22DZMjW94lHQM3ppzyb=
+W280qvQ5thzmCf69yDSq04" style=3D"color:#192733" rel=3D"noopener" data-hs-li=
+nk-id=3D"1" data-hs-link-id-v2=3D"SS6chJVN" target=3D"_blank"><span style=
+=3D"text-decoration: underline;">Instagram</span></a>.</span></p></div></di=
+v></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:0px 5px 10px"><div id=3D"hs_cos_wrapper_module-4=
+-0-1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mod=
+ule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" da=
+ta-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"presentation" class=3D"hse-footer hse-secondary" width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-serif; font-s=
+ize:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; font-size:16px; color:#192733; word-break:break-word; tex=
+t-align:center; margin-bottom:0; line-height:135%; padding:10px 20px">
+          <p style=3D"font-size: 11px; line-height: 150%; font-weight: bold=
+;"><span style=3D"font-family: Helvetica, Arial, sans-serif;">HubSpot Media=
+, 2 Canal Park, Cambridge, MA, 02141,&nbsp;USA, +1 888.482.7768</span></p>
+<p style=3D"font-size: 11px; line-height: 150%; font-weight: bold;"><span s=
+tyle=3D"font-family: Helvetica, Arial, sans-serif;">Never want to hear from=
+ us again? Break our hearts and <a href=3D"https://media.hubspot.com/hs/pre=
+ferences-center/en/page?data=3DW2nXS-N30h-B9W1BMh2C3zdylsW1S4lvS4tvnJsW38z9=
+ts2t49gLW3XN_Nn3M0d9WW4hMgMR3grmkbW23psxB4p9LS7W2FXG5_2Myyy0W47N73S3R1xpxW2=
+nQ8b83X-Sv_W2RLVHW1VvdkJW3SCnBf32zRmgW36mxf_2PlYvZW2xMMMr4fsmzHW4fpQQy4mbrC=
+kW2YxtDw49tb4gW2Hqmk_4hJ3yWW4tBrp72w0BNFW4chhZF1BmXs6W3_JnSq4fNQh_W2v-Z661B=
+q2gVW1_5dSf2MqSc_W3gdq3d3z0Vq-W3F6j5R49SC2hW2CHZsx239KCrW1XhzC53V_0yZW3XYF_=
+G1Vnm3-W2xLVf72YwBSWW47ywgJ2CP0zSW3C12bQ383tqtW3XX5XL3QRCCLW2w141m2xWB9TW3S=
+N4VG3_JRj1W1Xx3K53XXtBBW2sZ7pn3FgD9nW1_vqjR2w3zPpW2nPmgJ3G_QnLW2FrXyw4kNmcL=
+W3ZwdJH21qSg1W3j0z7q3jpT0KW1S3wtz3C0CYyW34BsN23SKJ2kW45kh4M2FMB27W2xywGc2CX=
+QQqW3K2zTJ1XvnYJW3blJL-2RLTnlW3gmwlR3d84JYW1NDxGn3jtDxJW3QQP504hHdwxW2MLwxm=
+4rGmvNf36k1Y_04&amp;_hsenc=3Dp2ANqtz--xy1ZLI39DhIW6EapTLPomjhKxPao5WE0msuoz=
+IyQ6K8P1iaMMS9GJ3nuFCIsefzjvVHMM2H-3rJG3er81hlKaDkykww&amp;_hsmi=3D39113075=
+8" rel=3D"noopener" data-unsubscribe=3D"true" style=3D"color:#00a4bd" data-=
+hs-link-id=3D"0" data-hs-link-id-v2=3D"kDnPxijp" target=3D"_blank"><span st=
+yle=3D"color: #192733; text-decoration: underline !important;">Unsubscribe<=
+/span></a>.</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://media.hubspot.com/e3t/Cto/UB+113/d2q-Vf04/VWySsF7CZgnXW=
+3xydQk7GQhy7W46ZLVZ5GcxdfVBB8Dr3D35Mg192" alt=3D"" width=3D"1" height=3D"1"=
+ border=3D"0" style=3D"display:none!important;min-height:1px!important;widt=
+h:1px!important;border-width:0!important;margin-top:0!important;margin-bott=
+om:0!important;margin-right:0!important;margin-left:0!important;padding-top=
+:0!important;padding-bottom:0!important;padding-right:0!important;padding-l=
+eft:0!important"></body></html>
+------=_Part_758410_1532259246.1763894747294--
+

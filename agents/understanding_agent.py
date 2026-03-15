@@ -7,7 +7,7 @@ class UnderstandingAgent:
         self.brain = LLMBrain()
 
     def run(self):
-        tasks = self.registry.fetch_smart_batch(status='DISCOVERED', limit=10)
+        tasks = self.registry.fetch_smart_batch(status='DISCOVERED', limit=20)
         if not tasks: 
             print("No articles to understand.")
             return

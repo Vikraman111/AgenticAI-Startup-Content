@@ -76,11 +76,12 @@ class Registry:
         cols = [description[0] for description in cursor.description]
         return [dict(zip(cols, row)) for row in cursor.fetchall()]
 
-    def fetch_smart_batch(self, status, limit=10):
+    def fetch_smart_batch(self, status, limit=20):
         """
         Fetch articles ranked by heuristic quality signals (no LLM cost).
         Prioritizes: content length, source reliability, recency.
         Perfect for selecting top articles before expensive LLM processing.
+        Default limit is now 20 (expanded from 10).
         """
         cursor = self.conn.cursor()
         
@@ -107,6 +108,7 @@ class Registry:
                 'crunchbase': 25,
                 'venturebeat': 23,
                 'fastcompany': 20,
+                'hustle_email': 22,  # High-quality curated content
                 'afterschool': 18,
                 'businessinsider': 20,
             }
@@ -127,9 +129,9 @@ class Registry:
             # 4. Content Quality signals - Max 25 points
             title = article.get('title', '').lower()
             business_keywords = [
-                'market', 'trend', 'growth', 'strategy', 'innovation', 'billion',
-                'revenue', 'startup', 'founder', 'acquisition', 'raise', 'series',
-                'expansion', 'launch', 'partnership', 'investment'
+                'market', 'trend', 'growth', 'strategy', 'innovation', 'tactic',
+                'revenue', 'startup', 'founder', 'framework', 'scale', 'playbook',
+                'expansion', 'launch', 'partnership', 'lessons', 'advice', 'guide'
             ]
             keyword_matches = sum(1 for kw in business_keywords if kw in title)
             score += min(25, keyword_matches * 3)

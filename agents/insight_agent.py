@@ -8,7 +8,7 @@ class InsightAgent:
 
     def run(self):
         # We fetch SCORED items, but we filter inside loop for high scores
-        tasks = self.registry.fetch_batch(status='SCORED')
+        tasks = self.registry.fetch_batch(status='SCORED', limit=20)
         print(f"💡 INSIGHT AGENT: Looking for gems in {len(tasks)} items...")
 
         for task in tasks:
@@ -20,14 +20,22 @@ class InsightAgent:
             print(f"   Deriving insights for: {task['title']}...")
             
             prompt = f"""
-            This article is high quality. Generate 3 specific "Actionable Takeaways" 
-            for a startup founder based on this news.
+            You are a top-tier Strategic Consultant and Business Analyst. 
+            Do NOT simply summarize the article. Instead, breakdown the core business case study based PURELY ON FACTS from the article.
+            
+            Identify and extract:
+            1. The Market Gap: What specific problem or whitespace did the company identify?
+            2. The Strategic Differentiator: EXACTLY what did they do differently to succeed?
+            3. Risks & Tradeoffs: What risks did they take, or what conventional wisdom did they ignore?
+            4. The Core Lesson: Actionable takeaway for a founder.
+            
+            Keep the tone professional, objective, and deeply analytical.
             
             Article: {task['title']}
-            Summary: {task['summary']}
+            Summary/Content: {task['summary']}
             """
             
-            insights = self.brain.think(prompt, "You are a Startup Advisor.")
+            insights = self.brain.think(prompt, "You are a Strategic Business Analyst.")
             
             self.registry.update_artifact(task['id'], {
                 "strategic_insight": insights,

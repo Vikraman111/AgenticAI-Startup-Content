@@ -10,6 +10,7 @@ from monitoring.venturebeat_crawler import VentureBeatCrawler
 from monitoring.fastcompany_crawler import FastCompanyCrawler
 from monitoring.afterschool_crawler import AfterschoolCrawler
 from monitoring.business_insider_crawler import BusinessInsiderCrawler
+from monitoring.hustle_crawler import HustleCrawler
 
 def run_monitoring():
     print("\n" + "="*80)
@@ -23,6 +24,7 @@ def run_monitoring():
         FastCompanyCrawler(),
         AfterschoolCrawler(),
         BusinessInsiderCrawler(),
+        HustleCrawler(),
     ]
     
     for crawler in crawlers:

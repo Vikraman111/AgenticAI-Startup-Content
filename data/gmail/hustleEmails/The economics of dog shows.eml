@@ -1,0 +1,1843 @@
+Delivered-To: shyams07@gmail.com
+Received: by 2002:a17:522:89c8:b0:64a:133e:e77c with SMTP id ee8csp2209050pvb;
+        Sun, 8 Feb 2026 02:50:57 -0800 (PST)
+X-Received: by 2002:ac8:5993:0:b0:4ff:52fe:be3f with SMTP id d75a77b69052e-506393adba0mr107492521cf.29.1770547857246;
+        Sun, 08 Feb 2026 02:50:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1770547857; cv=none;
+        d=google.com; s=arc-20240605;
+        b=N2zeXQwvdWkCMzUwU6Htoiu7EJyxbdvGMvz3QRvCUmTg7ps+5MWuqqOWTJNPsZ0grV
+         YiVtu7/dT7ZflOp3bitNKVRWr1i2uI8vTlMEN5g4/MyHmx1c4Vr02Jou3jNsVaG9dJ3T
+         3CAYBaKEQ27BdiuYhSab2cNFYPizPvrcm5CvOoqfbc1qN6gocol3LPlux2tc1H5HscOU
+         3sxZucwUkO13LcNsFxWzZOpvd5YksglMUAtSl/d74lioJL7fJngRH6gnNVBV8bjHsZqv
+         7I64jY4a8zxdzisqwhZu+iuDfslYeonCpTMbNftXIR+gwdSD3MOOckw6PztM548QUJrd
+         uaew==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:precedence:mime-version:subject
+         :message-id:to:reply-to:from:date:list-unsubscribe:dkim-signature
+         :dkim-signature;
+        bh=o/VD7LVky0Cogb09DP8GxVgNNxwFl5bBdq8JoM89xRo=;
+        fh=L9Pq+drjbGeEtrAQNZSRmpxQ+ME9iXW0EGrUbR1eMas=;
+        b=WWHltqum2oDcp4Ty9Cp1vwogGg8hctcfngnaTkBnjItdcLy3zsuEzGCAh0HC1ZG0WX
+         K29vU4WHz33rZ/KJRodnifuuZeYPLE2cuVqnjk0aibu14IGSGVGNE0pCY/NVex3Zfl7j
+         BCm9Lz+P0Xys7x+xuyQHVejgKQnHo7MrTXjU2MftEsROr2hSnWTtInmgrj3PtoAwRt5d
+         PpE5K4JY2UpZDFpjlNPSfAuNp1FwxOVRDVdXcWzwgjrcxh5VZZkhKWcCiGbj/HhYV8ou
+         swrSmVDg9aarbiyyTZTYgOyhH8gLg9GFxR1Sr9UDk3XzKnIaWDbJqnZGYyJ+udu+Xe9t
+         seyA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs1 header.b=iMF+17uL;
+       dkim=pass header.i=@thehustle.co header.s=hs2-20627419 header.b=XSNa5ywd;
+       spf=pass (google.com: domain of 1axcf9vr5qhsyxnlaq74kbauraat1cgx55wg82-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.243 as permitted sender) smtp.mailfrom="1axcf9vr5qhsyxnlaq74kbauraat1cgx55wg82-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Return-Path: <1axcf9vr5qhsyxnlaq74kbauraat1cgx55wg82-shyams07=gmail.com@20627419m.thehustle.co>
+Received: from bid49b5.20627419m.thehustle.co (bid49b5.20627419m.thehustle.co. [158.247.31.243])
+        by mx.google.com with ESMTPS id d75a77b69052e-5064362dd9fsi61835071cf.25.2026.02.08.02.50.56
+        for <shyams07@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 08 Feb 2026 02:50:57 -0800 (PST)
+Received-SPF: pass (google.com: domain of 1axcf9vr5qhsyxnlaq74kbauraat1cgx55wg82-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.243 as permitted sender) client-ip=158.247.31.243;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs1 header.b=iMF+17uL;
+       dkim=pass header.i=@thehustle.co header.s=hs2-20627419 header.b=XSNa5ywd;
+       spf=pass (google.com: domain of 1axcf9vr5qhsyxnlaq74kbauraat1cgx55wg82-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.243 as permitted sender) smtp.mailfrom="1axcf9vr5qhsyxnlaq74kbauraat1cgx55wg82-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Received: by 172.16.128.26 with SMTP id a0h5nnp5ez4m1s9lr6wp37cma7pwul83dx2pyqn3ij;
+        Sun, 8 Feb 2026 10:50:56 GMT
+DKIM-Signature: v=1; s=hs1; d=20627419m.thehustle.co; 
+        i=@20627419m.thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=o/VD7LVky0Cogb09DP8GxVgNNxwFl5bBdq8JoM89xRo=; 
+        b=iMF+17uLIjJ6v7ppC5+2faPhc4gtg+3mjms5FTXO2kRIe8qFjJy1WJFVpjhxtE
+         twHSBRkc72YLoY/3/4LP2gyjPeQczf8TgUCMMYwiOB04/6iWpIITDIcgp5TV/R2
+         BG5yZq1wA3YplZBmWq2DxelmvHmF0NgkQHtYAZyeaMoq+/psKL+rY88MFl5QzOK
+         QJ2JjcJr+2+w0MsRuTB7qmokx7Q5d0/kaVzsEQAf5EyBbrNX/wgpxtDj3uKO3ua
+         iTBURoNL9sD5MZw14kqcRH+zFRKAzGTUgf3KK1R+QDptAAYr1gVCV+1JITioK3F
+         07nzl1kX8w1EDrI79+U4q9AuD2tA==; q=dns/txt; t=1770547856; 
+        x=1770810656;
+DKIM-Signature: v=1; s=hs2-20627419; d=thehustle.co; 
+        i=@thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=o/VD7LVky0Cogb09DP8GxVgNNxwFl5bBdq8JoM89xRo=; 
+        b=XSNa5ywdnVue0VCys5eppsvBSfbvKR2EfHHUnaNLxC4yslZ9x+M4BwOMgbC27g
+         szuGUvkZsefCNy/25Lo8d2h6rJFYeNYD2Rp/iAytwoeW/BEXs/mqmC9qJ4YkR1v
+         uPFIXQ3Bvlkje6QW5OnHeGuDclCppx8mhlVWVjlbQq5YL5f6dSj5oaRo5tzxYYM
+         BV8dnBAvTprHBfEsidIBoAGrSs16HEfQUzG7WN2F1bmZPdMDssnvrL/8GGF81zw
+         S+gMo5OQyZe8/Yj4JoqY/q40+HpJKISw6oeKIEeH5DxwlWIICP0WLbsZw6jcuI9
+         M9A3QuaXXVIzNSXa5OloyEcAgvxg==; q=dns/txt; t=1770547856; 
+        x=1770810656;
+Return-Path: <1axcf9vr5qhsyxnlaq74kbauraat1cgx55wg82-shyams07=gmail.com@20627419m.thehustle.co>
+X-HS-Cid: 1axfn7930unb739sx33hbn5xh2gacaq8vki03q
+List-Unsubscribe: <mailto:1axdoab6afxk06cn93n46949in83ysudyx9hsm-shyams07=gmail.com@20627419m.thehustle.co?subject=unsubscribe>, <https://blog2.hubspot.com/hs/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-SkW3H6x7y45V-47W1QhlV31L5LJ4W24TyvH4kFjWFW1QgWxN1L6CpvW1BFW-z3P1H71W4mKc4j3y_BFMW41ZLYs2CKbQHW2z_Rq44tjQVjW1_kjlj2WgXsRW2Fr0_D21rjxSW36kRDm2MTyM2W3BNL551BfjYnW1BJPgJ38x1d7W3ZGwyp2sF0lbW1BwtNJ2WtnXvW3jrXJy2RhKSmW1QyYf_2FrpgXW3T6g1p1Lp-b1W2zFggd2-dRmzW3G_nR44p84LfW2zWVlP2vBjkWW2MQcqN2p9B_ZW36v-DD1_9QPDW4cxKB_2t291RW3VLkmk4czpmhW2-GM1N3jp0z8W41yK533C6Z42W3JTWPv3_wpVDW30ymWj3XHZPwW2xH9xd2v_sqzW41TQYS2PkHQwW3NTxpr3jkLj0W3R3Bbj4rwVXRW3dc1583QRKvKW2PxR1b2MnQF_W3XLx7R2qQpxBW3XXv_p3GS38nW2MNCdX3GM0KYW23p0Xg4fgnCzW3XTYFK3M0FMDW3GJ6t04cMjsvW2TSx2Y2YG71ZW36wQzN1-_lHRW3j8XFx47Qb20W2w35vw2-d55BW3JWHyJ3GZL-8W4pxWgD3gmy1nW2KxTjD2PV_r2W4hLxRs2FY-d0W3bxJXH43rc1gW1Bm5np3SP0pBW2zFJg041rSZMW2CCnwX2w4TXQW3B_p1447B6QJ0>
+Date: Sun, 8 Feb 2026 05:50:56 -0500
+From: The Hustle <news@thehustle.co>
+Reply-To: news@thehustle.co
+To: shyams07@gmail.com
+Message-ID: <1770547843572.c0930840-1856-42e4-81dd-f87db5085c14@20627419m.thehustle.co>
+Subject: The economics of dog shows
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_247093_2038355555.1770547856617"
+Precedence: bulk
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: aemkeh5:aigxwfj6:aidf:HubSpot
+
+------=_Part_247093_2038355555.1770547856617
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Even the participants at the Westminster Dog Show, the best pups in the wor=
+ld, are unlikely to make a fortune for their owners.=E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD
+
+Share The Hustle:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-_XrELg0NelOwsyX=
+LuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVso=
+fA&_hsmi=3D402461492
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-_XrELg0NelOwsy=
+XLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVs=
+ofA&_hsmi=3D402461492 )
+
+Check your referral progress & prizes here (https://thehustle.co/refer-the-=
+hustle?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmb=
+yjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 )
+
+You've got 3 referrals, just 2 away from earning a Hustle candle. Check out=
+ all of our prizes here (https://store.thehustle.co/?_hsenc=3Dp2ANqtz-_XrEL=
+g0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2Px=
+uYCPcmqVsofA&_hsmi=3D402461492 ) .
+
+Share your link:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-_XrELg0NelOwsyX=
+LuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVso=
+fA&_hsmi=3D402461492
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-_XrELg0NelOwsy=
+XLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVs=
+ofA&_hsmi=3D402461492 )
+
+View in browser (https://hubspotmedia-20627419.hs-sites.com/the-economics-o=
+f-dog-shows?ecid=3DACsprvuP_6Rst4VXsl13Wj35fAFFadi8v6c5E7GQ-cap5Nt_BH7Tq_QG=
+8W7C_QCG2TUYbkBjH2dF&_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm=
+_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 )
+
+The Hustle by HubSpot Media (https://thehustle.co/?_hsenc=3Dp2ANqtz-_XrELg0=
+NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuY=
+CPcmqVsofA&_hsmi=3D402461492 )
+
+Issue #380
+
+Small fluffy dog with blue ribbon posing in ornate chair while being photog=
+raphed (https://thehustle.co/originals/the-economics-of-dog-shows?_hsenc=3D=
+p2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqib=
+zah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 )
+
+Sunday, February 8, 2025
+
+The economics of dog shows
+
+Even the participants at the Westminster Dog Show, the best pups in the wor=
+ld, are unlikely to make a fortune for their owners.
+
+BY KELLI MAR=C3=8DA KORDUCKI (https://x.com/kelkord?_hsenc=3Dp2ANqtz-_XrELg=
+0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2Pxu=
+YCPcmqVsofA&_hsmi=3D402461492 )
+
+Abigail was exhausted. The six-year-old white bull terrier =E2=80=94 offici=
+ally known as GCHB Alaric Star Spangled Sister =E2=80=94 had just been decl=
+ared the best in her breed at the 2026 Westminster Dog Show.
+
+Now, with a few hours to kill before vying against the other top terriers f=
+or the Best in Group title, she was stealing a few minutes of rest in her c=
+rate. It was an impressive show of composure considering the surrounding co=
+mmotion: the whirr of hair dryers at grooming stations, excited chatter, ju=
+dging calls blaring from competing PA systems, and the occasional bark from=
+ any of a few hundred dogs.
+
+Last week, ~2.5k canines representing ~212 breeds and their owners, groomer=
+s, trainers, and handlers descended on midtown Manhattan for the Westminste=
+r Dog Show, widely known as the Super Bowl of dogs. They came from across t=
+he country and around the world, traveling from as far as Japan, Indonesia,=
+ and Peru.
+
+I took the C train from Brooklyn to observe. What drives the people behind =
+the spectacle? As one California-based dog handler told me, =E2=80=9CNumber=
+ one, you have to be competitive. And you have to love the dogs.=E2=80=9D
+
+You also have to be willing to sink a small fortune into breeding, grooming=
+, training, feeding, and showing your prospective prize-winners, with no gu=
+arantee of a return on investment.
+
+An expansive economic ecosystem
+
+Dogs like Abigail don=E2=80=99t just come out for the big show.
+
+Owners vying for a national title will typically run a =E2=80=9Ccampaign=E2=
+=80=9D to raise a dog=E2=80=99s national ranking in the year leading up to =
+the top contest. That may involve competing in dozens or even hundreds (htt=
+ps://www.gazettextra.com/entertainment/couples-at-the-westminster-show-bond=
+-over-dogs-and-each-other/article_bd9251df-8d09-5297-93e0-a2eb9d6abfa5.html=
+?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri=
+5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) of shows week after=
+ week; there are ~29k events in the US every year, each with entry fees ran=
+ging from around $35 (https://showdogprepschool.com/the-rising-costs-of-dog=
+-shows/?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUm=
+byjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) to $100 (htt=
+ps://res.cloudinary.com/fwkc-production/image/upload/v1756306491/fwkc-prod/=
+assets/2026/show%20info/prm491_2026_anz7aj.pdf?_hsenc=3Dp2ANqtz-_XrELg0NelO=
+wsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcm=
+qVsofA&_hsmi=3D402461492 ) a pop.
+
+Many owners will also pony up for professional photo shoots and ad spreads =
+in one or more of the dog-show industry=E2=80=99s numerous monthly trade ma=
+gazines such as Dog News (https://www.dognews.com/ad-rates?_hsenc=3Dp2ANqtz=
+-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kms=
+VTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) and Canine Chronicle (https://canine=
+chronicle.com/advertising/?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDi=
+paR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D40246=
+1492 ) , paying between $200 and over $2k for the privilege of exposure. Fo=
+r a big-ticket competition like Westminster, the combined costs of campaign=
+ing can easily total (https://showsightmagazine.com/the-seven-secrets-to-sh=
+ow-success/?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pub=
+quUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492#:~:text=3D=
+There%20are%20national%20dog%20magazines,Sure%2C%20but%20very%20few .) well=
+ into the six figures.
+
+Graham, an Old English Sheepdog at the Westminster Dog Show. (Roy Rochlin/G=
+etty Images)
+
+The standards for success are exacting. The Westminster Dog Show is run by =
+the Westminster Kennel Club and American Kennel Club (AKC), a 142-year-old =
+purebred dog registry that sanctions some 5k regional and breed-specific do=
+g clubs throughout the country.
+
+The kennel clubs=E2=80=99 joint mandate is to ensure the health and continu=
+ity of each breed and variety under their oversight. In a competition setti=
+ng, that means rewarding the dogs that adhere the closest to their breed=E2=
+=80=99s original blueprint, whether it was first engineered to pull a cart,=
+ herd a flock, root out rodents, or look regal on a noblewoman=E2=80=99s la=
+p.
+
+=E2=80=9CEvery breed has a standard, and the idea is that you=E2=80=99re br=
+eeding dogs to that standard,=E2=80=9D explains Victoria Sottile, Abigail=
+=E2=80=99s breeder, owner, and show handler.
+
+=E2=80=9CSo for bull terriers, you want an egg-shaped head that's filled un=
+der the eyes and filled in the muzzle, with no noticeable indentations and =
+ears right on top of the head, and triangular, dark, deep-set eyes. There's=
+ a standard for every part of the anatomy that you take into consideration =
+when assessing the qualities or virtues that your dog has and what she lack=
+s, and you want to breed for complementary genealogy and physiology.=E2=80=
+=9D
+
+Given the stakes, many owners hire professional handlers to guide the dog t=
+hrough the judging circuit, spending between (https://showsightmagazine.com=
+/hiring-a-handler-101/?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8=
+qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492=
+ ) $500 and $1.5k per event =E2=80=94 and sometimes more for a prestige eve=
+nt such as Westminster. If a pooch then gets ranked as the best of its bree=
+d or breed group, owners can expect to shell out additional handler bonuses=
+ in the hundreds of dollars, and between $2.5k and $5k for the coveted Best=
+ in Show title. Travel, boarding, and grooming tack on more costs.
+
+Olivia Heller/The Hustle
+
+To keep expenses manageable, some owners opt to go DIY.
+
+Stacy Pagel watched instructional YouTube videos to learn how to groom her =
+Saint Bernard =E2=80=94 GCHG CH Kris's Kountry Three Card Monte V Northstar=
+, or =E2=80=9CPanda=E2=80=9D for short. The 170-pound pup requires one to t=
+wo double-shampoo and styling sessions every month, which would run Pagel u=
+pwards of $150 per appointment where she lives in southwestern Wisconsin.
+
+But Pagel=E2=80=99s approach doesn=E2=80=99t exactly come cheap, either. =
+=E2=80=9CYou have to buy the equipment. Dryers will cost $100 or $200, and =
+then you have all the different types of scissors=E2=80=9D =E2=80=94 easily=
+ hundreds of dollars altogether =E2=80=94 =E2=80=9Cplus the whole process t=
+akes around four hours every time,=E2=80=9D she says.
+
+Custom shampoo and coat conditioner require frequent restocks, as do the sp=
+ecial pants Panda wears off duty to keep his legs clean and white in betwee=
+n baths. (=E2=80=9CIf you let his coat get too wet too often, it=E2=80=99ll=
+ turn yeasty.=E2=80=9D)
+
+Like a majority of show dog owners, Pagel does her own handling at competit=
+ions instead of paying a professional. But simply entering the ring with le=
+ash in-hand is a costly endeavor, requiring the use of special dog leads (h=
+ttps://nymag.com/strategist/article/westminster-status-items.html?_hsenc=3D=
+p2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqib=
+zah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) and snappy attire. At this ye=
+ar=E2=80=99s event, an onsite vendor stall showcased racks of tweedy skirts=
+uits, the unofficial uniform of Westminster handlers.
+
+They were priced upwards of $1.5k a pop.
+
+What=E2=80=99s in it for the winners
+
+Though there=E2=80=99s plenty of money to be made from the dog show ecosyst=
+em, the people behind the dogs aren=E2=80=99t necessarily seeing major wind=
+falls. Most dog shows hand out ribbons and trophies instead of cash prizes =
+to even their biggest winners; last week=E2=80=99s Westminster=E2=80=99s Be=
+st in Show champ, Penny the Doberman Pinscher, went home with the Westminst=
+er Legend Trophy, a handsome crystal bowl.
+
+Penny the Doberman Pinscher basks in the glow of victory at a Hudson Yards =
+luncheon. (Bryan Bedder/Getty Images)
+
+Where the titles do pay off is in the value of a show dog=E2=80=99s breedin=
+g stock. People who want to raise a future show dog tend to favor the genes=
+ of a champion dog.
+
+Winning the judges=E2=80=99 favor reflects well on a dog=E2=80=99s demeanor=
+ and adaptability, says Jane Dekovich, a Richmond travel agent who used to =
+show Hungarian Pulis =E2=80=94 a herding breed with thick, yarnlike fur. =
+=E2=80=9CThese dogs have to be around other dogs in close quarters. They ha=
+ve strangers coming up and touching their genitals. They=E2=80=99ve got to =
+get cool with a lot really quick. And dogs that aren't comfortable with tha=
+t don't make it.=E2=80=9D
+
+Christina Miller, a breeder-owner-handler based in northwest Georgia, says =
+that winning titles can also help demonstrate the quality of a breeding pro=
+gram, which leads to easier placement for puppies and a stronger reputation=
+ within breed circles.
+
+=E2=80=9CThe more you can title your dogs, the better puppies you know you'=
+re producing,=E2=80=9D says Miller, who was at Westminster to show a father=
+-son pair of Canaans, a rare herding breed originating from the Levant.
+
+Regardless of dog-show outcomes, Miller sells her puppies for about $3k eac=
+h, which she says is standard for uncommon breeds. But that cost also refle=
+cts extensive early training, socialization, health testing, and lifelong b=
+reeder support. She says that when all is said and done, she=E2=80=99s luck=
+y to break even.
+
+Other event participants take a decidedly more profit-driven approach, leve=
+raging top-tier titles for premium pricing on puppies and champion sperm. =
+=E2=80=9CSome of these dogs go for five or six figures,=E2=80=9D Dekovich s=
+ays. Similarly, for an elite minority of professional dog handlers and bree=
+ders, a record of victory can net a six-figure annual income.
+
+But most people on the dog show circuit are forced to pursue their passion =
+while supporting themselves with other work. Miller used to work in veterin=
+ary care and now runs a small boarding kennel and dog-training supply busin=
+ess. Sottile, Abigail=E2=80=99s owner, recently retired from a 36-year teac=
+hing career in the Brooklyn public school system. Both agree that breeding =
+and showing dogs is no way to get rich =E2=80=94 at least, not without cutt=
+ing a whole lot of ethical corners.
+
+As Sottile sees it, the dog-show economy thrives on dog lovers=E2=80=99 sen=
+se of avocation.
+
+=E2=80=9CWe do this because we love the breed and we want the breed to impr=
+ove and stay healthy and to continue,=E2=80=9D she says. =E2=80=9CAnyone wh=
+o does it for money, their heart isn't in the right place.=E2=80=9D
+
+Share & discuss this story on:
+
+Site (https://thehustle.co/originals/the-economics-of-dog-shows?_hsenc=3Dp2=
+ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibza=
+h8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 )
+
+YouTube (https://www.youtube.com/@TheHustleChannel?_hsenc=3Dp2ANqtz-_XrELg0=
+NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuY=
+CPcmqVsofA&_hsmi=3D402461492 )
+
+LinkedIn (https://www.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz-_XrE=
+Lg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2P=
+xuYCPcmqVsofA&_hsmi=3D402461492 )
+
+Instagram (https://www.instagram.com/thehustledaily/?hl=3Den&_hsenc=3Dp2ANq=
+tz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8k=
+msVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 )
+
+Today's email was brought to you by Kelli Mar=C3=ADa Korducki, (https://x.c=
+om/kelkord?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubq=
+uUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) Katherine=
+ Laidlaw (https://x.com/klaidlaw?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEM=
+BtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=
+=3D402461492 ) , Mark Dent (https://x.com/mdent05?_hsenc=3Dp2ANqtz-_XrELg0N=
+elOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYC=
+PcmqVsofA&_hsmi=3D402461492 ) , and Zachary Crockett (https://x.com/zzcrock=
+ett?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH=
+1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) , with help from=
+ Kaylee Jenzen.
+
+Was this email forwarded to you? Sign up here (https://thehustle.co/join/?u=
+tm_source=3Dthehustle&utm_medium=3Demail&utm_campaign=3Dfooter&_hsenc=3Dp2A=
+Nqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah=
+8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) .
+
+Subscribe to our other newsletters
+
+Expert insights: Marketing Against the Grain (https://marketingagainstthegr=
+ain.com/subscribe?utm_source=3Demail&utm_campaign=3Dhustle&utm_medium=3Dfoo=
+ter&_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH=
+1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 )   |   Stay up-to=
+-date on AI:  Mindstream
+
+(https://www.mindstream.news/?utm_channel=3Demail&utm_source=3Dhustle&utm_m=
+edium=3Dfooter&_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6=
+pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 )
+
+Follow The Hustle on YouTube (https://www.youtube.com/@TheHustleChannel?_hs=
+enc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-l=
+azrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) , LinkedIn (https://www=
+.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEM=
+BtNvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=
+=3D402461492 ) , and Instagram (https://www.instagram.com/thehustledaily/?h=
+l=3Den&_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBtNvDipaR8qm_wNkn6pubquUmb=
+yjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D402461492 ) .
+
+HubSpot Media, 2 Canal Park, Cambridge, MA, 02141, USA, +1 888.482.7768
+
+Never want to hear from us again? Break our hearts and Unsubscribe (https:/=
+/blog2.hubspot.com/hs/preferences-center/en/page?data=3DW2nXS-N30h-LtW2nQ_j=
+T3gxLBfW1BF67G2CvCjMW3HcYps3NLvkSW3LHhvt30vmLWW3SR22j235CXXW1YZtbK3f_85DW2-=
+LXkd2KBNL6W4tn8X43QNlHCW4hMhD-2MHw_pW3_Bck934p2QvW36CnQk49wH31W2FD4C23dpTFV=
+W3C1YRX47SNV_W2vZLZc36lhj6W3XXqPm3T1dkgW2-lFnz43yZmdW41-9R-3jfYY6W3g8kgy383=
+vtDW32zRh03W1YBhW4kfsgK1Bhq4HW3H3DdT2RtMr7W2Ww21x36dvvGW4tnB223C13gkW3VZL__=
+1S3-pfW2qM6bv3B-Y9jW2MGPMk2-fcJjW4cgBqQ38CG5kW2CGP4w2vwdH2W2r5JyZ2YLkDWW1_k=
+Knz2sSLHcW4mCvRW2WxdybW47DL4M3bkYtmW2sRWVS3_w31lW3C0Hyr3S-k8LW2KMXcG47WC6hW=
+2WqvLy30DxLdW3ZFj894tf7RTW49MZBk3VJZNTW3ZCCcH24Wy22W3GM7vR2FJ7LyW3bw4_Z2y1j=
+z5W2MNyx038dg55W1BgvtD3_-kyDW3M7l5536hSTFW38CJ_936FV_gW2zZl4W2PsJmFW2RDKC13=
+_LXVHW4czkHr3P3mDhW1S8xYf41FHBwW3JVm0C41Jf5RW4hFxYY2KpQnRW1NFlQy4fyhtQW3dcX=
+0K2FSvVSW41Qsj03Cgpq7f2-GQ-X04&_hsenc=3Dp2ANqtz-_XrELg0NelOwsyXLuuWZ_WLEMBt=
+NvDipaR8qm_wNkn6pubquUmbyjH1Ri5C-lazrqibzah8kmsVTv2PxuYCPcmqVsofA&_hsmi=3D4=
+02461492 ) .
+------=_Part_247093_2038355555.1770547856617
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>The economics of dog shows</title>
+    <meta property=3D"og:title" content=3D"The economics of dog shows">
+    <meta name=3D"twitter:title" content=3D"The economics of dog shows">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #FFFFFF;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://hubspotmedia-20627419.hs-sites.com/the-economics-of-dog-sh=
+ows"><meta name=3D"robots" content=3D"noindex,follow"><!--[if !((mso)|(IE))=
+]><!-- --><style type=3D"text/css">@media only screen and (max-width:639px)=
+{img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stretch-cta .hs-=
+cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #eaf0f6 !important;border-right:1px solid #eaf0f6 !important;box-sizing:=
+border-box}
+.hse-border-bottom-m{border-bottom:1px solid #eaf0f6 !important}.hse-border=
+-top-m{border-top:1px solid #eaf0f6 !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-4{max-width:200px !important;width:200px !impor=
+tant}
+.moz-text-html .hse-section .hse-size-8{max-width:400px !important;width:40=
+0px !important}
+.moz-text-html .hse-section .hse-size-12{max-width:600px !important;width:6=
+00px !important}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-4{=
+max-width:200px !important;width:200px !important}
+.hse-section .hse-size-8{max-width:400px !important;width:400px !important}=
+.hse-section .hse-size-12{max-width:600px !important;width:600px !important=
+}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section_1770413930634 .hse-column-container{background-color:#fff !importa=
+nt} }@media only screen and (max-width:639px){ #section-0 .hse-column-conta=
+iner{padding-top:0px !important;padding-bottom:0px !important}
+#section-0 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-1 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-1 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-2 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-2 .hse-column-container{background-color:#fff !important} }@media =
+screen and (max-width:639px){.social-network-cell{display:inline-block}
+}@media only screen and (max-width:639px){ #section-3 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-3 .hse-column-container{background-color:#fff !important} }@media =
+only screen and (max-width:639px){.hse-body-wrapper-td{padding-bottom:20px =
+!important}
+#section-4 .hse-column-container{padding-top:0px !important;padding-bottom:=
+0px !important}
+#section-4 .hse-column-container{background-color:#fff !important} }</style=
+><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_main a[x=
+-apple-data-detectors]{color:inherit !important;text-decoration:none !impor=
+tant;font-size:inherit !important;font-family:inherit !important;font-weigh=
+t:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}
+.ShadowHTML p,.sh-modified-inline p{margin:0}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#FFFFFF" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Helvetica, Arial, sans-serif; font-size:16p=
+x; color:#192733; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#FFF=
+FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">Even the participants at the Westminster Dog Show, the best p=
+ups in the world, are unlikely to make a fortune for their owners.=E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD &nbsp;
+</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#ffffff" bgcolor=3D"#ffffff">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-brea=
+k:break-word; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1770413930634" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1770413930634_0" class=3D"hse-column hse-size-12">
+  <!--[if !mso]><!--><div id=3D"hs_cos_wrapper_module_17704139306091" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hd" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;display:n=
+one" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div s=
+tyle=3D"font-size: 11px; text-align: center; line-height: 130%">
+  <em>
+   =20
+      <span style=3D"font-weight: bold; color: #bf2434">Share The Hustle:</=
+span>
+      <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/=
+VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69sMD-6lZ3lgVSVj-13Byd3DW=
+1_SmzP3j6jcgW4n9z3Q5Jd7xpW2Xxnkv6C-_KlW3Wd46T5TTG4MW4wYCwL4017BzW7YCkY84x_V=
+4YVgYQbs4ZcSQyW4YLXKz10LJ-gW8fYjxn2Wj4BXN3YqK5VjV0pXW1vc6yL7rrwmfVDkWkR1fH7=
+mqVZ9Wq71DGXW5W5snvpn6hml6hW5G5bqn5L25drW8pNM303kZ35-VvYCcp5RctGGW50V0Jt8H0=
+V3PN6t_hxp5s7Lmf51knYx04" style=3D"color:#192733; text-decoration:underline=
+ !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"iqt7z0d0" target=
+=3D"_blank" data-contains-exactly-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+  </em>
+  <br>
+  <span>
+    Check your referral progress &amp; prizes <a href=3D"https://d2q-Vf04.n=
+a1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5Kgz=
+HXN8XrLFg2_3wqW69sMD-6lZ3n3W6qKxlL3g9syLVM_lm667CyZDN6qwHCpkRJKwW1mgh601r9n=
+hnW9ckqH26ClN9YW6b5N-j8pRLV2W27t0sf4Xp0cMW89086-1Z33HqW2X6_2v6kKQ5jW2nSJ1k6=
+Qdb7RW4lynR-5bSVLyN6XgmP_v7rjJW5yvht686BHVWW6Y_--x6f6TRbW6NXq1L6sFnVCW8wYZd=
+42JgxQQW228gN27ZYjb9W2LKvMS4VDDZvW2VyQcW6zQ6gjW1VyGmN6S7sCSf1Q8S2W04" style=
+=3D"color:#192733; text-decoration:underline !important" data-hs-link-id=3D=
+"1" data-hs-link-id-v2=3D"3ulPwwvP" target=3D"_blank">here</a>
+  </span>
+</div></div><!--<![endif]-->
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1770412065509" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1770412065509_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17704120654901" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hm" style=3D"color: inh=
+erit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div style=3D"font-size: 14px; text=
+-align: center; line-height: 140%;">
+  <em>
+ =20
+    <span>You've got 3 referrals, just 2 away from earning a Hustle candle.=
+ Check out all of our <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/=
+UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLD-2_3wqW5BW0B06lZ=
+3nwW86khY43jFScQW5Dnv5M4zPfDFW5LK-vZ2WWGxVW83ZZ-21PZXJ5W1K9Kqz59TwWFW7QGwpF=
+4H1Bh7W444gNk3ZSnXZW2pJjMr5Zm_bsW55Prcx3n0bTrW5hhyzw57_TptW7Rr6x76CdR-5W3JQ=
+PFG5yK41sW5J9t9P5K_r6GW1BhyFH8K8v7yW6stJW51clS-tW3mH5s96JKkcyW8NcZ3R85b8FQW=
+70Frv-48rCCrf4rDBJg04" style=3D"color:#192733; text-decoration:underline !i=
+mportant" data-hs-link-id=3D"2" data-hs-link-id-v2=3D"v9PpzLyj" target=3D"_=
+blank">prizes here</a>.</span>
+ =20
+ =20
+  <br>
+    <span style=3D"font-weight: bold; color: #bf2434;">Share your link:</sp=
+an>
+   =20
+      <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/=
+VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69sMD-6lZ3lnW4b6fWS3r1-4B=
+W7tm5T_98g_tZN2CfLQp-VM2-W8f0Ktp7Qml8JW2r117Y3zwWFsW8cK16z5KWTF7W47xxbv8dkn=
+8hW3Z8f0f6jxTDsW5kWg4S1CBZQqVF-fxY1f2DSGW8bBZY16yZHmPW4_-dyM1qlgqdW147NPb5Z=
+2zK9VPTgbC7m4KPhW1WPB0w17HQzTW8dhvvf3llWXRW372kRS1G2BwQVZmWlB8dFzVtW7sDXbk3=
+Vc59gW2mhGWq6cwQN2f1N3q0W04" style=3D"color:#192733; text-decoration:underl=
+ine !important" data-hs-link-id=3D"2" data-hs-link-id-v2=3D"dQWh244K" targe=
+t=3D"_blank" data-contains-exactly-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+ =20
+  </em>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1770413892178" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1770413892178_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17704138921772" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><div style=3D"overflow:hidden">
+  <table role=3D"presentation" class=3D"hse-pre-header hse-secondary" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"text-align:right; fo=
+nt-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496=
+d; margin-bottom:0; padding:0" align=3D"right">
+    <tbody>
+      <tr>
+        <td align=3D"right" valign=3D"top" style=3D"color:#192733; word-bre=
+ak:break-word; text-align:right; font-family:Arial, sans-serif; font-size:1=
+2px; padding:10px 0; margin-bottom:0; line-height:135%">
+          <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-V=
+f04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLD-4ZD0CW5BWr2F6lZ3lwW5k3yhK8f=
+XJrGW50rtfd4bND40W4H6CyL3lNTtxW3pdbfQ4w-438W56yb5_1wlyBWW15bVhX29G24yW2NSxF=
+h38J16BW1rwGlh2gz5lXW6w0Nv68j13PbW5bQLC46sFVQmW7VWZ987jGJg-VLNYHJ2lc6MVW10v=
+lNx62lh8KW3T_m8g1C-1kzW89bxwJ7Kx4BZW9jWZhR2Z3GKGMq-fzqlHplcW8LgXmb6hTZ2CW6p=
+gNWS70_DdkW2C_mrt8rDkcbW3KYNyB1RWq8hW76sRzg2S8Mn3W1HQQnr5wF2XbW8ly-cW1H-r6h=
+W2n1PLQ5vkzbvW43gkSz88nR5zW8nW_tL5zwjYCW7lzS3T75B1JfW9c6j7K3P9krJW7BW0j13N1=
+_S-W3wYncJ8FKHdBW6LbBVL6QSxHvW13HndB1DQhgqW3R7Mlt8z5Y61f8zF25v04" style=3D"=
+color:#192733; font-weight:normal; text-decoration:underline; font-style:no=
+rmal" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"9UcCv/np" target=3D"_blan=
+k">View in browser</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-0" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container hse-no-stack-row" style=3D"min-wid=
+th:280px; max-width:600px; margin:0 auto; border-collapse:separate; display=
+:table; width:100%; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" class=3D"hse-no-stack-row" width=3D"600=
+" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"400" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:400px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-8 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:400px; width:66.66%">
+  <div id=3D"hs_cos_wrapper_module-0-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;table-layout:fixed" data-hs-cos-general-typ=
+e=3D"widget" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper"=
+ role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"left" valign=3D"top" style=3D"font-family:Helvetica, Ari=
+al, sans-serif; color:#192733; word-break:break-word; text-align:left; padd=
+ing:10px 20px; font-size:0px">
+        <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf0=
+4/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLD-2_3wqW5BW0B06lZ3q5W9cSlDF8Y2N=
+JmW1rlk4g53Y5sdVgpZtq99lSjfW32RPCC1CSk21N8y84YhMNYy4W40kRR-7c3L6zW68VWkh6Zd=
+8ytVpxbwc89kWK0W8B06tk42RhbgN3Qh89w3cKL0W6JmSsy37LBbhW6TJS9r8QzqfDW3gfBdF6-=
+KCj8W3ztjg_3fDR90W36zDLP1Qc50LW7KQn7m7wTbDzW2QTbNW1TkX5xV_fNCs5KQ8wWf4KJ2ln=
+04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs=
+-link-id-v2=3D"lAmjrZBz">
+        <img alt=3D"The Hustle by HubSpot Media" src=3D"https://hs-20627419=
+.f.hubspotemail.net/hub/20627419/hubfs/Critical_Template_Imagery/TheHustle_=
+HSMedia_white_logo-png-1.jpeg?width=3D360&amp;upscale=3Dtrue&amp;name=3DThe=
+Hustle_HSMedia_white_logo-png-1.jpeg" style=3D"outline:none; text-decoratio=
+n:none; border:none; max-width:100%; font-size:16px" width=3D"180" align=3D=
+"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"200" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:200px">
+<![endif]-->
+<div id=3D"column-0-1" class=3D"hse-column hse-size-4 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:200px; width:33.33%">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D"table-layout:fixed"><tbody><tr><td style=3D"f=
+ont-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; wor=
+d-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-0-1=
+-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module-0-1-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_=
+cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; li=
+ne-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"line-height:125%; font-weight:bold; text-align:r=
+ight" align=3D"right"><span style=3D"color: #ffffff;">Issue #380</span></p>=
+</div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-1-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentat=
+ion" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; color:#192733; word-break:break-word; text-align:center; =
+padding:0px; font-size:0px">
+        <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf0=
+4/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFz2_3wqW6N1vHY6lZ3lmW6j4rh51YTr=
+15N60jJqV5SJVLW6jt4Ks8w69c4VKhvX-89GRpQW3dJHk_88pKBwW5zXHgP1yD8J-W1kqvw83sG=
+P-rN7qxjkB_HYBlW5GYT731xzfJQV5QcV131qq5GW6SBk3s2by5qqW6rnr4Q40LSxHN6xP6FSKv=
+zV3W7J63nT2g5_Y4N7KCg_LXS02WW7hjj6n8fSJ0-V6wjqb1XSr6wW85xv_n6QyK5sW3BFCwQ3C=
+DZ-tVktDp48ptVxjW1z1W1255YZT_W5WWnq44cFFX1f2c_c_z04" target=3D"_blank" styl=
+e=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"j/J+qs8v">
+        <img alt=3D"Small fluffy dog with blue ribbon posing in ornate chai=
+r while being photographed" src=3D"https://hs-20627419.f.hubspotemail.net/h=
+ub/20627419/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Feb%208%202026=
+/Dog_Show_gif.gif?width=3D1200&amp;upscale=3Dtrue&amp;name=3DDog_Show_gif.g=
+if" style=3D"outline:none; text-decoration:none; border:none; max-width:100=
+%; font-size:16px" width=3D"600" align=3D"middle" class=3D"stretch-on-mobil=
+e">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-1-0-=
+1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_co=
+s_wrapper_module-1-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_c=
+os_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; lin=
+e-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D=
+"rich_text"><p style=3D"line-height:125%; text-align:center; font-weight:bo=
+ld" align=3D"center"><span style=3D"color: #ffffff;">Sunday, February 8, 20=
+25</span></p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-2" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-2-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-2-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module-2-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos=
+_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-=
+height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"r=
+ich_text"><h1 style=3D"margin:0; font-size:30px; line-height:125%">&nbsp;</=
+h1>
+<h1 style=3D"margin:0; font-size:30px; line-height:125%"><span style=3D"col=
+or: #192733;">The economics of dog shows</span></h1>
+<p style=3D"font-size:18px; line-height:125%">&nbsp;</p>
+<p style=3D"font-size:18px; line-height:125%"><span style=3D"color: #192733=
+;"><em>Even the participants at the Westminster Dog Show, the best pups in =
+the world, are unlikely to make a fortune for their owners.</em></span></p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold">&nbsp;</p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold"><br><span s=
+tyle=3D"color: #192733;">BY <a href=3D"https://d2q-Vf04.na1.hubspotlinks.co=
+m/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLD-2_3wqW5BW=
+0B06lZ3q2W5rNR208XRJGSW7tV4Ch3mkVl3W6lfGr77TtpH7W6BVwC18P9MpHW6_PNT_1sgKY6W=
+7hBqm47DZXVSW8LdmWg8RlQQ0VFcJCj3jxXWpW2zyHjd1hz9LXW6nFmtb85qMbRW3YJrg82-MTJ=
+XW247v8_7CFN6jW6nq1dk4dhbvMW64vjcf6T5DPqVV1G9r8K9CpgW1mbkC12PScqnN7cyShySVB=
+X-N7R24HhHZZrXf3bT5xn04" style=3D"font-weight:bold; color:#192733; text-dec=
+oration:none !important" rel=3D"noopener" data-hs-link-id=3D"0" data-hs-lin=
+k-id-v2=3D"aQ+NAHat" target=3D"_blank">KELLI MAR=C3=8DA KORDUCKI</a></span>=
+</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Abigail was exhausted. The six-year-old white=
+ bull terrier =E2=80=94 officially known as GCHB Alaric Star Spangled Siste=
+r =E2=80=94 had just been declared the best in her breed at the 2026 Westmi=
+nster Dog Show.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Now, with a few hours to kill before vying ag=
+ainst the other top terriers for the Best in Group title, she was stealing =
+a few minutes of rest in her crate. It was an impressive show of composure =
+considering the surrounding commotion: the whirr of hair dryers at grooming=
+ stations, excited chatter, judging calls blaring from competing PA systems=
+, and the occasional bark from any of a few hundred dogs.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Last week, <strong>~2.5k</strong> canines rep=
+resenting ~212 breeds and their owners, groomers, trainers, and handlers de=
+scended on midtown Manhattan for the Westminster Dog Show, widely known as =
+the Super Bowl of dogs. They came from across the country and around the wo=
+rld, traveling from as far as Japan, Indonesia, and Peru.</p></div></div></=
+td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-1" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Illustration of small white and brown dog jumping over =
+agility hurdle" src=3D"https://hs-20627419.f.hubspotemail.net/hub/20627419/=
+hubfs/Daily%20Newsletter%20Images/Daily%20Images/Feb%208%202026/Dog_Show_2.=
+png?width=3D1160&amp;upscale=3Dtrue&amp;name=3DDog_Show_2.png" style=3D"out=
+line:none; text-decoration:none; max-width:100%; font-size:16px" width=3D"5=
+80" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-2_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">I took the C train from Brooklyn to observe. =
+What drives the people behind the spectacle? As one California-based dog ha=
+ndler told me, =E2=80=9CNumber one, you have to be competitive. And you hav=
+e to love the dogs.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">You also have to be willing to sink a small f=
+ortune into breeding, grooming, training, feeding, and showing your prospec=
+tive prize-winners, with no guarantee of a return on investment.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>An expansive economic ecosystem</stro=
+ng></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Dogs like Abigail don=E2=80=99t just come out=
+ for the big show.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Owners vying for a national title will typica=
+lly run a =E2=80=9Ccampaign=E2=80=9D to raise a dog=E2=80=99s national rank=
+ing in the year leading up to the top contest. That may involve competing i=
+n dozens or <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q=
+-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLD-4ZD0CW5BWr2F6lZ3ldW5lLMM8=
+8ZN7sjVDMfhx468Fj2W98p0c289h1ZwW3mjlFt3350wcW3YW5LQ3Htp0MW8T1ZHX5gl762W92Y-=
+3546cl4FW4PtGd792mm2_W8mlfkz7fZ_hnN2QHy14Z16M0W8fy9G56pgkkbW8__1Kt7qglyHW1s=
+Bb8q8r3HXnW1qdzN-3nHmwyW47_WzG6zFnNPW4_YT4S2h6bz9W7-BG2N8k3RHWW2yVygH63Bs3j=
+W1XlPkT7mbVpQW4x86wQ1x6z1fW6m1b_r895PRbW5ZNztJ8dn6VYVWpKrl31PVNRW8BVD1k6Y1W=
+8YW5l8R2n3WGp_9W5Tx-151PvNrpW5CxcV-5LD-rJW4v5QRd29vRGMW1hzhtF3zZRw8W1sTGSN2=
+DyxHsW3k_RFh1pVkNfW2hlbhj3K6FdKN615NPfNmXFJW8KGM2T6DTqHWf5NVr5z04" style=3D=
+"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"5F3zmJnZ" targe=
+t=3D"_blank">even hundreds</a> of shows week after week; there are ~29k eve=
+nts in the US every year, each with entry fees ranging from around <a href=
+=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW=
+8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFz2_3wqW6N1vHY6lZ3mYW83jdLk4KDpVkW392CnX6LFfZ5=
+W8pbP-87Brt47W3zRsKR7mf64DW8B9fR56RDhKgW2GRfM62CPyt-W4R58258gMK66W7BBfZV5nT=
+XR0W1W2gjt1WSPs1W5rM2BS4Fhm5jW1vhSjx7KTvsZW3xjYR06VNzH_W45F4xX74Z4NvW35-6yW=
+1b9nKSW1yx3Hh5MH1ncW2rJd_H7zc8xsN180_C1hMGxKW8hnXHn5nkHrZW3lZRR51C6LCzW1wq9=
+G73tPsbTW2MNcHR6qQcFVW8DH5ml3hVp3sf39gkX604" style=3D"color:#192733" data-h=
+s-link-id=3D"0" data-hs-link-id-v2=3D"GkxFSocl" target=3D"_blank">$35</a> t=
+o <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg=
+6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLGM2_3wqW95jsWP6lZ3nsN2rSf78QH1f_W71q7=
+Vv2F6scMW5lXWQb3vk1qxW92zK194Dr-7JW2yFgjv2dPxWsW875mtT6DwqQcW7hrDrk5zHWrDW1=
+CT6291nwVC7W133_8C2rQgL8W1NHchq3XsGKcW7xnDt21_wyrLN1Z0_v7pPNzhW4Q29wr42qLd1=
+W8d_Zsj7bKZMsW9j015n6qcJshVMZzld5BrjvvW5HKTzQ6Yct1WW8myYKq4J_zCgW41yBRx1D6W=
+y1W16HH5b1nK9ZkW9cNz-x63BBJrN24ChwhkXCNwW15Lmfp795RxBW50bSq47kBS6qW5gt7c58c=
+6XnbVDzZv21hFNDNVqfDQn9d92g6N5h27JPN8RNYW7bJb2r8VxQQ4W8yYS8s8vQ8MNf7KRdQz04=
+" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"peZIL=
+XgK" target=3D"_blank">$100</a> a pop.</p>
+<p style=3D"line-height:125%"><br>Many owners will also pony up for profess=
+ional photo shoots and ad spreads in one or more of the dog-show industry=
+=E2=80=99s numerous monthly trade magazines such as <a href=3D"https://d2q-=
+Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY=
+3L5KgzHXN8XrLD-2_3wqW5BW0B06lZ3kxVhzBnQ5DQTGgVthwdh2Fsq4HW2ldvGn7q8Dz0W6FVB=
+BP1WKPw7W4Q6knr3YBfxpW4ML1rR93VtgDV9fBNn2W2q3SW21m8807jqmpfVpc9CL7nRHnjW88F=
+dgz8LSr5sW4Gt2Q_3lnrdxW2SPHzz5Rt6K9N1T-yg_LpvvqN4jmWCprpdwKW71ZDt535LrWbW4s=
+2SXL3gLFDbM6JCTgJ7m1sW4zKjvr1K1Y3Pf5b6S1K04" style=3D"color:#192733; font-s=
+tyle:italic" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"RBiBl32q" target=
+=3D"_blank">Dog News</a> and <a href=3D"https://d2q-Vf04.na1.hubspotlinks.c=
+om/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69=
+sMD-6lZ3kSW2HqL-z28Pf2xW35QJq-32rzBqW9j4Jsw1T3K8gW1MQ4DL2nSYm3W45jJ523xnCf_=
+W7jwqC97-gJylW74ZQC61M_CZ1W7BQmFW1tgRWDW47thkQ98kC8dW5DkJLw8NJDc0VPhZFy92NY=
+JNW1xPF9B2KhBMSW3-8wc6424kFMW2xFsvC3Rr-npN54fbgzCtVbZW5xFwhZ2jplKnVj7FB268F=
+PvsN5l2rYfNbmncW56T5Bh92_yrgW2wSYfC1mGJrYf5-zdj004" style=3D"color:#192733;=
+ font-style:italic" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"dWCb7OaM" t=
+arget=3D"_blank">Canine Chronicle</a>, paying between <span style=3D"font-w=
+eight: bold;">$200</span> and over <span style=3D"font-weight: bold;">$2k</=
+span> for the privilege of exposure. For a big-ticket competition like West=
+minster, the combined costs of campaigning can <a href=3D"https://d2q-Vf04.=
+na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5Kg=
+zHXN8XrLDH4ZD0CW50kH_H6lZ3pLVnjD4w27XGrNW6J8nvP47NRN_VHZXRL5zsv-wW8xfhHZ7Rm=
+rhFVm7DgT5yn86rW2cDBXS4Xx06LW2060992KrHFWW1dhVX377WLNzW8P1jf446xpMXW5XKT2q1=
+8FWg8W2_Fxwz7vYHNpW8X_kcR3nT_CCW1dTGv05sw9t1W8HHx-61DFj28W4WfMcm6S-RgkW2Kvz=
+Kq7dl7M4W6GHg_35mNmZZW2pYvXR4Gbg_BW492g2r371cGPW86QNl42nGVzWW48g0282ZhzBCW9=
+dGYb25rb7xjW7kY1bX4xhtQBMb3QfVSwmScW4dxJCG42m1DXW2ZT5_C12txq_W6--Tnv1nk4S3W=
+3HDrZ58DlJ8gN5L4tHtW1vM0W2pwh631pjh0mW7DXh8_76pP9cW2YxyD16cP5hYf83cmcb04" s=
+tyle=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"FojVNESO=
+" target=3D"_blank">easily total</a> well into the six figures.</p></div></=
+div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-3" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Handler in tuxedo presenting large fluffy Old English S=
+heepdog in show ring" src=3D"https://hs-20627419.f.hubspotemail.net/hub/206=
+27419/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Feb%208%202026/Dog_S=
+how_Old_English_Sheepdog_Westminster.jpeg?width=3D1160&amp;upscale=3Dtrue&a=
+mp;name=3DDog_Show_Old_English_Sheepdog_Westminster.jpeg" style=3D"outline:=
+none; text-decoration:none; max-width:100%; font-size:16px" width=3D"580" a=
+lign=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-4" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-4_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Graham, an Old English Sheepdog at =
+the Westminster Dog Show. (Roy Rochlin/Getty Images)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The standards for success are exacting. The W=
+estminster Dog Show is run by the Westminster Kennel Club and American Kenn=
+el Club (AKC), a 142-year-old purebred dog registry that sanctions some 5k =
+regional and breed-specific dog clubs throughout the country.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The kennel clubs=E2=80=99 joint mandate is to=
+ ensure the health and continuity of each breed and variety under their ove=
+rsight. In a competition setting, that means rewarding the dogs that adhere=
+ the closest to their breed=E2=80=99s original blueprint, whether it was fi=
+rst engineered to pull a cart, herd a flock, root out rodents, or look rega=
+l on a noblewoman=E2=80=99s lap.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CEvery breed has a standard, and the =
+idea is that you=E2=80=99re breeding dogs to that standard,=E2=80=9D explai=
+ns <strong>Victoria Sottile</strong>, Abigail=E2=80=99s breeder, owner, and=
+ show handler.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CSo for bull terriers, you want an eg=
+g-shaped head that's filled under the eyes and filled in the muzzle, with n=
+o noticeable indentations and ears right on top of the head, and triangular=
+, dark, deep-set eyes. There's a standard for every part of the anatomy tha=
+t you take into consideration when assessing the qualities or virtues that =
+your dog has and what she lacks, and you want to breed for complementary ge=
+nealogy and physiology.=E2=80=9D</p>
+<p style=3D"line-height:125%"><br>Given the stakes, many owners hire profes=
+sional handlers to guide the dog through the judging circuit, spending <a h=
+ref=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt5=
+9WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFz2_3wqW6N1vHY6lZ3mfW2q2Px96SdGP3W6bb1jq3ty=
+b42W2G6Fkn3n2bbWN10bxL8_hkv-N2_BxhFCb-YzW4dB8Jr8F969bW68j4PW1-V2l5W6Kq5J71M=
+QkV6W6F83jH22wKDBW2l-SXs6v_Lg6W2jYp3J2lGs8hW9dMYh46tHkpyW7MPbq_6MqQcHW7Qw5W=
+v29SR8VW1pSjP_2HSQx6N18Prt98CPd5W6Bdk155W3V7pW84q9LF4S82TWV23vL-2ysdLKN1JHt=
+N7HyV66N8l08wJ51wjNW6D1Bjv39PPvZf7hkBqs04" style=3D"color:#192733" data-hs-=
+link-id=3D"0" data-hs-link-id-v2=3D"pkIstGRS" target=3D"_blank">between</a>=
+ $500 and $1.5k per event =E2=80=94 and sometimes more for a prestige event=
+ such as Westminster. If a pooch then gets ranked as the best of its breed =
+or breed group, owners can expect to shell out additional handler bonuses i=
+n the hundreds of dollars, and between $2.5k and $5k for the coveted Best i=
+n Show title. Travel, boarding, and grooming tack on more costs.</p></div><=
+/div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-5" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Chart showing US dog population growth from 52.9M in 19=
+96 to 87.3M in 2025" src=3D"https://hs-20627419.f.hubspotemail.net/hub/2062=
+7419/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Feb%208%202026/Dog_Sh=
+ow_1.png?width=3D1160&amp;upscale=3Dtrue&amp;name=3DDog_Show_1.png" style=
+=3D"outline:none; text-decoration:none; max-width:100%; font-size:16px" wid=
+th=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-6" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-6_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Olivia Heller/The Hustle</span></em=
+></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">To keep expenses manageable, some owners opt =
+to go DIY.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Stacy Pagel</strong> watched instruct=
+ional YouTube videos to learn how to groom her Saint Bernard =E2=80=94 GCHG=
+ CH Kris's Kountry Three Card Monte V Northstar, or =E2=80=9CPanda=E2=80=9D=
+ for short. The 170-pound pup requires one to two double-shampoo and stylin=
+g sessions every month, which would run Pagel upwards of $150 per appointme=
+nt where she lives in southwestern Wisconsin.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But Pagel=E2=80=99s approach doesn=E2=80=99t =
+exactly come cheap, either. =E2=80=9CYou have to buy the equipment. Dryers =
+will cost $100 or $200, and then you have all the different types of scisso=
+rs=E2=80=9D =E2=80=94 easily hundreds of dollars altogether =E2=80=94 =E2=
+=80=9Cplus the whole process takes around four hours every time,=E2=80=9D s=
+he says.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Custom shampoo and coat conditioner require f=
+requent restocks, as do the special pants Panda wears off duty to keep his =
+legs clean and white in between baths. (=E2=80=9CIf you let his coat get to=
+o wet too often, it=E2=80=99ll turn yeasty.=E2=80=9D)</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Like a majority of show dog owners, Pagel doe=
+s her own handling at competitions instead of paying a professional. But si=
+mply entering the ring with leash in-hand is a costly endeavor, requiring t=
+he use of <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-V=
+f04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFz2_3wqW6N1vHY6lZ3q2W77h_8G50=
+t128VdSRGv87LL2vW6T-Vg_2gbGPxW19jDpN8pZtrMVybCng4M20mCW3bnWD1846wWPW7KPVV16=
+c_VQhW8Zp2pT28HRClW6cy-Dx24Kd6DW1BZyBf3rlfwDW7zWmnW2K7Jr7N69zxxMTKCQWW1k7Ss=
+f32WX1PVvFZVq6FM-_HW8xSd9w8S2LvFV4BtrH923nf1W9hDvlb2nthQnW7_mls_5K9j0bVLlXq=
+X44fzyqW7kFSFX702VFcW4_Gl8X1Jwd9rW3LKdPw1NBdXsf2gqqw604" style=3D"color:#19=
+2733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"BoVLgGnq" target=3D"_blan=
+k">special dog leads</a> and snappy attire. At this year=E2=80=99s event, a=
+n onsite vendor stall showcased racks of tweedy skirtsuits, the unofficial =
+uniform of Westminster handlers.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">They were priced upwards of $1.5k a pop.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>What=E2=80=99s in it for the winners<=
+/strong></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Though there=E2=80=99s plenty of money to be =
+made from the dog show ecosystem, the people behind the dogs aren=E2=80=99t=
+ necessarily seeing major windfalls. Most dog shows hand out ribbons and tr=
+ophies instead of cash prizes to even their biggest winners; last week=E2=
+=80=99s Westminster=E2=80=99s Best in Show champ, Penny the Doberman Pinsch=
+er, went home with the Westminster Legend Trophy, a handsome crystal bowl.<=
+/p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-7" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Doberman Pinscher with award ribbon overlooking Manhatt=
+an skyline from high-rise observation deck" src=3D"https://hs-20627419.f.hu=
+bspotemail.net/hub/20627419/hubfs/Daily%20Newsletter%20Images/Daily%20Image=
+s/Feb%208%202026/Dog_Show_Penny_Doberman_Pinscher.jpeg?width=3D1160&amp;ups=
+cale=3Dtrue&amp;name=3DDog_Show_Penny_Doberman_Pinscher.jpeg" style=3D"outl=
+ine:none; text-decoration:none; max-width:100%; font-size:16px" width=3D"58=
+0" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-8" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-8_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Penny the Doberman Pinscher basks i=
+n the glow of victory at a Hudson Yards luncheon. (Bryan Bedder/Getty Image=
+s)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Where the titles <em>do </em>pay off is in th=
+e value of a show dog=E2=80=99s breeding stock. People who want to raise a =
+future show dog tend to favor the genes of a champion dog.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Winning the judges=E2=80=99 favor reflects we=
+ll on a dog=E2=80=99s demeanor and adaptability, says <strong>Jane Dekovich=
+</strong>, a Richmond travel agent who used to show Hungarian Pulis =E2=80=
+=94 a herding breed with thick, yarnlike fur. =E2=80=9CThese dogs have to b=
+e around other dogs in close quarters. They have strangers coming up and to=
+uching their genitals. They=E2=80=99ve got to get cool with a lot really qu=
+ick. And dogs that aren't comfortable with that don't make it.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Christina Miller</strong>, a breeder-=
+owner-handler based in northwest Georgia, says that winning titles can also=
+ help demonstrate the quality of a breeding program, which leads to easier =
+placement for puppies and a stronger reputation within breed circles.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CThe more you can title your dogs, th=
+e better puppies you know you're producing,=E2=80=9D says Miller, who was a=
+t Westminster to show a father-son pair of Canaans, a rare herding breed or=
+iginating from the Levant.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Regardless of dog-show outcomes, Miller sells=
+ her puppies for about <strong>$3k</strong> each, which she says is standar=
+d for uncommon breeds. But that cost also reflects extensive early training=
+, socialization, health testing, and lifelong breeder support. She says tha=
+t when all is said and done, she=E2=80=99s lucky to break even.</p></div></=
+div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-9" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Illustration of handler in suit presenting Doberman Pin=
+scher in show stance" src=3D"https://hs-20627419.f.hubspotemail.net/hub/206=
+27419/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Feb%208%202026/Dog_S=
+how_3.png?width=3D1160&amp;upscale=3Dtrue&amp;name=3DDog_Show_3.png" style=
+=3D"outline:none; text-decoration:none; max-width:100%; font-size:16px" wid=
+th=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-10" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-10_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Other event participants take a decidedly mor=
+e profit-driven approach, leveraging top-tier titles for premium pricing on=
+ puppies and champion sperm. =E2=80=9CSome of these dogs go for five or six=
+ figures,=E2=80=9D Dekovich says. Similarly, for an elite minority of profe=
+ssional dog handlers and breeders, a record of victory can net a six-figure=
+ annual income.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But most people on the dog show circuit are f=
+orced to pursue their passion while supporting themselves with other work. =
+Miller used to work in veterinary care and now runs a small boarding kennel=
+ and dog-training supply business. Sottile, Abigail=E2=80=99s owner, recent=
+ly retired from a 36-year teaching career in the Brooklyn public school sys=
+tem. Both agree that breeding and showing dogs is no way to get rich =E2=80=
+=94 at least, not without cutting a whole lot of ethical corners.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">As Sottile sees it, the dog-show economy thri=
+ves on dog lovers=E2=80=99 sense of avocation.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CWe do this because we love the breed=
+ and we want the breed to improve and stay healthy and to continue,=E2=80=
+=9D she says. =E2=80=9CAnyone who does it for money, their heart isn't in t=
+he right place.=E2=80=9D</p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-3" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-3-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"non=
+e" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align=
+:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px"><div id=3D"hs_cos_wrapper_module-3-0-1" cla=
+ss=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" styl=
+e=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos=
+-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrap=
+per_module-3-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wra=
+pper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-heig=
+ht: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_=
+text"><p style=3D"text-align:center; font-size:26px; line-height:150%" alig=
+n=3D"center">Share &amp; discuss this story on:</p></div></div></td></tr></=
+tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-3-0-=
+2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"p=
+resentation" align=3D"center" style=3D"width: auto; text-align: center; mar=
+gin: 0 auto; " class=3D"hs_cos_wrapper_type_social_module">
+  <tbody>
+    <tr>
+      <td class=3D"social-network-cell" align=3D"center" style=3D"font-fami=
+ly:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-break:=
+break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113=
+/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFz2_3wqW6N1vHY6lZ3pWW14=
+9Bwk7jTSxnN5bGCQzZl592W9c9BBk1JjS_QW4wBV692hkKYtV2rnqN8Tcp6nW3-W9tD59sgrVW7=
+kNb0z8k-H5dW5LtqlP7lm5hkN3-0ykTPZ5cHW38Bs1B1MT6sLN7LQw0LpDDxTN3nw1ynJTD4CW3=
+_B5bf4mRrlzVrY_Yx1SHGy9W1Nt0sH738j7TW4QknC_82dRsGW3Xk2lH32FYVbW6_jcZv2F_VW2=
+W4rs9Dp8J2yzYN6m_mRW2FzVnW5NmX4D8nn2ShW2M-h847RPZhfdTP9ST04" style=3D"color=
+:#00a4bd; text-decoration:none !important" data-hs-link-id=3D"1" data-hs-li=
+nk-id-v2=3D"zXjKCASd" target=3D"_blank"><img src=3D"https://hs-20627419.f.h=
+ubspotemail.net/hub/20627419/hubfs/Critical_Template_Imagery/H.png?height=
+=3D80&amp;upscale=3Dtrue&amp;name=3DH.png" alt=3D"Site" height=3D"40" style=
+=3D"outline:none; text-decoration:none; border:none; width:auto!important; =
+height:40px!important; vertical-align:middle" valign=3D"middle" width=3D"au=
+to">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113=
+/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69sMD-6lZ3ngW4X=
+Nfp47Z4Y17MCJ_FMpgltmN4mWfXLtQ3LTW3WtdQg6G9NhbW59Sc-26C_psBW7q-PDZ2Y47Z1W3z=
+H01D3PCjzNW7Y9-Vh5ZG1DvW3-rFXm418k-_W6fp1hc5jkTG4W5bpqsK78rKS_W612y_s7mGzJw=
+W6p1mWs8w6dqNW4Fmj_Z7c78DJW3Th_h58-ktNsW5S6kjZ7CnZtjW76bLPd7XTLj4W2zghRC3jt=
+-fhW16bVbR1_hQCjM8sr_VVFfBdf8W4Rzx04" style=3D"color:#00a4bd; text-decorati=
+on:none !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"BhKHpnJa" t=
+arget=3D"_blank"><img src=3D"https://hs-20627419.f.hubspotemail.net/hs/hsst=
+atic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/Fol=
+low+Me+-+Email/youtube_circle_color.png" alt=3D"YouTube" height=3D"40" styl=
+e=3D"outline:none; text-decoration:none; border:none; width:auto!important;=
+ height:40px!important; vertical-align:middle" valign=3D"middle" width=3D"a=
+uto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113=
+/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69sMD-6lZ3nfW2m=
+rZbD55mcmjW8JCFNM3Hgx49W1bf1492PkphdW98qysM1l8qZ5W5tqhfZ2kXc-nW4TT41N7Jk4-2=
+W3b443N3jDfXpW6jxX8Y6pQ6BkW4T2phn64jWZ-W6rWdN71Y5QGkN4R8XqMF5h3gW8t_2rR11gb=
+kCW1SXzKg5Pc29cW21YFxp50XrxDW8QlSwm6mG-q1W6MJ69-3pppMPW2WS7B-5J95LzW7m17j81=
+sVwflVH2Kjw56j3D3W6cJ7RN5HqhcMdMYHY-04" style=3D"color:#00a4bd; text-decora=
+tion:none !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"hMx6vuQx"=
+ target=3D"_blank"><img src=3D"https://hs-20627419.f.hubspotemail.net/hs/hs=
+static/TemplateAssets/static-1.262/img/hs_default_template_images/modules/F=
+ollow+Me+-+Email/linkedin_circle_color.png" alt=3D"LinkedIn" height=3D"40" =
+style=3D"outline:none; text-decoration:none; border:none; width:auto!import=
+ant; height:40px!important; vertical-align:middle" valign=3D"middle" width=
+=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113=
+/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69sMD-6lZ3lhW8C=
+cp4V5MbRqhVSX7wl21vzCqW7Cvrkp40vtw5W71xhCW51TvzrW7ypvbW6W4cF8N8fNvCXJdmxcW2=
+j7s4d4qxNkFF1YLn4S7-CCVcyrKn36PKd0W2vhrMb6G0x9nN5GLJJ3MGhTcW3_Rxnn3DLsndW6q=
+3RW319SsnlW7j5_hv8DrZdmW5zvl1N1DdFYQW8Mjj6X5CQpcPW6sY3xC240h5JW1cg9Lk2fG9Cy=
+W5g8-c962Hx76W4y7dH15NNQQ0d2mG2004" style=3D"color:#00a4bd; text-decoration=
+:none !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Bzlwbvlf" tar=
+get=3D"_blank"><img src=3D"https://hs-20627419.f.hubspotemail.net/hs/hsstat=
+ic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/Follo=
+w+Me+-+Email/instagram_circle_color.png" alt=3D"Instagram" height=3D"40" st=
+yle=3D"outline:none; text-decoration:none; border:none; width:auto!importan=
+t; height:40px!important; vertical-align:middle" valign=3D"middle" width=3D=
+"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-3" cl=
+ass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" sty=
+le=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-co=
+s-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"none" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align:to=
+p" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-4" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-4-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:5px 10px"><div id=3D"hs_cos_wrapper_module-4-=
+0-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modu=
+le" style=3D"color: inherit; font-size: inherit; line-height: inherit;" dat=
+a-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_=
+cos_wrapper_module-4-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs=
+_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; l=
+ine-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"text-align:center; font-size:14px; line-height:1=
+25%" align=3D"center"><span style=3D"font-family: Helvetica, Arial, sans-se=
+rif;"><span style=3D"color: #192733;">Today's email was brought to you by <=
+a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2=
+lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLD-2_3wqW5BW0B06lZ3nMW7bvJLD18XlhQW98LBtB=
+8FVBx5W6qV_Ld7xQpkSW3DZR5w6NYW6mW1k4cfF6m_yC1W4pL8M86wJvgGW44-Hml6F7zx1W1MY=
+ZXf554WZsW2S699P5DKTHLW9ktkZP538BK6W7DBGC187rkBzW89gHWm7FMlqgW39qvns82__wbW=
+431klC1c1yLxW77gN6274prNJW3hFyfH6fR5QlW4mKG4V2snpYPW7jrs1D1Y6vQ9f11RwwY04" =
+rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"1" data-hs-link=
+-id-v2=3D"bZPUkZpn" target=3D"_blank">Kelli Mar=C3=ADa Korducki,</a> <a hre=
+f=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59W=
+W8lTDvM4C1FzMVLsY3L5KgzHXN8XrLD-2_3wqW5BW0B06lZ3lKW7ZmzJP9hqYJ-N6HkQvB-7ZJS=
+W5GrDRY18d3MrW84cTMZ29PXMQW74m35v6MYPYlW1wx22G8wjKc9W6jppRD6FWkmFW3ZzTr62p3=
+5ZqW8W0DSf6wjRgPW4MYFZR1cMWc-W52H6Sq567gMXW9gT4ZN9fdxNvW1VbPnJ2fr98hW1d5DR2=
+8k2M09W5j1WBX4LGjxBW2DhS7V8Kk633F8s2d9NxZC1W8G_wPz8KVwpJf9jqYgn04" rel=3D"n=
+oopener" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=
+=3D"oE73l/qS" target=3D"_blank">Katherine Laidlaw</a>, <a href=3D"https://d=
+2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMV=
+LsY3L5KgzHXN8XrLD-2_3wqW5BW0B06lZ3n_N87sPqlm-vMPW7_f8LY8g8lFlW5GwXxy2YDT8KW=
+4v1p3D66Q3WPVXBc568q57bmW5DKpPJ3yy9FsW5rDCl57tmhptW6lQSvs83VPPKW1jkDdw3FW84=
+WW4MYc5M94FD8yW7xg5GN4tjtGxW2k0Yft8PzmKjF5rkbl4471YVSG2ZG7wN-hyW6rrHft41-kf=
+fW44VHSr7qyl0QVdJWr647SxJFVcW9hM3sLBSWdv-GCn04" rel=3D"noopener" style=3D"c=
+olor:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"dEMdBBbn" target=
+=3D"_blank">Mark Dent</a>, and <a  href=3D"https://d2q-Vf04.na1.hubspotlink=
+s.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLD-2_3wq=
+W5BW0B06lZ3kRVPXWQS3FqyZgTJTxg5BdcxfW59QWQz6gGRbkW32H7qZ8TTGx9W3ZK_1w1wctJ8=
+W7Z7wfk8RCqBZN8zQRnBN1PqTW4CZMc98Bb4bYW4nSz9g1wv96vW52tjWf8y4fxSW5tPPkX7Bl8=
+8gW7_ScP02dq-SqN5vQB1CCNxYfW5FghsR8Z8Q1LW29GmV91gm6BSW21kJqK91zqNrV4D0s687H=
+cfqW2Tg_096xGXT2f2wqL6004" rel=3D"noopener" style=3D"color:#192733" data-hs=
+-link-id=3D"0" data-hs-link-id-v2=3D"CAzB/nO2" target=3D"_blank">Zachary Cr=
+ockett</a>, with help from Kaylee Jenzen.</span></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter">&nbsp;</p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-family: Helvetica, Arial, sans-serif; color: #00=
+0000;"><span style=3D"color: #192733;">Was this email forwarded to you? Sig=
+n up <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/V=
+WSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLG82_3C8W7Y8-PT6lZ3mXN6kVhRLfP5XrW4=
+J9Ywy6mt4wkN2c4j41JyzRnW8x73y96R8k-SW6353Wr5TwFg3W1ls7JK22-r1NW1S9JkP2fsv4Z=
+W6hwX-P2f8GsXW74Dc6T1HJGJ3W1M5rVW3dt9kRW2PFJSR4VfM-XW3CGw6k4Dmt-1W10p6G_4Yw=
+kCZW7mpnzZ2Zq59_N8FShCtHb8xDW2fY5jP1mzDJnW7hBnXj6WNRZ1W8c13hX7HxyjNW2q01Ng1=
+3-30rN7jFKQMHL02gW8pghjt65sZ5VW486CNZ9gqjZvW39-Vs61V22cLW65cGvh4FY2mgW1Cxhx=
+r3lVqDcW53s0zp5JNwHbf5f0HsW04" rel=3D"noopener" style=3D"color:#192733" dat=
+a-hs-link-id=3D"0" data-hs-link-id-v2=3D"nmcX5Hpp" target=3D"_blank">here</=
+a>.</span></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;"><br><strong>Subscri=
+be to our other newsletters</strong><strong><br></strong>Expert insights: <=
+a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2=
+lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFT3hKBlW7lCdLW6lZ3nfW73Ktl15tvvMnW25l-SX=
+3Qk_0KW8DF68l5jpNqTW5jG0-P4n8zxDW5pXJzY51c8fHW8CtcNl7tLm4pW3NdJ0q7tLThyW5TB=
+fYQ8VNp2hW5SNxvf1rRqJ9VrCJ9s71W92fW4d5mT14Bq82_W5RtsZl7x4pLWW8sybBZ51N18xW3=
+dSFm03D6cfFN4HCXzWZWnhxW3RF9YL3FH6f_W6gPpzS6MyZ7fW7n0bnC1bRyKGSBTj6t-jW2VW7=
+vKl5pQ_MCVH62d57lZ3pqW3bXgb159ft0pW65bwkk60Kkr-VdxQP95cwmrjf6dSp7v04" style=
+=3D"color:#192733" rel=3D"noopener" data-hs-link-id=3D"0" data-hs-link-id-v=
+2=3D"5lzKc1ko" target=3D"_blank"><em>Marketing Against the Grain</em></a>&n=
+bsp; | &nbsp; Stay up-to-date on AI: <a href=3D"https://d2q-Vf04.na1.hubspo=
+tlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFz=
+3dnPjW6N1vHY6lZ3lHW2wXKSp57krRMW56t_tF3zJQ7BW3KN1J28lpX6_VzhLvV7nB_8GW3Xc3P=
+l6jtJxnVX4-xl123tY5W4BtdQT8JV4_8N4fCqzsm8rlkW99NVYF1bWb9cW2VrBBl2FKqbRW7sn-=
+lW2bnYvHW3d8MMq7Q9cMFW1sJSRC62fBYwN6xTRz2m13X7W8XJfTn5wNP32W7wqLDs4RhDBWW6H=
+0nNn8fdWLkVV1q224rmjsLW3yQDlD7rvQhcW2xk8Mg5mPBX-W6vccFN8c5zwlW40vhbJ8WR6_gd=
+HR3p604" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=
+=3D"fB+Qb5IE" target=3D"_blank"> <em><span style=3D"text-decoration: underl=
+ine;">Mindstream</span></em><em><span style=3D"text-decoration: underline;"=
+><br><br></span></em></a></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;">Follow <em>The Hust=
+le</em> on <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-=
+Vf04/VWSg6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69sMD-6lZ3pzW1FfbcQ5=
+3V1P8W2KgrXY7Q3FTJW7vpMFL4TLBVhW1jlJXm2dTXBXW3xtSWb4vy0CZVMMKWW5bgr_yW1V5k9=
+Y5z8dzLV9_6zH289WpzW5X2KqT5mlrmHW7bYKZ54yv_RcW3gtZnK70ZmH7W8vWqNX6ngpKkN5Tq=
+WTcSdpTnW1709Y-83YKd1W6qCzqX7_6X0MN7gb803-vNyJW4J21-Z7d0v7HVY1rXc8CLSBTW2l6=
+djH5lz7zvW6r2Psp1lf3L-f4lmtwF04" style=3D"color:#192733" rel=3D"noopener" d=
+ata-hs-link-id=3D"1" data-hs-link-id-v2=3D"e97Sa5iX" target=3D"_blank"><spa=
+n style=3D"text-decoration: underline;">YouTube</span></a>,&nbsp;<a href=3D=
+"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg6n2lt59WW8lT=
+DvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69sMD-6lZ3p4W19xHp58YHHV-W7jLmgY8jh5C2W4P=
+XJc98JNYTTW71J-8l3_Dqz9N5zZxJ_2FPsMN33VRSyRRr-wMvWqCXPmRYtW5W4lLH1WqxyDW5yG=
+knl99QMVJW6gW5VK50295QW3vWvcY2xK6bMW16jw388dylrHW1mbl-792xGn6Vn3MMp2tynS5W2=
+sJQYZ65RPjcN5nj79pyDg_YW731bL92BkhH1W7KQlwj7TvDXRW1WVdXN6_D3WbW9g59r53yl6Hj=
+f33QtCH04" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"1" d=
+ata-hs-link-id-v2=3D"w0Kb7DPn" target=3D"_blank">LinkedIn</a>,&nbsp;and&nbs=
+p;<a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VWSg=
+6n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXN8XrLFg2_3wqW69sMD-6lZ3m1W5R5zvJ8xplVVW90b=
+ZYG1bj0jNW1cDdWq8KkHPgW7b9HJG74fj4TW6c33hJ8NGHywW37ctPB4C71WGN2pm21h5wzsrW7=
+0qzbW6jlJT3W4ZvkD95PxdvZW77xLx84CX99HN5DgDjXN2-80W9gz88d4D7cs-W9fC-Nj1KVqc9=
+W6sw3rq5pfY7sW5dt6cb7KnnlRW7rkLSL6ybKRVN675Zf8ydPMQW85mTwr8tnXTSW2YLgjq41F7=
+t5W4JwYN43xgX2Df5bw8wK04" style=3D"color:#192733" rel=3D"noopener" data-hs-=
+link-id=3D"1" data-hs-link-id-v2=3D"SS6chJVN" target=3D"_blank"><span style=
+=3D"text-decoration: underline;">Instagram</span></a>.</span></p></div></di=
+v></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:0px 5px 10px"><div id=3D"hs_cos_wrapper_module-4=
+-0-1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mod=
+ule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" da=
+ta-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"presentation" class=3D"hse-footer hse-secondary" width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-serif; font-s=
+ize:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; font-size:16px; color:#192733; word-break:break-word; tex=
+t-align:center; margin-bottom:0; line-height:135%; padding:10px 20px">
+          <p style=3D"font-size: 11px; line-height: 150%; font-weight: bold=
+;"><span style=3D"font-family: Helvetica, Arial, sans-serif;">HubSpot Media=
+, 2 Canal Park, Cambridge, MA, 02141,&nbsp;USA, +1 888.482.7768</span></p>
+<p style=3D"font-size: 11px; line-height: 150%; font-weight: bold;"><span s=
+tyle=3D"font-family: Helvetica, Arial, sans-serif;">Never want to hear from=
+ us again? Break our hearts and <a  href=3D"https://blog2.hubspot.com/hs/pr=
+eferences-center/en/page?data=3DW2nXS-N30h-LtW2nQ_jT3gxLBfW1BF67G2CvCjMW3Hc=
+Yps3NLvkSW3LHhvt30vmLWW3SR22j235CXXW1YZtbK3f_85DW2-LXkd2KBNL6W4tn8X43QNlHCW=
+4hMhD-2MHw_pW3_Bck934p2QvW36CnQk49wH31W2FD4C23dpTFVW3C1YRX47SNV_W2vZLZc36lh=
+j6W3XXqPm3T1dkgW2-lFnz43yZmdW41-9R-3jfYY6W3g8kgy383vtDW32zRh03W1YBhW4kfsgK1=
+Bhq4HW3H3DdT2RtMr7W2Ww21x36dvvGW4tnB223C13gkW3VZL__1S3-pfW2qM6bv3B-Y9jW2MGP=
+Mk2-fcJjW4cgBqQ38CG5kW2CGP4w2vwdH2W2r5JyZ2YLkDWW1_kKnz2sSLHcW4mCvRW2WxdybW4=
+7DL4M3bkYtmW2sRWVS3_w31lW3C0Hyr3S-k8LW2KMXcG47WC6hW2WqvLy30DxLdW3ZFj894tf7R=
+TW49MZBk3VJZNTW3ZCCcH24Wy22W3GM7vR2FJ7LyW3bw4_Z2y1jz5W2MNyx038dg55W1BgvtD3_=
+-kyDW3M7l5536hSTFW38CJ_936FV_gW2zZl4W2PsJmFW2RDKC13_LXVHW4czkHr3P3mDhW1S8xY=
+f41FHBwW3JVm0C41Jf5RW4hFxYY2KpQnRW1NFlQy4fyhtQW3dcX0K2FSvVSW41Qsj03Cgpq7f2-=
+GQ-X04&amp;_hsenc=3Dp2ANqtz--Y2CGoMuMvs_rhR0_ok4vSXGUjcuPOvc60vm1iMsPDOMM5t=
+e-0q6kxWobOCDzJGZ9so5Mv2diHvaYjCNYjamRXoXH5aA&amp;_hsmi=3D402461492" rel=3D=
+"noopener" data-unsubscribe=3D"true" style=3D"color:#00a4bd" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"kDnPxijp" target=3D"_blank"><span style=3D"co=
+lor: #192733; text-decoration: underline !important;">Unsubscribe</span></a=
+>.</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://d2q-Vf04.na1.hubspotlinks.com/Cto/UB+113/d2q-Vf04/VWSg6=
+n2lt59WW8lTDvM4C1FzMVLsY3L5KgzHXW8XrLpH8fYH232V01" alt=3D"" width=3D"1" hei=
+ght=3D"1" border=3D"0" style=3D"display:none!important;min-height:1px!impor=
+tant;width:1px!important;border-width:0!important;margin-top:0!important;ma=
+rgin-bottom:0!important;margin-right:0!important;margin-left:0!important;pa=
+dding-top:0!important;padding-bottom:0!important;padding-right:0!important;=
+padding-left:0!important"></body></html>
+------=_Part_247093_2038355555.1770547856617--
+

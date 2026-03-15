@@ -1,0 +1,1922 @@
+Delivered-To: shyams07@gmail.com
+Received: by 2002:a17:522:b38d:b0:64a:133e:e77c with SMTP id g13csp4068569pvz;
+        Thu, 5 Feb 2026 02:38:40 -0800 (PST)
+X-Received: by 2002:a05:620a:3703:b0:8b1:f1e4:a3d2 with SMTP id af79cd13be357-8ca2f8450a7mr691509085a.24.1770287919837;
+        Thu, 05 Feb 2026 02:38:39 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1770287919; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EjxNR7HrplW+hSJTbCS57t4gN4Zd7oHQNY69xaqWzDrIAxh/Lxg0JLSsmB+omLwZri
+         mpYfqYVquFgco4h4XH6wBxKqNMD0TNv/71xFeLM9YP28WwPxdp6k2IGelAtrr98/o5Ch
+         zu061eDasukvAeefOB2E7VmEmrkKxuDTDsBspFh0zwM/lIoS+NPQMtkjfrxqHSbU8+S3
+         JmfvW+Jw1I7TShaLmvmiJITCUmZQ9U0p27jDFa21lgwSkkRE/h+VG34AwrIQEBNqH5wx
+         INAVqTXtoxamz1DDah/UICNN6PlQiApOy4igqoEoZVRFxXjdq7/uagUdKwI0NgZML1hX
+         X/Kw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:precedence:mime-version:subject
+         :message-id:to:reply-to:from:date:list-unsubscribe:dkim-signature
+         :dkim-signature;
+        bh=eRfkh8bh+ujDokI7ECC8wODFnV5Fz761K3lyXlk3vys=;
+        fh=L9Pq+drjbGeEtrAQNZSRmpxQ+ME9iXW0EGrUbR1eMas=;
+        b=EaCnUKdQAThYRKJ7vARpR2jRJZhDGGyen/zJ04DCYagh6bGeTi494LzL0ld5NU69uc
+         4eCSS6L6mXZaPhFyLkuNY9JVoMOBeNbOmBt+zzJDZz7sUNuXIm267yPnxYpoEAQYXRA0
+         +oEulyy0U478NDaM0KbeHcu2pQ7z1+o8it0RDQ/UY5fh3MLr1+Eq7LPD0choucI3Eb/T
+         LyMg9b1lTBdAdL4HcNf6yfGeQnVKyvpIbp/mmDx2oAel2AHhUzwHtRQnfgNg0A6vJK3R
+         gRt90EsfMVvMdKO0OUqK6x19/wwC4ZzGiUrJmvZo9Qd7Kl4+S38p50oc5/AT4a+mz+6O
+         PdZg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs1 header.b=oBhbEieA;
+       dkim=pass header.i=@thehustle.co header.s=hs2-20627419 header.b=J0AG+8Qy;
+       spf=pass (google.com: domain of 1axb36cvudrcbmoeduvl6a1yubiehpk2r2w8pi-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.194 as permitted sender) smtp.mailfrom="1axb36cvudrcbmoeduvl6a1yubiehpk2r2w8pi-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Return-Path: <1axb36cvudrcbmoeduvl6a1yubiehpk2r2w8pi-shyams07=gmail.com@20627419m.thehustle.co>
+Received: from bid49as.20627419m.thehustle.co (bid49as.20627419m.thehustle.co. [158.247.31.194])
+        by mx.google.com with ESMTPS id af79cd13be357-8ca2fd80349si462437085a.348.2026.02.05.02.38.39
+        for <shyams07@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 05 Feb 2026 02:38:39 -0800 (PST)
+Received-SPF: pass (google.com: domain of 1axb36cvudrcbmoeduvl6a1yubiehpk2r2w8pi-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.194 as permitted sender) client-ip=158.247.31.194;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs1 header.b=oBhbEieA;
+       dkim=pass header.i=@thehustle.co header.s=hs2-20627419 header.b=J0AG+8Qy;
+       spf=pass (google.com: domain of 1axb36cvudrcbmoeduvl6a1yubiehpk2r2w8pi-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.194 as permitted sender) smtp.mailfrom="1axb36cvudrcbmoeduvl6a1yubiehpk2r2w8pi-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Received: by 172.16.128.26 with SMTP id a0h5nnp5ez4m1s9lr6wp37cma7pwul83dx2pyqn3ij;
+        Thu, 5 Feb 2026 10:38:39 GMT
+DKIM-Signature: v=1; s=hs1; d=20627419m.thehustle.co; 
+        i=@20627419m.thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=eRfkh8bh+ujDokI7ECC8wODFnV5Fz761K3lyXlk3vys=; 
+        b=oBhbEieA1vOWRG5tsvTcch2gq9GIBRK+1ZmOVxcmUfv3jHNpYFvyHL7mPlcXrq
+         OCqrvzoUPcLUA2cWlGkQV9nC5lD5lI5vRPLJRiLpvYSpN7Vi2vKcnMEGAFg5SlE
+         xbz6+d1rBbFHt/prc2eYqgb5C+xN+yyRTdtwVCznmC9mH99LSAg2Wwk+bj2DREe
+         8E699NkkSfTq6xO/uZRoqnPX7u5T7WAPEiBm7iRq6qoYT9Ih1H9w8LTLnROy0wo
+         HhmUVfUs28HHfVrgAheENO0EVJux621RXy9ZsOTYEFyltR8kxsEBAjk5b+FQpmQ
+         McchFJwzUvOvvrxhdPL9W6sWHLWA==; q=dns/txt; t=1770287919; 
+        x=1770550719;
+DKIM-Signature: v=1; s=hs2-20627419; d=thehustle.co; 
+        i=@thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=eRfkh8bh+ujDokI7ECC8wODFnV5Fz761K3lyXlk3vys=; 
+        b=J0AG+8QyGW6ApPFT1GEd04nW7QKqggksylK9jdP63EKIf4Ltdo3RVSyn7eVuZX
+         +nvxVRVfrwv0W/zdlJ8W1NipXOdNVLBfi0eZeD6yb3mOrwH48380yOdN4rLL/4q
+         cNjw8pTKhnnsI2JrBVZHDnP4v7xtxa/WPRFibCKqIyUrY+KW+0I0Vrs1YjdeT1o
+         Z0W1pdxG5ifcNjpUv64owmBypD2I4zvrlnHITnZ3Qiazpg+nNZlb7bi8vuXaeIX
+         2WszT8bqMbVimJy9J7+FUAe7qPjnNmsJbUaZgrHp4rZu83FcsEg1/ZVt/kBmSIV
+         PRX1MezAQnuEwxGqLcIKRVRZ6oWg==; q=dns/txt; t=1770287919; 
+        x=1770550719;
+Return-Path: <1axb36cvudrcbmoeduvl6a1yubiehpk2r2w8pi-shyams07=gmail.com@20627419m.thehustle.co>
+X-HS-Cid: 1axfw8ar8t0vikz2wd50wj4izp9bhmjqzau32e
+List-Unsubscribe: <mailto:1axdeqia3oko0zv9hs19ehlwzkg21h1sm2czfa-shyams07=gmail.com@20627419m.thehustle.co?subject=unsubscribe>, <https://blog2.hubspot.com/hs/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-GsW2t3kKh2KSxsvW25gCM43bfh2hW1X62By43rGTjW2RQFdF4cR3wBW2Mzkvz3H3b3zW2PWrH52Ft5xyW3JDg6y43qWfXW3VY6Wd22WlZdW2YFLPx3LFk4cW34wDXT3__B8XW21bV6t20Zvz_W4ms5R724_5XhW3yZZBK4ck10MW1Lv7cL3zbNW-W3R3Bb92r1X0bW25jG4x22XFcHW3zjJpn2FwdLGW1VdvkK2Tz5Q1W3VY1KK1VnRZ9W38z8TQ2nYHpzW2CVRJH3z3h-wW4hwWNj1QvFBsW1_rZ2X2sSMs8W2Ymn8j49n9Z2W400vMB2Yn82tW4fzZj61X6rRpW2zNNlT3D_BPSW4tgJXt2RMJkBW1Y-kRN1ZtSlwW1LgtcW3ZHPgKW3J-pHy217ycPW2xQD-83g2ttnW3JW9Z236hRh1W1LwT9R4hrFznW4tGB3C3R2nScW2vMs3F4pzDCVW2p8Kdm4clfhLW25dWjF3gnrXqW4r7v3f2Wpfc_W3_VkVn1LxK4qW4rBFnv3JWBR4W45CfMm2KV9tKW2RjDY32PK1JLW2TJ-Vy3T6k01W3R5GRQ2PFhVwW47njnc3GWp6XW3b4X9L1_7MtGW3h-6PL1SpRDGW1Vdqtq256CQwW32BcNL3b4zLLW3P750j3SPSCJW306Tqg2YDrR-W1Vww942WGPZXW2YCGZ21Ssh5C0>
+Date: Thu, 5 Feb 2026 05:38:39 -0500
+From: The Hustle <news@thehustle.co>
+Reply-To: news@thehustle.co
+To: shyams07@gmail.com
+Message-ID: <1770287911722.ee1e9797-ecff-4a7d-be71-49eac9a502c9@20627419m.thehustle.co>
+Subject: =?utf-8?Q?=F0=9F=91=A9=F0=9F=8F=BB=E2=80=8D=F0=9F=92=BB_=C2=A0Cowor?=
+ =?utf-8?Q?king_for_the_1%?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_186667_1930038165.1770287919462"
+Precedence: bulk
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: aemkeh5:aigxoyg4:aipuz:HubSpot
+
+------=_Part_186667_1930038165.1770287919462
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Plus: A hot new boycott app, a gripping murder mystery game, and more.=E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+
+You've got 3 referrals, just 2 away from earning a Hustle candle. Check out=
+ all of our prizes here (https://store.thehustle.co/?_hsenc=3Dp2ANqtz--53uG=
+zZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYv=
+Fz5oi2xBchJg&_hsmi=3D402112758 ) .
+
+Share your link:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe=
+3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBch=
+Jg&_hsmi=3D402112758
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz--53uGzZhIs1VQL=
+e3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBc=
+hJg&_hsmi=3D402112758 )
+
+Share The Hustle:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe=
+3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBch=
+Jg&_hsmi=3D402112758
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz--53uGzZhIs1VQL=
+e3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBc=
+hJg&_hsmi=3D402112758 )
+
+Check your referral progress & prizes here (https://thehustle.co/refer-the-=
+hustle?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp=
+7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 )
+
+The Hustle by HubSpot Media  (https://thehustle.co/home/?_hsenc=3Dp2ANqtz--=
+53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_=
+tWYvFz5oi2xBchJg&_hsmi=3D402112758 )
+
+=F0=9F=91=8B  Good morning. While you=E2=80=99re just trying to make it thr=
+ough all five days of the workweek, 84-year-old Tom Henschel is gearing up =
+to attend his 60th Super Bowl. He=E2=80=99s part of the exclusive =E2=80=9C=
+Never Miss a Super Bowl=E2=80=9D club, which includes fellow devoted fans D=
+on Crisman and Gregory Eaton. When Henschel attended the first-ever Super B=
+owl to watch the Green Bay Packers play the Kansas City Chiefs, tickets wer=
+e $12 and fans wore suits and ties. His seat this year? $2.7k.
+
+STARTING UP
+
+This startup wants to mind your beeswax
+
+=E2=9D=8C  The problem: A large share of global food crops depend on pollin=
+ation, but it=E2=80=99s often an afterthought in agricultural planning =E2=
+=80=94 rarely measured or optimized.
+
+=F0=9F=92=A1  The pitch: France-based UBEES (https://ubees.com/?_hsenc=3Dp2=
+ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbU=
+l12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) equips beehives with sensors to=
+ monitor pollination health and track environmental conditions. A connected=
+ hive lets users monitor productivity, biodiversity, and crop quality to in=
+crease yields and power more regenerative farms.
+
+=F0=9F=9A=80  The outlook: UBEES already operates in 15+ (https://bebeez.eu=
+/2026/02/03/french-startup-ubees-raises-e8-million-to-expand-bee-powered-re=
+generative-agriculture-globally/?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4J=
+MA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=
+=3D402112758 ) countries and plans to expand into Latin America and Africa =
+=E2=80=94 key regions for crops like coffee, cocoa, and avocados.
+
+NEWS FLASH
+
+-
+
+Knock, knock: Kindred, a home swap platform, scored 150k (https://www.forbe=
+s.com/sites/francescawalton/2026/02/03/home-swap-startup-kindred-raises-125=
+-million-in-fresh-funding-as-travelers-seek-creative-ways-to-save-money?_hs=
+enc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5=
+W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) new members in 2025 and=
+ is anticipating higher demand this year as budget-conscious travelers look=
+ beyond pricey hotels and home rentals. It recently raised $125m and plans =
+to scale beyond the 150+ cities it currently supports.
+
+-
+
+Dr. Bot: Lotus Health AI=E2=80=99s LLM acts like a primary care doctor and =
+can offer diagnoses, prescriptions, and referrals, which are then reviewed =
+by human doctors. Lotus, which just raised a $35m (https://techcrunch.com/2=
+026/02/03/lotus-health-nabs-35m-for-ai-doctor-that-sees-patients-for-free/?=
+_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fE=
+XL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) Series A, claims its=
+ AI can see 10x as many patients as a traditional doctor=E2=80=99s office.
+
+-
+
+Clocking into reality: DeepSight is a startup that helps industrial compani=
+es, predominantly in food manufacturing, create (https://agfundernews.com/d=
+eepsight-takes-augmented-reality-to-the-factory-floor?_hsenc=3Dp2ANqtz--53u=
+GzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWY=
+vFz5oi2xBchJg&_hsmi=3D402112758 ) trainings in VR and AR. Experienced emplo=
+yees put on smart glasses and perform their daily tasks while explaining ho=
+w they're done. Then, DeepSight=E2=80=99s AI returns with step-by-step work=
+ instructions.
+
+-
+
+Demon what now? The finalists (https://gizmodo.com/check-out-10-weird-and-w=
+onderful-finalists-for-the-pulitzer-of-the-new-instrument-world-2000717314?=
+_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fE=
+XL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) of Georgia Tech=E2=
+=80=99s annual Guthman Musical Instrument Competition include the =E2=80=9C=
+Gajveena,=E2=80=9D a combination of the very low-pitched double bass and ru=
+dra veena; the =E2=80=9CDemon Box,=E2=80=9D which amplifies the frequencies=
+ of nearby electronic devices; and =E2=80=9CFiddle Henge.=E2=80=9D That=E2=
+=80=99s four violins on a motorized bass drum, apparently.
+
+FROM OUR FRIENDS AT MINDSTREAM
+
+An illustration of a lab. (https://www.mindstream.news/p/the-materials-bott=
+leneck-everyone-ignored-just-broke?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD=
+4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=
+=3D402112758 )
+
+AI gets practical in the lab
+
+Designing new materials is easy for AI. Making them a reality in the lab is=
+ not.
+
+Researchers at MIT developed an AI model that bridges the gap between desig=
+n and production, with practical synthesis recipes that scientists can use =
+to create real materials.
+
+=F0=9F=91=89  Read more on Mindstream (https://www.mindstream.news/p/the-ma=
+terials-bottleneck-everyone-ignored-just-broke?_hsenc=3Dp2ANqtz--53uGzZhIs1=
+VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2=
+xBchJg&_hsmi=3D402112758 )
+
+THE BIG IDEA
+
+A desk and two chairs sit in front of a brown curtain. On one sized, an ove=
+rsized hand holds out a white coffee mug. On the other is an oversized piec=
+e of bread topped with caviar. (https://thehustle.co/news/caviar-taste-meet=
+s-the-coworking-era?mainArticle=3Dtrue&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPe=
+BHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_=
+hsmi=3D402112758 )
+
+Caviar taste meets the coworking era
+
+For as hard as CEOs have tried to get workers back in the office, remote wo=
+rk is still alive and well, with ~70% (https://www.sap.com/sea/blogs/hybrid=
+-meetings-and-workers-state-of-mind?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHg=
+D4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsm=
+i=3D402112758#:~:text=3DToday%2C%2070%25%20of%20U.S.%20Fortune,Short%20answ=
+er:%20No .) of Fortune 500 companies having adopted hybrid models.
+
+As such, demand for coworking spaces is once again booming.
+
+- Coworking space in the US totaled 159m (https://www.facilitiesdive.com/ne=
+ws/large-companies-push-coworking-expansion/811222/?_hsenc=3Dp2ANqtz--53uGz=
+ZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvF=
+z5oi2xBchJg&_hsmi=3D402112758 ) square feet by the end of 2025, according t=
+o Coworking Cafe, up 17% YoY and ~38% over the past three years.
+
+- While it accounts for just 2.2% of total US office inventory, analysts ex=
+pect (https://www.wsj.com/real-estate/commercial/a-new-breed-of-shared-offi=
+ces-is-bringing-the-co-working-market-back-to-life-8f7287eb?mod=3Darticle_i=
+nline&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7=
+etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) that figure co=
+uld eventually grow to 10%.
+
+But this time around, a growing share of that floorspace is being taken up =
+by coworking companies that are elevating what labor looks like=E2=80=A6
+
+Enter: The era of luxury coworking
+
+For remote workers who can afford it and companies that want offices withou=
+t a long-term lease, these next-gen spaces offer premium amenities and stun=
+ning interiors =E2=80=94 divided into shared spaces, meeting rooms, and pri=
+vate offices =E2=80=94 that turn work into a lifestyle.
+
+- At Arc Beverly (https://www.latimes.com/b2b/commercial-real-estate/story/=
+2025-12-09/arc-beverly-hills-launch-luxury-coworking-social-club-cuisine?_h=
+senc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL=
+5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) , a newly launched wor=
+kspace-focused social club in Los Angeles, members (i.e., influencers, busi=
+ness leaders, entire companies) can network across its rooftop, lounges, th=
+eater, wellness programs, and upscale, all-day restaurant and bar.
+
+- The Malin (https://themalin.co/?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4=
+JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=
+=3D402112758 ) =E2=80=94 one of America=E2=80=99s fastest-growing companies=
+, where =E2=80=9Cthe most ambitious go to work beautifully=E2=80=9D =E2=80=
+=94 offers velvet-draped Zoom backgrounds, concierge services, and artisana=
+l coffee. It launched in 2021 and plans to add four more locations this yea=
+r after doubling revenue to $20m in 2025, per (https://www.inc.com/jennifer=
+-conrad/the-next-generation-of-coworking-is-here-its-gorgeous-and-its-growi=
+ng-fast/91223274?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2Zcj=
+MFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) Inc=
+.
+
+Rates typically begin at ~$300/month for individuals but can creep into the=
+ thousands depending on the membership tier.
+
+CEOs need coworking spaces, too
+
+For professionals with caviar taste and budgets to match, Industrious is ki=
+cking things up a few notches with Industrious Reserve (https://www.industr=
+iousoffice.com/locations/390-park-avenue-5th-floor-new-york?_hsenc=3Dp2ANqt=
+z--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b=
+5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) =E2=80=94 essentially, a WeWork for=
+ the 1% =E2=80=94 which opens in NYC this spring, per (https://www.fastcomp=
+any.com/91483735/a-coworking-space-for-the-1-of-workers?_hsenc=3Dp2ANqtz--5=
+3uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_t=
+WYvFz5oi2xBchJg&_hsmi=3D402112758 ) Fast Company.
+
+- The specs: pre-Zoom grooming services, private dining, caviar tastings, a=
+nd dedicated staff who=E2=80=99ll greet you by name and bring you your coff=
+ee just as you like it.
+
+- The clientele: C-suite execs and businesses like VC firms, hedge funds, a=
+nd high-end fashion brands.
+
+- The cost: $7k-$9.5k a month (oof).
+
+Considering many top-earning professionals work well over 40 hours a week, =
+it makes sense that they=E2=80=99d want the space they spend much of their =
+time in to match their living standards.
+
+Not sure if you=E2=80=99d call that work-life balance, but it=E2=80=99s got=
+ta beat cheap snacks and cubicles.
+
+=F0=9F=94=97 (https://thehustle.co/news/caviar-taste-meets-the-coworking-er=
+a?mainArticle=3Dtrue&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb=
+2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 )
+
+HIGHLY RECOMMENDED
+
+SEO won=E2=80=99t save you=E2=80=A6 but AEO could be your business life raf=
+t. We sat down with a marketing expert to learn how (https://blog.hubspot.c=
+om/marketing?hubs_content=3Dblog.hubspot.com%2F&hubs_content-cta=3Dnull&hub=
+s_post-cta=3Dblognavcard-marketing&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD=
+4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=
+=3D402112758 ) to make it happen.
+
+NEWSWORTHY NUMBER
+
+Increase in average daily downloads of apps NonUSA (iOS) and Made O=E2=80=
+=99Meter (iOS and Google Play) between Jan. 15-21 and the week prior, per (=
+https://techcrunch.com/2026/01/21/apps-for-boycotting-american-products-sur=
+ge-to-the-top-of-the-danish-app-store/?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPe=
+BHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_=
+hsmi=3D402112758 ) TechCrunch. Both apps, which help users determine if pro=
+ducts are American-made and offers local alternatives, recently sprang to t=
+he top of the Danish App Store amid a broader European boycott of American =
+products and services following the US government=E2=80=99s threats of a Gr=
+eenland takeover.
+
+Ironically, iOS users will, however, need to use a US-made app store to dow=
+nload the apps onto their =E2=80=9Cdesigned in California=E2=80=9D iPhones.
+
+AROUND THE WEB
+
+=F0=9F=93=85  On this day: In 1919, Charlie Chaplin, Mary Pickford, Douglas=
+ Fairbanks, and D.W. Griffith formed (https://www.history.com/this-day-in-h=
+istory/february-5/united-artists-created?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3p=
+PeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg=
+&_hsmi=3D402112758 ) the legendary film studio United Artists Corporation.
+
+=F0=9F=94=8E  Game: A compelling murder mystery (https://william-rous.itch.=
+io/type-help?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhN=
+H9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) that yo=
+u solve by typing in codes.
+
+=F0=9F=92=8A  That=E2=80=99s interesting: ProPublica made a database to tra=
+ck (https://www.propublica.org/article/rx-inspector-prescription-drug-looku=
+p?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7=
+fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) where generic drug=
+s come from and the factories that made them.
+
+=F0=9F=93=B0  Newsletter: Subscribe (https://join.sherwood.news/thewrap/?ut=
+m_source=3Dhubspot&utm_medium=3Demail&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeB=
+HgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_h=
+smi=3D402112758 ) to The Wrap for essential stories and market moves.
+
+=F0=9F=90=B1  Aww: A tussle (https://www.reddit.com/r/aww/comments/1q510cm/=
+cheddar_wanted_to_groom_his_brother_and_it_was/?_hsenc=3Dp2ANqtz--53uGzZhIs=
+1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi=
+2xBchJg&_hsmi=3D402112758 ) .
+
+SHOWER THOUGHT
+
+If you were born in the '90s, you may be the last generation that remembers=
+ what it was like to go to the internet, rather than always being on it. SO=
+URCE (https://www.reddit.com/r/Showerthoughts/comments/1po5389/if_you_were_=
+born_in_the_90s_you_may_be_the_last/?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBH=
+gD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hs=
+mi=3D402112758 )
+
+Today's email was brought to you by Juliet Bennett Rylah (https://bsky.app/=
+profile/jbrylah.bsky.social?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8=
+XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D4021=
+12758 ) and Singdhi Sokpo.
+
+Editing by: Sara "Will take my caviar to go" Friedman.
+
+Was this email forwarded to you? Sign up here (https://thehustle.co/join/?u=
+tm_source=3Dthehustle&utm_medium=3Demail&utm_campaign=3Dfooter&_hsenc=3Dp2A=
+Nqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl=
+12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) .
+
+Working on something big?
+
+We've got a whole library of business-building resources (https://thehustle=
+.co/resources?utm_source=3Dthe-hustle&utm_medium=3Demail-media-newsletter&u=
+tm_campaign=3Downed&utm_term=3Dresources-footer-link-07-2025&utm_content=3D=
+hustle-footer&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFh=
+NH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 )  for y=
+ou.
+
+Subscribe to our other newsletters
+
+Stay up-to-date on AI: Mindstream (https://www.mindstream.news/?utm_channel=
+=3Demail&utm_source=3Dhustle&utm_medium=3Dfooter&_hsenc=3Dp2ANqtz--53uGzZhI=
+s1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5o=
+i2xBchJg&_hsmi=3D402112758 )   |  Expert insights: Marketing Against the Gr=
+ain (https://marketingagainstthegrain.com/subscribe?utm_source=3Dthehustle&=
+utm_medium=3Demail&utm_campaign=3Ddailyfooter&_hsenc=3Dp2ANqtz--53uGzZhIs1V=
+QLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2x=
+BchJg&_hsmi=3D402112758 )  |  Sell better: The Science of Scaling (https://=
+blog.hubspot.com/the-science-of-scaling-subscribe?_hsenc=3Dp2ANqtz--53uGzZh=
+Is1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5=
+oi2xBchJg&_hsmi=3D402112758 )
+
+Follow The Hustle on YouTube (https://www.youtube.com/@TheHustleChannel?_hs=
+enc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5=
+W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) , LinkedIn (https://www=
+.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4J=
+MA7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=
+=3D402112758 ) , and Instagram (https://www.instagram.com/thehustledaily/?h=
+l=3Den&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA7K8XiGZrlb2ZcjMFhNH9I_xp=
+7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D402112758 ) .
+
+HubSpot Media, 2 Canal Park, Cambridge, MA, 02141, USA, +1 888.482.7768
+
+Never want to hear from us again? Break our hearts and Unsubscribe (https:/=
+/blog2.hubspot.com/hs/preferences-center/en/page?data=3DW2nXS-N30h-MMW1-Zjv=
+G36FW4fW1VdscW1Z8LfdW2KSZF03d36lHW1Svmtt2Kp05GW4kHnHv1QDfmsW3GQQyD2t51KFW3_=
+s6zx2CCrBzW4tfXDs3W0DyRW1_mhgv4ksnwpW2p5W4p4fpRCWW2Wnmzd1VjCJLW3DW9Fv257YsP=
+W3gqSYY2CvDh5W3VyL_H3C7JbvW2PG5qs32Gn47W4fLJ0b3blK9QW3d0--D38lyN8W3DH4bc38B=
+Q55W4hy39q1X1nJZW4psmZs3_H_vZW2KHpjJ2y28B4W43DH2d215n6sW4pr0zP32gzV0W4fJG-4=
+20WBsbW3K24rW4fP9YHW1BPqp71S9kYyW1N59M743NCX7W4r6J7730r41HW3QNlfc2MCP8fW4hx=
+hR-2MP0bpW4tCGBl3dzZYvW1_35X13_pFqhW4tdjgq3M153FW2CxdL73jlyhxW3Y28qK1ZvzBWW=
+2xwnjn3_-0ZBW41ZlDw4rj_W9W2-MQwg3JWbRLW3DSdz03dfX0lW2pbtGh1LGpy2W2qWVnk2-w2=
+x0W3gb0Rk2WLYLLW34l69p3XJrSBW3QKqLF2p5WKLW3_ByNj45ym2jW25p9fB4th6LQW3LYvfD2=
+PkglJW36pCcf1NCJCBW36nLks4pKty8W30lSPP23jnlSW2WH_pM43zhr0W38sL6v2r65ppW2RDb=
+wn1Lm5NKW3Xy1ls2xR1LMf21pd8p04&_hsenc=3Dp2ANqtz--53uGzZhIs1VQLe3pPeBHgD4JMA=
+7K8XiGZrlb2ZcjMFhNH9I_xp7etc7fEXL5W7svYAbUl12b5c_tWYvFz5oi2xBchJg&_hsmi=3D4=
+02112758 ) .
+------=_Part_186667_1930038165.1770287919462
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head><!--[if !mso]><!--><l=
+ink rel=3D"stylesheet" type=3D"text/css" hs-webfonts=3D"true" href=3D"https=
+://fonts.googleapis.com/css?family=3DLato|Lato:i,b,bi&amp;display=3Dswap"><=
+!--<![endif]-->
+    <title>=F0=9F=91=A9=F0=9F=8F=BB=E2=80=8D=F0=9F=92=BB &nbsp;Coworking fo=
+r the 1%</title>
+    <meta property=3D"og:title" content=3D"=F0=9F=91=A9=F0=9F=8F=BB=E2=80=
+=8D=F0=9F=92=BB &nbsp;Coworking for the 1%">
+    <meta name=3D"twitter:title" content=3D"=F0=9F=91=A9=F0=9F=8F=BB=E2=80=
+=8D=F0=9F=92=BB &nbsp;Coworking for the 1%">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #FFFFFF;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://marketingagainstthegrain.com/-temporary-slug-cba8e7e3-909c=
+-438e-8130-ab2e4d46dc7b"><meta name=3D"robots" content=3D"noindex,follow"><=
+!--[if !((mso)|(IE))]><!-- --><style type=3D"text/css">@media only screen a=
+nd (max-width:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,=
+.hs-stretch-cta .hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #eaf0f6 !important;border-right:1px solid #eaf0f6 !important;box-sizing:=
+border-box}
+.hse-border-bottom-m{border-bottom:1px solid #eaf0f6 !important}.hse-border=
+-top-m{border-top:1px solid #eaf0f6 !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-12{max-width:600px !important;width:600px !impo=
+rtant}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12=
+{max-width:600px !important;width:600px !important}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section_1767749004168 .hse-column-container{background-color:#fff !importa=
+nt} }@media only screen and (max-width:639px){ #section_17594246323143 .hse=
+-column-container{padding-top:10px !important;padding-bottom:10px !importan=
+t}
+#section_17594246323143 .hse-column-container{background-color:#fff !import=
+ant} }
+@media only screen and (max-width:639px){ #section_17702254684525 .hse-colu=
+mn-container{padding-top:0px !important;padding-bottom:0px !important}
+#section_17702254684525 .hse-column-container{background-color:#eaf0f6 !imp=
+ortant}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-bott=
+om:20px !important}
+#section-2 .hse-column-container{background-color:#fff !important} }</style=
+><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_main a[x=
+-apple-data-detectors]{color:inherit !important;text-decoration:none !impor=
+tant;font-size:inherit !important;font-family:inherit !important;font-weigh=
+t:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}
+.ShadowHTML p,.sh-modified-inline p{margin:0}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#FFFFFF" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Lato, Tahoma, sans-serif; font-size:16px; c=
+olor:#192733; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#FFF=
+FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">Plus: A hot new boycott app, a gripping murder mystery game, =
+and more.=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD &nbsp;
+</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#ffffff" bgcolor=3D"#ffffff">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-break:br=
+eak-word; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1767749004168" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1767749004168_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17677490162412" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hm" style=3D"color: inh=
+erit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div style=3D"font-size: 14px; text=
+-align: center; line-height: 140%;">
+  <em>
+ =20
+    <span>You've got 3 referrals, just 2 away from earning a Hustle candle.=
+ Check out all of our <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/=
+UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYz2_3wqW5BW0B06l=
+Z3l0V2Rnpm8528hcW4Kb-mt5K0qJ2W69bhDB449Zj0W15JdHy2MlRw1W59PdwX1fPdjjW1pRLfb=
+4FlHY3W5Cdx8D1kYk0NW918cQW6BFTXTW8dyyls3c9DfwVp_61l90_vwXW59qpNM6vBYwzN4TZR=
+cWC285JN10Rz3CxDRDcW55NKgN1bMM8MW47TC-q8qfqw1VnmL3d9f2tJ4W6PP7ps2pQKCfW7JSy=
+Gg69wfLXf7cQDZ204" style=3D"color:#192733; text-decoration:underline !impor=
+tant" data-hs-link-id=3D"2" data-hs-link-id-v2=3D"v9PpzLyj" target=3D"_blan=
+k">prizes here</a>.</span>
+ =20
+ =20
+  <br>
+    <span style=3D"font-weight: bold; color: #bf2434;">Share your link:</sp=
+an>
+   =20
+      <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/=
+VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYT2_3wqW69sMD-6lZ3kFVjBvZ85kyvCb=
+W1vFmP33ntNcqW8kz0456HRmnYW4FKxsx6vZCQwVBbs3m6Tzq35W8BNTzr7rStmQN95SPF3Db3P=
+lN8WSnnBnmygPW8596ZM307P_3W4LcL4k578NZ9W2Nm6QT7f4H08W4sYgq08DNhmFW1lgQpz3z2=
+RH0W8svQL91-kyphW7bqRQY3SczPdW2xjyg82_msTHW4sWsFP3JZDs5W95DxTT1x278vW6L5r04=
+6PSbMDW1nwq3_36LHHCf5S7h3P04" style=3D"color:#192733; text-decoration:under=
+line !important" data-hs-link-id=3D"1" data-hs-link-id-v2=3D"Zygo4LuM" targ=
+et=3D"_blank" data-contains-exactly-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+ =20
+  </em>
+</div></div>
+<!--[if !mso]><!--><div id=3D"hs_cos_wrapper_module_17677490041141" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hd" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;display:n=
+one" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div s=
+tyle=3D"font-size: 11px; text-align: center; line-height: 130%">
+  <em>
+   =20
+      <span style=3D"font-weight: bold; color: #bf2434">Share The Hustle:</=
+span>
+      <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/=
+VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYT2_3wqW69sMD-6lZ3lPW5BQT4H6ntx4=
+3W42yrj95nYkrJW6cWZKm48YcLGW6rdT557lsd48W2bwCfK3w6Ll4N7sqW0pVJtlvW7f-fwj8Bq=
+yJ2W8vyxLG76QWtTVBs-f_2rSxTLW7wsC8289J8MLW96WfRs65hZHhW2Knb_75dKVgPVl96-f36=
+mzzcW3cZGT_7BSTSVW60BkPc1Fl-JGW1MrTXM79WYKyW74MfxK8RwKYHW6mnCqh6M5cBKW8S0tb=
+M1s-bxDN2gfRLQ5RKlHd3QQD604" style=3D"color:#192733; text-decoration:underl=
+ine !important" data-hs-link-id=3D"2" data-hs-link-id-v2=3D"dQWh244K" targe=
+t=3D"_blank" data-contains-exactly-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+  </em>
+  <br>
+  <span>
+    Check your referral progress &amp; prizes <a href=3D"https://d2q-Vf04.n=
+a1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K8=
+6t_N1xVmYT2_3wqW69sMD-6lZ3kVW4qsKQt2xKq8cW8PGKfk4r_S9KN4q76rwr7JnpW7Ps7b88Y=
+YPV_V83hTV4jB9dsN2cDQXgwwbZQW66VHYf5tvq7RW4kmZfH536Z3yW5zKR_F1dKMlqW1kRmPz2=
+pYXHlV37ZVg4Dv8DvW8PwRb9905d2kW64SRhJ49ctqjVS0CVS30XDkkW1W5ynt6LfH_yW3BB8B9=
+1mQMX_W8VrFWq3yP9bQW24QlKT6VTvzkW2nylJJ43nGryW2Zt_kd85TD39f91v8JY04" style=
+=3D"color:#192733; text-decoration:underline !important" data-hs-link-id=3D=
+"3" data-hs-link-id-v2=3D"T/hBDVGM" target=3D"_blank">here</a>
+  </span>
+</div></div><!--<![endif]-->
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17594246323143" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff; padding-bottom:10px; pad=
+ding-top:10px" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:10px; padding-top:=
+10px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1759424632314-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17594246323132" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Lato, Tahoma, sans-serif; color:#192733; word-break:break-word; tex=
+t-align:center; padding:10px 20px; font-size:0px">
+        <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf0=
+4/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYz2_3wqW5BW0B06lZ3mpW1X_Ckz7DT=
+HklW507F_N2FCd7fW93NB5d6YCjqxW7rW4Wc6pQC41W47SjLv70vVl_W42Mlym1Bs7NgW1Nf28V=
+4TDsZWV_6TBY61SvKKW7hTqBj9gjx8NW5fXgjl5Qt5KbVncFzL41g5r6W4Yh3tN3r3F72N3J6tz=
+_GHsvRW76Xgcy8bvCDjW1yTC302hB5nkVJQZ0M1wTQzBW1FPbtc4sGRPbW1bYdtD57680pf5_vB=
+Lb04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-=
+hs-link-id-v2=3D"BtznYW/L">
+        <img alt=3D"The Hustle by HubSpot Media " src=3D"https://marketinga=
+gainstthegrain.com/hs-fs/hubfs/The_Hustle_HubSpot_Media_Email_Logo_2026.png=
+?width=3D500&amp;upscale=3Dtrue&amp;name=3DThe_Hustle_HubSpot_Media_Email_L=
+ogo_2026.png" style=3D"outline:none; text-decoration:none; border:none; max=
+-width:100%; font-size:16px" width=3D"250" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1759424660484" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1759424660484_0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-=
+break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17594=
+246604542" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_typ=
+e_module" style=3D"color: inherit; font-size: inherit; line-height: inherit=
+;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=
+=3D"hs_cos_wrapper_module_17594246604542_" class=3D"hs_cos_wrapper hs_cos_w=
+rapper_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"rich_text"><p style=3D"line-height:150%">=F0=9F=91=8B&nb=
+sp; <span style=3D"font-weight: bold;">Good morning. </span>While you=E2=80=
+=99re just trying to make it through all five days of the workweek, 84-year=
+-old Tom Henschel is gearing up to attend his 60th Super Bowl. He=E2=80=99s=
+ part of the exclusive =E2=80=9CNever Miss a Super Bowl=E2=80=9D club, whic=
+h includes fellow devoted fans&nbsp;Don Crisman and Gregory Eaton. When Hen=
+schel attended the first-ever Super Bowl to watch the Green Bay Packers pla=
+y the Kansas City Chiefs, tickets were $12 and fans wore suits and ties. Hi=
+s seat this year?&nbsp;$2.7k.</p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-0" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff; padding-bottom:10px; pad=
+ding-top:10px" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:10px; padding-top:=
+10px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-=
+break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-0-0-3=
+" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module"=
+ style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-h=
+s-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"no=
+ne" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-alig=
+n:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Lato, Tahoma, sans-serif; col=
+or:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:4px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:4px solid #eaf0f6;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-0-0-4" c=
+lass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" st=
+yle=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-c=
+os-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wr=
+apper_module-0-0-4_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_w=
+rapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-he=
+ight: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"ric=
+h_text"><h2 style=3D"margin:0; font-size:13px; line-height:115%"><span styl=
+e=3D"color: #bf2434;">STARTING UP</span></h2></div></div></td></tr></tbody>=
+</table>
+<div id=3D"hs_cos_wrapper_module-0-0-5" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Lato, Tahoma, sans-serif; color:#192733; word-break:break-word; tex=
+t-align:center; padding:10px 20px; font-size:0px">
+        <img alt=3D"A graph that depicts an increasing line. The graph is s=
+tylized with a honeycomb background and a bee moving along the line. " src=
+=3D"https://marketingagainstthegrain.com/hs-fs/hubfs/UBEES-1.gif?width=3D11=
+20&amp;upscale=3Dtrue&amp;name=3DUBEES-1.gif" style=3D"outline:none; text-d=
+ecoration:none; max-width:100%; font-size:16px" width=3D"560" align=3D"midd=
+le" class=3D"stretch-on-mobile">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17574389=
+236785" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module_17574389236785_" class=3D"hs_cos_wrapper hs_cos_wrapp=
+er_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"rich_text"><p style=3D"line-height:150%"><span style=3D"font=
+-size: 12px; color: #000000;"> </span></p>
+<h2 style=3D"margin:0; font-size:18px; line-height:150%"><span style=3D"fon=
+t-size: 22px;">This startup wants to mind your beeswax&nbsp;</span><br><br>=
+</h2>
+<p style=3D"line-height:150%">=E2=9D=8C&nbsp; <span style=3D"font-weight: b=
+old;">The problem:</span> A large share of global food crops depend on poll=
+ination, but it=E2=80=99s often an afterthought in agricultural planning =
+=E2=80=94&nbsp;rarely measured or optimized.&nbsp;<br><br></p>
+<p style=3D"line-height:150%">=F0=9F=92=A1&nbsp; <span style=3D"font-weight=
+: bold;">The pitch: </span>France-based <a href=3D"https://d2q-Vf04.na1.hub=
+spotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1x=
+VmYg2_3wqW50kgx26lZ3nLV_fTdd2C4c6lN1JBFzQNkYtNW8gX60w5Xf6s2W2ZlJW94xn8HwW1B=
+vLbf7NFKvYW120R_y9jLD7nW6fP3wY8HkTg3W1skkRD3KXKV4W36R6S12GM20JW8-ZcNm7KWHfm=
+W8hjLB66pdMVgN4LkD0JyP--7W6TvLlq96G75fVCn6sf4yZgNQW2TF-dK30ZV-HVGC1zL2tZvx_=
+f7NV73b04" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"0" d=
+ata-hs-link-id-v2=3D"3aoVWJQt" target=3D"_blank">UBEES</a> equips beehives =
+with sensors to monitor pollination health and track environmental conditio=
+ns. A connected hive lets users monitor productivity, biodiversity, and cro=
+p quality to increase yields and power more regenerative farms.&nbsp;&nbsp;=
+<br><br></p>
+<p style=3D"line-height:150%">=F0=9F=9A=80&nbsp; <span style=3D"font-weight=
+: bold;">The outlook: </span>UBEES already operates in <a  href=3D"https://=
+d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8=
+W7lBRbf5K86t_N1xVm-l2_3wqW95jsWP6lZ3mjN4mZVJy2RtDhW7ym1J12X0KLJW6SkgmR21SLx=
+dW942KS06-ZkKPV3V_1D4jwJybW9czKvS16XBqsW61PM886v4GG_W2zFDlP3S_lxvW3cjv4D57y=
+LYXW4QrvRd8lz48nW8HnMvB7SyMvGN8CgCk-KQvPVW3y_-kT8PGKtzVyBycX9d8DvVW9lpTYW6X=
+F7qDVB68T82zc5vvVQzJJs4yNHGJW5yMzV_898wzjW3-38FW19kXvsW7FrqFX5GdPTqN8w8PD3c=
+lX7-W1TfFtJ22bJ-WN4ylX-CG6p4-W5ZqLT81JYtg0W6CvcMR1DXXNGW5rzT1r330GGlW1s9dv3=
+2b39cKW1Rm_6T5gSGyyW39M1XL8p05RVW3CY9bb27b6c-f3wWG-d04" rel=3D"noopener" st=
+yle=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"ePBxCtzW"=
+ target=3D"_blank">15+</a> countries and plans to expand into Latin America=
+ and Africa =E2=80=94 key regions for crops like coffee, cocoa, and avocado=
+s.</p>
+<p style=3D"line-height:150%">&nbsp;</p>
+<p style=3D"line-height:150%"><span style=3D"font-size: 12px; color: #00000=
+0;"> </span></p></div></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17695445=
+719212" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertica=
+l-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Lato, Tahoma, sans-serif; col=
+or:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:4px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:4px solid #eaf0f6;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17357724=
+672301" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module_17357724672301_" class=3D"hs_cos_wrapper hs_cos_wrapp=
+er_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"rich_text"><h2 style=3D"margin:0; font-size:13px; line-heigh=
+t:150%"><span style=3D"color: #bf2434;">NEWS FLASH</span></h2>
+<ul style=3D"line-height:150%">
+<li>
+<p style=3D"line-height:150%"><span style=3D"font-weight: normal;"><span st=
+yle=3D"font-weight: bold;">Knock, knock: </span>Kindred,</span><span style=
+=3D"font-weight: bold;"> </span>a home swap platform, scored <a href=3D"htt=
+ps://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8=
+BfNJ8W7lBRbf5K86t_N1xVmYT4ZD0CW69t95C6lZ3kDW6gmNMb6Z-4jKW8NSSZ420s6bcW2c1Sz=
+y2sWbMdW47HxTF3rfr-RW2hjtDg55Yx90W8_7B8B7Rt2rcN5Gf1D3kQ8XFW3tM9gt8l_rLQW6WP=
+tkZ4QQ75LN6-C8bQvzbDFW1rbhQk30Fm9qVY4cw_5hQ5byN4S5TFSWXjpcW7xqNTN2y8tpBW8wr=
+Rfq2zlXMlN7x3qnT1DC2DW1WgmXL8z8CSwW6KwX9c8HlRPJW6W7YhJ9lzBrQW1jkt7l55GnwHN8=
+QMHglLBxlkW6Yzwbh4TM4d4W5lpLFp9krgLfW88hV5s1DRLqDW3-B0k23f0tmcW9jhc074WnjHW=
+W4znw3X8Cg8Y0W6c46yL4BwjrLW8L3jJg3cZY4ZW6Tmlkx58HSL0W6JW54g6Wsts-W4cg5QL4H2=
+XG9W4859Rw7spzt1W4Wr1Fy43KT2WW5X68ss3ld0l5N5pssS6RWgmkf86Kyqs04" style=3D"c=
+olor:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"B/2cBVMZ" target=
+=3D"_blank">150k</a> new members in 2025 and is anticipating higher demand =
+this year as budget-conscious travelers look beyond pricey hotels and home =
+rentals. It recently raised $125m and plans to scale beyond the 150+ cities=
+ it currently supports.<br><br></p>
+</li>
+<li>
+<p style=3D"line-height:150%"><span style=3D"font-weight: bold;">Dr. Bot: <=
+/span>Lotus Health AI=E2=80=99s LLM acts like a primary care doctor and can=
+ offer diagnoses, prescriptions, and referrals, which are then reviewed by =
+human doctors. Lotus, which just raised a <a href=3D"https://d2q-Vf04.na1.h=
+ubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N=
+1xVmZM2_3wqW7Y8-PT6lZ3mXW6y2S5r238xV7W4j_JKz2gNr2cW21-Vc3798fmpW6Pgl889l7v9=
+xW8h9B_W7XQJcyW2Qz45-564nSdW7Z0ZrL1CYx0dW62QpHC52p4LdN10vzDLljLr9VqvHm06cWC=
+FQW3nmq_n7kpJ8BW7dBXsz5XHGgZW3HTR5q848RmwN4hRQ6CxV7b6W8Gg8t872KqqfW4GP6Fp5N=
+6cyrW3sKCd-274hQWW39wYMC8Lw_VWW16-_7m13fdRbW61qxLP5ybhCNW1ZhLw83x52TRW8bj17=
+p7FWt0dW25gnRt31Wgs8W81Tg9V6tnpD_W57nrKY1q26x4W81mqTS2VcPdRf61gP-004" style=
+=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Hxt9cYf4" ta=
+rget=3D"_blank">$35m</a> Series A, claims its AI can see 10x as many patien=
+ts as a traditional doctor=E2=80=99s office.</p>
+<p style=3D"line-height:150%">&nbsp;</p>
+</li>
+<li>
+<p style=3D"line-height:150%"><span style=3D"font-weight: normal;"><span st=
+yle=3D"font-weight: bold;">Clocking into reality: </span>DeepSight</span> i=
+s a startup that helps industrial companies, predominantly in food manufact=
+uring, <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04=
+/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZs2_3wqW7lCdLW6lZ3l4W2sg0R899lW=
+vBW1bYLyw7BwPXdW7Hb9HC4SFGvLW4fq8Bv6ZfxN6V4k6RT8gN9YQVLbMfs2737ZtW6k52zv5Dy=
+f9lW7KHp8M7tlpFjW59JZFh4l2-xvW79lzt_6FzXBTW4Mqr2V1BkNg5N1qmrmcy8G5dW3GS2ZZ4=
+yyn8HW1pJ_R46HQlhtW5_cXrg24BP0SW41jNrY80HSzkVXJKKS5B_t57W2MvVSG5X3FgRW9gTq_=
+j4JSVy-W6dk28c23xPrZN6D2NzW7kWLpW2d8wQ81qy9y4W95WL6r3MTlKsW5qqxyj80WXW1f8Zx=
+mf604" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"=
+lLy9UmL2" target=3D"_blank">create</a> trainings in VR and AR. Experienced =
+employees put on smart glasses and perform their daily tasks while explaini=
+ng how they're&nbsp;done. Then, DeepSight=E2=80=99s AI returns with step-by=
+-step work instructions.&nbsp;<br><br></p>
+</li>
+<li style=3D"line-height: 150%;">
+<p style=3D"line-height:150%"><span style=3D"font-weight: bold;">Demon what=
+ now? </span>The <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+11=
+3/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVm-l2_3wqW95jsWP6lZ3kwN=
+7qfj01XqCbZW8tm-sY3jKS7nW7TVlgd7_KH4qW85Wf9L9hN-66W5xpz4n7FB4nlW44BQrT6hk7W=
+8N4NzhLxKv7BgN99yn5w4B_HbW82LKRN4gQjM_W40qtLZ2rSZQSVSGw136jM_8CW1HnZnc961LW=
+wW8SlpW46T06wzW972tJW5xFNzRW6L_3JV5X4qCMW13qr1663C_ytW8hsrFG5xbB85W98BN902S=
+JXCNN7xJyX4cPD0GW97lkrM12R3s8W7z0-WB2GdyxlW4GSsVv8gWx0pVfRJ_Q6SJDVjW2MMqGJ1=
+w1zdvN3Rpk3nmZv5QW5cMHhp3N03VwVkbm2G6jJkCFW53YYSX2kzT4mN9kSXZ8nKpB9W8TfYGm4=
+NBRR4f2ryGRH04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-=
+id-v2=3D"CTkA4rLO" target=3D"_blank">finalists</a> of Georgia Tech=E2=80=99=
+s annual Guthman Musical Instrument Competition include the =E2=80=9CGajvee=
+na,=E2=80=9D a combination of the very low-pitched double bass and rudra ve=
+ena; the =E2=80=9CDemon Box,=E2=80=9D which amplifies the frequencies of ne=
+arby electronic devices; and =E2=80=9CFiddle Henge.=E2=80=9D That=E2=80=99s=
+ four violins on a motorized bass drum, apparently.<br><br><span style=3D"f=
+ont-size: 12px; color: #000000;"> </span></p>
+</li>
+</ul>
+<p style=3D"line-height:150%"><span style=3D"font-size: 12px; color: #00000=
+0;"> </span></p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17702254684525" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#eaf0f6" bgcolor=3D"#eaf0f6">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#eaf0f6">
+      <tr style=3D"background-color:#eaf0f6;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1770225468452-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-=
+break:break-word; padding:20px 20px 10px"><div id=3D"hs_cos_wrapper_module_=
+17702254684522" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrappe=
+r_type_module" style=3D"color: inherit; font-size: inherit; line-height: in=
+herit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><di=
+v id=3D"hs_cos_wrapper_module_17702254684522_" class=3D"hs_cos_wrapper hs_c=
+os_wrapper_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; f=
+ont-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widge=
+t" data-hs-cos-type=3D"rich_text"><h2 style=3D"margin:0; font-size:13px; li=
+ne-height:115%"><span style=3D"font-family: Lato, Tahoma, sans-serif; color=
+: #bf2434;">FROM OUR FRIENDS AT MINDSTREAM</span></h2></div></div></td></tr=
+></tbody></table>
+<div id=3D"hs_cos_wrapper_module_17702254684523" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"pr=
+esentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Lato, Tahoma, sans-serif; color:#192733; word-break:break-word; tex=
+t-align:center; padding:10px 20px; font-size:0px">
+        <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf0=
+4/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZs2_3wqW7lCdLW6lZ3nmW4CYlXL64y=
+7nnVqzDt-1v6qsmW481zHM1R2KsKW2yfQ5g46Zh8NVKXckY3mmp2WW8_Tyzm5cnN8HW5rGMZb7F=
+mNqWVyQk5D3Rz2llW2PvHhN8tGCyJW15Kw_B2hNyNTW8j254X88VTqbN64VCQVgmN0JW8sN2HQ3=
+ZrlG6W2j0pVk507gyBN5cNhP0GVWgGN409WNXqZ9wcN8C5lKy19Q_0W7hWHqK1G_zGrW7128mw4=
+j8ng8W3wXkQT1-xdvrW6KlQgN2BWxmvW5FBqQ16xpdYLW5hTCPC8N6FGxVrY1SC3S9lwmf1VLRT=
+H04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-h=
+s-link-id-v2=3D"lD+tAOeU">
+        <img alt=3D"An illustration of a lab." src=3D"https://marketingagai=
+nstthegrain.com/hs-fs/hubfs/mindstream-2425.png?width=3D1120&amp;upscale=3D=
+true&amp;name=3Dmindstream-2425.png" style=3D"outline:none; text-decoration=
+:none; border:none; max-width:100%; font-size:16px" width=3D"560" align=3D"=
+middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17702254=
+684524" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module_17702254684524_" class=3D"hs_cos_wrapper hs_cos_wrapp=
+er_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"rich_text"><h2 style=3D"margin:0; line-height:150%; font-siz=
+e:22px; font-weight:bold">AI gets practical in the lab&nbsp;</h2>
+<h2 style=3D"margin:0; line-height:150%; font-size:16px">&nbsp;</h2>
+<p style=3D"line-height:150%">Designing new materials is easy for AI. Makin=
+g them a reality in the lab is not.&nbsp;</p>
+<h2 style=3D"margin:0; line-height:150%; font-size:16px">&nbsp;</h2>
+<p style=3D"line-height:150%">Researchers at MIT developed an AI model that=
+ bridges the gap between design and production, with practical synthesis re=
+cipes that scientists can use to create real materials.&nbsp;</p>
+<p style=3D"line-height:150%"><br><span style=3D"font-weight: bold;">=F0=9F=
+=91=89&nbsp; </span><a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB=
++113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZs2_3wqW7lCdLW6lZ3=
+q5W1bsS8P3VCLlSW4gyr871QzWgFW2f92yh5KQJ_5N5_BCY6jD5lKW1tmNnc3VNry0VY3BRl6Fh=
+jbhW4WhMtV7XSMwnW6B4RMm4mMMKhMGKvQ596534W6SBHKV3lNYjsW6DSDsk71WRjhW4xjPwd6Z=
+XsK4W4P80xx2Rpd3CVF3wjN3jbqF_N3fD7NSWy2xwW18XwxH1mZFy-W10NF895ggf1zW8S7Cq19=
+fpbQQW7XPV2n5v6YP2V6LLJw15nlk0W3nCC5l2CCr7tW24Z7mj6Y12D4W3hxqVb3zWKfvW6lqCM=
+M6jpTbXdlQQVF04" style=3D"color:#192733; font-weight:bold" rel=3D"noopener"=
+ data-hs-link-id=3D"1" data-hs-link-id-v2=3D"JdmWHid1" target=3D"_blank">Re=
+ad more on <span style=3D"font-style: italic;">Mindstream</span></a></p>
+<ul style=3D"line-height:150%"></ul></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-2" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-2-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-=
+break:break-word; padding:15px 20px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><h2 style=3D"margin:0; font-size:13px; line-height:115%">&n=
+bsp;</h2>
+<h2 style=3D"margin:0; font-size:13px; line-height:115%"><span style=3D"col=
+or: #bf2434; font-family: Lato, Tahoma, sans-serif;">THE BIG IDEA</span></h=
+2></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-1" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Lato, Tahoma, sans-serif; color:#192733; word-break:break-word; tex=
+t-align:center; padding:10px 20px 0px; font-size:0px">
+        <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf0=
+4/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZs2_3wqW7lCdLW6lZ3mzN5fPtzsCtj=
+JKN2yYqWdtfzYSN6yYp2mk8s8DW4pVN4K2z6Hz5W98FXMy1yPz8rVtB__N6ZFBH3W58kFBB3SmT=
+17W1Nd5r_4_GMZ7W5gcz2r7qCJHhW3q-H4n5hc_gZW1vjTds9bhsx9W23DC2H1Gr2YbW1lHcG12=
+hWmpwN17ychk87MydW6_lvd21jqXp4L4Rc7b6BK1W5DFLjS5xmzGsW4bSChn4pwrTtW1yDPQh7Q=
+g1T9W4LwfSb3yxtnRVP-pWh371CQLW8k_DBy5cvrPXN2zT05KtXDp-W6WC1dH1t6CsBdZLMz-04=
+" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-l=
+ink-id-v2=3D"PHmzsVt7">
+        <img alt=3D"A desk and two chairs sit in front of a brown curtain. =
+On one sized, an oversized hand holds out a white coffee mug. On the other =
+is an oversized piece of bread topped with caviar." src=3D"https://marketin=
+gagainstthegrain.com/hs-fs/hubfs/luxury-coworking.png?width=3D1120&amp;upsc=
+ale=3Dtrue&amp;name=3Dluxury-coworking.png" style=3D"outline:none; text-dec=
+oration:none; border:none; max-width:100%; font-size:16px" width=3D"560" al=
+ign=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17507867=
+493761" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module_17507867493761_" class=3D"hs_cos_wrapper hs_cos_wrapp=
+er_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"rich_text"><ul style=3D"line-height:150%"></ul>
+<ul style=3D"line-height:150%"></ul>
+<p style=3D"line-height:150%; font-weight:bold; font-size:20px"><span style=
+=3D"font-size: 22px;">Caviar taste meets the coworking era&nbsp;</span></p>
+<p style=3D"line-height:150%">&nbsp;</p>
+<p style=3D"line-height:150%">For as hard as CEOs have tried to get workers=
+ back in the office, remote work is still alive and well, with <a href=3D"h=
+ttps://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2=
+S8BfNJ8W7lBRbf5K86t_N1xVmYg4ZD0CW50kH_H6lZ3q5W1LygrF5K64D8N82q7k7Tl2y7N5Gtv=
+2m-Q7lxW6Jmcm88jSgq5V2L7QD4Sfy6sW81_nDt6yL0lxW8NXkV-8F8HxVW2MPqvn6Dv0Z2W5Lm=
+kpW2k1ZRXW3s0x062Xjz5sW1bkKGm4yzsr_W8s50Rg92yWZQW19-vfz5-km_7W6ftKk5719GbkN=
+89DhzL-vzGRMcsMcKpYp_nW52Kg2B32T94qVKg9vG5fRnbwW4CyN7J351T4lW7Fq6809bFwy6W5=
+G-xsh5x-rBzN1XL37fswS0vW8p3Xcm7RbGytW1Sc6lw99DfYYW8pyq995Pmw5BW3PjvJb4NCZy1=
+W1DlRln4HlkvLW7bYGFw1sRY9bW6L0dgk52sdTkW5FfMdq4FfJZLW1TJHh05gdVjCW5BZt_z3D7=
+7QFf1Bw5sH04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id=
+-v2=3D"J2PCPbLG" target=3D"_blank">~70%</a> of Fortune 500 companies having=
+ adopted hybrid models.&nbsp;<br><br></p>
+<p style=3D"line-height:150%">As such, demand for coworking spaces is once =
+again booming.&nbsp;</p>
+<ul style=3D"line-height:150%">
+<li aria-level=3D"1">Coworking space in the US totaled <a href=3D"https://d=
+2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W=
+7lBRbf5K86t_N1xVmZM2_3wqW7Y8-PT6lZ3p5W5Wlwgs6wncDVW4S2_wV6NMWZ6W2-SnYm1qbrs=
+MW8BqTZh37bSYgW2277Qq7cYF64W80xpXG7VKJKtMSGzqChg4-5VsfqRt6qSbCPW3KhVML7fbbH=
+fW6jydCT4R0MbmW25Zmxn3SZthMW1pY29m7P5VQDN8y606VrYtbVW6_1xC35ZXsV8W1GxlMj5p1=
+tM-W1wbZX14j2_PXW5pLKFY1Q_RCZW4hHwj0504nzfW7-Y6VG1_24rFW8H2-5G376gdGW4wdj0p=
+8jCKFlW46v4p0989Jn5W33-Pw-7k-JS8W6FljPl8fm-l5W6hNBcL4--lW-VRcx6M91FMHHf1SN1=
+2M04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"g=
+HmZUkAi" target=3D"_blank">159m</a> square feet by the end of 2025, accordi=
+ng to Coworking Cafe, up 17% YoY and ~38% over the past three years.<br><br=
+></li>
+<li aria-level=3D"1">While it accounts for just 2.2% of total US office inv=
+entory, analysts <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+11=
+3/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYz4ZD0CW5BWr2F6lZ3nKW=
+2vTJKM6mP-XJW7gG_mz6197YqW4gyBX-7M8MtLW8fqZRL2yxQhWW188Yyv7BgsYmVD4tnM5DLNK=
+zW3y_1874WnHF8W2ywqq-5jcppnW93Mw0v6fSl4LW5qz01F8WHjjkW7bHwJ56fvCngW701wTK2p=
+JFYVW1M6L_86zyNbFN8tdG928DYL1N2YxfljM9cpXW5xbq3B3LBw4QW3gQwKC45DHX7W12s0kf5=
+8PRwXW4RpVh45lYsyzW5pFfH17r-QYRN7CT966ht11sW1c1_Vm4kkq7rW3r8RQp486pjWW2MCFB=
+H6PyZymW4hPcwW1KCXL0W8LnBRq1vFfbnN1jb45WYhXkcVqq6gD28LQMsN5zS-PN9g2q9W5mdV8=
+R6DJ3g_W4D2N2T5KSH1BW6Z18lx15Y03PN8sLlDLlZSZ9W2DJj2K6WC2MMf3DhHLz04" style=
+=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"BGyZQOpq" ta=
+rget=3D"_blank">expect</a> that figure could eventually grow to 10%.</li>
+</ul>
+<p style=3D"line-height:150%">But this time around, a growing share of that=
+ floorspace is being taken up by coworking companies that are elevating wha=
+t labor looks like=E2=80=A6 &nbsp; <br><br></p>
+<p style=3D"line-height:150%"><span style=3D"font-weight: bold; font-size: =
+18px;">Enter: The era of luxury coworking</span><br><br>For remote workers =
+who can afford it and companies that want offices without a long-term lease=
+, these next-gen spaces offer premium amenities and stunning interiors =E2=
+=80=94 divided into shared spaces, meeting rooms, and private offices =E2=
+=80=94 that turn work into a lifestyle.&nbsp;</p>
+<ul style=3D"line-height:150%">
+<li aria-level=3D"1">At <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ct=
+c/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVm-l2_3wqW95jsWP=
+6lZ3lRW837-sF2SKTyqN6VpMc6_h085W6pbCHr1Gy4hyV3cKwh8w5_YVW1kyp742T0-3RW8Zxd6=
+L7FvH0DVstR1z2Z0G4tW1V1Sg42RlLq7W58w52W4SJty5VMPwgk71D3XLW7kZfBs3KN5MPW6DTx=
+8l2xxky_W6cyZXY7tfK6lN98lySFBmkrkW7Smt943c3QC2W3jxtGV25HGwTW99WFWd1b7VT4W43=
+gBkl4ZHLrHVXySjF52Z5P5W4vGCM258vKsYVKn5vZ4LmxjYW52D2T28vyvl2W2C5T1Y5WzPPbW8=
+0Y5tS60w8y6W27wtwb8dX4cbW5BFMRG7VM-rdN6cLvPX8SGyKVBV1k27Pm1VPW4tNqs17X8tj_W=
+3qvxPC8GpCv5f51Hgn004" style=3D"color:#192733" data-hs-link-id=3D"0" data-h=
+s-link-id-v2=3D"v1zdGsl0" target=3D"_blank">Arc Beverly</a>, a newly launch=
+ed workspace-focused social club in Los Angeles, members (i.e., influencers=
+, business leaders, entire companies) can network across its rooftop, loung=
+es, theater, wellness programs, and upscale, all-day restaurant and bar.&nb=
+sp;&nbsp;<br><br></li>
+<li aria-level=3D"1"><a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/U=
+B+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYz2_3wqW5BW0B06lZ=
+3kxN5WKkz_Fn-gzW3F9RZb3sxKhxW6nw6K82YPTSlW2pV73n2xTv5dW5jBMsL2zY8CYW5_lf3L1=
+NNzLRW5jhhF04S7t84W492B6Z2LW-h-W43J_CR69qczGW6nysQj4QM9L-W3PHy4c7LnG2xW8-Dz=
+cB467QNYW8kWlD47YT9sGW6wNDrq2ypL01W6BsVJr1bvbnQW8sMtlf2GgfnfN5wdRCymG6rpW8F=
+dz3-3nbZQ6f21Y_l004" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-=
+link-id-v2=3D"ron7Y7Vo" target=3D"_blank">The Malin</a> =E2=80=94 one of Am=
+erica=E2=80=99s fastest-growing companies, where =E2=80=9Cthe most ambitiou=
+s go to work beautifully=E2=80=9D =E2=80=94 offers velvet-draped Zoom backg=
+rounds, concierge services, and artisanal coffee. It launched in 2021 and p=
+lans to add four more locations this year after doubling revenue to $20m in=
+ 2025, <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04=
+/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVm-l2_3wqW95jsWP6lZ3q4W86fFkt24wl=
+34W7c8T2V3W1QglW19wtZn5d5TgQW4SJzD71LzJtCVMxFys64gjj8W5Vgt801DRTH4N8Chc-b6L=
+m5-W168SD66djsHHW6Fc5Lj5kzfKNTCD8S58838dW5wGWsK4GXk59W11P8L92zm74rW8B6lXY1W=
+KlwxVr0-8j5RnJM2W7Kgbb64Nj8QgW6lzJlX7sBf9HW83KsQY7CMYpQW2dLwc91V3SXqW2Qyzpv=
+650_gfW60lgkf6V1Bt7N2T7mP_77rpNW5cs15D3DnLbnW8_V62d3shfKWW846fbg8s-rfyVHHyH=
+p8tWZZzW3NvGVH5fGG2NN2FfyG7rw2_qW7LDWv37m62hQW9jl0sC5cK5jmW66fGcW72pT7Kf151=
+R9F04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"=
+VX7VkKc0" target=3D"_blank">per</a> <span style=3D"font-style: italic;">Inc=
+</span>.&nbsp;</li>
+</ul>
+<p style=3D"line-height:150%">Rates typically begin at ~$300/month for indi=
+viduals but can creep into the thousands depending on the membership tier.<=
+/p>
+<p style=3D"line-height:150%"><br><span style=3D"font-weight: bold; font-si=
+ze: 18px;">CEOs need coworking spaces, too</span></p>
+<p style=3D"line-height:150%">&nbsp;</p>
+<p style=3D"line-height:150%">For professionals with caviar taste and budge=
+ts to match, Industrious is kicking things up a few notches with <a href=3D=
+"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5=
+z2S8BfNJ8W7lBRbf5K86t_N1xVmZs2_3wqW7lCdLW6lZ3mSVKLbmh4Ct9gTN8vrJJqdjQ5XW6fW=
+kCJ5jN59QW55tKMt2jBqj-W7Jfv0M9c635tW5HzDGh6rldLKW3MPMGB8WBVl3W1n3Kc_4Vgh7wW=
+3Q9z5l7DL4CpW7bB-GT45jXPNW5wqbb03zyfnwN2fCw581q6xkW7gjVMl4k8-fmW5hTygm2FMyC=
+zW4tZ4jM7nKnB6N9lX-Rfy_PPSV-yCvj1dM_BjVS_NZW96-pRgW2NSQnH3SXKBQW982Q9P2bH_R=
+VW8kXC6F8dsTsFW6hlVnM9cqFzDW5FjJlB6wnYtJW8JZn8h6dwdp-f9lZMQ604" style=3D"co=
+lor:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"yleCnl+H" target=
+=3D"_blank">Industrious Reserve</a> =E2=80=94 essentially, a WeWork for the=
+ 1% =E2=80=94 which opens in NYC this spring, <a href=3D"https://d2q-Vf04.n=
+a1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K8=
+6t_N1xVmZs2_3wqW7lCdLW6lZ3nzW4X4HVY4k4sDwW1kbPwv29c1c2W4_9jXB2y9VrjW18zJvb8=
+H-fPRW4s-LXl4d7W3fW23W4y51kKBrSW4YN2hd751k6hW2VFQRW6NjdwwW55-4RG2XtTf0W989S=
+b26pWF2tW24F8kM4rtVSCW2d-9656fTSLWW18BvHk88sHBNW6KF4qT1TC6wtW51BF1P1MC-D8W7=
+_MhXG579s_4W4SNVR44FxjS1W5Lw7lp1cRQ3TW3Gqj-g2GRCTzW72jYJz7mkJwfW8NmvMK8sjRm=
+zVwLV099hPtHCW7hYhXh18cF6WVHYSCf8K0tVqdLynxC04" style=3D"color:#192733" dat=
+a-hs-link-id=3D"0" data-hs-link-id-v2=3D"XTJ5LcKS" target=3D"_blank">per</a=
+> <span style=3D"font-style: italic;">Fast Company</span>.&nbsp;</p>
+<ul style=3D"line-height:150%">
+<li aria-level=3D"1">The specs: pre-Zoom grooming services, private dining,=
+ caviar tastings, and dedicated staff who=E2=80=99ll greet you by name and =
+bring you your coffee just as you like it.<br><br></li>
+<li aria-level=3D"1">The clientele: C-suite execs and businesses like VC fi=
+rms, hedge funds, and high-end fashion brands.<br><br></li>
+<li aria-level=3D"1">The cost: $7k-$9.5k a <em>month</em> (oof).</li>
+</ul>
+<p style=3D"line-height:150%">Considering many top-earning professionals wo=
+rk well over 40 hours a week, it makes sense that they=E2=80=99d want the s=
+pace they spend much of their time in to match their living standards.&nbsp=
+;</p>
+<p style=3D"line-height:150%">&nbsp;</p>
+<p style=3D"line-height:150%">Not sure if you=E2=80=99d call that work-life=
+ balance, but it=E2=80=99s gotta beat cheap snacks and cubicles.&nbsp;&nbsp=
+;</p>
+<p style=3D"line-height:150%">&nbsp;</p>
+<p style=3D"line-height:150%; text-align:right" align=3D"right"><a href=3D"=
+https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z=
+2S8BfNJ8W7lBRbf5K86t_N1xVmZs2_3wqW7lCdLW6lZ3nFW1Nr29Z1tjp1ZW9knY1y47vplnW85=
+96fy3LkShjW37PL-V31hLDhW63v9B41ZhkdDW20pSJd2LFDmpW6B5qMb6pP5XVW8QFZgk3nNRsq=
+W4SgXLR1YFZbgW7bwxHh2Nbw8ZN1FZ_M669VpDW59LjFB8sM0RCW4kg-Kc5nHQt7W17hqrY6027=
+pNV9_lvS97tCgPW1trcfp6bmHgtW5TV6Ls5vW9tnW6Lv78m1vjqMHW6tm_817S7nHRW68sJs95k=
+k_4YW2CzVBd324g99W1H68ZZ1b3BnVW2RY0yW1F1V_2N7TDZ-wtb8kqf30k-rz04" style=3D"=
+color:#192733; text-decoration:none" rel=3D"noopener" data-hs-link-id=3D"1"=
+ data-hs-link-id-v2=3D"jJgNLGMI" target=3D"_blank">=F0=9F=94=97</a></p></di=
+v></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17702452=
+196721" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertica=
+l-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Lato, Tahoma, sans-serif; col=
+or:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:4px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:4px solid #eaf0f6;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17357735=
+453792" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module_17357735453792_" class=3D"hs_cos_wrapper hs_cos_wrapp=
+er_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"rich_text"><h2 style=3D"margin:0; font-size:13px; line-heigh=
+t:150%"><span style=3D"color: #bf2434;">HIGHLY RECOMMENDED<br></span></h2>
+<p style=3D"line-height:150%">&nbsp;</p>
+<p style=3D"line-height:150%"><span style=3D"font-weight: bold;">SEO won=E2=
+=80=99t save you=E2=80=A6</span> but AEO could be your business life raft. =
+We sat down with a marketing expert to <a href=3D"https://d2q-Vf04.na1.hubs=
+potlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xV=
+m-l2_3wqW95jsWP6lZ3nLW4nQqW85Fq-KyW2bnvq37s1rn-W7qtDJ52HgCBgW4BTr702qcVm4N7=
+jcKHYBPSCSW897F8D6Zr2FlW20_kxx2hWdkYW2xjCQQ5KXVl3N1YRk3w668vDW2GWMdx4xzQz6W=
+7gHVqH5-xLrVW3fsg1f5JS17BVy0yG91Yh_ShN7mjyH5xQGnrW8rSjGN1zZM4ZW5cVJr25k1Gq5=
+W5fzSxw5kL64xW42gV9z52MV07W3GG46K9clD39W3r-yMn87C-wYW4-ZbkP9lG_VTW7zGRVg5ps=
+hcPW6_19pj5cD7D2W8n7qhp2DNvv_N3yQCqcJ41FLW4qbDsz7z2_QBW2ns-W14ZRDZpVBV7jW1z=
+TV48W6bF-Wx7zbkTbV5h_YX7wCQGrf2nZzjC04" style=3D"color:#192733" data-hs-lin=
+k-id=3D"0" data-hs-link-id-v2=3D"v5BD/8rG" target=3D"_blank">learn how</a> =
+to make it happen.<br><br></p></div></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17598022=
+886831" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertica=
+l-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Lato, Tahoma, sans-serif; col=
+or:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:4px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:4px solid #eaf0f6;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-2-0-6" c=
+lass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" st=
+yle=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-c=
+os-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wr=
+apper_module-2-0-6_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_w=
+rapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-he=
+ight: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"ric=
+h_text"><h2 style=3D"margin:0; font-size:13px; line-height:115%"><span styl=
+e=3D"font-family: Lato, Tahoma, sans-serif; color: #bf2434;">NEWSWORTHY NUM=
+BER</span></h2></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-7" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"left" valign=3D"top" style=3D"font-f=
+amily:Lato, Tahoma, sans-serif; color:#192733; word-break:break-word; text-=
+align:left; padding:10px 20px; font-size:0px">
+        <img alt=3D"867%" src=3D"https://marketingagainstthegrain.com/hs-fs=
+/hubfs/867%25.png?width=3D1120&amp;upscale=3Dtrue&amp;name=3D867%25.png" st=
+yle=3D"outline:none; text-decoration:none; max-width:100%; font-size:16px" =
+width=3D"560" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:15px 20px 10px"><div id=3D"hs_cos_wrapper_module-2-0=
+-8" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module-2-0-8_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_=
+cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; li=
+ne-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"line-height:150%">Increase in average daily down=
+loads of apps NonUSA (iOS) and Made O=E2=80=99Meter (iOS and Google Play) b=
+etween Jan. 15-21 and the week prior, <a href=3D"https://d2q-Vf04.na1.hubsp=
+otlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVm=
+-22_3wqW8wLKSR6lZ3n2W6F4w4P76BddJW5vKT-Z3GsVbTW6Xlmp97YFVcCW5t5Dwc7YhDTyW5J=
+J43J4Tg3K_W7q17Vx5p6vJYW3Bhz691BP0JwW9jJtWH22gTfkW1nXWjb3PYqTdN6tZL-J7F7KXV=
+2JVLB57wtXNW6ssNwK5Rb1Y6VTV1Gv58QCk7W1jBznn1LyTFyVj8gZF1FHQj4W4wH7mV5MJZYkW=
+2KsVJN87hRMqW1ZYHWB6gSbRwW8X0_MG7x91ScW9jjrNq4Dyc0tW5RdQM76XLvl_W9czb1B1_Py=
+p0W4622K397VW5RW7kLC7768svHzW7Stwr53zYQSTW2nkPy83vZc13W5jlXVF68yRRWVCYCKc4h=
+zZh0f63BxNl04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-i=
+d-v2=3D"BU//7qVA" target=3D"_blank">per</a> <span style=3D"font-style: ital=
+ic;">TechCrunch</span>. Both apps, which help&nbsp;users determine if produ=
+cts are American-made and offers local alternatives, recently sprang to the=
+ top of the Danish App Store amid a broader European boycott of American pr=
+oducts and services following the US government=E2=80=99s threats of a Gree=
+nland takeover.&nbsp;</p>
+<p style=3D"line-height:150%">&nbsp;</p>
+<p style=3D"line-height:150%">Ironically, iOS users will, however, need to =
+use a US-made app store to download the apps onto their =E2=80=9Cdesigned i=
+n California=E2=80=9D iPhones.</p>
+<p style=3D"line-height:150%">&nbsp;</p></div></div></td></tr></tbody></tab=
+le>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17701391=
+938891" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertica=
+l-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Lato, Tahoma, sans-serif; col=
+or:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:4px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:4px solid #eaf0f6;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17701391=
+962982" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module_17701391962982_" class=3D"hs_cos_wrapper hs_cos_wrapp=
+er_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"rich_text"><h2 style=3D"margin:0; font-size:13px; line-heigh=
+t:115%"><span style=3D"font-family: Lato, Tahoma, sans-serif; color: #bf243=
+4;">AROUND THE WEB</span></h2></div></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17701392=
+081903" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module_17701392081903_" class=3D"hs_cos_wrapper hs_cos_wrapp=
+er_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"rich_text"><p style=3D"line-height:150%">=F0=9F=93=85&nbsp; =
+<span style=3D"font-weight: bold;">On this day:</span> In 1919, Charlie Cha=
+plin, Mary Pickford, Douglas Fairbanks, and D.W. Griffith <a href=3D"https:=
+//d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfN=
+J8W7lBRbf5K86t_N1xVmZs2_3wqW7lCdLW6lZ3kMW6f3pgC3K-7bKW6smNTq36fL_RW7c5Qv42X=
+rV0SN4sNmzG917YVN7f9-JjWhZHRW2Tr6zY5fHXj8W4GD0cZ7WbmB6W87XpRD4cvP9BW5dGzB15=
+_mCtsW5FsZXX6_Tbs5W3R4NvB1pNK1PW5L269w8PxnpCN3ppNJGlp8n1W3p7jc64wPczRW8C13P=
+N5nLqH6W5WDQbr6-gCk7N4mz1KHn095RW7hlM474xDy24W8p7_Dk6fN6g-MXHLqCcnv84VF2KbZ=
+2_jyDwW37wwPW8NJ68tW8PCT4F7VbWCYW4WsgZS7ljjkCf2pP76004" style=3D"color:#192=
+733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"VVyc+taV" target=3D"_blank=
+">formed</a> the legendary film studio United Artists Corporation.&nbsp;<br=
+><br></p>
+<p style=3D"line-height:150%">=F0=9F=94=8E<span style=3D"font-weight: bold;=
+">&nbsp; Game: </span>A compelling <a href=3D"https://d2q-Vf04.na1.hubspotl=
+inks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYT2=
+_3wqW69sMD-6lZ3m5W8kC_7v5ZXwx4W6yVccw7CJt3pW19DTn7704LyvW5bk-0h2C0th1W4FLwb=
+s2PSvgvW3VQV8Q1c9PMTW12qZTj8RKnpKW5P77nF6gYmXTW8yb-5C2Z-0sNW54J8sv74g6GpW7m=
+Rbvh2rdrbnV7hZFF6FTv81W7sMp4Y7mPxk7W582W4-2sgypCN78k_BS7h0wBW8jR0gt6zPP4zVD=
+tQl034PftPW6dn1lc409S8gW7yVc2x5Mb4FgW5g88zH5slYFCd79stl04" style=3D"color:#=
+192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"VLhxbLuy" target=3D"_bl=
+ank">murder mystery</a> that you solve by typing in codes.&nbsp;<br><br></p=
+>
+<p style=3D"line-height:150%">=F0=9F=92=8A&nbsp; <span style=3D"font-weight=
+: bold;">That=E2=80=99s interesting: </span><span style=3D"font-style: ital=
+ic;">ProPublica</span> made a database to <a href=3D"https://d2q-Vf04.na1.h=
+ubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N=
+1xVmZs2_3wqW7lCdLW6lZ3l8N1-vKZMvSQ-4W26bNxG6r15PpW7SDL784G2vbGN6FR9GfNFcGTW=
+93Dwsp2pbhhXW3tvSnb5-LwDlVXSyjt7PfZGqW5nGrFc1Bq9nDW6GgVQK3f0gRJW42SW9y3DRgP=
+9W6w_s195tFxV8W481kXS8LdrScW8rV4sD7_wB30W7Cjsy67Yyy8TW9b41nw5pJ3CFVQDcd_2gX=
+VvnW1DV11G69WtMXW3RXJxV2YHmXvW1M07Rk272cVVVTSgqW1_XJmpF30WCw6J4HpW5P3qSX16r=
+97BW1PTZ4390Z4kGW68zwnz4fTD48d8nY9Y04" style=3D"color:#192733" data-hs-link=
+-id=3D"0" data-hs-link-id-v2=3D"316chTgx" target=3D"_blank">track</a> where=
+ generic drugs come from and the factories that made them.&nbsp;<br><br></p=
+>
+<p style=3D"line-height:150%">=F0=9F=93=B0<span style=3D"font-weight: bold;=
+">&nbsp; Newsletter: </span><a href=3D"https://d2q-Vf04.na1.hubspotlinks.co=
+m/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZ83dnPjW6N=
+1vHY6lZ3mvW6lZXxG4jgqJTW67ggW88KrDwHW3Jltcb1tLChxW15BS8r8CjjYBW7bCVpB1q8hmv=
+M6ZZSXVs28kW59Nh9c6jrc-fW7_GZHL2SCNFxW739mPl7L3gR5W1SnBjB55YvdlW6-XxyR32Nln=
+xW6PtnyJ2SVd2fW7YJyKj1Fq1WqVVFN3s3GK-HNW2-Yvgn19cmpGW5M-vQt413_04W349wcQ1fR=
+h3nW609Q-_6nL5_fW2Xr7J34w20mfW9cFwD56qMLZSN7C4CZtpz_k9W8VKVyy3bvxGBf1RdtVl0=
+4" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-l=
+ink-id-v2=3D"VaPCo8ZQ" target=3D"_blank">Subscribe</a> to&nbsp;<span style=
+=3D"font-style: italic;">The Wrap </span><span style=3D"font-style: normal;=
+">for</span> essential stories and market moves.&nbsp;<br><br></p>
+<p style=3D"line-height:150%">=F0=9F=90=B1&nbsp; <span style=3D"font-weight=
+: bold;">Aww: </span>A <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc=
+/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZM2_3wqW7Y8-PT6=
+lZ3kRW8lp7jW1xtynqVk3_-q4GFm_zW7Vx9mm3_l-sbV793CX4DMpqtW5H5pzx27ktdBW9fwbsS=
+10G7-YW4LTsTg58gf6cW1DnzZL55zZNDN7NnrBvGyv1KW8DjdVt1PZymfW5drSG13nvpJ-N6vTr=
+DfqpHLsW2Kf4k78yZ47zW1PbzM03bwKLqW77JH0R16b0m9W7LY_BT5pJMF2W8V2yQk8TvL3mW4Y=
+0v3B94pN5lW1ytRwT1B_czJW1nylW63yX8MwW1Zd5gL5cDNC3W63GX0Q6Tm6bRW58qRmb1zfCl6=
+N2gHNvvCBw8_N5_q00cWhwVlW4Rfx2H14vqlNf8w8HGz04" style=3D"color:#192733" dat=
+a-hs-link-id=3D"0" data-hs-link-id-v2=3D"pQPXCrmG" target=3D"_blank">tussle=
+</a>.<br><br></p></div></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17381948=
+264292" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertica=
+l-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Lato, Tahoma, sans-serif; col=
+or:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:4px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:4px solid #eaf0f6;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-2-0-21" =
+class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" s=
+tyle=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-=
+cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_w=
+rapper_module-2-0-21_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos=
+_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-=
+height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"r=
+ich_text"><p style=3D"line-height:150%"><span style=3D"font-size: 13px; fon=
+t-weight: bold; color: #bf2434;">SHOWER THOUGHT<br><br></span></p>
+<p style=3D"line-height:150%"><em>If you were born in the '90s, you may be =
+the last generation that remembers what it was like to go to the internet, =
+rather than always being on it.</em> <span style=3D"font-size: 13px; font-w=
+eight: bold; color: #bf2434;"><span style=3D"color: #192733;"><span style=
+=3D"font-size: 9px;"><a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/U=
+B+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVm-22_3wqW8wLKSR6lZ=
+3l9W71ng326g1bhHW1k-6118Cn_NdW5nn-p45sV9g3W36cQ7m2vcKbMW12j0W16vCFkFV_Pqmj4=
+7XxL_W5_hkX44hkDbsW9hTwww1CGXyCW3TQXht3ZbbqtW4KtHRB3Hc0NbW2-Vn1Q11pj_ZW8mT4=
+F52gPGQrN31W_rcTrKX8W1yl_Lx7SfdRMW3_lg_13kN5yxW6j3v1g4CPMsWW6N0MYY7yKMZmW82=
+ShGT1rsQ4pW6mDXq91RVnLTW4CH3wh5F5m-_Vf8Nb19fQF7yN45dmfn78DVGW3zL18-5PTlGKW7=
+t9FyY8F8q9ZW163Tgx3n_bvhW4Jpw384t9pZPW8Zhz1t44YFp8W572lw046hPkLf5n8Rrq04" r=
+el=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-=
+id-v2=3D"kSvebXJo" target=3D"_blank">SOURCE</a><br><br></span></span></span=
+></p></div></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:0px 20px"><div id=3D"hs_cos_wrapper_module-2-0-22" c=
+lass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" st=
+yle=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-c=
+os-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"none"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align:t=
+op" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Lato, Tahoma, sans-serif; col=
+or:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:4px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:4px solid #eaf0f6;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:10px 10px 5px"><div id=3D"hs_cos_wrapper_module_1744=
+3876257693" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_ty=
+pe_module" style=3D"color: inherit; font-size: inherit; line-height: inheri=
+t;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=
+=3D"hs_cos_wrapper_module_17443876257693_" class=3D"hs_cos_wrapper hs_cos_w=
+rapper_widget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"rich_text"><p style=3D"text-align:center; line-height:15=
+0%" align=3D"center"><span style=3D"font-size: 14px; color: #192733;">Today=
+'s email was brought to you </span><span style=3D"font-size: 14px;">by <a h=
+ref=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7=
+rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYT2_3wqW69sMD-6lZ3nXW5Z893S89yN9dW10_Gcx5s=
+tC4YW3KDmG28kzPQ_W2Pjjbm5hkqD0W1fsN954Gn-9yN8CWLL49B1-7N3d6nR0f-sCsW25qbWb1=
+JkGZfW5MpDyF5z52H1VM0d0M6KccCBW5VPZPC29vTDNW91Rxby8-R031VgS-_f7-8Yr1W8FgcqV=
+79yXF_W2FRchk2BqXW9W6trZZP7d6fhMW711MDV6g0QRbW3L_4gD11Vw0wW5g7B-043fdXfW58c=
+qY255-7t9f8qyFpY04" rel=3D"noopener" style=3D"color:#192733" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"LWZQnTZv" target=3D"_blank">Juliet Bennett Ry=
+lah</a> and Singdhi Sokpo.</span><span style=3D"font-size: 14px; color: #19=
+2733;"><br>Editing by: Sara "Will take my caviar to go" Friedman</span><spa=
+n style=3D"font-size: 14px; color: #192733;">.</span></p>
+<p style=3D"text-align:center; line-height:115%" align=3D"center"><span sty=
+le=3D"color: #192733; font-size: 14px;">&nbsp;</span></p>
+<p style=3D"text-align:center; line-height:115%" align=3D"center"><span sty=
+le=3D"font-size: 14px; color: #192733;">Was this email forwarded to you? Si=
+gn up <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/=
+VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZM2_3C8W7Y8-PT6lZ3pHW8g-78y36K7j=
+kW6XMxHy3xnL9jN5Gbx9Yw5jRyVW19wR25fcfxW7g6QQ52lwzxJW6LvDqK19bVXrW14HldB5npc=
+KLW90j_7g4xH0D6W11djcv5B9bv8W4wnSfk2C3LzTW3Z9g_P8p44HYW2NKRKT9hpySJN7M-PrPQ=
+Jf_FW1gcgWx3SkWvsW8ct47P2ff2WQW5pvPWT8HrMW9N52jngypP5RJW8nDJyB8lKt2_W7_b4zq=
+868rH-W901b1Y2fq_k_W4lp-dt6yvZDFW35k1W32k885BW1hqKvQ7GzLwmW2x7xRS625pCDW2_c=
+B_g2v662LW5Gytlk7BnTxgf7lB85P04" style=3D"color:#192733" data-hs-link-id=3D=
+"0" data-hs-link-id-v2=3D"nmcX5Hpp" target=3D"_blank"><span style=3D"text-d=
+ecoration: underline;">here</span></a>.<br><br><strong>Working on something=
+ big?<br></strong><span style=3D"font-weight: normal;">We've got a whole&nb=
+sp;</span><a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-V=
+f04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVm-l3qn9qW95jsWP6lZ3lNW1ZVH5m7=
+WFV2BW3QrWHL81yq9fW1ZBxlj1fgV_wW4mZR1z1HX_cPW210DCh7PGvPXN1h412ptV-mFW6sZjT=
+j3DgR_-W8CvsLP2WYXPgW8wx7kS4Tp1pwW3s-P_D7LJZLvW7M47Vz3t_BbHW15yq5N3SJnk3W1F=
+j5gq3tdSf_W6F72vR7KlYLMN5Qw-BLgkP4dW7hLRc-2C7jD5W2Wq_QQ6-DMRJW6vHpm46C4PJQW=
+7bWwD05KR3-3W1gv1hS31cXb3W6T5nnv3QYGy7VB1Tfv66fr3DW8HXWFt8fSH7tW6xdSzf1V27h=
+GW69KMQ263xnbCW4Y51Nm1kkfjqN13bqJd4Pt0pV4QVHN94LJp3W5-Q-xV38lWJ8W3_yS1V87nb=
+JWf8Qz7Z204" target=3D"_blank" style=3D"color:#192733; font-weight:normal" =
+rel=3D"noopener" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"2qBw5x7A">libr=
+ary of business-building resources</a><span style=3D"font-weight: normal;">=
+&nbsp;for you.</span><br><strong><br>Subscribe to our other newsletters<br>=
+</strong><span style=3D"font-weight: normal;">Stay up-to-date on AI:&nbsp;<=
+/span><a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/=
+VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZ83dnPjW6N1vHY6lZ3nxW3MjYgv7VylD=
+TW1bYPN54tgk0jW8jHPSS8FtlX4W1kFwmZ39grQRW5VrxQx6q5RNrW6QS0gn7kV0fNMyG4zK_6B=
+M3W88xY-J881Dd2W6YRKm-88xC3kW6h_J0x4TSMN_W562WG23d8X-cV3BKwm7JX3vrW6w0W3-8N=
+mTfQW82Pzfn9fTMCXW4wJnpl6m-rKkW4b0Gby8YFTrFW75fzdv8yPh1MW7hxfcM76NWrLW4SYwt=
+p69y34pW4VG25k3_hj6rW84K1yN3S5FrvW1Qk8vF8G2hpmf98jrHd04" target=3D"_blank" =
+style=3D"color:#192733; font-weight:normal" rel=3D"noopener" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"fB+Qb5IE"><em>Mindstream</em></a><span style=
+=3D"font-weight: normal;">&nbsp; | &nbsp;Expert insights:&nbsp;<a href=3D"h=
+ttps://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2=
+S8BfNJ8W7lBRbf5K86t_N1xVmZs3hKBlW7lCdLW6lZ3mkW7ZbYR325mvp1W1Pq_yC2g0GYxW1Vt=
+rx47DtkyzW3L5BMC32MRH_W3pbscs66DMG0N5qHX6dHkkWHW7mJCWJ8HSB0PV8XdJz4WvSR6N4R=
+2Zhnd7mssW5K5b9H9772jYM97KlTfBrnzW6XWGrW4W1brKVx_Mjn8ZkxlzW6vTy7L4yR_9TW86f=
+CTP4lWYFdV9zPX42k_Z-DW1twTD48TBrdRW5WBpjm1jWmM1W67s6gg5lHLH_W1K7V3Z4CmkgWMt=
+bVmPFTnW_MVj7mVs0-YBW4nhWpp7Jh8CMW4_6Vn07x8X2Ff5fhcdn04" target=3D"_blank" =
+rel=3D"noopener" data-saferedirecturl=3D"https://www.google.com/url?q=3Dhtt=
+ps://media.hubspot.com/e3t/Ctc/UB%2B113/d2q-Vf04/VXkFRq2VRv_xW59D4KV6t0jZ7W=
+1WCq9G5JPR91N1CRsZd2-ZW0W69sMD-6lZ3lNW3qcx5q8-DTp8W9l-hL26N8H2zVvTx4p6Ybmyn=
+W6tsSB96zBlLpW5rTHmc8Wxxd5V1-nN64gNFJ5W4_W7kT5108M8W8Hctbg7vmJ3wW1-pyMZ8Hwf=
+xBW4PmvxP6lt4RcN6ljPthjjs4MVBHgHC7sH2sNW3g3fHf9lBS8HW1yfl45830Xb4N3Xhf62-z6=
+ZzN30NLxkKv9ctW3QwlVT3bLb1RW2NLjj53GYgNCF7sfpMDTcFJW6Y-S5x1Pl8Lnf8wBDzW04&a=
+mp;source=3Dgmail&amp;ust=3D1769604029639000&amp;usg=3DAOvVaw0f23lxo06WIAqw=
+B8breOYF" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=
+=3D"UBlrEUmV"><span style=3D"font-style: italic;">Marketing Against the Gra=
+in</span></a></span><span style=3D"font-weight: normal;">&nbsp;| &nbsp;Sell=
+ better: <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf=
+04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmZ82_3wqW6N1vHY6lZ3nDW5-YwCd5H=
+W8kvW7qv40J2q8N1pW7kpKtH2tkxSLW2n85Yz27nChzW51dB2W9hCT00W6jH4DV6vP2TdW7fVTj=
+M96lmHzW6G2wmM2Vq788W96c0c934dVmDW3V_k7Q4tPp6kW1NwFcH7RbDKwV8J_hw554gLFW3BH=
+nwf1glKsbVCSw7b8G08WRW2gmm3j69FVyfW8k4lx555BwNBW6WL-6g7t461tN8hTc4j6gpVGW79=
+9ZPG7K7d5nW85C4Hx5q44XxW87WTMC6vQsVlN2L55VlBchHWf5f0XKM04" rel=3D"noopener"=
+ style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"SjL+Lc=
+/q" target=3D"_blank"><span style=3D"font-style: italic;">The Science of Sc=
+aling</span></a></span><br><strong><br></strong></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:115%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;">Follow <em>The Hust=
+le</em> on <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-=
+Vf04/VXbcLk5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYT2_3wqW69sMD-6lZ3nrW2n3-26=
+7z8rxWW7DQxWT5XJzF7W3bcwHW5kVzHLW2STYHb5zZnM0W4HHvwp1F695GN56YkCn9rxyKW720n=
+ZH7wxm3xW9jM68c5PN0jmW3X3h_97PHQW_MfWrBXZGY9xW8MdFBB4dQvsyW89Tpqd2yk2YpW6-D=
+Jxg35LdjQW87fTX14H-rhXW93XKxQ6GNrm7W5fXnQp6gY-VNW2D4w8C6l9cZPW4HhsJ17ltvSFW=
+17Z4NW8QF4VTW4S1sQZ6r8J_vdL4KRj04" style=3D"color:#192733" rel=3D"noopener"=
+ data-hs-link-id=3D"0" data-hs-link-id-v2=3D"BhKHpnJa" target=3D"_blank"><s=
+pan style=3D"text-decoration: underline;">YouTube</span></a>, <a href=3D"ht=
+tps://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rRW4C5z2S=
+8BfNJ8W7lBRbf5K86t_N1xVmYT2_3wqW69sMD-6lZ3q2W6c7dFn6Y6rHnW8TYJFM39lnqmW18BJ=
+H47mqXgsW8lk7DY1z7t6WW1pnkSh8zfmGCW5tl0zB7NDsc3W7sHKGb6gYZ7qW1GpDxw1KZgRjW8=
+0z3X53Y6by1W5hRCDP1Kl_FhW5yJWtG3dTdJ1W1F3YZ31l6nW-VHT9mG5gBL_CW2nk2Zg6CJcML=
+W2dpvF91yYBtNW6F2KRv2BWY5wW3mhSHM5Vq0DVW5-PQr15chZ9zN3N4kTkMplc_W1RrPjc2CQK=
+PFf4MZyP804" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"0"=
+ data-hs-link-id-v2=3D"hMx6vuQx" target=3D"_blank">LinkedIn</a>, and <a hre=
+f=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VXbcLk5yN7rR=
+W4C5z2S8BfNJ8W7lBRbf5K86t_N1xVmYT2_3wqW69sMD-6lZ3mXW4cn90086d8YTV2XtwP4jh9s=
+mW8brKY42xk1XLW8Zy9jn9ftFmyW12xdpP9fzq94N89Hfx6_jzb0W147qPC6_tbthW4dN0xg5mS=
+0QCW1DltQ35mgZMWW52PQnX637SmFW3b9Xb62SJzLBW6t91Rz8N7N-fW2qD4Z33q4NLZW255_PV=
+7C94znW6zDN2v256XGHN5XJr0HttVHPW7Sp04s4LXrPMW4GCN7k77QTnqVWCNT09kQyMQW8Pb9g=
+v3_kcyHf4rVWfP04" style=3D"color:#192733" rel=3D"noopener" data-hs-link-id=
+=3D"0" data-hs-link-id-v2=3D"Bzlwbvlf" target=3D"_blank"><span style=3D"tex=
+t-decoration: underline;">Instagram</span></a>.</span></p></div></div></td>=
+</tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Lato, Tahoma, sans-serif; font-size:16px; color:#192733; word-bre=
+ak:break-word; padding:0px 5px 10px"><div id=3D"hs_cos_wrapper_module_17443=
+876257694" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_typ=
+e_module" style=3D"color: inherit; font-size: inherit; line-height: inherit=
+;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table r=
+ole=3D"presentation" class=3D"hse-footer hse-secondary" width=3D"100%" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-serif; fon=
+t-size:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Lato, Tahoma=
+, sans-serif; font-size:16px; color:#192733; word-break:break-word; text-al=
+ign:center; margin-bottom:0; line-height:135%; padding:10px 20px">
+          <p style=3D"font-size: 11px; line-height: 150%; font-weight: bold=
+;"><span style=3D"font-family: Lato, Tahoma, sans-serif;">HubSpot Media, 2 =
+Canal Park, Cambridge, MA, 02141,&nbsp;USA, +1 888.482.7768</span></p>
+<p style=3D"font-size: 11px; line-height: 150%; font-weight: bold;"><span s=
+tyle=3D"font-family: Lato, Tahoma, sans-serif;">Never want to hear from us =
+again? Break our hearts and <a href=3D"https://blog2.hubspot.com/hs/prefere=
+nces-center/en/page?data=3DW2nXS-N30h-MMW1-ZjvG36FW4fW1VdscW1Z8LfdW2KSZF03d=
+36lHW1Svmtt2Kp05GW4kHnHv1QDfmsW3GQQyD2t51KFW3_s6zx2CCrBzW4tfXDs3W0DyRW1_mhg=
+v4ksnwpW2p5W4p4fpRCWW2Wnmzd1VjCJLW3DW9Fv257YsPW3gqSYY2CvDh5W3VyL_H3C7JbvW2P=
+G5qs32Gn47W4fLJ0b3blK9QW3d0--D38lyN8W3DH4bc38BQ55W4hy39q1X1nJZW4psmZs3_H_vZ=
+W2KHpjJ2y28B4W43DH2d215n6sW4pr0zP32gzV0W4fJG-420WBsbW3K24rW4fP9YHW1BPqp71S9=
+kYyW1N59M743NCX7W4r6J7730r41HW3QNlfc2MCP8fW4hxhR-2MP0bpW4tCGBl3dzZYvW1_35X1=
+3_pFqhW4tdjgq3M153FW2CxdL73jlyhxW3Y28qK1ZvzBWW2xwnjn3_-0ZBW41ZlDw4rj_W9W2-M=
+Qwg3JWbRLW3DSdz03dfX0lW2pbtGh1LGpy2W2qWVnk2-w2x0W3gb0Rk2WLYLLW34l69p3XJrSBW=
+3QKqLF2p5WKLW3_ByNj45ym2jW25p9fB4th6LQW3LYvfD2PkglJW36pCcf1NCJCBW36nLks4pKt=
+y8W30lSPP23jnlSW2WH_pM43zhr0W38sL6v2r65ppW2RDbwn1Lm5NKW3Xy1ls2xR1LMf21pd8p0=
+4&amp;_hsenc=3Dp2ANqtz-_91GdB39KV_l3bOiPhfGmcHhevn95AOYOtKz4SPvIL5kIBXuJUig=
+3PHofNLm_m28C8RqDhQ1y6BzlYpKm1YImAMQOUHw&amp;_hsmi=3D402112758" rel=3D"noop=
+ener" data-unsubscribe=3D"true" style=3D"color:#00a4bd" data-hs-link-id=3D"=
+0" data-hs-link-id-v2=3D"kDnPxijp" target=3D"_blank"><span style=3D"color: =
+#192733; text-decoration: underline !important;">Unsubscribe</span></a>.</s=
+pan></p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://d2q-Vf04.na1.hubspotlinks.com/Cto/UB+113/d2q-Vf04/VXbcL=
+k5yN7rRW4C5z2S8BfNJ8W7lBRbf5K86t_W1xVmKg8fYH232V01" alt=3D"" width=3D"1" he=
+ight=3D"1" border=3D"0" style=3D"display:none!important;min-height:1px!impo=
+rtant;width:1px!important;border-width:0!important;margin-top:0!important;m=
+argin-bottom:0!important;margin-right:0!important;margin-left:0!important;p=
+adding-top:0!important;padding-bottom:0!important;padding-right:0!important=
+;padding-left:0!important"></body></html>
+------=_Part_186667_1930038165.1770287919462--
+

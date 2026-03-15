@@ -19,15 +19,14 @@ class SmartFilter:
 
         # STAGE 2: LLM Validation (Contextual Intelligence)
         prompt = f"""
-        TASK: Is this article relevant to BUSINESS TRENDS, MARKET ANALYSIS, or INDUSTRY INSIGHTS?
+        TASK: Is this article relevant to BUSINESS TRENDS, GROWTH STRATEGIES, STARTUP ADVICE, or INDUSTRY INSIGHTS?
         
         ARTICLE TITLE: {title}
         SUMMARY: {summary[:200]}
         
         CRITERIA:
-        - YES: Market trends, industry shifts, company strategy changes, consumer behavior patterns, economic analysis, business innovations.
-        - YES: Startup news, funding, business partnerships (relevant to business trends).
-        - NO: Lifestyle products, sports, entertainment, politics, general celebrity news.
+        - YES: Actionable business advice, growth tactics, market trends, industry shifts, company strategy changes, consumer behavior patterns, economic analysis, business innovations.
+        - NO: Pure funding/raise announcements without deeper strategy, lifestyle products, sports, entertainment, politics, general celebrity news.
         
         ANSWER ONLY in JSON format: {{"relevant": true/false, "reason": "short explanation"}}
         """

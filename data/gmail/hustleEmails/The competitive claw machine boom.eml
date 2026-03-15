@@ -1,0 +1,1884 @@
+Delivered-To: shyams07@gmail.com
+Received: by 2002:a17:522:e7c3:b0:641:64ec:3c0c with SMTP id fe3csp1834520pvb;
+        Sun, 11 Jan 2026 02:51:32 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IH58j9SMvyPW+SDNfW5tlbdVDrO9AuGEQmIfXv32ywW5EO0xxxtqZEii9fIep+dlBmjlzxw
+X-Received: by 2002:ac8:5512:0:b0:501:147a:a215 with SMTP id d75a77b69052e-501147aa44emr67561051cf.73.1768128691779;
+        Sun, 11 Jan 2026 02:51:31 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1768128691; cv=none;
+        d=google.com; s=arc-20240605;
+        b=RzT293JKOkI5DkwKvNjFxmxE+99dx5jxSWWQr6HROFct0PNadMtZCW7VIvUGT0/LfX
+         FYwGPsuig7itd/U3YoOObj5UmEIqe1GuKU+++3ED595rZsmz2+MVBZQPki89J5uC176R
+         FpF3y5DBYF4zCX282N+yeH6z0DMYq2bo5DZeFZWpZOxLB23aKpj1zSRcMx8pn2+28z+S
+         5LoIsws1yhdPaTozF5fRmlOQs5PJ4mJBLQN3CBmy4lCurIgjaSrTGh2kKmQNkvdkJpMi
+         TQcXn+QcduVdbWMMWLVd9eiNwTTMjuk8SaqxFGSUFupuBrDMnTN6P/IstvyM4y2XLoOG
+         AEjg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:precedence:mime-version:subject
+         :message-id:to:reply-to:from:date:list-unsubscribe:dkim-signature
+         :dkim-signature;
+        bh=o8d8PDUrX8umSHiBN9hq+0k9t4+cUcZOoRpLpRy06qg=;
+        fh=L9Pq+drjbGeEtrAQNZSRmpxQ+ME9iXW0EGrUbR1eMas=;
+        b=WxhroBIy0gRHlpjsM2KwGzJZQJAAhsmlaiJCZarrwbLW4qEI/FtJiBhTrFcvYbYuCW
+         hWIwgdqIaj3DpgEA2xOZ7FGS/Q7MC0IhWzVVys7yLbSdyGR16jQSMk22u2+D+H2drXiZ
+         88xYdIQr9Az63As4UMBXwKWoLMYeH9qRXntDhyYbJSdzq1HoQ9+MrCLegf6danboFUgE
+         8xcFB7tt0PpUEE0yFt2IKBCX8ir1xGldQ0hjWaZo6BC1rnxvIJ3AngUeuyn0bW5D0aOG
+         ms81sOM6+WMEzezfJGdKlhC8sp2jsZZBlRagP69wCdKZkm2IlgmrnrWFWahPIvcA1Jiy
+         9Qug==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs2 header.b=WZd0xAjZ;
+       dkim=pass header.i=@thehustle.co header.s=hs1-20627419 header.b=H0R4WV8e;
+       spf=pass (google.com: domain of 1axcg4haddkuo8vjo0vkm0h25fpqxiujxrya76-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.205 as permitted sender) smtp.mailfrom="1axcg4haddkuo8vjo0vkm0h25fpqxiujxrya76-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Return-Path: <1axcg4haddkuo8vjo0vkm0h25fpqxiujxrya76-shyams07=gmail.com@20627419m.thehustle.co>
+Received: from bid49a3.20627419m.thehustle.co (bid49a3.20627419m.thehustle.co. [158.247.31.205])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ffb03997c9si147433431cf.457.2026.01.11.02.51.31
+        for <shyams07@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 11 Jan 2026 02:51:31 -0800 (PST)
+Received-SPF: pass (google.com: domain of 1axcg4haddkuo8vjo0vkm0h25fpqxiujxrya76-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.205 as permitted sender) client-ip=158.247.31.205;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs2 header.b=WZd0xAjZ;
+       dkim=pass header.i=@thehustle.co header.s=hs1-20627419 header.b=H0R4WV8e;
+       spf=pass (google.com: domain of 1axcg4haddkuo8vjo0vkm0h25fpqxiujxrya76-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.205 as permitted sender) smtp.mailfrom="1axcg4haddkuo8vjo0vkm0h25fpqxiujxrya76-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Received: by 172.16.128.26 with SMTP id ayfv0sbrrs8u87cfokcicid2zw7yy8v82rtdhoi;
+        Sun, 11 Jan 2026 10:51:31 GMT
+DKIM-Signature: v=1; s=hs2; d=20627419m.thehustle.co; 
+        i=@20627419m.thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=o8d8PDUrX8umSHiBN9hq+0k9t4+cUcZOoRpLpRy06qg=; 
+        b=WZd0xAjZ3WFNYyVzlGmlINYKTiGQNRbq0dN3yacZhxAThE0ABGyZzObGaUiwwS
+         qEgKD4xxJIBIb948LF6Nr/4KIBBNCpVMlqFOy1lfLay82ZY0bGOWZVDOb3PpGB1
+         pCG5Yi1t/jn1GI05sY/TcHmPn10dfAU4j2tsQsUbDY5sV+yJ00Yrudzvmv98dzV
+         hd6mSAhvv4xaXH9ln8OUPVuy4uIPZVJZTvTO9qD16Dak4I0SVerp/Tr6cW1Xo9H
+         EbY+ChtbFPMjVUyH/g144zD4A6GIrwVWUkiAN2IkOerpbcPT/SyD4r/CHkhOUBs
+         sCNfyv83NQo2AmCcBZCEoynRs5Hg==; q=dns/txt; t=1768128691; 
+        x=1768391491;
+DKIM-Signature: v=1; s=hs1-20627419; d=thehustle.co; 
+        i=@thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=o8d8PDUrX8umSHiBN9hq+0k9t4+cUcZOoRpLpRy06qg=; 
+        b=H0R4WV8evr5+/DPikfdNak3VWapz8kXOA7mZITRklF2XkVo7Fcfd26roMAC4i2
+         K85X9Ww7K9zYDSKj0Pl4NXpG5GhpHZZBmKJKS3JVnX0fzXv+xenEAd/DUqCj/fk
+         NJ+rXIJihzAqooZa8EUvKPk7uzfp49jO1qrdtK26HjKD+zXyk6pg4oyM+j0T+pv
+         +k2jZnPNo59glxUGmaJNXLidmBbBy9illbiuLyDoykz5FnR7NZdbMlU7fEXzYxL
+         RW+6vN3UGI+uGJnEJKz8lMesOMyTzEYex1D5kLpYXoI+D/u3v+YtLxpBnS7JHEg
+         l1LGWL3QsqkmdAyKrwcyjv5g19Vg==; q=dns/txt; t=1768128691; 
+        x=1768391491;
+Return-Path: <1axcg4haddkuo8vjo0vkm0h25fpqxiujxrya76-shyams07=gmail.com@20627419m.thehustle.co>
+X-HS-Cid: 1axfpeqkpqi4cbtjcl41jwk7o1jtj91dokldna
+List-Unsubscribe: <mailto:1axdmidnbkj6tk2xghkm1futlycwynfwznp4ie-shyams07=gmail.com@20627419m.thehustle.co?subject=unsubscribe>, <https://media.hubspot.com/hs/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-SrW1BxhvF34B1qNW3Fd6Yd2CSNtDW400rJc38xxy0W3zchGz4kDw5XW4cBDKZ2TQtlNW1Xx3Vh4fzD1YW2zGXj84twgFwW2WyVdt30sfrzW34wbjF3bb1yDW2TRLbZ2r7HcTW2Tvmql3gc_XXW2qNMHD45vPqxW23kMbq2-kSDVW43zmcb1Xc3qVW3XYm0x47lJ5hW3y_ygq3z0rcsW4cQJNH2zMwGpW2HYj1x2xPNlGW1LGhFm1SjNMhW3gq5bQ3H6tXKW38jVqL2Yt564W1ZflXg1_cXdmW1_h--k2p6k50W1Lhm3W384jswW2sK8Lx2q-zGpW4mBzg84p9hf-W4pxWyw41tvbQW2RktpM250nRdW2-np-B3bhnMdW1Zqsjl1Qy2vPW4t5-H62zMypQW3c_Ly-2KNkwdW3M2krG4hHZSkW45n_Cm2TkfVGW3674vn34gPmXW1N83pT4hm8DyW4kKXV34cGhryW34zzcq32kWSyW36pzVv3zd63tW4hvFxM41Cdr_W1Z74zS1LgWc7W2-Kg1V39_yt7W3Q_TjP49t7KkW4pFgfp36gv5RW4frrqy3dqGwKW45PCg5346R0NW4t6SQj3M2Nv7W2xZYp33ZDXCPW2qQ2v54px2JNW2YFNnd3K2ZStW2-FX-64md2N-W1QmWk749kfH3W3XL2MD2HZ6sDW47lLRF2nQGjF0>
+Date: Sun, 11 Jan 2026 05:51:31 -0500
+From: The Hustle <news@thehustle.co>
+Reply-To: news@thehustle.co
+To: shyams07@gmail.com
+Message-ID: <1768128662556.1e05724c-d631-42b1-8bc8-a5003e057d2d@20627419m.thehustle.co>
+Subject: The competitive claw machine boom
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_38116_1997669672.1768128691299"
+Precedence: bulk
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: aemkeh5:aigu3p7q:aipuz:HubSpot
+
+------=_Part_38116_1997669672.1768128691299
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+How a childhood obsession became an online phenomenon and a full-time caree=
+r for claw-machine enthusiasts.
+
+Share The Hustle:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY=
+5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNY=
+Lg&_hsmi=3D397763044
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9B=
+Y5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxN=
+YLg&_hsmi=3D397763044 )
+
+Check your referral progress & prizes here (https://thehustle.co/refer-the-=
+hustle?_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_H=
+N_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 )
+
+You've got 3 referrals, just 2 away from earning a Hustle candle. Check out=
+ all of our prizes here (https://store.thehustle.co/?_hsenc=3Dp2ANqtz--mUX4=
+lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8q=
+vL9BbJbxNYLg&_hsmi=3D397763044 ) .
+
+Share your link:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY=
+5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNY=
+Lg&_hsmi=3D397763044
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9B=
+Y5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxN=
+YLg&_hsmi=3D397763044 )
+
+View in browser (https://media.hubspot.com/the-competitive-claw-machine-boo=
+m?ecid=3DACsprvsXvuTwnpSUgwFWdl34uGIrQa--bKtm745ImzprFmSzlW6LzK5xEueTSkEnbH=
+QMVN2zqW8P&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m3=
+54_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 )
+
+The Hustle by HubSpot Media (https://thehustle.co/?_hsenc=3Dp2ANqtz--mUX4lk=
+beDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL=
+9BbJbxNYLg&_hsmi=3D397763044 )
+
+Issue #377
+
+Impossible Claw Illustration: A woman in a striped shirt stands before a re=
+d claw machine labeled "THE IMPOSSIBLE CLAW" against a brick wall. (https:/=
+/thehustle.co/originals/the-competitive-claw-machine-boom?_hsenc=3Dp2ANqtz-=
+-mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-=
+yle8qvL9BbJbxNYLg&_hsmi=3D397763044 )
+
+Sunday, January 11, 2025
+
+The competitive claw machine boom
+
+How a childhood obsession became an online phenomenon and a full-time caree=
+r for claw-machine enthusiasts.
+
+BY ANNA RAHMANAN (https://www.instagram.com/annabyrahmanan/?hl=3Den&_hsenc=
+=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q=
+9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 )
+
+Walk into almost any American mall, bowling alley, or family restaurant and=
+ you=E2=80=99ll see it: a glowing box of plush toys and blinking LEDs waiti=
+ng for someone to drop a few dollars to try to grab a prize.
+
+Claw machines could have been relics, lost to the =E2=80=9890s alongside sp=
+itball shooters and mall photobooths. Instead, they=E2=80=99ve amassed bill=
+ions of views on social media and have proved to be a viable small business=
+ for local operators.
+
+Their popularity isn=E2=80=99t from winning expensive prizes, or because co=
+mpetitions pay big. Claw machines are still difficult to win and many belie=
+ve they=E2=80=99re rigged by operators. It=E2=80=99s because claw machines =
+=E2=80=94 in their own way, nostalgia personified =E2=80=94 have become an =
+unlikely and effective modern vehicle for monetizable content.
+
+A Vogue editor plays on a claw machine at a fashion event in Sydney, Austra=
+lia. (Photo by Mark Metcalfe/Getty Images for Vaefno)
+
+And in the center of this unexpected industry is a generation of players an=
+d operators who treat claw machines not as games, but as engines for making=
+ money.
+
+The kids who never grew out of it
+
+Before claw machines were content, before they were side hustles, before th=
+ey were tropes in TikTok videos, they were everywhere and irresistible to E=
+rik Kane.
+
+=E2=80=9CI remember always seeing them in the early 2000s growing up,=E2=80=
+=9D says Kane, the 26-year-old creator behind the YouTube account Arcade Wa=
+rrior (https://www.youtube.com/channel/UClRVvM7X7zX65HY9P7Zllvg?_hsenc=3Dp2=
+ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm=
+_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 ) . =E2=80=9CThere was always one=
+ in a grocery store, restaurant, mall. They were very prevalent. The marque=
+e sign would light up next to flashing lights, plus the claw itself. I was =
+always drawn to it.=E2=80=9D
+
+As a kid in Rochester, New York, Kane begged his parents for a dollar to pl=
+ay. "If it was not for them giving me a dollar to play whenever I would see=
+ one, I probably never would have gotten fully invested in them," he says. =
+Eventually, he started filming. Today, his channel has 2m+ subscribers.
+
+=E2=80=9CAround the time I was 12 or 13, I started to film some clips of me=
+ just playing,=E2=80=9D he says. =E2=80=9CMe and my brother would go around=
+ and film but wouldn=E2=80=99t upload anything. It was just something we di=
+d for fun.=E2=80=9D
+
+Erik Kane shows off his latest plushie prize. (YouTube)
+
+In Pennsylvania, future YouTuber Matt Magnone, known online as Arcade Matt =
+(https://www.youtube.com/@arcade_matt?_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQ=
+iwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_h=
+smi=3D397763044 ) , was doing the same thing.
+
+=E2=80=9CEver since I was a little kid, it was the one game at the arcade t=
+hat you could win an instant gift with,=E2=80=9D says the 38-year-old. =E2=
+=80=9CInstant gratification=E2=80=94millennials love that. I didn=E2=80=99t=
+ care what the prize was. It was just the fact that I could win something.=
+=E2=80=9D
+
+At 17, he bought a full-size claw machine for $500, which he stored in his =
+mom=E2=80=99s basement and practiced on daily.
+
+=E2=80=9CMy first job was a cashier at a neighborhood pharmacy and I only m=
+ade $5 an hour so I had to save up for months and months and months in my p=
+retzel jar until I finally had enough money to buy it,=E2=80=9D he says.
+
+He now has 1.83m YouTube subscribers, who he fondly refers to as goobers.
+
+Alongside the channels, the competitive claw machine community has grown. A=
+spiring clawmasters share tips and tricks online. Clawcades host tournament=
+s for local players. The cost to play depends on location and prizes, but o=
+n average is still between a quarter and $2 per play. They=E2=80=99re espec=
+ially popular in Japan, where a woman named Yuka Nakajima holds the Guinnes=
+s World Record for most claw-machine wins at 3.5k.
+
+Matt Magnone says winning claw tournaments isn=E2=80=99t where the revenue =
+is =E2=80=93 it=E2=80=99s in videos of him playing the game. (Courtesy of M=
+att Magnone)
+
+And like any community, it has its own drama. Magnone explains he=E2=80=99s=
+ called out members online who =E2=80=9Cgive false information on hacks=E2=
+=80=9D to gather views.
+
+=E2=80=9CThat ruins it for us content creators because the arcades see us w=
+alking in with a camera and think we want to try to hack the system,=E2=80=
+=9D he says.
+
+He=E2=80=99s called out arcades, too, for allegedly rigging their games (ht=
+tps://www.vox.com/2015/4/3/8339999/claw-machines-rigged?_hsenc=3Dp2ANqtz--m=
+UX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yl=
+e8qvL9BbJbxNYLg&_hsmi=3D397763044 ) or keeping payout levels low. (Anecdota=
+lly, machines will pay out between 10%-30% of the time, but it depends on h=
+ow the owner has set the game.)
+
+Videos cost Magnone between $50-$100, and throughout his career he=E2=80=99=
+s amassed a wide range of prizes: from mp4 players (=E2=80=9Cthey were very=
+ valuable then=E2=80=9D) to licensed items like Minecraft-related products,=
+ giant Squishable plushies and more. Once, he turned $20 into 33 prizes at =
+Dave & Busters.
+
+=E2=80=9CI don=E2=80=99t really do any kind of training,=E2=80=9D he says. =
+=E2=80=9CClaw machines are one of those things that, once you get the feel =
+for it, you just have to catch the machine at the right time and the prize =
+in the right position.=E2=80=9D
+
+The jackpot behind the jackpot
+
+Neither Kane nor Magnone make money winning tournament jackpots. The real o=
+pportunity, the thing that birthed what could be described as the claw econ=
+omy, is that claw machines translate perfectly into content.
+
+What makes claw-machine content so sticky online is that it=E2=80=99s built=
+ on the same psychological loop as the gameplay itself: set up, suspense, a=
+nd then payoff.
+
+The viewer experiences the =E2=80=9Calmost win=E2=80=9D on screen, without =
+paying for the next attempt, watching the claw strains to latch onto the pr=
+ize. It creates a kind of low-grade high: the thrill of almost.
+
+Plushies based on licensed characters, like the ones above in an arcade in =
+Italy, can help drive traffic to a machine. (Photo by Matteo Della Torre/Nu=
+rPhoto via Getty Images)
+
+It=E2=80=99s no surprise, then, that, when the audience is in the millions,=
+ a $1 plush toy =E2=80=94 or the mere chance of clawing a $1 toy from a mac=
+hine =E2=80=94 can generate thousands in ad revenue.
+
+One thing that Magnone and Kane do have to keep in mind, though, is the ris=
+k of being repetitive.
+
+=E2=80=9CI honestly feel like my content is very repetitive,=E2=80=9D says =
+Magnone.
+
+He tries to stay on top of trends to skirt around an algorithm that rewards=
+ him for constantly posting similar content. =E2=80=9CWhen fidget spinners =
+were hot, that=E2=80=99s what propelled me to over a million subscribers be=
+cause there was a claw machine with one in it and I won it,=E2=80=9D he rem=
+embers.
+
+=E2=80=9CBut it=E2=80=99s hard to always find machines filled with items th=
+at are trending so you just have to go with the flow.=E2=80=9D
+
+The evolution of the machines
+
+Part of the enduring appeal is that claw machines still invite debate about=
+ fairness, skill, and rigging. In reality, the technology has evolved in wa=
+ys that make the entire system both more sophisticated and more predictable=
+.
+
+=E2=80=9CIt=E2=80=99s not a myth but a common misconception,=E2=80=9D Magno=
+ne says. =E2=80=9CCertain machines are 100% skill-based.=E2=80=9D
+
+Machines in the =E2=80=9880s and =E2=80=9890s had knobs inside them that al=
+lowed owners to set the strength of a claw=E2=80=99s grip or the number of =
+times a claw would drop a prize before it delivered it to its winner.
+
+More modern versions of the tool are different.
+
+=E2=80=9CNowadays, the machines are filled with very expensive prizes: vide=
+o games, handbags,=E2=80=9D Kane says. =E2=80=9CThose machines are usually =
+set on a payout rate. If an item costs $20, until $20 or more is put into t=
+he machine, it=E2=80=99s not going to pay out.=E2=80=9D
+
+The thrill of the almost-win keeps players (and viewers) coming back. (Phot=
+o by Calla Kessler/The Washington Post via Getty Images)
+
+According to Magnone, older claw machines were largely skill-based, with a =
+fixed claw strength that stayed consistent from play to play and allowed ex=
+perienced players to win through good positioning and technique.
+
+Newer machines, by contrast, often use payout systems that tie claw strengt=
+h to how much money has been fed into the game, meaning the claw only reach=
+es full strength after the operator=E2=80=99s preset threshold is met. They=
+=E2=80=99re usually flashier, featuring LED lights, loud music and sleeker =
+designs, and they make it much harder for the average player to tell when a=
+ prize is actually winnable.
+
+Magnone can detect the difference on sight. =E2=80=9CLook for the credit di=
+splay, the way the joystick moves,=E2=80=9D he suggests. =E2=80=9CThe older=
+ machines that let you only go forward once and then right, those were all =
+skill. They don=E2=80=99t make those anymore.=E2=80=9D
+
+=E2=80=9CNow that I=E2=80=99m on the other side, I play less=E2=80=9D
+
+Based in Melbourne, Australia, Jack Ennis owns and operates ~40 claw machin=
+es across trampoline parks, kids=E2=80=99 play centers, malls and restauran=
+ts. He started as a player and eventually became an operator because he rea=
+lized the business was shockingly profitable.
+
+=E2=80=9CIt=E2=80=99s funny because I have been a player for so long and th=
+en transitioned to owning and operating the claw machines,=E2=80=9D he says=
+. =E2=80=9CThere is a lot of psychology behind the playing. It triggers rew=
+ard pathways. When you=E2=80=99re about to win something, you want to play =
+again.=E2=80=9D
+
+But becoming the operator ruined the magic. =E2=80=9CNow that I am on the o=
+ther side, I know the machine is telling you when you=E2=80=99re going to w=
+in. I don=E2=80=99t really play them anymore. It ruined the experience a li=
+ttle bit.=E2=80=9D
+
+Still, he believes in the product.
+
+=E2=80=9CWe know we are providing a service: entertainment and fun. Even if=
+ people don=E2=80=99t win, they have fun,=E2=80=9D he says.
+
+A single machine can earn up to $400/week for Jack Ennis, who owns about 40=
+ like these. (Courtesy of Jack Ennis)
+
+Ennis=E2=80=99 business model is simple. According to him, machines cost be=
+tween $500 and $1,000 and he believes that the return on the initial invest=
+ment can likely be made in four to six months. After that, it=E2=80=99s pur=
+e profit. Ennis says a single machine can earn him between $200 and $400/we=
+ek.
+
+Credit card readers exploded revenue (=E2=80=9CPeople lose track of spendin=
+g with Apple Pay,=E2=80=9D Ennis says) while colorful prizes and pop-cultur=
+e-themed toys keep engagement high. Add to it all locations with high foot =
+traffic, and the potential for revenue keeps multiplying.
+
+=E2=80=9CIt=E2=80=99s very scalable and profitable,=E2=80=9D says Ennis. =
+=E2=80=9CA perfect side hustle.=E2=80=9D
+
+But even here, the money isn=E2=80=99t about a single play. It=E2=80=99s th=
+e ecosystem: nostalgia, psychology, social play, and the sheer volume of at=
+tempts.
+
+Meow Claw, a claw-machine arcade in Rockville, Maryland, is inspired by Jap=
+an=E2=80=99s arcades, where the machines are called UFO catchers. (Photo by=
+ Michael S. Williamson/The Washington Post via Getty Images)
+
+And increasingly, content creators drive foot traffic as much as casual pla=
+yers.
+
+Content pays
+
+There=E2=80=99s a misconception that claw-machine pros earn money the way g=
+amers or athletes do: through competitions, high-stakes events, prize winni=
+ngs. Both Kane and Magnone shut that down quickly.
+
+There are small competitions popping up at dedicated =E2=80=9Cclawcades,=E2=
+=80=9D they say, but nobody=E2=80=99s paying rent off a trophy.
+
+The creators make money because they film themselves playing and sell ad in=
+ventory against the millions of views that those clips generate.
+
+Kane and Magnone also mention sponsorships, selling merchandise or the priz=
+es that they won which, according to both, doesn=E2=80=99t actually amount =
+to much.
+
+To put it simply: the claw machine is the stage. The content is the product=
+.
+
+What started as a coin-eating arcade sideshow is now a full-blown ecosystem=
+ powered by social media, nostalgia and the most consistent human impulse o=
+f all: the desire to win. Or, at the very least, watch somebody else win.
+
+Share & discuss this story on:
+
+Site (https://thehustle.co/originals/the-competitive-claw-machine-boom?_hse=
+nc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM=
+7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 )
+
+YouTube (https://www.youtube.com/@TheHustleChannel?_hsenc=3Dp2ANqtz--mUX4lk=
+beDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL=
+9BbJbxNYLg&_hsmi=3D397763044 )
+
+LinkedIn (https://www.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz--mUX=
+4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8=
+qvL9BbJbxNYLg&_hsmi=3D397763044 )
+
+Instagram (https://www.instagram.com/thehustledaily/?hl=3Den&_hsenc=3Dp2ANq=
+tz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42=
+HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 )
+
+Today's email was brought to you by Anna Rahmanan (https://www.instagram.co=
+m/annabyrahmanan/?hl=3Den&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTM=
+nNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763=
+044 ) , Katherine Laidlaw (https://x.com/klaidlaw?_hsenc=3Dp2ANqtz--mUX4lkb=
+eDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9=
+BbJbxNYLg&_hsmi=3D397763044 ) , Mark Dent (https://x.com/mdent05?_hsenc=3Dp=
+2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxG=
+m_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 ) , and Zachary Crockett (https:=
+//x.com/zzcrockett?_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcp=
+yNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 ) ,=
+ with help from Kaylee Jenzen.
+
+Was this email forwarded to you? Sign up here (https://thehustle.co/join/?u=
+tm_source=3Dthehustle&utm_medium=3Demail&utm_campaign=3Dfooter&_hsenc=3Dp2A=
+Nqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_=
+42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 ) .
+
+Subscribe to our other newsletters
+
+Expert insights: Masters in Marketing (https://blog.hubspot.com/masters-in-=
+marketing-subscribe?utm_source=3Demail&utm_campaign=3Dhustle&utm_medium=3Df=
+ooter&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN=
+_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 )   |   Stay up-=
+to-date on AI:  Mindstream
+
+(https://www.mindstream.news/?utm_channel=3Demail&utm_source=3Dhustle&utm_m=
+edium=3Dfooter&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxG=
+w6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 )
+
+Follow The Hustle on YouTube (https://www.youtube.com/@TheHustleChannel?_hs=
+enc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2j=
+M7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 ) , LinkedIn (https://www=
+.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR=
+3ynWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=
+=3D397763044 ) , and Instagram (https://www.instagram.com/thehustledaily/?h=
+l=3Den&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3ynWyTMnNiffcpyNxGw6m354_H=
+N_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D397763044 ) .
+
+HubSpot Media, 2 Canal Park, Cambridge, MA, 02141, USA, +1 888.482.7768
+
+Never want to hear from us again? Break our hearts and Unsubscribe (https:/=
+/media.hubspot.com/hs/preferences-center/en/page?data=3DW2nXS-N30h-R-W34ppN=
+z1LwtRqW47zk8Y1LCqfLW1ZrfcX3bwSLxW4tn_7T3X-Q73W30KrH23F02_-W2-DHm93M8505W3H=
+8vKQ1VyzHkW45CJ4r2xGfzlW2Rg8hk1Qrk7hW367tR_1_snM3W2KRk6941G9CVW3dspgB4pc1-G=
+W41sh3C2MTDr8W3zb2qg3XwMVLW3bBcRJ4cR6qcW3JWbLt4mtRQFW2p27LB4kr45DW1_bGlC2-m=
+BMzW3SZ9Vl1NgkLXW30LL5K30rSFTW3BJxCQ3VXLcxW4tFkbW4klwYCW4myxPm1X0ffNW2WhR4B=
+2WHDR3W3STYjj3F7TRHW2-JSn21BCScWW1BDJzz2RR6hCW24TZmV2zP8kBW3R3wN823kkbKW1Z6=
+gN638BNknW4th8MT3jml1hW3MbgmD3P04-QW3NGL0h2Rs3_tW2MlKjd218Kx8W3dgl9S1BwRLgW=
+32hPsT3QTjrqW258lMC219CgwW4cSg6R43T9PpW2KrVqd3df2RgW3z98X82xKD6TW4csYnK3SMJ=
+bSW1Xf6FM2KrVvpW4hd1c830kgDDW2r11Sc1_57dcW3zcbLB2sVqy4W4hm6CL3M4RmkW3ZVxBG4=
+5mgWGW1VqTxP3GTPFmW1V9Xbc257rcZW1NnDdM3QFcrhW43Yjqm3_TyRmW3Y2b464hhSJBW2PnZ=
+4V3XZXxZW4fhxjL30LKTlf1N7JsD04&_hsenc=3Dp2ANqtz--mUX4lkbeDPM9BY5uNcQiwpmR3y=
+nWyTMnNiffcpyNxGw6m354_HN_m4O0cO2jM7q9RxGm_42HO-yle8qvL9BbJbxNYLg&_hsmi=3D3=
+97763044 ) .
+------=_Part_38116_1997669672.1768128691299
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>The competitive claw machine boom</title>
+    <meta property=3D"og:title" content=3D"The competitive claw machine boo=
+m">
+    <meta name=3D"twitter:title" content=3D"The competitive claw machine bo=
+om">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #FFFFFF;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://media.hubspot.com/the-competitive-claw-machine-boom"><meta=
+ name=3D"robots" content=3D"noindex,follow"><!--[if !((mso)|(IE))]><!-- -->=
+<style type=3D"text/css">@media only screen and (max-width:639px){img.stret=
+ch-on-mobile,.hs_rss_email_entries_table img,.hs-stretch-cta .hs-cta-img{he=
+ight:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #eaf0f6 !important;border-right:1px solid #eaf0f6 !important;box-sizing:=
+border-box}
+.hse-border-bottom-m{border-bottom:1px solid #eaf0f6 !important}.hse-border=
+-top-m{border-top:1px solid #eaf0f6 !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-4{max-width:200px !important;width:200px !impor=
+tant}
+.moz-text-html .hse-section .hse-size-8{max-width:400px !important;width:40=
+0px !important}
+.moz-text-html .hse-section .hse-size-12{max-width:600px !important;width:6=
+00px !important}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-4{=
+max-width:200px !important;width:200px !important}
+.hse-section .hse-size-8{max-width:400px !important;width:400px !important}=
+.hse-section .hse-size-12{max-width:600px !important;width:600px !important=
+}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section_1767985633857 .hse-column-container{background-color:transparent !=
+important}
+#section_1767985633857 .hse-column-container{background-color:transparent !=
+important}
+}@media only screen and (max-width:639px){ #section-0 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-0 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-1 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-1 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-2 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-2 .hse-column-container{background-color:#fff !important} }@media =
+screen and (max-width:639px){.social-network-cell{display:inline-block}
+}@media only screen and (max-width:639px){ #section-3 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-3 .hse-column-container{background-color:#fff !important} }@media =
+only screen and (max-width:639px){.hse-body-wrapper-td{padding-bottom:20px =
+!important}
+#section-4 .hse-column-container{padding-top:0px !important;padding-bottom:=
+0px !important}
+#section-4 .hse-column-container{background-color:#fff !important} }</style=
+><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_main a[x=
+-apple-data-detectors]{color:inherit !important;text-decoration:none !impor=
+tant;font-size:inherit !important;font-family:inherit !important;font-weigh=
+t:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}
+.ShadowHTML p,.sh-modified-inline p{margin:0}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#FFFFFF" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Helvetica, Arial, sans-serif; font-size:16p=
+x; color:#192733; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#FFF=
+FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">How a childhood obsession became an online phenomenon and a f=
+ull-time career for claw-machine enthusiasts.</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#ffffff" bgcolor=3D"#ffffff">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-brea=
+k:break-word; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1767985633857" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1767985633857_0" class=3D"hse-column hse-size-12">
+  <!--[if !mso]><!--><div id=3D"hs_cos_wrapper_module_17679856650131" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hd" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;display:n=
+one" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div s=
+tyle=3D"font-size: 11px; text-align: center; line-height: 130%">
+  <em>
+   =20
+      <span style=3D"font-weight: bold; color: #bf2434">Share The Hustle:</=
+span>
+      <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82Q=
+CH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKV-2-ZW0W5BW0B06lZ3mcW1cXynt91Rwg7W2W_Jsn4Q=
+NgHFW5RHjfp8JLx_wW7lT4_G6Zz4DQW367gNK7t8d_MW47M8J91gmTPvW6gwtKn6tb_SVW7MrPP=
+04DgRZsW7yGn3q7vVqBTW8m14bl8PVyScVZQCGZ27Z8mfVkY6_D7gffq7W5CYSMM3pG9-dN8y5z=
+RwdgNbrW3Lc_N-3_vfsnN8xM8lrYnhfBW1Xwn_Q97tcP-W7plrCJ47lP8lf56cYyl04" style=
+=3D"color:#192733; text-decoration:underline !important" data-hs-link-id=3D=
+"0" data-hs-link-id-v2=3D"iqt7z0d0" target=3D"_blank" data-contains-exactly=
+-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+  </em>
+  <br>
+  <span>
+    Check your referral progress &amp; prizes <a href=3D"https://media.hubs=
+pot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKV-=
+2-ZW0W5BW0B06lZ3pRW4DP1b960v-JXW4sPCtV2V9h2jVyghKx6_mHcCW5S5dnq6qXLBwW6ld_f=
+P2nQgHmW8Sgcbg2fLyHbW1M57D_6TYr8yW6lF01r4wz-mnW8bNn7D98PnYQW85tMkM5f5xWYW5g=
+-KSS1hcBXXVbwkhd45-3b_W9398kQ7QXl5QW3sG8Rp2X1LxFW79WR9h6lVn57W8QdGK-89wj4ZW=
+5KGGWb3xSjdHW6jzZcd6x7rFGd_lPMM04" style=3D"color:#192733; text-decoration:=
+underline !important" data-hs-link-id=3D"1" data-hs-link-id-v2=3D"3ulPwwvP"=
+ target=3D"_blank">here</a>
+  </span>
+</div></div><!--<![endif]-->
+<div id=3D"hs_cos_wrapper_module_17679856809612" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module hs-hm" style=3D"color: inher=
+it; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"=
+widget" data-hs-cos-type=3D"module"><div style=3D"font-size: 14px; text-ali=
+gn: center; line-height: 140%;">
+  <em>
+ =20
+    <span>You've got 3 referrals, just 2 away from earning a Hustle candle.=
+ Check out all of our <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d=
+2q-Vf04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKVH2-ZW0W50kgx26lZ3pFW5Pn_L=
+s3n59HSW3ThVlh2Rl0gPW5hCnV96mKFCtW4jxZPb7K6GFrW97_pwK6l6ljLW47RhxN76h73tW73=
+SjM71hGW_2W66Vw4471K4CpW3gYHkP2GmVf2W5zVzcf127GWqW6B2LfD3ml7XKW4994rY64vZ5X=
+W7zGJHr2BDsdSW33yy5Y6b0LLkW5yhWKG1RncTXW4YDZQ35zywvbf5SgNg804" style=3D"col=
+or:#192733; text-decoration:underline !important" data-hs-link-id=3D"2" dat=
+a-hs-link-id-v2=3D"v9PpzLyj" target=3D"_blank">prizes here</a>.</span>
+ =20
+ =20
+  <br>
+    <span style=3D"font-weight: bold; color: #bf2434;">Share your link:</sp=
+an>
+   =20
+      <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82Q=
+CH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKV-2-ZW0W5BW0B06lZ3kCN3LGHtVfv0KpW8cRrMY4F3=
+wCzW19FgMx4lmqHFW6dW-g95R6BjhW51hBMK7lnZvFW3gzjf33-GPC0W2ly6gB1ltbldW1-SZGZ=
+5Mhz2fW9718KZ7J0YnqW1qjJsh33MDK6W83tcBd1k3pwbW26xKQt81k4jDW3v_6_G62S4ZJW3nN=
+sYb8_cRq4V5fXgT50y5NbW3CJ1zF6THPFTW2gYtGp41vh4jW6w9HWF2KY0RLf8yvcp604" styl=
+e=3D"color:#192733; text-decoration:underline !important" data-hs-link-id=
+=3D"2" data-hs-link-id-v2=3D"dQWh244K" target=3D"_blank" data-contains-exac=
+tly-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+ =20
+  </em>
+</div></div>
+<div id=3D"hs_cos_wrapper_module_17679856338552" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><div style=3D"overflow:hidden">
+  <table role=3D"presentation" class=3D"hse-pre-header hse-secondary" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"text-align:right; fo=
+nt-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496=
+d; margin-bottom:0; padding:0" align=3D"right">
+    <tbody>
+      <tr>
+        <td align=3D"right" valign=3D"top" style=3D"color:#192733; word-bre=
+ak:break-word; text-align:right; font-family:Arial, sans-serif; font-size:1=
+2px; padding:10px 0; margin-bottom:0; line-height:135%">
+          <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBC=
+Q82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKXM2-ZW0W95jsWP6lZ3lBW97QdL02YMjnxW1QhJ=
+td728_2cVCs77q391gcpVpfRTc2gRCR-W97HLyR8tTjVyW6z4BW52DRzzGW44x5l19756LCW18b=
+PxQ7wknP9W6mHYTM4cwKlSW7FFLRb59rYxrVpJHNr2R-5_DW669tCZ5gdlJHW3M62FS55_x-yW9=
+9YvPb5-t3zkW5_RRsg2MnD26W3CXj2d2vY3j_W5yG6Jy588dQWW6ZTx2k974CJSW3HySq03wH9S=
+xW1xzxyy3k4V1fW6vWcYR42KcGlW1zQqT92v0hjlW7ywT8w6JYq4PW1Y7mFz9kmBV1W4KhgCS4L=
+JwB7W4p1tYT4n4PlGN1Wp-y58XBPZN5NK_vqxQJttW4XMC8N2mXMnFW7DlG1C7bkdnqf2TSwBl0=
+4" style=3D"color:#192733; font-weight:normal; text-decoration:underline; f=
+ont-style:normal" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Z4Jg9hoI" tar=
+get=3D"_blank">View in browser</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-0" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container hse-no-stack-row" style=3D"min-wid=
+th:280px; max-width:600px; margin:0 auto; border-collapse:separate; display=
+:table; width:100%; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" class=3D"hse-no-stack-row" width=3D"600=
+" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"400" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:400px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-8 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:400px; width:66.66%">
+  <div id=3D"hs_cos_wrapper_module-0-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;table-layout:fixed" data-hs-cos-general-typ=
+e=3D"widget" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper"=
+ role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"left" valign=3D"top" style=3D"font-family:Helvetica, Ari=
+al, sans-serif; color:#192733; word-break:break-word; text-align:left; padd=
+ing:10px 20px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ8=
+2QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKVH2-ZW0W50kgx26lZ3lxW6P9xHZ6nnQ8QN6TZ2g6=
+l5FX2W3MQ3dg7C6H7LW40rVKC418n7jW2npXmq4V_wV4W1wnRVB16L8QhW3R3nWx3m-PHVW7Gdh=
+b33Nx-8MW7320jL1P9PXVW5pJL3q3qf3r4VhQ6nn7ZP3WgW934h668mMD6zV-tp035WQdXxW4jG=
+8GB6dVJZVW6_s6G01zvmSfW2m4Vmy4PZ461f2CtRw604" target=3D"_blank" style=3D"co=
+lor:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"lAmjrZBz">
+        <img alt=3D"The Hustle by HubSpot Media" src=3D"https://media.hubsp=
+ot.com/hs-fs/hubfs/Critical_Template_Imagery/TheHustle_HSMedia_white_logo-p=
+ng-1.jpeg?width=3D360&amp;upscale=3Dtrue&amp;name=3DTheHustle_HSMedia_white=
+_logo-png-1.jpeg" style=3D"outline:none; text-decoration:none; border:none;=
+ max-width:100%; font-size:16px" width=3D"180" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"200" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:200px">
+<![endif]-->
+<div id=3D"column-0-1" class=3D"hse-column hse-size-4 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:200px; width:33.33%">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D"table-layout:fixed"><tbody><tr><td style=3D"f=
+ont-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; wor=
+d-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-0-1=
+-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module-0-1-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_=
+cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; li=
+ne-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"line-height:125%; font-weight:bold; text-align:r=
+ight" align=3D"right"><span style=3D"color: #ffffff;">Issue #377</span></p>=
+</div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-1-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentat=
+ion" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; color:#192733; word-break:break-word; text-align:center; =
+padding:0px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ8=
+2QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKWz2-ZW0W6N1vHY6lZ3nnW92pKbK8l3BRLW6N8wRG=
+8MMyYKW25qQSz8r_vkPW8Vwmsl7lzMF7W2SHHMj2lsCymW5gmQy99d0ycFVWJ1d75yGP_qW1h9y=
+L519kZgpW9cqjg45R71ZcW73Yq0Y4rTGykW3ndDs35n1WlQW7XNcPF52dk_rW62BH7J57b3NxW7=
+ZRhvM73jQVkW49Ggnv8CYT0kW3Rr6zw5rNpLDW72D6WL2s8yMRW4PqTmk4VdDwKW99mVPX4kTp9=
+MW9d_cS01dxThrW1qTjdg4D5zfMW5Cx59w4ZBdZdf7Bbsb404" target=3D"_blank" style=
+=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"bDaSAwtI">
+        <img alt=3D"Impossible Claw Illustration: A woman in a striped shir=
+t stands before a red claw machine labeled &quot;THE IMPOSSIBLE CLAW&quot; =
+against a brick wall." src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%2=
+0Newsletter%20Images/Daily%20Images/Jan%2011%202026/claw.gif?width=3D1200&a=
+mp;upscale=3Dtrue&amp;name=3Dclaw.gif" style=3D"outline:none; text-decorati=
+on:none; border:none; max-width:100%; font-size:16px" width=3D"600" align=
+=3D"middle" class=3D"stretch-on-mobile">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-1-0-=
+1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_co=
+s_wrapper_module-1-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_c=
+os_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; lin=
+e-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D=
+"rich_text"><p style=3D"line-height:125%; text-align:center; font-weight:bo=
+ld" align=3D"center"><span style=3D"color: #ffffff;">Sunday, January 11,&nb=
+sp;2025</span></p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-2" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-2-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-2-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module-2-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos=
+_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-=
+height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"r=
+ich_text"><h1 style=3D"margin:0; font-size:30px; line-height:125%">&nbsp;</=
+h1>
+<h1 style=3D"margin:0; font-size:30px; line-height:125%"><span style=3D"col=
+or: #192733;">The competitive claw machine boom</span></h1>
+<p style=3D"font-size:18px; line-height:125%">&nbsp;</p>
+<p style=3D"font-size:18px; line-height:125%"><span style=3D"color: #192733=
+;"><em>How a childhood obsession became an online phenomenon and a full-tim=
+e career for claw-machine enthusiasts.</em></span></p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold">&nbsp;</p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold"><br><span s=
+tyle=3D"color: #192733;">BY <a href=3D"https://media.hubspot.com/e3t/Ctc/UB=
++113/d2q-Vf04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKWg2-ZW0W69sMD-6lZ3n_=
+W2zLxL_7cQY29N1P23bjr2JJlW2mSw995D1dxKW5lx0W72qSkkSW2SR53S4x7rKbN7hppK9Qw0v=
+jW5SXgqB4tGC-sV_gk70548jl8W5l_Vd47HGlgyW5D8wDh24D4wTW4FTy7T8CDZ2lW53_21l5g9=
+rDBW38dvV69dqz9xW8h9XWn6ns50dW5XcYZ41B03gDW4v9m6B94YvjzW2Yvm8-3z66wFW7g834J=
+1DX1LDW4Pnkd_7fN2LLW7KwwZl28CP1Bf96TQ0H04" style=3D"font-weight:bold; color=
+:#192733; text-decoration:none !important" rel=3D"noopener" data-hs-link-id=
+=3D"0" data-hs-link-id-v2=3D"kXa22tHB" target=3D"_blank">ANNA RAHMANAN</a><=
+/span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Walk into almost any American mall, bowling a=
+lley, or family restaurant and you=E2=80=99ll see it: a glowing box of plus=
+h toys and blinking LEDs waiting for someone to drop a few dollars to try t=
+o grab a prize.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Claw machines could have been relics, lost to=
+ the =E2=80=9890s alongside spitball shooters and mall photobooths. Instead=
+, they=E2=80=99ve amassed billions of views on social media and have proved=
+ to be a viable small business for local operators.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Their popularity isn=E2=80=99t from winning e=
+xpensive prizes, or because competitions pay big. Claw machines are still d=
+ifficult to win and many believe they=E2=80=99re rigged by operators. It=E2=
+=80=99s because claw machines =E2=80=94 in their own way, nostalgia personi=
+fied =E2=80=94 have become an unlikely and effective modern vehicle for mon=
+etizable content.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-1" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Sydney Fashion Event: A woman plays a claw machine fill=
+ed with white capsules at a &quot;WITCHERY&quot; fashion event in Sydney." =
+src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Da=
+ily%20Images/Jan%2011%202026/Claw_Witchery.jpg?width=3D1160&amp;upscale=3Dt=
+rue&amp;name=3DClaw_Witchery.jpg" style=3D"outline:none; text-decoration:no=
+ne; max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-2_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">A Vogue editor plays on a claw mach=
+ine at a fashion event in Sydney, Australia. (Photo by Mark Metcalfe/Getty =
+Images for Vaefno)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">And in the center of this unexpected industry=
+ is a generation of players and operators who treat claw machines not as ga=
+mes, but as engines for making money.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>The kids who never grew out of it</st=
+rong></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Before claw machines were content, before the=
+y were side hustles, before they were tropes in TikTok videos, they were ev=
+erywhere and irresistible to <strong>Erik Kane</strong>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CI remember always seeing them in the=
+ early 2000s growing up,=E2=80=9D says Kane, the 26-year-old creator behind=
+ the YouTube account <a   href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/=
+d2q-Vf04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKWg2-ZW0W69sMD-6lZ3p7W4Z9f=
+j36VHm1hN4J3JWDD-8wGW2L7kC03PggVnW61rKVB8QnyVdW7g14r56RwzDyVThWcM6KsP6ZW5JX=
+xjK7tsqHPW5wR3bP4pGdksW30Ty1K48j263N85XTlQTyc3cW2t0HYr5Y92s6W737KnC6WBX5tW1=
+3dHc37WHzTBW3T0Bgf6K2vhGW1_3Qw_5lZ-PrW2NtG4S2chzHBW1qWR0t7vKDpPW3qy_C-8sx3K=
+2VQ7mmW1n4zRrW1s5dCh2nvjjwf4mc8-W04" style=3D"color:#192733" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"9h1RCX5+" target=3D"_blank">Arcade Warrior</a=
+>. =E2=80=9CThere was always one in a grocery store, restaurant, mall. They=
+ were very prevalent. The marquee sign would light up next to flashing ligh=
+ts, plus the claw itself. I was always drawn to it.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">As a kid in Rochester, New York, Kane begged =
+his parents for a dollar to play. "If it was not for them giving me a dolla=
+r to play whenever I would see one, I probably never would have gotten full=
+y invested in them," he says. Eventually, he started filming. Today, his ch=
+annel has <strong>2m+ </strong>subscribers.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CAround the time I was 12 or 13, I st=
+arted to film some clips of me just playing,=E2=80=9D he says. =E2=80=9CMe =
+and my brother would go around and film but wouldn=E2=80=99t upload anythin=
+g. It was just something we did for fun.=E2=80=9D</p></div></div></td></tr>=
+</tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-3" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Arcade Warrior: YouTuber Erik Kane gives a thumbs-up wh=
+ile holding a plush donkey prize in an arcade." src=3D"https://media.hubspo=
+t.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Jan%2011%20202=
+6/Claw_prize.png?width=3D1160&amp;upscale=3Dtrue&amp;name=3DClaw_prize.png"=
+ style=3D"outline:none; text-decoration:none; max-width:100%; font-size:16p=
+x" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-4" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-4_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Erik Kane shows off his latest plus=
+hie prize. (YouTube)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In Pennsylvania, future YouTuber <strong>Matt=
+ Magnone</strong>, known online as <a href=3D"https://media.hubspot.com/e3t=
+/Ctc/UB+113/d2q-Vf04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKV-2-ZW0W5BW0B=
+06lZ3pGW84BnbK5snlvcW17FcWh6K1pD0W7pwM8R144pKcN463L7KzZrLvW83c6ZQ2BV902W7NT=
+-X31PYqw8W66k8C64sY_8tW9lQPwL3QYKgnVs--Sm4mmlPZW4nC5zL6WnFc6W87vwcC8_Hvx_W2=
+01H7d1lrRVdN1h73DRmx9KqW24ytQZ6GwFB4N8tt1N9zR6npW4FhDdR3kL14-N7rthjQWlBQ8N5=
+XbPJWTCHC0f5v_LyT04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-=
+link-id-v2=3D"hEHwuuwa" target=3D"_blank">Arcade Matt</a>, was doing the sa=
+me thing.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CEver since I was a little kid, it wa=
+s the one game at the arcade that you could win an instant gift with,=E2=80=
+=9D says the 38-year-old. =E2=80=9CInstant gratification=E2=80=94millennial=
+s love that. I didn=E2=80=99t care what the prize was. It was just the fact=
+ that I could win something.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">At 17, he bought a full-size claw machine for=
+ $500, which he stored in his mom=E2=80=99s basement and practiced on daily=
+.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CMy first job was a cashier at a neig=
+hborhood pharmacy and I only made $5 an hour so I had to save up for months=
+ and months and months in my pretzel jar until I finally had enough money t=
+o buy it,=E2=80=9D he says.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">He now has <strong>1.83m </strong>YouTube sub=
+scribers, who he fondly refers to as goobers.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Alongside the channels, the competitive claw =
+machine community has grown. Aspiring clawmasters share tips and tricks onl=
+ine. Clawcades host tournaments for local players. The cost to play depends=
+ on location and prizes, but on average is still between a quarter and $2 p=
+er play. They=E2=80=99re especially popular in Japan, where a woman named Y=
+uka Nakajima holds the Guinness World Record for most claw-machine wins at =
+3.5k.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-5" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Arcade Matt: YouTuber Matt Magnone holds up three blue =
+prize balls in front of a &quot;BIG CHOICE&quot; claw machine." src=3D"http=
+s://media.hubspot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Image=
+s/Jan%2011%202026/Claw_Tilt_Big_Choice.jpg?width=3D1160&amp;upscale=3Dtrue&=
+amp;name=3DClaw_Tilt_Big_Choice.jpg" style=3D"outline:none; text-decoration=
+:none; max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-6" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-6_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Matt Magnone says winning claw tour=
+naments isn=E2=80=99t where the revenue is =E2=80=93 it=E2=80=99s in videos=
+ of him playing the game. (Courtesy of Matt Magnone)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">And like any community, it has its own drama.=
+ Magnone explains he=E2=80=99s called out members online who =E2=80=9Cgive =
+false information on hacks=E2=80=9D to gather views.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CThat ruins it for us content creator=
+s because the arcades see us walking in with a camera and think we want to =
+try to hack the system,=E2=80=9D he says.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">He=E2=80=99s called out arcades, too, for all=
+egedly <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82=
+QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKWg2-ZW0W69sMD-6lZ3nqW5n90PN4mtrLvW4mdMHm5=
+tFxsxW40313B3p_K3KW527NYF90zfxkW7hmC9m5cxXKXW5QGJth2vWvlcW8npr603xBF4vW4YjD=
+_v66TNwZW5sdtWH6nb65XW2y-54z6d8VrJVDK6FY9f_7HQW6BMhWQ7ZGJ9pW82DKQL2gcYnPVZ8=
+mKg6z0NGrW5hhC1Q1ts6j1W7DYG-N2Bt3-JW5PBlm31w6VPqN34g7BF7nxfYW4slv737DVb4CW7=
+clNlV3RyKBsf41CsP-04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs=
+-link-id-v2=3D"uEWTj5Hv" target=3D"_blank">rigging their games</a> or keepi=
+ng payout levels low. (Anecdotally, machines will pay out between <strong>1=
+0%</strong>-<strong>30%</strong> of the time, but it depends on how the own=
+er has set the game.)</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Videos cost Magnone between <strong>$50</stro=
+ng>-<strong>$100</strong>, and throughout his career he=E2=80=99s amassed a=
+ wide range of prizes: from mp4 players (=E2=80=9Cthey were very valuable t=
+hen=E2=80=9D) to licensed items like Minecraft-related products, giant Squi=
+shable plushies and more. Once, he turned $20 into 33 prizes at Dave &amp; =
+Busters.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CI don=E2=80=99t really do any kind o=
+f training,=E2=80=9D he says. =E2=80=9CClaw machines are one of those thing=
+s that, once you get the feel for it, you just have to catch the machine at=
+ the right time and the prize in the right position.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>The jackpot behind the jackpot</stron=
+g></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Neither Kane nor Magnone make money winning t=
+ournament jackpots. The real opportunity, the thing that birthed what could=
+ be described as the claw economy, is that claw machines translate perfectl=
+y into content.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">What makes claw-machine content so sticky onl=
+ine is that it=E2=80=99s built on the same psychological loop as the gamepl=
+ay itself: set up, suspense, and then payoff.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The viewer experiences the =E2=80=9Calmost wi=
+n=E2=80=9D on screen, without paying for the next attempt, watching the cla=
+w strains to latch onto the prize. It creates a kind of low-grade high: the=
+ thrill of <em>almost</em>.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-7" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Italian Arcade: A row of pink and white claw machines i=
+n Italy filled with licensed plushies like Mickey Mouse and Mario." src=3D"=
+https://media.hubspot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20I=
+mages/Jan%2011%202026/Claw_Pink_EClaw.jpg?width=3D1160&amp;upscale=3Dtrue&a=
+mp;name=3DClaw_Pink_EClaw.jpg" style=3D"outline:none; text-decoration:none;=
+ max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-8" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-8_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Plushies based on licensed characte=
+rs, like the ones above in an arcade in Italy, can help drive traffic to a =
+machine. (Photo by Matteo Della Torre/NurPhoto via Getty Images)</span></em=
+></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It=E2=80=99s no surprise, then, that, when th=
+e audience is in the millions, a $1 plush toy =E2=80=94 or the mere chance =
+of clawing a $1 toy from a machine =E2=80=94 can generate thousands in ad r=
+evenue.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">One thing that Magnone and Kane do have to ke=
+ep in mind, though, is the risk of being repetitive.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CI honestly feel like my content is v=
+ery repetitive,=E2=80=9D says Magnone.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">He tries to stay on top of trends to skirt ar=
+ound an algorithm that rewards him for constantly posting similar content. =
+=E2=80=9CWhen fidget spinners were hot, that=E2=80=99s what propelled me to=
+ over a million subscribers because there was a claw machine with one in it=
+ and I won it,=E2=80=9D he remembers.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CBut it=E2=80=99s hard to always find=
+ machines filled with items that are trending so you just have to go with t=
+he flow.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>The evolution of the machines</strong=
+></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Part of the enduring appeal is that claw mach=
+ines still invite debate about fairness, skill, and rigging. In reality, th=
+e technology has evolved in ways that make the entire system both more soph=
+isticated and more predictable.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CIt=E2=80=99s not a myth but a common=
+ misconception,=E2=80=9D Magnone says. =E2=80=9CCertain machines are 100% s=
+kill-based.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Machines in the =E2=80=9880s and =E2=80=9890s=
+ had knobs inside them that allowed owners to set the strength of a claw=E2=
+=80=99s grip or the number of times a claw would drop a prize before it del=
+ivered it to its winner.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">More modern versions of the tool are differen=
+t.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CNowadays, the machines are filled wi=
+th very expensive prizes: video games, handbags,=E2=80=9D Kane says. =E2=80=
+=9CThose machines are usually set on a payout rate. If an item costs $20, u=
+ntil $20 or more is put into the machine, it=E2=80=99s not going to pay out=
+.=E2=80=9D</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-9" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"The &quot;Almost-Win&quot;: A young girl watches with a=
+n open-mouthed, excited expression as a claw attempts to grab a rainbow-col=
+ored pig toy." src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%20Newslet=
+ter%20Images/Daily%20Images/Jan%2011%202026/Claw_Pigs.jpg?width=3D1160&amp;=
+upscale=3Dtrue&amp;name=3DClaw_Pigs.jpg" style=3D"outline:none; text-decora=
+tion:none; max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-10" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-10_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">The thrill of the almost-win keep=
+s players (and viewers) coming back. (Photo by Calla Kessler/The Washington=
+ Post via Getty Images)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">According to Magnone, older claw machines wer=
+e largely skill-based, with a fixed claw strength that stayed consistent fr=
+om play to play and allowed experienced players to win through good positio=
+ning and technique.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Newer machines, by contrast, often use payout=
+ systems that tie claw strength to how much money has been fed into the gam=
+e, meaning the claw only reaches full strength after the operator=E2=80=99s=
+ preset threshold is met. They=E2=80=99re usually flashier, featuring LED l=
+ights, loud music and sleeker designs, and they make it much harder for the=
+ average player to tell when a prize is actually winnable.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Magnone can detect the difference on sight. =
+=E2=80=9CLook for the credit display, the way the joystick moves,=E2=80=9D =
+he suggests. =E2=80=9CThe older machines that let you only go forward once =
+and then right, those were all skill. They don=E2=80=99t make those anymore=
+.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>=E2=80=9CNow that I=E2=80=99m on the =
+other side, I play less=E2=80=9D</strong></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Based in Melbourne, Australia, <strong>Jack E=
+nnis</strong> owns and operates ~40 claw machines across trampoline parks, =
+kids=E2=80=99 play centers, malls and restaurants. He started as a player a=
+nd eventually became an operator because he realized the business was shock=
+ingly profitable.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CIt=E2=80=99s funny because I have be=
+en a player for so long and then transitioned to owning and operating the c=
+law machines,=E2=80=9D he says. =E2=80=9CThere is a lot of psychology behin=
+d the playing. It triggers reward pathways. When you=E2=80=99re about to wi=
+n something, you want to play again.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But becoming the operator ruined the magic. =
+=E2=80=9CNow that I am on the other side, I know the machine is telling you=
+ when you=E2=80=99re going to win. I don=E2=80=99t really play them anymore=
+. It ruined the experience a little bit.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Still, he believes in the product.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CWe know we are providing a service: =
+entertainment and fun. Even if people don=E2=80=99t win, they have fun,=E2=
+=80=9D he says.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-11" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Operator's Machines: Four modern, glowing claw machines=
+=E2=80=94including &quot;LUCKY WHEEL&quot; and &quot;NEO CLAW&quot;=E2=80=
+=94owned by operator Jack Ennis." src=3D"https://media.hubspot.com/hs-fs/hu=
+bfs/Daily%20Newsletter%20Images/Daily%20Images/Jan%2011%202026/Claw_Assortm=
+ent.jpeg?width=3D1160&amp;upscale=3Dtrue&amp;name=3DClaw_Assortment.jpeg" s=
+tyle=3D"outline:none; text-decoration:none; max-width:100%; font-size:16px"=
+ width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-12" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-12_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">A single machine can earn up to $=
+400/week for Jack Ennis, who owns about 40 like these. (Courtesy of Jack En=
+nis)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Ennis=E2=80=99 business model is simple. Acco=
+rding to him, machines cost between <strong>$500 and $1,000</strong> and he=
+ believes that the return on the initial investment can likely be made in f=
+our to six months. After that, it=E2=80=99s pure profit. Ennis says a singl=
+e machine can earn him between <strong>$200 and $400/week</strong>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Credit card readers exploded revenue (=E2=80=
+=9CPeople lose track of spending with Apple Pay,=E2=80=9D Ennis says) while=
+ colorful prizes and pop-culture-themed toys keep engagement high. Add to i=
+t all locations with high foot traffic, and the potential for revenue keeps=
+ multiplying.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CIt=E2=80=99s very scalable and profi=
+table,=E2=80=9D says Ennis. =E2=80=9CA perfect side hustle.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But even here, the money isn=E2=80=99t about =
+a single play. It=E2=80=99s the ecosystem: nostalgia, psychology, social pl=
+ay, and the sheer volume of attempts.</p></div></div></td></tr></tbody></ta=
+ble>
+<div id=3D"hs_cos_wrapper_module-2-0-13" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Meow Claw Arcade: A man gives two thumbs up in front of=
+ a &quot;Meow Claw&quot; machine filled with identical pig plushies at an a=
+rcade in Maryland." src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%20Ne=
+wsletter%20Images/Daily%20Images/Jan%2011%202026/Claw_Thumbs_Up.jpg?width=
+=3D1160&amp;upscale=3Dtrue&amp;name=3DClaw_Thumbs_Up.jpg" style=3D"outline:=
+none; text-decoration:none; max-width:100%; font-size:16px" width=3D"580" a=
+lign=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-14" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-14_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Meow Claw, a claw-machine arcade =
+in Rockville, Maryland, is inspired by Japan=E2=80=99s arcades, where the m=
+achines are called UFO catchers. (Photo by Michael S. Williamson/The Washin=
+gton Post via Getty Images)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">And increasingly, content creators drive foot=
+ traffic as much as casual players.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Content pays</strong></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">There=E2=80=99s a misconception that claw-mac=
+hine pros earn money the way gamers or athletes do: through competitions, h=
+igh-stakes events, prize winnings. Both Kane and Magnone shut that down qui=
+ckly.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">There are small competitions popping up at de=
+dicated =E2=80=9Cclawcades,=E2=80=9D they say, but nobody=E2=80=99s paying =
+rent off a trophy.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The creators make money because they film the=
+mselves playing and sell ad inventory against the millions of views that th=
+ose clips generate.&nbsp;</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Kane and Magnone also mention sponsorships, s=
+elling merchandise or the prizes that they won which, according to both, do=
+esn=E2=80=99t actually amount to much.&nbsp;</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">To put it simply: the claw machine is the sta=
+ge. The content is the product.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">What started as a coin-eating arcade sideshow=
+ is now a full-blown ecosystem powered by social media, nostalgia and the m=
+ost consistent human impulse of all: the desire to win. Or, at the very lea=
+st, watch somebody else win.</p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-3" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-3-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"non=
+e" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align=
+:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px"><div id=3D"hs_cos_wrapper_module-3-0-1" cla=
+ss=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" styl=
+e=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos=
+-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrap=
+per_module-3-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wra=
+pper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-heig=
+ht: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_=
+text"><p style=3D"text-align:center; font-size:26px; line-height:150%" alig=
+n=3D"center">Share &amp; discuss this story on:</p></div></div></td></tr></=
+tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-3-0-=
+2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"p=
+resentation" align=3D"center" style=3D"width: auto; text-align: center; mar=
+gin: 0 auto; " class=3D"hs_cos_wrapper_type_social_module">
+  <tbody>
+    <tr>
+      <td class=3D"social-network-cell" align=3D"center" style=3D"font-fami=
+ly:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-break:=
+break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKWz2-ZW0W6N1vHY6lZ3pYW3XFpBn1NcrF=
+lW1DCMZv1-QS-fVFtqWf8nWhdtW8p3nvr6Z-LcdW8Ljg3Y5Yvd-YW8wHH8j79bmjHVSGxfF3p3w=
+ztW608Zll2Xk4rgV6Dsf-3jNF0JW100jCb71s76xW3LHBSP1B23ylW4z1lwt5MGW4PW91RB7217=
+2vhHW2YwNcz3fVMFLW5Mn9Zy8bntyNW9l9rnv5MWt7gN3CZtkSQ6BN-W2xjvS41lmnzqW7zp1dv=
+1wMFpMW6C0J3Q6TR6hPN8QdG8tY8216W9bXsL95b80gDf5WrP2H04" style=3D"color:#00a4=
+bd; text-decoration:none !important" data-hs-link-id=3D"1" data-hs-link-id-=
+v2=3D"Ou2dnE7M" target=3D"_blank"><img src=3D"https://media.hubspot.com/hs-=
+fs/hubfs/Critical_Template_Imagery/H.png?height=3D80&amp;upscale=3Dtrue&amp=
+;name=3DH.png" alt=3D"Site" height=3D"40" style=3D"outline:none; text-decor=
+ation:none; border:none; width:auto!important; height:40px!important; verti=
+cal-align:middle" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKV-2-ZW0W5BW0B06lZ3lYW5VMqZd8WsH9=
+hW1B2rg_89mt4qW2Qc3XC4VBq4ZW4190zc3NB20vVw2rXq7XqJFsV8wkfh8w65l6TVx3Z2ZMq1D=
+N81m7-XXNr2SW2d50Wx9dcj9tW55sW4P8q3R4qW4rL2m48kCB3GW7kg4Fg32_6TyW3r4KRY5syG=
+dTW4s_84-5nQbWbW1grDqK3-zK7xW8j2-hc1BVcxBW3cCrRl6XTn5XN3LzQN7ptbZHf1ssrP804=
+" style=3D"color:#00a4bd; text-decoration:none !important" data-hs-link-id=
+=3D"0" data-hs-link-id-v2=3D"BhKHpnJa" target=3D"_blank"><img src=3D"https:=
+//media.hubspot.com/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_=
+template_images/modules/Follow+Me+-+Email/youtube_circle_color.png" alt=3D"=
+YouTube" height=3D"40" style=3D"outline:none; text-decoration:none; border:=
+none; width:auto!important; height:40px!important; vertical-align:middle" v=
+align=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKV-2-ZW0W5BW0B06lZ3k-W6tPx7z6LR7J=
+GF7zJgKlGt9hW3_BLkd155nsPW68V1QJ4vX1_9W2R1HZ-4tfSqHN7ss9RBqRysLW7BBWzs2zWJH=
+tW10pj6v2lnV0lW1pd0322Zr70TW2lSyfH9dRZcKW7DtJtP640J3KW4TgWfK3wyKSYW1yMMLJ3q=
+r491W8t38T11ycvzHVR1bh97lV1tRW98MmmF8_KSn1W1kwC408vlnz-W3gMjbX17jSk_f4X5_QY=
+04" style=3D"color:#00a4bd; text-decoration:none !important" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"hMx6vuQx" target=3D"_blank"><img src=3D"https=
+://media.hubspot.com/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default=
+_template_images/modules/Follow+Me+-+Email/linkedin_circle_color.png" alt=
+=3D"LinkedIn" height=3D"40" style=3D"outline:none; text-decoration:none; bo=
+rder:none; width:auto!important; height:40px!important; vertical-align:midd=
+le" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKWg2-ZW0W69sMD-6lZ3nRW5RPbZC5jLxr=
+NW6RGStY9gCBlPW4LCV9m6H_y0dW8sy-nd2QBpyCW9fpxgF1Hk7LgW8qvnbh5n_gNFMVTFdCQ9R=
+PsW1GRgmF6X3__DW2gtZcN48Z8h1W2c2Kdg4SbZplW437tqH4mSk4dW1TBN0w8t9X3yW77Cmyf5=
+ycX46W6JdKXN529yN2W9gZzK15jj2SvW1JhtBx7-8QvpW4v9LHg36GSZBW4JHDMl4WjXFxW83DN=
+ks85rvv5W1rr0ZP1kTlGDf8lrVz804" style=3D"color:#00a4bd; text-decoration:non=
+e !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Bzlwbvlf" target=
+=3D"_blank"><img src=3D"https://media.hubspot.com/hs/hsstatic/TemplateAsset=
+s/static-1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/ins=
+tagram_circle_color.png" alt=3D"Instagram" height=3D"40" style=3D"outline:n=
+one; text-decoration:none; border:none; width:auto!important; height:40px!i=
+mportant; vertical-align:middle" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-3" cl=
+ass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" sty=
+le=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-co=
+s-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"none" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align:to=
+p" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-4" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-4-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:5px 10px"><div id=3D"hs_cos_wrapper_module-4-=
+0-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modu=
+le" style=3D"color: inherit; font-size: inherit; line-height: inherit;" dat=
+a-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_=
+cos_wrapper_module-4-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs=
+_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; l=
+ine-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"text-align:center; font-size:14px; line-height:1=
+25%" align=3D"center"><span style=3D"font-family: Helvetica, Arial, sans-se=
+rif;"><span style=3D"color: #192733;">Today's email was brought to you by <=
+a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82QCH8lF6v=
+jVJwtQX3W1FPBGm5J8y-jN11fKWg2-ZW0W69sMD-6lZ3nqW1h9zG21k8S48W42s0gy7fDN-MW4v=
+RBTc5PvxV_VGbfz539pm4GW2lxQCC4dqxYYN6G9BgTR8TK8N68Bz45rxlPpW1Gp5j47Z-bHZW1m=
+GVHw1fTFrTW4J7CPm2ZlN-qW88YQpW72K-FFW2n2N913mbMMYW411tGB23sg2DW2VhSxg8vSPqg=
+W8ZrgJC2tt1wlW8B7G253FZ7-bW35hy1-8TrG9HW4lW7Fh7HRYn6W4t7Cm48Kzsg0W4hw0hz3ZC=
+1Dsf7klQqW04" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"1=
+" data-hs-link-id-v2=3D"nxyEtUv1" target=3D"_blank">Anna Rahmanan</a>, <a h=
+ref=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82QCH8lF6vjVJ=
+wtQX3W1FPBGm5J8y-jN11fKVH2-ZW0W50kgx26lZ3nQN2lsCHlr8fnNW6lXrgJ2SnBGBW4vxrD7=
+6TsNCGW60XFnv310mDZW2kqYMG61tGJcW8pjl0D5g1JBdW2_W-q02Qygg1N4SC1fGr3Y_CM9v0Q=
+2THdkwW72Hf2j8wk2fqW2_vS6l2m0J0dW60pmfq1FWMs7VQhVys2rQmh8W4_4HcM3FqVYwW22Ty=
+6G2gNRKTW3KN5RY76BKcTf4hLhDq04" rel=3D"noopener" style=3D"color:#192733" da=
+ta-hs-link-id=3D"0" data-hs-link-id-v2=3D"oE73l/qS" target=3D"_blank">Kathe=
+rine Laidlaw</a>, <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-V=
+f04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKVH2-ZW0W50kgx26lZ3ntVV_6_z8FvR=
+K_N8Cpzl2_R-0vW6b0lYg5rZHSZW221Lt06WQ5XFW7tP-bc7VSvK6W3qKvmg4mQCHtW7gz4BG2Z=
+mZ1MW1X7H6m3FjtnXVTj9qZ2rj9QpW9kpSrV6CDN4DW7LDCR34DV_xLW7HVr-l7DdsjzW5qH2Yc=
+39w2C0W7Q2TPG4TJVZQW7Ml2-L2yPCbPW1GdJtH8zhVmMf87GlyF04" rel=3D"noopener" st=
+yle=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"dEMdBBbn"=
+ target=3D"_blank">Mark Dent</a>, and <a href=3D"https://media.hubspot.com/=
+e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKVH2-ZW0W50=
+kgx26lZ3krW4L7BhK41sGzbW5t1Khc87VFKxW98ffC68hh143W3dRMFn1ZV2rHN7_Z_yHqVmW-W=
+5rbDz075fk8MW6TQPdH5SSLQxW2MrT_F3zD7spW3v70Tr12JVrSW8417zK6nwM-YN7Cm_5P8jtg=
+lW2RXxFX8hr6xKW27_R3Y6Pyg2JW52D6MG62zh8GVw_k793vnD-pW7p6YzW4mytDGd3K-fY04" =
+rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link=
+-id-v2=3D"CAzB/nO2" target=3D"_blank">Zachary Crockett</a>, with help from =
+Kaylee Jenzen.</span></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter">&nbsp;</p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-family: Helvetica, Arial, sans-serif; color: #00=
+0000;"><span style=3D"color: #192733;">Was this email forwarded to you? Sig=
+n up <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82QC=
+H8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKWT2-Z-MW7lCdLW6lZ3m9N1fw3p0WbnQhN7WgvMt7Z0R=
+2W510Wj382sS_qVCbT9j6rWtRxW3FVXWs4pH-0mW3SWwNG1pLgLyW6tb0563_vYzmW1MJK7Q2V4=
+TwRW6kT23n1xWlcjW1hhpHB40vM3rW3nds2t2F9x-wW6ws1Gr5LykHmW1568Mh57TYv2W36CbSJ=
+5X7QwLW1xdgQc3FwF07W30Rhtl7-lYvRW2M92Bc6BRGpZW58QzfL9bHvH3N2hcfGt8mP_sN4SB5=
+lJ3bSsrW2SXwkW3TwtFPW8WHzhf6nB8YRVYFfS56y9spXW7Rfw3J4F60-kf5CDqtP04" rel=3D=
+"noopener" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=
+=3D"nmcX5Hpp" target=3D"_blank">here</a>.</span></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;"><br><strong>Subscri=
+be to our other newsletters</strong><strong><br></strong>Expert insights: <=
+a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82QCH8lF6v=
+jVJwtQX3W1FPBGm5J8y-jN11fKWz3hCZYW6N1vHY6lZ3pDW2xXP_q8nSZk2W75XFzt5R3-5qW6p=
+Sx-p16yz07W1FLh071Lq-bfW2F5ycB4t6rWrW5wGKM459jh_dVBb6Bx8cJVndV3ckb_9hLXYbW1=
+gz6B_7--GBfW33827n1Rb8s8VsQsZX73N9VZW8jHsc98-pTNNW3GKDfk7JD8JrN93dy22YGvdTW=
+3LMxBt8djZQQW14snDg7sDCfJW5LWQf33jDlQZW41dKmd6KdtqYW5b_yWX3swMPzW8T2dJk6Qfc=
+svW4NbLx63lLPbbW5Y7P1b3_1gx4f99RdQT04" style=3D"color:#192733" rel=3D"noope=
+ner" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"x5vRlAoK" target=3D"_blank=
+"><em><span style=3D"text-decoration: underline;">Masters in Marketing</spa=
+n></em></a>&nbsp; | &nbsp; Stay up-to-date on AI: <a href=3D"https://media.=
+hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11=
+fKWg3dh8WW69sMD-6lZ3n8N1ng77LrfZS-W2tWPq-5rhyXlW7Ttt4F8bJn9pW2HChh81JJ6nSW6=
+5D-cz6qlHNWW7-P_LK9dW8LCW621LS27fMdsYW23BFPM4tnDVTW1VbR9Y7YQhtkM330m76qHYxW=
+4d3WFx8BBKwqVN0-jW3KdcrxW4YnqtM6jQ8xHW3RHdc41d0vg9W2mQ7S73gSdyBW2f5YT88jYd5=
+6N24ww-lZMHrjW21RZ_M8BvRJdW8dsFHc6VBlXhVb8d1s6l0zvgf86z4QT04" style=3D"colo=
+r:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"fB+Qb5IE" target=3D"=
+_blank"> <em><span style=3D"text-decoration: underline;">Mindstream</span><=
+/em><em><span style=3D"text-decoration: underline;"><br><br></span></em></a=
+></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;">Follow <em>The Hust=
+le</em> on <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VVB=
+CQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKV-2-ZW0W5BW0B06lZ3nXN7FlZVj3vRkFW3X-K=
+py2Nds2rW5cscC778TZNNW2FzytX7s-BGdN2L5QBYYqYWVW4xN4ry5Cw1pKW4S6fSQ7khjHsW4Z=
+TgZp4sNsppW4ZZp1N11q6z-W8fHF4B4c9k3DW6vXcvp8S-Wm5W4G6Wl-2s5QBBW56HJzk3RF4HM=
+W4F9vZ67xLpFLW3JSfYN4qkjz1M6-D9kG_jKgW2K2wjq5MWVr4VnyV_B4TwvLWf1RYB0n04" st=
+yle=3D"color:#192733" rel=3D"noopener" data-hs-link-id=3D"1" data-hs-link-i=
+d-v2=3D"e97Sa5iX" target=3D"_blank"><span style=3D"text-decoration: underli=
+ne;">YouTube</span></a>,&nbsp;<a href=3D"https://media.hubspot.com/e3t/Ctc/=
+UB+113/d2q-Vf04/VVBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKV-2-ZW0W5BW0B06lZ3=
+lZW11pCSR5ptvmpW4KrKpB8J4xVHW1lDHym7WCyqGW6VJlVy2YY212W4_Cf4S40-pRtW9cVlpr4=
+z9bdKW26TBpw1Hq0_rW83B4MX2sFKJKW99KjN77VmMH0W5sVXTS7CgwkbW7v9v0h56KV0RW3dWd=
+mb87RpJMW1bTJDl4BHsgKW8X5Pgw99K9l-W21KWhZ2QwkFwW5Rt9l87w6mydW6VkL7v3MhNmcW2=
+_TpyD2VGsYMf3vVSQY04" rel=3D"noopener" style=3D"color:#192733" data-hs-link=
+-id=3D"1" data-hs-link-id-v2=3D"w0Kb7DPn" target=3D"_blank">LinkedIn</a>,&n=
+bsp;and&nbsp;<a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/V=
+VBCQ82QCH8lF6vjVJwtQX3W1FPBGm5J8y-jN11fKWg2-ZW0W69sMD-6lZ3q2W1S5nmw8Fk7V3W2=
+JtJMV4Frjx3W1FL9p92wH4dmN35d3xs9-k-FW1s98gn5YGR__W72HjzX2gj-KNW672RYz3Bbf4_=
+W6TPsjr8v99J5N3_Y61z6MCVPV7MtDr1PKJ4KW18JTsz7NstSLW2719s26dqnYpW77MmG8621sK=
+dW28rlfX8F4Z8rN1Dkx7RDqxz2W8xdnC55ghj63W3-3LPN8QlQMVW5Zn0Gf9d7RLpW8gGf5N6Qt=
+9rpW91s-VN4RXj2Sf9hSCg404" style=3D"color:#192733" rel=3D"noopener" data-hs=
+-link-id=3D"1" data-hs-link-id-v2=3D"SS6chJVN" target=3D"_blank"><span styl=
+e=3D"text-decoration: underline;">Instagram</span></a>.</span></p></div></d=
+iv></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:0px 5px 10px"><div id=3D"hs_cos_wrapper_module-4=
+-0-1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mod=
+ule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" da=
+ta-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"presentation" class=3D"hse-footer hse-secondary" width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-serif; font-s=
+ize:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; font-size:16px; color:#192733; word-break:break-word; tex=
+t-align:center; margin-bottom:0; line-height:135%; padding:10px 20px">
+          <p style=3D"font-size: 11px; line-height: 150%; font-weight: bold=
+;"><span style=3D"font-family: Helvetica, Arial, sans-serif;">HubSpot Media=
+, 2 Canal Park, Cambridge, MA, 02141,&nbsp;USA, +1 888.482.7768</span></p>
+<p style=3D"font-size: 11px; line-height: 150%; font-weight: bold;"><span s=
+tyle=3D"font-family: Helvetica, Arial, sans-serif;">Never want to hear from=
+ us again? Break our hearts and <a  href=3D"https://media.hubspot.com/hs/pr=
+eferences-center/en/page?data=3DW2nXS-N30h-R-W34ppNz1LwtRqW47zk8Y1LCqfLW1Zr=
+fcX3bwSLxW4tn_7T3X-Q73W30KrH23F02_-W2-DHm93M8505W3H8vKQ1VyzHkW45CJ4r2xGfzlW=
+2Rg8hk1Qrk7hW367tR_1_snM3W2KRk6941G9CVW3dspgB4pc1-GW41sh3C2MTDr8W3zb2qg3XwM=
+VLW3bBcRJ4cR6qcW3JWbLt4mtRQFW2p27LB4kr45DW1_bGlC2-mBMzW3SZ9Vl1NgkLXW30LL5K3=
+0rSFTW3BJxCQ3VXLcxW4tFkbW4klwYCW4myxPm1X0ffNW2WhR4B2WHDR3W3STYjj3F7TRHW2-JS=
+n21BCScWW1BDJzz2RR6hCW24TZmV2zP8kBW3R3wN823kkbKW1Z6gN638BNknW4th8MT3jml1hW3=
+MbgmD3P04-QW3NGL0h2Rs3_tW2MlKjd218Kx8W3dgl9S1BwRLgW32hPsT3QTjrqW258lMC219Cg=
+wW4cSg6R43T9PpW2KrVqd3df2RgW3z98X82xKD6TW4csYnK3SMJbSW1Xf6FM2KrVvpW4hd1c830=
+kgDDW2r11Sc1_57dcW3zcbLB2sVqy4W4hm6CL3M4RmkW3ZVxBG45mgWGW1VqTxP3GTPFmW1V9Xb=
+c257rcZW1NnDdM3QFcrhW43Yjqm3_TyRmW3Y2b464hhSJBW2PnZ4V3XZXxZW4fhxjL30LKTlf1N=
+7JsD04&amp;_hsenc=3Dp2ANqtz-8GQgWzuE7W6r_jy2blEblDG5Fi249JKJ_5SOib4U5xiRj0q=
+ZAtbIMrgRlwCWVaYYeOPJI100tKbsrCaKzOEWSH1fD9YQ&amp;_hsmi=3D397763044" rel=3D=
+"noopener" data-unsubscribe=3D"true" style=3D"color:#00a4bd" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"kDnPxijp" target=3D"_blank"><span style=3D"co=
+lor: #192733; text-decoration: underline !important;">Unsubscribe</span></a=
+>.</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://media.hubspot.com/e3t/Cto/UB+113/d2q-Vf04/VVBCQ82QCH8lF=
+6vjVJwtQX3W1FPBGm5J8y-jW11fKGG3D35Mg192" alt=3D"" width=3D"1" height=3D"1" =
+border=3D"0" style=3D"display:none!important;min-height:1px!important;width=
+:1px!important;border-width:0!important;margin-top:0!important;margin-botto=
+m:0!important;margin-right:0!important;margin-left:0!important;padding-top:=
+0!important;padding-bottom:0!important;padding-right:0!important;padding-le=
+ft:0!important"></body></html>
+------=_Part_38116_1997669672.1768128691299--
+

@@ -1,0 +1,1696 @@
+Delivered-To: shyams07@gmail.com
+Received: by 2002:a17:522:b38d:b0:64a:133e:e77c with SMTP id g13csp3924527pvz;
+        Wed, 4 Feb 2026 21:13:11 -0800 (PST)
+X-Received: by 2002:a05:620a:390d:b0:8c6:e258:3e30 with SMTP id af79cd13be357-8ca40db3e71mr203212985a.27.1770268390827;
+        Wed, 04 Feb 2026 21:13:10 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1770268390; cv=none;
+        d=google.com; s=arc-20240605;
+        b=l12hnER+LCSMUed9tEigEbbY1miB3Y3322mLtUHqBqWYEIYlgSTTklB/HsdqfHc2hH
+         JFVWHYy0aXpMDkfVTKJgKObMNr1Y3nuQs64ShjiO8Gsv49EUjpMHsvCvDg3mdKwGU7yh
+         0RGhgtXNstUrW69glOg7WpeDwgKpUCSwGC+aQ8zGPIPonGCLZc/9gD6ioMKByLDMj32N
+         1XxxqG3oa8ScF0LV5zGu6cVyQUAnZiFYhnvNpY58fCsww4fqEXIKPkpQCgSMjv4LFYWq
+         XiJsxfu8XjiSA7wgkoydzqomJmnfKVtP0Cnlpr58+l53fX6FE712Fem/VNcRgBBei8Yo
+         kWgA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=message-id:list-unsubscribe:list-unsubscribe-post:reply-to:sender
+         :to:from:subject:mime-version:date:dkim-signature:dkim-signature;
+        bh=pVVWfDk3JcZITE6JIyYjEZiRFUdX2YduYe7YGwySa9s=;
+        fh=L9Pq+drjbGeEtrAQNZSRmpxQ+ME9iXW0EGrUbR1eMas=;
+        b=YiVsuRHfQOHdBUAlQqQbu1jhtg9dgK5o7donN8ZLfB+8/4rqZTyvx7cNErZkob/xDm
+         D+1k9jZP14PODUpjwoFNJtqxI1hpkaXrQIxbYU5FtGaOgX+Tjm3bqHtq5NuGoNl27v4c
+         IQHKyxGmYW0YO6eXSuFT0+QDKFKJj/M8vRPZBJ91uv1w7YeuNYJ9Lh5dbJESCbjovbhi
+         XPGYMdIXru9AZsT9O6mnmnOaRdZtgLJEqCcE2NJxkZCy6avaZ8sFnlUNR82V+51c2OX6
+         3m1VB5al6K1XdsSn7Y+XMsTpmOzANY06kPY/xQKyaszAyROga5Rh6/kZSLzUPiiHRYgs
+         yOTg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mg-esp-prod-ap-us.the-captable.com header.s=k1 header.b=G8aYqMmT;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=Ow73HswZ;
+       spf=pass (google.com: domain of bounce+00aae7.38abf9-shyams07=gmail.com@mg-esp-prod-ap-us.the-captable.com designates 161.38.195.239 as permitted sender) smtp.mailfrom="bounce+00aae7.38abf9-shyams07=gmail.com@mg-esp-prod-ap-us.the-captable.com"
+Return-Path: <bounce+00aae7.38abf9-shyams07=gmail.com@mg-esp-prod-ap-us.the-captable.com>
+Received: from mgptr-195-239.piano.io (mgptr-195-239.piano.io. [161.38.195.239])
+        by mx.google.com with UTF8SMTPS id af79cd13be357-8ca2fa66591si417911185a.104.2026.02.04.21.13.10
+        for <shyams07@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 04 Feb 2026 21:13:10 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce+00aae7.38abf9-shyams07=gmail.com@mg-esp-prod-ap-us.the-captable.com designates 161.38.195.239 as permitted sender) client-ip=161.38.195.239;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mg-esp-prod-ap-us.the-captable.com header.s=k1 header.b=G8aYqMmT;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=Ow73HswZ;
+       spf=pass (google.com: domain of bounce+00aae7.38abf9-shyams07=gmail.com@mg-esp-prod-ap-us.the-captable.com designates 161.38.195.239 as permitted sender) smtp.mailfrom="bounce+00aae7.38abf9-shyams07=gmail.com@mg-esp-prod-ap-us.the-captable.com"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg-esp-prod-ap-us.the-captable.com; q=dns/txt; s=k1; t=1770268390; x=1770275590;
+ h=Message-Id: List-Unsubscribe: List-Unsubscribe-Post: Reply-To: Sender: Sender: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id;
+ bh=pVVWfDk3JcZITE6JIyYjEZiRFUdX2YduYe7YGwySa9s=;
+ b=G8aYqMmT0ucPsFUxcLrRa+pnNh9pe8f3Axs745XrVzl2jbKOHw9L7n2Y4+KZfzw0xXGkr3o8oQW96RnIpDjhxKekmI5DofpCFarHMkMISP/7OiVoIXvRp+EfIS2ybNyk1ikSULbxGQeGpMvQ5E7J8forj+2iqNJ78jYV0T7POQU=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1770268390; x=1770275590;
+ h=Message-Id: List-Unsubscribe: List-Unsubscribe-Post: Reply-To: Sender: Sender: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id;
+ bh=pVVWfDk3JcZITE6JIyYjEZiRFUdX2YduYe7YGwySa9s=;
+ b=Ow73HswZQhMW4QbSBlptvBV9m0nHljPdlQ7kaZRUhj4ntvXu57azkZqLTgyP/RNFOS43+WmyhR5FtuBWJC333lMpi6K/4S+Zfl2C6Em0CII3tCbIwZqYawmIJ3bKZrlZn0egxnNHiCUbh9PSOiwf0zcT8sfQOfaCSrvx3HYHQwk=
+X-Mailgun-Sid: WyI4NTBjMyIsInNoeWFtczA3QGdtYWlsLmNvbSIsIjM4YWJmOSJd
+X-Feedback-Id: postmaster@mg-esp-prod-ap-us.the-captable.com:pubid_181-ESP-prod-ap:6374b029a6d222764982ffd6:mailgun
+Received: by aae1b7aca86be4360f77f7739b030ebe3b88769130d1c978f1a9082b6527406b with HTTP
+ id 698426e6df3e6e184cfe2a37; Thu, 05 Feb 2026 05:13:10 GMT
+X-Mailgun-Sending-Ip-Pool-Name: US:ALL
+X-Mailgun-Sending-Ip-Pool: 609909391bb50b77d6002340
+X-Mailgun-Sending-Ip: 161.38.195.239
+Date: Thu, 05 Feb 2026 05:13:10 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="7e8806b64e8a8123852aeb24f52c7c0522ac09b22c3f995cce9e3377c3bf"
+Subject: The Budget moment for the creator economy
+From: The CapTable <hello@the-captable.com>
+To: shyams07@gmail.com
+X-Mailgun-Tag: pubid_181
+X-Mailgun-Tag: ESP
+X-Mailgun-Tag: prod-ap
+Sender: hello@the-captable.com
+Reply-To: news+reply-to@publisher-news.com
+X-Mailer: Piano ESP pp.2026.3.3-1fd56cc9
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://api-esp-ap.piano.io/tracker/listsub/publicpages/unsub/campaign/47223/user/2711957/sb/279068?sig=8300df10a8ba279073b3107a21820735b69431d2eeb27056457c5eec171fba25>
+Message-Id: <tq-cml903c0s01ic01a71je0at4f@the-captable.com>
+X-Mailgun-Variables: {"otherTags":["mlid_47223","hashid_vib-cml9022l3013q01aq1wqk1m9w","sbid_279068"]}
+
+--7e8806b64e8a8123852aeb24f52c7c0522ac09b22c3f995cce9e3377c3bf
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+
+05 February 2026View in Browser ( https://api-esp-ap.piano.io/story/estored=
+/181/47223/596647/2711957/279068/vib-cml9022l3013q01aq1wqk1m9w?sig=3D3aa627=
+446e6bfe419ce6e755e2fc2325001010da639c43ecb3eaa06641440b50&order=3D0 )
+https://api-esp-ap.piano.io/-c/181/47223/596648/2711957/279068/16c75405f394=
+4b6a1673a47114bc9941/-1/-1?attrs=3D0&order=3D0
+Good morning dear reader,
+For years, content creation in India lived in the margins. It was something=
+ done after college hours, between freelance gigs, quietly from a bedroom d=
+esk. Visible, popular, but rarely taken seriously as work.
+Last week=E2=80=99s Union Budget changed the tone. By formally recognising =
+the creative or orange economy, and committing funding to animation, gaming=
+, visual effects and digital storytelling, the government signalled that co=
+ntent creation is no longer just a side hustle.
+With 15,500 content-creator labs planned in schools and colleges, and new i=
+nstitutional backing for creative education, the government has placed a me=
+aningful bet on creators as future workers.
+The excitement is understandable. Recognition alone can shift behaviour. Pa=
+rents begin to listen differently. Students imagine longer runways. Early c=
+reators already seeing returns expect momentum to build as policy support d=
+eepens.
+Yet the harder test lies ahead. India=E2=80=99s skilling problem does not s=
+pare the creative economy. Strong execution, capable trainers, and industry=
+-aligned coursework can turn these labs into well-equipped spaces that genu=
+inely build employable skills. Industry participation and outcome-based tra=
+ining will decide whether this becomes a pipeline or a placeholder.
+If done right, the upside is large. Jobs emerge quickly, gig work expands, =
+and India moves from low-cost production to high-quality creation.
+The Budget has opened the door. What happens next will decide whether conte=
+nt creation remains a side hustle or becomes a credible, long-term career.
+Read the full story here =F0=9F=91=87
+Have a great day!
+Continue Reading ( https://api-esp-ap.piano.io/-c/181/47223/596655/2711957/=
+279068/34dcb54484a4fb0219c9612bd872eb09/-1/-1?attrs=3D0&order=3D0 )
+- Ishan Patra
+https://api-esp-ap.piano.io/-c/181/47223/596656/2711957/279068/9b254aced46c=
+2c9297cf650458a981bf/-1/-1?attrs=3D0&order=3D0 https://api-esp-ap.piano.io/=
+-c/181/47223/596656/2711957/279068/4bb0d96c74893a368ec6ad726793902b/-1/-1?a=
+ttrs=3D0&order=3D1
+https://api-esp-ap.piano.io/-c/181/47223/596671/2711957/279068/90007b5719d8=
+4c83f042e897e2f800f3/-1/-1?attrs=3D0&order=3D0
+Previous Reads
+https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/690a2e2503dd=
+d837340912b82065d6a4/-1/-1?attrs=3D0&order=3D0
+Pankaj Pawar, the quiet force powering Ambani=E2=80=99s $150 billion bet ( =
+https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/690a2e2503dd=
+d837340912b82065d6a4/-1/-1?attrs=3D0&order=3D0 )
+As Jio Platforms heads for a landmark IPO, the heavily centralised executio=
+n model that built its telecom dominance is being tested. Can the company=
+=E2=80=99s low-profile managing director reshape it for success in non-tele=
+com businesses? ( https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/2=
+79068/690a2e2503ddd837340912b82065d6a4/-1/-1?attrs=3D0&order=3D0 )
+Continue Reading ( https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/=
+279068/690a2e2503ddd837340912b82065d6a4/-1/-1?attrs=3D0&order=3D0 )
+https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/ea0c75e48f76=
+f46e4d8b9c229d9aea8f/-1/-1?attrs=3D0&order=3D1
+The second wave of pet-care wellness is here, fuelled by social media anxie=
+ty ( https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/ea0c75e=
+48f76f46e4d8b9c229d9aea8f/-1/-1?attrs=3D0&order=3D1 )
+Urban pet owners in India are spending more than ever on =E2=80=9Cnatural=
+=E2=80=9D and =E2=80=9Cgrain-free=E2=80=9D foods, but veterinarians warn th=
+e science doesn=E2=80=99t always match the claims. Worse, regulation is lar=
+gely absent. ( https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/2790=
+68/ea0c75e48f76f46e4d8b9c229d9aea8f/-1/-1?attrs=3D0&order=3D1 )
+Continue Reading ( https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/=
+279068/ea0c75e48f76f46e4d8b9c229d9aea8f/-1/-1?attrs=3D0&order=3D1 )
+https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/0e8aef99538c=
+06ee250d42ab446db783/-1/-1?attrs=3D0&order=3D2
+Org Chart: The leadership bench steering Flipkart toward its IPO ( https://=
+api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/0e8aef99538c06ee250d=
+42ab446db783/-1/-1?attrs=3D0&order=3D2 )
+Long known as a startup talent factory, Flipkart is now using that same ben=
+ch strength to prepare itself for life as a public company. ( https://api-e=
+sp-ap.piano.io/-c/181/47223/596670/2711957/279068/0e8aef99538c06ee250d42ab4=
+46db783/-1/-1?attrs=3D0&order=3D2 )
+Continue Reading ( https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/=
+279068/0e8aef99538c06ee250d42ab446db783/-1/-1?attrs=3D0&order=3D2 )
+https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/062b0bf85f59=
+5e7ae663b80ea39fd819/-1/-1?attrs=3D0&order=3D3
+Why Bollywood is moving away from old money to corporate capital ( https://=
+api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/062b0bf85f595e7ae663=
+b80ea39fd819/-1/-1?attrs=3D0&order=3D3 )
+As box-office volatility rises and traditional safety nets disappear, Bolly=
+wood producers are turning to corporate capital for stability. From equity =
+dilution to music-led deals, IP ownership and recurring revenues are fast r=
+eplacing star power as the industry=E2=80=99s core risk hedge. ( https://ap=
+i-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/062b0bf85f595e7ae663b8=
+0ea39fd819/-1/-1?attrs=3D0&order=3D3 )
+Continue Reading ( https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/=
+279068/062b0bf85f595e7ae663b80ea39fd819/-1/-1?attrs=3D0&order=3D3 )
+https://api-esp-ap.piano.io/-c/181/47223/596667/2711957/279068/16c75405f394=
+4b6a1673a47114bc9941/-1/-1?attrs=3D0&order=3D0
+https://api-esp-ap.piano.io/-c/181/47223/596668/2711957/279068/ecd5e8f056dd=
+49d2f1367aeaad0f4e14/-1/-1?attrs=3D0&order=3D0 https://api-esp-ap.piano.io/=
+-c/181/47223/596668/2711957/279068/a2db7a77bfbe9bac8f3c27276348fc31/-1/-1?a=
+ttrs=3D0&order=3D1 https://api-esp-ap.piano.io/-c/181/47223/596668/2711957/=
+279068/14155ec910b4cb431329e8155fe70f15/-1/-1?attrs=3D0&order=3D2 https://a=
+pi-esp-ap.piano.io/-c/181/47223/596668/2711957/279068/74309f7907fded104f677=
+cf8b43ea992/-1/-1?attrs=3D0&order=3D3 https://api-esp-ap.piano.io/-c/181/47=
+223/596668/2711957/279068/fc6e3bdc377d6305fc1069abe3148a99/-1/-1?attrs=3D0&=
+order=3D4
+Feedback ( https://api-esp-ap.piano.io/publicpages/faq-and-feedback/en?user=
+Data=3DvGWwfXH8Tbweyf9EoVw4mCBvndD59ep24cLC.KE7h25l9nKN_vxNUQVbMGTUS0ZIetnw=
+c7tvaoLWaDNqZOsFjiW_FAoQO97yeh4bE9lq1mTQm5bPWmUhb_gC3IwCJpIFeBbjCEBY&order=
+=3D0 ) Unsubscribe ( https://api-esp-ap.piano.io/tracker/listsub/publicpage=
+s/unsub/campaign/47223/user/2711957/sb/279068?sig=3D8300df10a8ba279073b3107=
+a21820735b69431d2eeb27056457c5eec171fba25&order=3D1 ) https://api-esp-ap.pi=
+ano.io/-c/181/47223/596669/2711957/279068/7c008ff75467a1f683e107ec04193451/=
+-1/-1?attrs=3D0&order=3D2
+
+--7e8806b64e8a8123852aeb24f52c7c0522ac09b22c3f995cce9e3377c3bf
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xml:lang=3D"en"=
+ lang=3D"en"><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3DUTF-8"><title>The most interesting news selected specially for yo=
+u!</title><meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-=
+scale=3D1, maximum-scale=3D1, user-scalable=3Dno"><meta name=3D"x-apple-dis=
+able-message-reformatting"><style type=3D"text/css">.ExternalClass {
+    width: 100%;
+}
+=2EExternalClass,
+=2EExternalClass p,
+=2EExternalClass span,
+=2EExternalClass font,
+=2EExternalClass td,
+=2EExternalClass div {
+    line-height: 100%;
+}
+body {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+td,
+td {
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0 none;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+}
+a img {
+    border: 0 none;
+}
+=2EimageFix {
+    display: block;
+}
+span.preheader {
+    display: none !important;
+}
+table,
+td {
+    border-collapse: collapse;
+}
+body,
+img,
+div,
+p,
+li,
+span,
+strong,
+a {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-spacing: 0;
+}
+table td {
+    border-collapse: collapse;
+}
+table th {
+    font-weight: normal;
+    text-transform: none;
+    line-height: initial;
+}
+=2Ehtmlblock {
+    word-break: break-word;
+    text-align: initial;
+    font-weight: normal;
+}
+a {
+    color: #0000FF;
+    text-decoration: underline;
+    outline: none;
+}
+a:hover {
+    text-decoration: none !important;
+}
+a[href^=3D"tel"],
+a[href^=3D"sms"] {
+    text-decoration: none;
+    color: #0000FF;
+}
+p {
+    margin: 0px;
+    padding: 0px;
+}
+table {
+    border-collapse: collapse;
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+}
+=2EoutlookShow {
+    display: none !important;
+    height: 0 !important;
+}
+#outlook a {
+    padding: 0;
+}
+#backgroundTable {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    line-height: 100% !important;
+}
+=2Ebutton a {
+    display: inline-block;
+    text-decoration: none;
+    -webkit-text-size-adjust: none;
+    text-align: center;
+}
+=2Ebutton a div {
+    text-align: center !important;
+}
+body.outlook p {
+    display: inline !important;
+}
+*{color:inherit;font-size:inherit;}
+
+=2Ehide-on-desktop{
+    display:none;width:0px;max-height:0px;font-size:0px;overflow:hidden;lin=
+e-height:0;visibility:hidden;mso-hide:all;
+}
+
+=2Eresponsive-wrapper {
+    margin:0 auto;
+    padding:0;
+    width:100%;
+    max-width:100%;
+    background-color:#ffffff;
+}
+
+=2Eresponsive-wrapper-inner {
+    margin:0 auto;
+    padding:0;
+    max-width:100%;
+}=20
+
+@media all and (max-width: 599px) {
+    .responsive-wrapper {
+        width:100% !important;
+        max-width:100%;
+    }
+    .responsive-wrapper-inner {
+        width:100% !important;
+        max-width:100%;
+    }
+    #mainbody .outer.hide-on-mobile {
+        display:none;width:0px;max-height:0px;font-size:0px;overflow:hidden=
+;line-height:0;visibility:hidden;mso-hide:all;
+    }
+    .show-on-mobile {
+        display: block!important;width:auto!important;max-height: initial!i=
+mportant;font-size:inherit!important;overflow:initial!important;line-height=
+: initial!important;visibility: visible!important;mso-hide: initial!importa=
+nt;
+    }
+}
+</style><style type=3D"text/css">@media all and (max-width: 599px) {
+    #mainbody {
+        width: 100%!important;
+        min-width: 100%!important;
+        padding: 0 2.5%!important;
+        box-sizing: border-box;
+    }
+    #mainbody .fixedtable {
+        width: auto!important;
+        min-width: auto!important;
+    }
+    .htmlblock {
+        min-width: 100%!important;
+        max-width: 100%!important;
+        width: 100%!important;
+        word-break: break-word;
+    }
+    .htmlblock table,
+    .htmlblock td {
+        min-width: 100%!important;
+        max-width: 100%!important;
+        width: 100%!important;
+    }
+    .htmlblock img {
+        max-width: 100%!important;
+    }
+    .htmlblock td {
+        width: 95%!important;
+        padding: 0!important;
+        margin: 0 auto!important;
+        display: block;
+    }
+    .block {
+        display: block !important;
+    }
+    .width-zero {
+        display: none !important;
+    }
+    .wrapper {
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+    .img-100 {
+        display: block !important;
+        width: 100%!important;
+        max-width: 100%!important;
+        min-width: 100%!important;
+    }
+    .img-100 img {
+        display: block !important;
+        width: 100%;
+        max-width: 100%!important;
+        height: auto!important;
+        min-width: auto!important;
+    }
+    .width-100 {
+        display: block !important;
+        width: 100%!important;
+        max-width: 100%!important;
+        min-width: 100%!important;
+    }
+    th.one-story {
+        font-weight: normal;
+        text-transform: none;
+    }
+    #mainbody .wrapper {
+        width: 100% !important;
+    }
+    #mainbody .outer{
+        min-width: 100%!important;
+        width: 100%!important;
+    }
+    #mainbody .logo img {
+        max-width: 95% !important;
+        height: auto;
+        margin: 10px 0 0!important;
+    }
+    #mainbody .show {
+        display: none;
+        height: 0;
+    }
+    #mainbody .block {
+        display: block !important;
+    }
+    #mainbody .width-100 {
+        width: 100% !important;
+        display: block !important;
+    }
+    #mainbody .width-zero {
+        width: 0% !important;
+        display: none !important;
+    }
+    #mainbody .padding-10 {
+        padding: 10px 10px 0!important;
+    }
+    #mainbody #bgonMobile {
+        background-image: url("https://api-esp-ap.piano.io/public/publisher=
+s/default4/email/images/fade_rectangle_1000.png") !important;
+    }
+    .block-title, .title a span, .tag a, .summary a span{
+        line-height: 1.2!important;
+    }
+    .row.last .one-story:last-child {
+        margin-bottom: 0px!important;
+    }
+    .social, .copy {
+        padding-top: 20px;
+    }
+    .outlookNone {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
+</style><style type=3D"text/css">@media all and (max-width: 599px) {
+    .outer{
+        width: 95%;
+    }
+    .outer .block-title {
+        padding: 0px 18px 0px 18px;
+        font-size: 18px!important;
+    }
+    .outer .one-story {
+        margin-bottom: 0px;
+    }
+    .outer .img-100{
+        padding-bottom: 5px!important;
+    }
+    .outer .img-100 img {
+        width: 100%!important;
+    }
+    .outer .text-block {
+        padding: 5px 15px 0px 18px!important;
+    }
+    .outer .tag{
+        padding-bottom: 5px!important;
+    }
+    .outer .tag a{
+        font-size: 14px!important;
+    }
+    .outer th.title{
+        display:block!important;
+        width: 100%!important;
+        padding-bottom: 3px!important;
+    }
+    .outer .title a span{
+        font-size: 16px!important;
+    }
+    .outer .summary{
+        padding-bottom: 5px!important;
+    }
+    .outer .summary span{
+        font-size: 12px!important;
+    }
+    .outer .button{
+        padding-bottom: 5px!important;
+    }
+    .outer .button a{
+        font-size: 16px!important;
+    }
+    .outer .static-text{
+        padding:10px 0 0;
+        display:block;
+    }
+}
+</style><style type=3D"text/css">@media (max-width: 400px) {
+
+    #block_206347  .social {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    }
+   =20
+ #block_206341  .divider {
+    width: 1px;
+    min-width: 1px;
+    }
+   =20
+   =20
+    #block_206347 .fixedtable {
+    width: 30px;
+    min-width: px;
+    }
+   =20
+
+
+
+
+}</style><!--[if gte mso 9]><style type=3D"text/css">.outlookShow{display: =
+block !important;height: auto !important;width: 100% !important}
+=2EoutlookNone{display: none !important=
+;height:0 !important;}</style><![endif=
+]--><!--[if mso]><style type=3D"text/css">.cpwbvauoutlook {
+    display: block !important;
+}
+
+=2Eczabowundef {
+    display: none !important;
+}</style><![endif]-->
+<!--[if mso 16]><style type=3D"text/css">.cd8l01windows {
+    display: block !important;
+}
+
+=2Ecpwbvauoutlook {
+    display: none !important;
+}</style><![endif]--><style type=3D"text/css">.czabowundef {
+    display: none \0/ !important;
+}
+
+=2Ecp4obv7outlook.com {
+    display: block \0/ !important;
+}
+
+_:-webkit-full-screen, _::-webkit-full-page-media, _:future, :root :not(.Si=
+ngleton) .cpwbvauoutlook,
+body[data-outlook-cycle] .cpwbvauoutlook {
+    display: block !important;
+}
+
+_:-webkit-full-screen, _::-webkit-full-page-media, _:future, :root :not(.Si=
+ngleton) .czabowundef,
+body[data-outlook-cycle] .czabowundef {
+    display: none !important;
+}
+</style><style type=3D"text/css">.body > div > div > .wrapper .cjvg8tisamsu=
+ng,
+#messageWebViewDiv .cjvg8tisamsung,
+#secdiv .cjvg8tisamsung,
+u ~ div .cp328swgmail,
+div > u ~ div .csobfcov {
+    display: block !important;
+}
+
+=2Ebody > div > div > .wrapper .czabowundef,
+#messageWebViewDiv .czabowundef,
+#secdiv .czabowundef,
+u ~ div .czabowundef,
+div > u ~ div .cp328swgmail,
+div > u ~ div .czabowundef {
+    display: none !important;
+}
+</style><style type=3D"text/css">_:-webkit-full-screen, _::-webkit-full-pag=
+e-media, _:future, :root .Singleton .czbkypapple.mac {
+    display: block !important;
+}
+
+_:-webkit-full-screen, _::-webkit-full-page-media, _:future, :root .Singlet=
+on .czabowundef {
+    display: none !important;
+}
+</style><style type=3D"text/css">.& .cd5b7eyahoo {
+    display: block !important;
+}
+
+@media screen yahoo {
+    .cd5b7eyahoo {
+        display: block !important;
+    }
+
+    .czabowundef {
+        display: none !important;
+    }
+}
+</style></head><body id=3D"mainbody" bgcolor=3D"#ffffff" style=3D"font-fami=
+ly:Helvetica, Arial, Tahoma, Verdana, sans-serif; font-size: 14px; color: #=
+000000; background-color: #ffffff; width:100% !important; -webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100% !important;margin: 0;padding: 0;li=
+ne-height:1;" yahoo=3D"fix"><span class=3D"preheader" style=3D"display:none=
+!important;width:0px;max-height:0px;font-size:0px;overflow:hidden;line-heig=
+ht:0;visibility:hidden;mso-hide:all;">The most interesting news selected sp=
+ecially for you!</span><div class=3D"czbkypapple.mac" style=3D"display:none=
+; width:0px; max-height: 0px; float:left;"><div style=3D"background-image: =
+url(https://api-esp-ap.piano.io/url/jerboa/181/47223/2711957/279068/vib-cml=
+9022l3013q01aq1wqk1m9w?ec=3Dapple.mac);"></div></div><div class=3D"csobfcov=
+" style=3D"display:none; width:0px; max-height: 0px; float:left;"><div styl=
+e=3D"background-image: url(https://api-esp-ap.piano.io/url/jerboa/181/47223=
+/2711957/279068/vib-cml9022l3013q01aq1wqk1m9w?ec=3Dgmail);"></div></div><di=
+v class=3D"cp328swgmail" style=3D"display:none; width:0px; max-height: 0px;=
+ float:left;"><div style=3D"background-image: url(https://api-esp-ap.piano.=
+io/url/jerboa/181/47223/2711957/279068/vib-cml9022l3013q01aq1wqk1m9w?ec=3Dg=
+mail);"></div></div><div class=3D"cp4obv7outlook.com" style=3D"display:none=
+; width:0px; max-height: 0px; float:left;"><div style=3D"background-image: =
+url(https://api-esp-ap.piano.io/url/jerboa/181/47223/2711957/279068/vib-cml=
+9022l3013q01aq1wqk1m9w?ec=3Doutlook.com);"></div></div><div class=3D"cpwbva=
+uoutlook" style=3D"display:none; width:0px; max-height: 0px; float:left;"><=
+div style=3D"background-image: url(https://api-esp-ap.piano.io/url/jerboa/1=
+81/47223/2711957/279068/vib-cml9022l3013q01aq1wqk1m9w?ec=3Doutlook);"></div=
+></div><div class=3D"cjvg8tisamsung" style=3D"display:none; width:0px; max-=
+height: 0px; float:left;"><div style=3D"background-image: url(https://api-e=
+sp-ap.piano.io/url/jerboa/181/47223/2711957/279068/vib-cml9022l3013q01aq1wq=
+k1m9w?ec=3Dsamsung);"></div></div><div class=3D"cd8l01windows" style=3D"dis=
+play:none; width:0px; max-height: 0px; float:left;"><div style=3D"backgroun=
+d-image: url(https://api-esp-ap.piano.io/url/jerboa/181/47223/2711957/27906=
+8/vib-cml9022l3013q01aq1wqk1m9w?ec=3Dwindows);"></div></div><div class=3D"c=
+d5b7eyahoo" style=3D"display:none; width:0px; max-height: 0px; float:left;"=
+><div style=3D"background-image: url(https://api-esp-ap.piano.io/url/jerboa=
+/181/47223/2711957/279068/vib-cml9022l3013q01aq1wqk1m9w?ec=3Dyahoo);"></div=
+></div><div class=3D"czabowundef" style=3D"display:block; width:0px; max-he=
+ight: 0px; float:left;"><div style=3D"background-image: url(https://api-esp=
+-ap.piano.io/url/jerboa/181/47223/2711957/279068/vib-cml9022l3013q01aq1wqk1=
+m9w?ec=3Dundef);"></div></div><table class=3D"outer responsive-wrapper " wi=
+dth=3D"100%" id=3D"block_596647" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"background-color: transparent;;table-layout: fixed;" align=
+=3D"center" bgcolor=3D"transparent"><tbody><tr><th align=3D"center" valign=
+=3D"top"><table class=3D"responsive-wrapper-inner" width=3D"700" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin:0 a=
+uto;table-layout: fixed;"><tr><th class=3D"block-td"><table width=3D"100%" =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"=
+background-color:transparent;border-collapse: separate;margin: 0px;padding:=
+0px;" bgcolor=3D"transparent"><tr><th class=3D"width-zero " width=3D"50"></=
+th><th class=3D"inner th_wrapper"><table class=3D"dynamic-static" width=3D"=
+100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" sty=
+le=3D"margin: 0px;padding:0px;"><tr class=3D"show"><th style=3D"line-height=
+:0px;font-size:0px;mso-line-height:exactly;" height=3D"25">&nbsp;</th></tr>=
+<tr><th><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" align=3D"center"><tr><th class=3D"padding-10" style=3D"color:#606060;fo=
+nt-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;te=
+xt-decoration: none; font-weight: normal; font-style: normal;text-align:lef=
+t;text-decoration:none;"><span style=3D"color:#606060;font-size: 12px; font=
+-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decoration: none=
+; font-weight: normal; font-style: normal;text-align:left;line-height:14px;=
+text-decoration:none;">05 February 2026</span></th><th class=3D"padding-10"=
+ style=3D"color:#606060;font-size: 12px; font-family:Helvetica, Arial, Taho=
+ma, Verdana, sans-serif;text-decoration: none; font-weight: normal; font-st=
+yle: normal;text-align:left;text-align:right;line-height:14px;"><a href=3D"=
+https://api-esp-ap.piano.io/story/estored/181/47223/596647/2711957/279068/v=
+ib-cml9022l3013q01aq1wqk1m9w?sig=3D3aa627446e6bfe419ce6e755e2fc2325001010da=
+639c43ecb3eaa06641440b50&amp;order=3D0" style=3D"color:#606060;font-size: 1=
+2px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decorat=
+ion: none; font-weight: normal; font-style: normal;text-align:left;text-ali=
+gn:right;line-height:14px;" target=3D"_blank">View in Browser</a></th></tr>=
+</table></th></tr><tr class=3D"show"><th style=3D"line-height:0px;font-size=
+:0px;mso-line-height:exactly;" height=3D"5">&nbsp;</th></tr></table></th><t=
+h class=3D"width-zero " width=3D"50"></th></tr></table></th></tr></table></=
+th></tr></tbody></table><style type=3D"text/css">@media all and (max-width:=
+ 599px) {
+    #block_596647 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596648" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;border:2px solid #00=
+0000;" bgcolor=3D"transparent"><tr><th class=3D"inner th_wrapper"><table cl=
+ass=3D"dynamic-static" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr><th cla=
+ss=3D"width-100" valign=3D"top" width=3D"100%"><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"backgr=
+ound:transparent;margin: 0px;padding:0px;" bgcolor=3D"transparent"><tr><th>=
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" style=3D"margin: 0px;padding:0px;"><tr><th class=3D"logo" alig=
+n=3D"center"><a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596648/271=
+1957/279068/16c75405f3944b6a1673a47114bc9941/-1/-1?attrs=3D0&amp;order=3D0"=
+ style=3D"display: block;width: 100%;" target=3D"_blank"><img src=3D"https:=
+//api-esp-ap.piano.io/-s/840a850a872b78bcfab7a625a77ef68e" alt=3D"" style=
+=3D"display: block; border:none; max-width: 50%"/></a></th></tr></table></t=
+h></tr></table></th></tr></table></th></tr></table></th></tr></table></th><=
+/tr></tbody></table><style type=3D"text/css">@media all and (max-width: 599=
+px) {
+    #block_596648 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596672" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"inner th_wrapper"><table class=3D"dynamic-static" wi=
+dth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" style=3D"margin: 0px;padding:0px;"><tr class=3D"show"><th style=3D"line=
+-height:0px;font-size:0px;mso-line-height:exactly;" height=3D"10">&nbsp;</t=
+h></tr><tr><th class=3D"htmlblock"><p dir=3D"ltr" style=3D"line-height: 24p=
+x;"><span style=3D"font-family: Georgia, 'Times New Roman', Courier, serif;=
+ font-size: 16px;">Good morning dear reader,</span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;">&nbsp;</p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">For years, conte=
+nt creation in India lived in the margins. It was something done after coll=
+ege hours, between freelance gigs, quietly from a bedroom desk. Visible, po=
+pular, but rarely taken seriously as work.</span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;">&nbsp;</p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">Last week&rsquo;=
+s Union Budget changed the tone. By formally recognising the creative or or=
+ange economy, and committing funding to animation, gaming, visual effects a=
+nd digital storytelling, the government signalled that content creation is =
+no longer just a side hustle.&nbsp;</span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;">&nbsp;</p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">With 15,500 cont=
+ent-creator labs planned in schools and colleges, and new institutional bac=
+king for creative education, the government has placed a meaningful bet on =
+creators as future workers.</span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;">&nbsp;</p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">The excitement i=
+s understandable. Recognition alone can shift behaviour. Parents begin to l=
+isten differently. Students imagine longer runways. Early creators already =
+seeing returns expect momentum to build as policy support deepens.</span></=
+p>
+<p dir=3D"ltr" style=3D"line-height: 24px;">&nbsp;</p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">Yet the harder t=
+est lies ahead. India&rsquo;s skilling problem does not spare the creative =
+economy. Strong execution, capable trainers, and industry-aligned coursewor=
+k can turn these labs into well-equipped spaces that genuinely build employ=
+able skills. Industry participation and outcome-based training will decide =
+whether this becomes a pipeline or a placeholder.</span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;">&nbsp;</p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">If done right, t=
+he upside is large. Jobs emerge quickly, gig work expands, and India moves =
+from low-cost production to high-quality creation.&nbsp;</span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;">&nbsp;</p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">The Budget has o=
+pened the door. What happens next will decide whether content creation rema=
+ins a side hustle or becomes a credible, long-term career.</span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;">&nbsp;</p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">Read the full st=
+ory here =F0=9F=91=87</span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;"><strong>&nbsp;</=
+strong></span></p>
+<p dir=3D"ltr" style=3D"line-height: 24px;"><span style=3D"font-family: Geo=
+rgia, 'Times New Roman', Courier, serif; font-size: 16px;">Have a great day=
+!</span></p></th></tr><tr class=3D"show"><th style=3D"line-height:0px;font-=
+size:0px;mso-line-height:exactly;" height=3D"10">&nbsp;</th></tr></table></=
+th></tr></table></th></tr></table></th></tr></tbody></table><style type=3D"=
+text/css">@media all and (max-width: 599px) {
+    #block_596672 .th_wrapper {
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-bottom: 10px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596655" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"inner th_wrapper"><table class=3D"dynamic-static" wi=
+dth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" style=3D"margin: 0px;padding:0px;"><tr class=3D"show"><th style=3D"line=
+-height:0px;font-size:0px;mso-line-height:exactly;" height=3D"5">&nbsp;</th=
+></tr><tr><!-- Server-side text width estimation (approximate)--><!-- Calcu=
+late VML arcsize for border-radius--><!-- VML v:roundrect applies same radi=
+us to all corners, so we take the max value--><!-- VML border attributes-->=
+<tr><th class=3D"button" align=3D"center"><table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tr><th height=3D"30" style=3D"color:#000000;font-=
+size:14px; font-family:Georgia, Times New Roman, Courier, serif;text-decora=
+tion: none; font-weight: bold; font-style: normal;text-align:center;line-he=
+ight:22px;vertical-align: middle; word-break:break-all;padding:5px 15px 5px=
+ 15px;"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml"=
+ xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://api-esp-=
+ap.piano.io/-c/181/47223/596655/2711957/279068/34dcb54484a4fb0219c9612bd872=
+eb09/-1/-1?attrs=3D0&amp;order=3D0" stroked=3D"t" strokecolor=3D"#000000" s=
+trokeweight=3D"2px" arcsize=3D"100%" fillcolor=3D"#ffffff" style=3D"width:2=
+10px;height:30pt;v-text-anchor:middle;mso-fit-shape-to-text:false;mso-heigh=
+t-rule:exactly;"><v:textbox inset=3D"0,0,0,0" style=3D"width:210px;height:4=
+0px;mso-fit-shape-to-text:false;mso-line-height-rule:exactly;font-size:14px=
+;"><table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" height=3D"100%=
+"><tr><td style=3D"height:auto;mso-line-height-rule:exactly;font-size:14px;=
+padding-top:2px;" align=3D"center" valign=3D"middle"><a href=3D"https://api=
+-esp-ap.piano.io/-c/181/47223/596655/2711957/279068/34dcb54484a4fb0219c9612=
+bd872eb09/-1/-1?attrs=3D0&amp;order=3D0" style=3D"color:#000000;font-size:1=
+4px; font-family:Georgia, Times New Roman, Courier, serif;text-decoration: =
+none; font-weight: bold; font-style: normal;text-align:center;line-height:2=
+2px;vertical-align: middle; word-break:break-all;color:#000000;text-decorat=
+ion:none;mso-color-alt:#000000;" target=3D"_blank">Continue Reading</a></td=
+></tr></table></v:textbox></v:roundrect><![endif]-->
+<!--[if !mso]><!--><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse: separate;background: #ffffff;border-radius:30px 3=
+0px 30px 30px;;border:2px solid #000000;"><tr><th height=3D"30" style=3D"co=
+lor:#000000;font-size:14px; font-family:Georgia, Times New Roman, Courier, =
+serif;text-decoration: none; font-weight: bold; font-style: normal;text-ali=
+gn:center;line-height:22px;vertical-align: middle; word-break:break-all;pad=
+ding:5px 15px 5px 15px;"><a href=3D"https://api-esp-ap.piano.io/-c/181/4722=
+3/596655/2711957/279068/34dcb54484a4fb0219c9612bd872eb09/-1/-1?attrs=3D0&am=
+p;order=3D0" style=3D"color:#000000;font-size:14px; font-family:Georgia, Ti=
+mes New Roman, Courier, serif;text-decoration: none; font-weight: bold; fon=
+t-style: normal;text-align:center;line-height:22px;vertical-align: middle; =
+word-break:break-all;" target=3D"_blank">Continue Reading</a></th></tr></ta=
+ble><!--<![endif]--></th></tr></table></th></tr></tr><tr class=3D"show"><th=
+ style=3D"line-height:0px;font-size:0px;mso-line-height:exactly;" height=3D=
+"5">&nbsp;</th></tr></table></th></tr></table></th></tr></table></th></tr><=
+/tbody></table><style type=3D"text/css">@media all and (max-width: 599px) {
+    #block_596655 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596654" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"inner th_wrapper"><table class=3D"dynamic-static" wi=
+dth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" style=3D"margin: 0px;padding:0px;"><tr><th class=3D"htmlblock"><p><span=
+ style=3D"font-family: Georgia, 'Times New Roman', Courier, serif; font-siz=
+e: 16px; line-height: 24px;"><span style=3D"white-space-collapse: preserve;=
+"><strong>- Ishan Patra</strong></span></span></p></th></tr></table></th></=
+tr></table></th></tr></table></th></tr></tbody></table><style type=3D"text/=
+css">@media all and (max-width: 599px) {
+    #block_596654 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596656" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"width-zero " width=3D"400"></th><th class=3D"inner t=
+h_wrapper"><table class=3D"dynamic-static" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin: 0px;paddi=
+ng:0px;"><tr class=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-=
+line-height:exactly;" height=3D"10">&nbsp;</th></tr><tr><th class=3D"social=
+" align=3D"center" valign=3D"middle" style=3D"word-break: break-word;"><tab=
+le class=3D"fixedtable" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse:collapse; padding:0; margin:0; mso-table-lspace:0; m=
+so-table-rspace:0;"><tr><th valign=3D"top" style=3D"color:#000;font-size: 1=
+2px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decorat=
+ion: none; font-weight: normal; font-style: normal;text-align:center;"><a h=
+ref=3D"https://api-esp-ap.piano.io/-c/181/47223/596656/2711957/279068/9b254=
+aced46c2c9297cf650458a981bf/-1/-1?attrs=3D0&amp;order=3D0" style=3D"color:#=
+000;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-se=
+rif;text-decoration: none; font-weight: normal; font-style: normal;text-ali=
+gn:center;" target=3D"_blank"><img border=3D"0" alt=3D"" style=3D"display:i=
+nline-block;text-align:center;" width=3D"24" height=3D"24" src=3D"https://a=
+pi-esp-ap.piano.io/public/publishers/default4/email/images/social/telegram-=
+grey.png"/><div style=3D"color:#000;font-size: 12px; font-family:Helvetica,=
+ Arial, Tahoma, Verdana, sans-serif;text-decoration: none; font-weight: nor=
+mal; font-style: normal;text-align:center;"><img border=3D"0" alt=3D"" styl=
+e=3D"display:block;" width=3D"10" height=3D"3" src=3D"https://api-esp-ap.pi=
+ano.io/public/publishers/default4/email/images/10.gif"/><div></div></div></=
+a></th><th width=3D"10"><img border=3D"0" alt=3D"" style=3D"display:block;"=
+ width=3D"10" height=3D"10" src=3D"https://api-esp-ap.piano.io/public/publi=
+shers/default4/email/images/10.gif"/></th><th valign=3D"top" style=3D"color=
+:#000;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-=
+serif;text-decoration: none; font-weight: normal; font-style: normal;text-a=
+lign:center;"><a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596656/27=
+11957/279068/4bb0d96c74893a368ec6ad726793902b/-1/-1?attrs=3D0&amp;order=3D1=
+" style=3D"color:#000;font-size: 12px; font-family:Helvetica, Arial, Tahoma=
+, Verdana, sans-serif;text-decoration: none; font-weight: normal; font-styl=
+e: normal;text-align:center;" target=3D"_blank"><img border=3D"0" alt=3D"" =
+style=3D"display:inline-block;text-align:center;" width=3D"24" height=3D"24=
+" src=3D"https://api-esp-ap.piano.io/public/publishers/default4/email/image=
+s/social/x-grey.png"/><div style=3D"color:#000;font-size: 12px; font-family=
+:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decoration: none; font-=
+weight: normal; font-style: normal;text-align:center;"><img border=3D"0" al=
+t=3D"" style=3D"display:block;" width=3D"10" height=3D"3" src=3D"https://ap=
+i-esp-ap.piano.io/public/publishers/default4/email/images/10.gif"/><div></d=
+iv></div></a></th></tr></table></th></tr><tr class=3D"show"><th style=3D"li=
+ne-height:0px;font-size:0px;mso-line-height:exactly;" height=3D"5">&nbsp;</=
+th></tr></table></th><th class=3D"width-zero " width=3D"400"></th></tr></ta=
+ble></th></tr></table></th></tr></tbody></table><style type=3D"text/css">@m=
+edia all and (max-width: 599px) {
+    #block_596656 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596666" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;border:5px solid tra=
+nsparent;" bgcolor=3D"transparent"><tr><th class=3D"inner th_wrapper"><tabl=
+e class=3D"dynamic-static" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr cla=
+ss=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-line-height:exac=
+tly;" height=3D"10">&nbsp;</th></tr><tr class=3D"separator"><th><table widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center=
+" style=3D"margin: 0px;padding:0px;"><tr><th><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin=
+: 0px;padding:0px;"><tr><th width=3D"100%" style=3D"border-top:3px solid #2=
+5bf51"></th></tr></table></th></tr></table></th></tr></table></th></tr></ta=
+ble></th></tr></table></th></tr></tbody></table><style type=3D"text/css">@m=
+edia all and (max-width: 599px) {
+    #block_596666 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596671" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"inner th_wrapper"><table class=3D"dynamic-static" wi=
+dth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" style=3D"margin: 0px;padding:0px;"><tr class=3D"show"><th style=3D"line=
+-height:0px;font-size:0px;mso-line-height:exactly;" height=3D"10">&nbsp;</t=
+h></tr><tr><th class=3D"width-100 img-100" align=3D"center" width=3D"700"><=
+a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596671/2711957/279068/90=
+007b5719d84c83f042e897e2f800f3/-1/-1?attrs=3D0&amp;order=3D0" target=3D"_bl=
+ank" width=3D"700"><img border=3D"0" alt=3D"" title=3D"" width=3D"700" heig=
+ht=3D"auto" style=3D"display: block; border: none;padding:0px!important;" s=
+rc=3D"https://api-esp-ap.piano.io/-s/33fadc0d89f3ada1bedf08f8b8e83ab8"/></a=
+></th></tr><tr class=3D"show"><th style=3D"line-height:0px;font-size:0px;ms=
+o-line-height:exactly;" height=3D"10">&nbsp;</th></tr></table></th></tr></t=
+able></th></tr></table></th></tr></tbody></table><style type=3D"text/css">@=
+media all and (max-width: 599px) {
+    #block_596671 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596657" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;border:2px solid #00=
+0000;" bgcolor=3D"transparent"><tr><th class=3D"inner th_wrapper"><table cl=
+ass=3D"dynamic-static" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr><th cla=
+ss=3D"htmlblock"><p style=3D"line-height: 38px; font-family: georgia, times=
+, 'times new roman', serif; font-size: 25px; color: #000000; text-align: ce=
+nter;"><span style=3D"font-size: 18px;"><strong>Previous Reads</strong></sp=
+an></p></th></tr></table></th></tr></table></th></tr></table></th></tr></tb=
+ody></table><style type=3D"text/css">@media all and (max-width: 599px) {
+    #block_596657 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596670" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"width-zero " width=3D"50"></th><th class=3D"inner th=
+_wrapper"><table class=3D"dynamic-static" width=3D"100%" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin: 0px;paddin=
+g:0px;"><tr class=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-l=
+ine-height:exactly;" height=3D"20">&nbsp;</th></tr><tr class=3D"row"><th cl=
+ass=3D"width-100"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr><th c=
+lass=3D"width-100 one-story" valign=3D"top" width=3D"290"><table width=3D"1=
+00%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" styl=
+e=3D"background:transparent;text-align:center;margin: 0px;padding:0px;borde=
+r-collapse: separate;overflow: hidden;" bgcolor=3D"transparent"><tr><th cla=
+ss=3D"width-100"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr><th cl=
+ass=3D"width-100 img-100" align=3D"center" width=3D"290"><a href=3D"https:/=
+/api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/690a2e2503ddd837340=
+912b82065d6a4/-1/-1?attrs=3D0&amp;order=3D0" target=3D"_blank" width=3D"290=
+"><img border=3D"0" alt=3D"Pankaj Pawar, the quiet force powering Ambani=E2=
+=80=99s $150 billion bet" title=3D"Pankaj Pawar, the quiet force powering A=
+mbani=E2=80=99s $150 billion bet" width=3D"290" height=3D"auto" style=3D"di=
+splay: block; border: none;padding:0px!important;" src=3D"https://api-esp-a=
+p.piano.io/-s/b7151c8d11c400d54dd53ed13a4070b6"/></a></th></tr><tr class=3D=
+"show"><th style=3D"line-height:0px;font-size:0px;mso-line-height:exactly;"=
+ height=3D"10">&nbsp;</th></tr><tr><th class=3D"width-100 block" width=3D"2=
+90" valign=3D"middle"><table width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"margin: 0px;padding:0px;"><tr><th class=3D"text-=
+block"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr class=3D"show"><=
+th style=3D"line-height:0px;font-size:0px;mso-line-height:exactly;" height=
+=3D"5">&nbsp;</th></tr><tr><th class=3D"title" width=3D"100%" style=3D"word=
+-wrap: break-word;color:#000;font-size: 18px; font-family:Georgia, Times Ne=
+w Roman, Courier, serif; text-decoration: none; font-weight: bold; font-sty=
+le: normal; text-align:left; text-decoration:none;"><a class=3D"line-text" =
+target=3D"_blank" href=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/2=
+711957/279068/690a2e2503ddd837340912b82065d6a4/-1/-1?attrs=3D0&amp;order=3D=
+0" style=3D"word-wrap: break-word;color:#000;font-size: 18px; font-family:G=
+eorgia, Times New Roman, Courier, serif; text-decoration: none; font-weight=
+: bold; font-style: normal; text-align:left; text-decoration:none;"><span s=
+tyle=3D"word-wrap: break-word;color:#000;font-size: 18px; font-family:Georg=
+ia, Times New Roman, Courier, serif; text-decoration: none; font-weight: bo=
+ld; font-style: normal; text-align:left; line-height:24px;">Pankaj Pawar, t=
+he quiet force powering Ambani=E2=80=99s $150 billion bet</span></a></th></=
+tr><tr><th class=3D"summary" width=3D"100%" style=3D"word-wrap: break-word;=
+color:#5d5d5d;font-size:14px;font-family:Georgia, Times New Roman, Courier,=
+ serif;text-decoration:none;font-weight:normal;font-style:normal;text-align=
+:left; text-decoration:none;"><a class=3D"line-text" target=3D"_blank" href=
+=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/690a2e25=
+03ddd837340912b82065d6a4/-1/-1?attrs=3D0&amp;order=3D0" style=3D"word-wrap:=
+ break-word;color:#5d5d5d;font-size:14px;font-family:Georgia, Times New Rom=
+an, Courier, serif;text-decoration:none;font-weight:normal;font-style:norma=
+l;text-align:left; text-decoration:none;"><span style=3D"word-wrap: break-w=
+ord;color:#5d5d5d;font-size:14px;font-family:Georgia, Times New Roman, Cour=
+ier, serif;text-decoration:none;font-weight:normal;font-style:normal;text-a=
+lign:left;line-height:24px;">As Jio Platforms heads for a landmark IPO, the=
+ heavily centralised execution model that built its telecom dominance is be=
+ing tested. Can the company=E2=80=99s low-profile managing director reshape=
+ it for success in non-telecom businesses?</span></a></th></tr><!-- Server-=
+side text width estimation (approximate)--><!-- Calculate VML arcsize for b=
+order-radius--><!-- VML v:roundrect applies same radius to all corners, so =
+we take the max value--><!-- VML border attributes--><tr><th class=3D"butto=
+n" align=3D"center"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+><tr><th height=3D"30" style=3D"color:#339966;font-size:14px; font-family:G=
+eorgia, Times New Roman, Courier, serif;text-decoration: none; font-weight:=
+ normal; font-style: normal;text-align:center;line-height:22px;vertical-ali=
+gn: middle; word-break:break-all;padding:5px 15px 5px 15px;"><!--[if mso]><=
+v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schema=
+s-microsoft-com:office:word" href=3D"https://api-esp-ap.piano.io/-c/181/472=
+23/596670/2711957/279068/690a2e2503ddd837340912b82065d6a4/-1/-1?attrs=3D0&a=
+mp;order=3D0" stroked=3D"t" strokecolor=3D"#339966" strokeweight=3D"1px" ar=
+csize=3D"100%" fillcolor=3D"transparent" style=3D"width:210px;height:30pt;v=
+-text-anchor:middle;mso-fit-shape-to-text:false;mso-height-rule:exactly;"><=
+v:textbox inset=3D"0,0,0,0" style=3D"width:210px;height:40px;mso-fit-shape-=
+to-text:false;mso-line-height-rule:exactly;font-size:14px;"><table cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%" height=3D"100%"><tr><td style=3D=
+"height:auto;mso-line-height-rule:exactly;font-size:14px;padding-top:2px;" =
+align=3D"center" valign=3D"middle"><a href=3D"https://api-esp-ap.piano.io/-=
+c/181/47223/596670/2711957/279068/690a2e2503ddd837340912b82065d6a4/-1/-1?at=
+trs=3D0&amp;order=3D0" style=3D"color:#339966;font-size:14px; font-family:G=
+eorgia, Times New Roman, Courier, serif;text-decoration: none; font-weight:=
+ normal; font-style: normal;text-align:center;line-height:22px;vertical-ali=
+gn: middle; word-break:break-all;color:#339966;text-decoration:none;mso-col=
+or-alt:#339966;" target=3D"_blank">Continue Reading</a></td></tr></table></=
+v:textbox></v:roundrect><![endif]-->
+<!--[if !mso]><!--><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse: separate;background: transparent;border-radius:20=
+px 20px 20px 20px;;border:1px solid #339966;"><tr><th height=3D"30" style=
+=3D"color:#339966;font-size:14px; font-family:Georgia, Times New Roman, Cou=
+rier, serif;text-decoration: none; font-weight: normal; font-style: normal;=
+text-align:center;line-height:22px;vertical-align: middle; word-break:break=
+-all;padding:5px 15px 5px 15px;"><a href=3D"https://api-esp-ap.piano.io/-c/=
+181/47223/596670/2711957/279068/690a2e2503ddd837340912b82065d6a4/-1/-1?attr=
+s=3D0&amp;order=3D0" style=3D"color:#339966;font-size:14px; font-family:Geo=
+rgia, Times New Roman, Courier, serif;text-decoration: none; font-weight: n=
+ormal; font-style: normal;text-align:center;line-height:22px;vertical-align=
+: middle; word-break:break-all;" target=3D"_blank">Continue Reading</a></th=
+></tr></table><!--<![endif]--></th></tr></table></th></tr></table></th></tr=
+></table></th></tr></table></th></tr></table></th><th class=3D"width-zero "=
+ width=3D"20"></th><th class=3D"width-100 one-story" valign=3D"top" width=
+=3D"290"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"background:transparent;text-align:center;m=
+argin: 0px;padding:0px;border-collapse: separate;overflow: hidden;" bgcolor=
+=3D"transparent"><tr><th class=3D"width-100"><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin=
+: 0px;padding:0px;"><tr><th class=3D"width-100 img-100" align=3D"center" wi=
+dth=3D"290"><a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/2711=
+957/279068/ea0c75e48f76f46e4d8b9c229d9aea8f/-1/-1?attrs=3D0&amp;order=3D1" =
+target=3D"_blank" width=3D"290"><img border=3D"0" alt=3D"The second wave of=
+ pet-care wellness is here, fuelled by social media anxiety" title=3D"The s=
+econd wave of pet-care wellness is here, fuelled by social media anxiety" w=
+idth=3D"290" height=3D"auto" style=3D"display: block; border: none;padding:=
+0px!important;" src=3D"https://api-esp-ap.piano.io/-s/393cc27c57329df857dae=
+060bed736b1"/></a></th></tr><tr class=3D"show"><th style=3D"line-height:0px=
+;font-size:0px;mso-line-height:exactly;" height=3D"10">&nbsp;</th></tr><tr>=
+<th class=3D"width-100 block" width=3D"290" valign=3D"middle"><table width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:=
+ 0px;padding:0px;"><tr><th class=3D"text-block"><table width=3D"100%" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margi=
+n: 0px;padding:0px;"><tr class=3D"show"><th style=3D"line-height:0px;font-s=
+ize:0px;mso-line-height:exactly;" height=3D"5">&nbsp;</th></tr><tr><th clas=
+s=3D"title" width=3D"100%" style=3D"word-wrap: break-word;color:#000;font-s=
+ize: 18px; font-family:Georgia, Times New Roman, Courier, serif; text-decor=
+ation: none; font-weight: bold; font-style: normal; text-align:left; text-d=
+ecoration:none;"><a class=3D"line-text" target=3D"_blank" href=3D"https://a=
+pi-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/ea0c75e48f76f46e4d8b9=
+c229d9aea8f/-1/-1?attrs=3D0&amp;order=3D1" style=3D"word-wrap: break-word;c=
+olor:#000;font-size: 18px; font-family:Georgia, Times New Roman, Courier, s=
+erif; text-decoration: none; font-weight: bold; font-style: normal; text-al=
+ign:left; text-decoration:none;"><span style=3D"word-wrap: break-word;color=
+:#000;font-size: 18px; font-family:Georgia, Times New Roman, Courier, serif=
+; text-decoration: none; font-weight: bold; font-style: normal; text-align:=
+left; line-height:24px;">The second wave of pet-care wellness is here, fuel=
+led by social media anxiety</span></a></th></tr><tr><th class=3D"summary" w=
+idth=3D"100%" style=3D"word-wrap: break-word;color:#5d5d5d;font-size:14px;f=
+ont-family:Georgia, Times New Roman, Courier, serif;text-decoration:none;fo=
+nt-weight:normal;font-style:normal;text-align:left; text-decoration:none;">=
+<a class=3D"line-text" target=3D"_blank" href=3D"https://api-esp-ap.piano.i=
+o/-c/181/47223/596670/2711957/279068/ea0c75e48f76f46e4d8b9c229d9aea8f/-1/-1=
+?attrs=3D0&amp;order=3D1" style=3D"word-wrap: break-word;color:#5d5d5d;font=
+-size:14px;font-family:Georgia, Times New Roman, Courier, serif;text-decora=
+tion:none;font-weight:normal;font-style:normal;text-align:left; text-decora=
+tion:none;"><span style=3D"word-wrap: break-word;color:#5d5d5d;font-size:14=
+px;font-family:Georgia, Times New Roman, Courier, serif;text-decoration:non=
+e;font-weight:normal;font-style:normal;text-align:left;line-height:24px;">U=
+rban pet owners in India are spending more than ever on =E2=80=9Cnatural=E2=
+=80=9D and =E2=80=9Cgrain-free=E2=80=9D foods, but veterinarians warn the s=
+cience doesn=E2=80=99t always match the claims. Worse, regulation is largel=
+y absent.</span></a></th></tr><!-- Server-side text width estimation (appro=
+ximate)--><!-- Calculate VML arcsize for border-radius--><!-- VML v:roundre=
+ct applies same radius to all corners, so we take the max value--><!-- VML =
+border attributes--><tr><th class=3D"button" align=3D"center"><table border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><th height=3D"30" style=3D"c=
+olor:#339966;font-size:14px; font-family:Georgia, Times New Roman, Courier,=
+ serif;text-decoration: none; font-weight: normal; font-style: normal;text-=
+align:center;line-height:22px;vertical-align: middle; word-break:break-all;=
+padding:5px 15px 5px 15px;"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schema=
+s-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=
+=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/ea0c75e4=
+8f76f46e4d8b9c229d9aea8f/-1/-1?attrs=3D0&amp;order=3D1" stroked=3D"t" strok=
+ecolor=3D"#339966" strokeweight=3D"1px" arcsize=3D"100%" fillcolor=3D"trans=
+parent" style=3D"width:210px;height:30pt;v-text-anchor:middle;mso-fit-shape=
+-to-text:false;mso-height-rule:exactly;"><v:textbox inset=3D"0,0,0,0" style=
+=3D"width:210px;height:40px;mso-fit-shape-to-text:false;mso-line-height-rul=
+e:exactly;font-size:14px;"><table cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" height=3D"100%"><tr><td style=3D"height:auto;mso-line-height-rule=
+:exactly;font-size:14px;padding-top:2px;" align=3D"center" valign=3D"middle=
+"><a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068=
+/ea0c75e48f76f46e4d8b9c229d9aea8f/-1/-1?attrs=3D0&amp;order=3D1" style=3D"c=
+olor:#339966;font-size:14px; font-family:Georgia, Times New Roman, Courier,=
+ serif;text-decoration: none; font-weight: normal; font-style: normal;text-=
+align:center;line-height:22px;vertical-align: middle; word-break:break-all;=
+color:#339966;text-decoration:none;mso-color-alt:#339966;" target=3D"_blank=
+">Continue Reading</a></td></tr></table></v:textbox></v:roundrect><![endif]=
+-->
+<!--[if !mso]><!--><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse: separate;background: transparent;border-radius:20=
+px 20px 20px 20px;;border:1px solid #339966;"><tr><th height=3D"30" style=
+=3D"color:#339966;font-size:14px; font-family:Georgia, Times New Roman, Cou=
+rier, serif;text-decoration: none; font-weight: normal; font-style: normal;=
+text-align:center;line-height:22px;vertical-align: middle; word-break:break=
+-all;padding:5px 15px 5px 15px;"><a href=3D"https://api-esp-ap.piano.io/-c/=
+181/47223/596670/2711957/279068/ea0c75e48f76f46e4d8b9c229d9aea8f/-1/-1?attr=
+s=3D0&amp;order=3D1" style=3D"color:#339966;font-size:14px; font-family:Geo=
+rgia, Times New Roman, Courier, serif;text-decoration: none; font-weight: n=
+ormal; font-style: normal;text-align:center;line-height:22px;vertical-align=
+: middle; word-break:break-all;" target=3D"_blank">Continue Reading</a></th=
+></tr></table><!--<![endif]--></th></tr></table></th></tr></table></th></tr=
+></table></th></tr></table></th></tr></table></th></tr></table></th></tr><t=
+r class=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-line-height=
+:exactly;" height=3D"20">&nbsp;</th></tr><tr class=3D"row last"><th class=
+=3D"width-100"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr><th clas=
+s=3D"width-100 one-story" valign=3D"top" width=3D"290"><table width=3D"100%=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=
+=3D"background:transparent;text-align:center;margin: 0px;padding:0px;border=
+-collapse: separate;overflow: hidden;" bgcolor=3D"transparent"><tr><th clas=
+s=3D"width-100"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr><th cla=
+ss=3D"width-100 img-100" align=3D"center" width=3D"290"><a href=3D"https://=
+api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/0e8aef99538c06ee250d=
+42ab446db783/-1/-1?attrs=3D0&amp;order=3D2" target=3D"_blank" width=3D"290"=
+><img border=3D"0" alt=3D"Org Chart: The leadership bench steering Flipkart=
+ toward its IPO" title=3D"Org Chart: The leadership bench steering Flipkart=
+ toward its IPO" width=3D"290" height=3D"auto" style=3D"display: block; bor=
+der: none;padding:0px!important;" src=3D"https://api-esp-ap.piano.io/-s/1dc=
+cdd1b690ae260d0a51ec2c075b2d6"/></a></th></tr><tr class=3D"show"><th style=
+=3D"line-height:0px;font-size:0px;mso-line-height:exactly;" height=3D"10">&=
+nbsp;</th></tr><tr><th class=3D"width-100 block" width=3D"290" valign=3D"mi=
+ddle"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" style=3D"margin: 0px;padding:0px;"><tr><th class=3D"text-block"><table wi=
+dth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" style=3D"margin: 0px;padding:0px;"><tr class=3D"show"><th style=3D"line=
+-height:0px;font-size:0px;mso-line-height:exactly;" height=3D"5">&nbsp;</th=
+></tr><tr><th class=3D"title" width=3D"100%" style=3D"word-wrap: break-word=
+;color:#000;font-size: 18px; font-family:Georgia, Times New Roman, Courier,=
+ serif; text-decoration: none; font-weight: bold; font-style: normal; text-=
+align:left; text-decoration:none;"><a class=3D"line-text" target=3D"_blank"=
+ href=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/0e8=
+aef99538c06ee250d42ab446db783/-1/-1?attrs=3D0&amp;order=3D2" style=3D"word-=
+wrap: break-word;color:#000;font-size: 18px; font-family:Georgia, Times New=
+ Roman, Courier, serif; text-decoration: none; font-weight: bold; font-styl=
+e: normal; text-align:left; text-decoration:none;"><span style=3D"word-wrap=
+: break-word;color:#000;font-size: 18px; font-family:Georgia, Times New Rom=
+an, Courier, serif; text-decoration: none; font-weight: bold; font-style: n=
+ormal; text-align:left; line-height:24px;">Org Chart: The leadership bench =
+steering Flipkart toward its IPO</span></a></th></tr><tr><th class=3D"summa=
+ry" width=3D"100%" style=3D"word-wrap: break-word;color:#5d5d5d;font-size:1=
+4px;font-family:Georgia, Times New Roman, Courier, serif;text-decoration:no=
+ne;font-weight:normal;font-style:normal;text-align:left; text-decoration:no=
+ne;"><a class=3D"line-text" target=3D"_blank" href=3D"https://api-esp-ap.pi=
+ano.io/-c/181/47223/596670/2711957/279068/0e8aef99538c06ee250d42ab446db783/=
+-1/-1?attrs=3D0&amp;order=3D2" style=3D"word-wrap: break-word;color:#5d5d5d=
+;font-size:14px;font-family:Georgia, Times New Roman, Courier, serif;text-d=
+ecoration:none;font-weight:normal;font-style:normal;text-align:left; text-d=
+ecoration:none;"><span style=3D"word-wrap: break-word;color:#5d5d5d;font-si=
+ze:14px;font-family:Georgia, Times New Roman, Courier, serif;text-decoratio=
+n:none;font-weight:normal;font-style:normal;text-align:left;line-height:24p=
+x;">Long known as a startup talent factory, Flipkart is now using that same=
+ bench strength to prepare itself for life as a public company.</span></a><=
+/th></tr><!-- Server-side text width estimation (approximate)--><!-- Calcul=
+ate VML arcsize for border-radius--><!-- VML v:roundrect applies same radiu=
+s to all corners, so we take the max value--><!-- VML border attributes--><=
+tr><th class=3D"button" align=3D"center"><table border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0"><tr><th height=3D"30" style=3D"color:#339966;font-siz=
+e:14px; font-family:Georgia, Times New Roman, Courier, serif;text-decoratio=
+n: none; font-weight: normal; font-style: normal;text-align:center;line-hei=
+ght:22px;vertical-align: middle; word-break:break-all;padding:5px 15px 5px =
+15px;"><!--[if mso]><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://api-esp-a=
+p.piano.io/-c/181/47223/596670/2711957/279068/0e8aef99538c06ee250d42ab446db=
+783/-1/-1?attrs=3D0&amp;order=3D2" stroked=3D"t" strokecolor=3D"#339966" st=
+rokeweight=3D"1px" arcsize=3D"100%" fillcolor=3D"transparent" style=3D"widt=
+h:210px;height:30pt;v-text-anchor:middle;mso-fit-shape-to-text:false;mso-he=
+ight-rule:exactly;"><v:textbox inset=3D"0,0,0,0" style=3D"width:210px;heigh=
+t:40px;mso-fit-shape-to-text:false;mso-line-height-rule:exactly;font-size:1=
+4px;"><table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" height=3D"1=
+00%"><tr><td style=3D"height:auto;mso-line-height-rule:exactly;font-size:14=
+px;padding-top:2px;" align=3D"center" valign=3D"middle"><a href=3D"https://=
+api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068/0e8aef99538c06ee250d=
+42ab446db783/-1/-1?attrs=3D0&amp;order=3D2" style=3D"color:#339966;font-siz=
+e:14px; font-family:Georgia, Times New Roman, Courier, serif;text-decoratio=
+n: none; font-weight: normal; font-style: normal;text-align:center;line-hei=
+ght:22px;vertical-align: middle; word-break:break-all;color:#339966;text-de=
+coration:none;mso-color-alt:#339966;" target=3D"_blank">Continue Reading</a=
+></td></tr></table></v:textbox></v:roundrect><![endif]-->
+<!--[if !mso]><!--><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse: separate;background: transparent;border-radius:20=
+px 20px 20px 20px;;border:1px solid #339966;"><tr><th height=3D"30" style=
+=3D"color:#339966;font-size:14px; font-family:Georgia, Times New Roman, Cou=
+rier, serif;text-decoration: none; font-weight: normal; font-style: normal;=
+text-align:center;line-height:22px;vertical-align: middle; word-break:break=
+-all;padding:5px 15px 5px 15px;"><a href=3D"https://api-esp-ap.piano.io/-c/=
+181/47223/596670/2711957/279068/0e8aef99538c06ee250d42ab446db783/-1/-1?attr=
+s=3D0&amp;order=3D2" style=3D"color:#339966;font-size:14px; font-family:Geo=
+rgia, Times New Roman, Courier, serif;text-decoration: none; font-weight: n=
+ormal; font-style: normal;text-align:center;line-height:22px;vertical-align=
+: middle; word-break:break-all;" target=3D"_blank">Continue Reading</a></th=
+></tr></table><!--<![endif]--></th></tr></table></th></tr></table></th></tr=
+></table></th></tr></table></th></tr></table></th><th class=3D"width-zero "=
+ width=3D"20"></th><th class=3D"width-100 one-story" valign=3D"top" width=
+=3D"290"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center" style=3D"background:transparent;text-align:center;m=
+argin: 0px;padding:0px;border-collapse: separate;overflow: hidden;" bgcolor=
+=3D"transparent"><tr><th class=3D"width-100"><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin=
+: 0px;padding:0px;"><tr><th class=3D"width-100 img-100" align=3D"center" wi=
+dth=3D"290"><a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/2711=
+957/279068/062b0bf85f595e7ae663b80ea39fd819/-1/-1?attrs=3D0&amp;order=3D3" =
+target=3D"_blank" width=3D"290"><img border=3D"0" alt=3D"Why Bollywood is m=
+oving away from old money to corporate capital" title=3D"Why Bollywood is m=
+oving away from old money to corporate capital" width=3D"290" height=3D"aut=
+o" style=3D"display: block; border: none;padding:0px!important;" src=3D"htt=
+ps://api-esp-ap.piano.io/-s/5f3d6382430882c4a8145b747f9ba203"/></a></th></t=
+r><tr class=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-line-he=
+ight:exactly;" height=3D"10">&nbsp;</th></tr><tr><th class=3D"width-100 blo=
+ck" width=3D"290" valign=3D"middle"><table width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"margin: 0px;padding:0px;"><tr><th =
+class=3D"text-block"><table width=3D"100%" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr cl=
+ass=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-line-height:exa=
+ctly;" height=3D"5">&nbsp;</th></tr><tr><th class=3D"title" width=3D"100%" =
+style=3D"word-wrap: break-word;color:#000;font-size: 18px; font-family:Geor=
+gia, Times New Roman, Courier, serif; text-decoration: none; font-weight: b=
+old; font-style: normal; text-align:left; text-decoration:none;"><a class=
+=3D"line-text" target=3D"_blank" href=3D"https://api-esp-ap.piano.io/-c/181=
+/47223/596670/2711957/279068/062b0bf85f595e7ae663b80ea39fd819/-1/-1?attrs=
+=3D0&amp;order=3D3" style=3D"word-wrap: break-word;color:#000;font-size: 18=
+px; font-family:Georgia, Times New Roman, Courier, serif; text-decoration: =
+none; font-weight: bold; font-style: normal; text-align:left; text-decorati=
+on:none;"><span style=3D"word-wrap: break-word;color:#000;font-size: 18px; =
+font-family:Georgia, Times New Roman, Courier, serif; text-decoration: none=
+; font-weight: bold; font-style: normal; text-align:left; line-height:24px;=
+">Why Bollywood is moving away from old money to corporate capital</span></=
+a></th></tr><tr><th class=3D"summary" width=3D"100%" style=3D"word-wrap: br=
+eak-word;color:#5d5d5d;font-size:14px;font-family:Georgia, Times New Roman,=
+ Courier, serif;text-decoration:none;font-weight:normal;font-style:normal;t=
+ext-align:left; text-decoration:none;"><a class=3D"line-text" target=3D"_bl=
+ank" href=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/2711957/279068=
+/062b0bf85f595e7ae663b80ea39fd819/-1/-1?attrs=3D0&amp;order=3D3" style=3D"w=
+ord-wrap: break-word;color:#5d5d5d;font-size:14px;font-family:Georgia, Time=
+s New Roman, Courier, serif;text-decoration:none;font-weight:normal;font-st=
+yle:normal;text-align:left; text-decoration:none;"><span style=3D"word-wrap=
+: break-word;color:#5d5d5d;font-size:14px;font-family:Georgia, Times New Ro=
+man, Courier, serif;text-decoration:none;font-weight:normal;font-style:norm=
+al;text-align:left;line-height:24px;">As box-office volatility rises and tr=
+aditional safety nets disappear, Bollywood producers are turning to corpora=
+te capital for stability. From equity dilution to music-led deals, IP owner=
+ship and recurring revenues are fast replacing star power as the industry=
+=E2=80=99s core risk hedge.</span></a></th></tr><!-- Server-side text width=
+ estimation (approximate)--><!-- Calculate VML arcsize for border-radius-->=
+<!-- VML v:roundrect applies same radius to all corners, so we take the max=
+ value--><!-- VML border attributes--><tr><th class=3D"button" align=3D"cen=
+ter"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><th height=
+=3D"30" style=3D"color:#339966;font-size:14px; font-family:Georgia, Times N=
+ew Roman, Courier, serif;text-decoration: none; font-weight: normal; font-s=
+tyle: normal;text-align:center;line-height:22px;vertical-align: middle; wor=
+d-break:break-all;padding:5px 15px 5px 15px;"><!--[if mso]><v:roundrect xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com=
+:office:word" href=3D"https://api-esp-ap.piano.io/-c/181/47223/596670/27119=
+57/279068/062b0bf85f595e7ae663b80ea39fd819/-1/-1?attrs=3D0&amp;order=3D3" s=
+troked=3D"t" strokecolor=3D"#339966" strokeweight=3D"1px" arcsize=3D"100%" =
+fillcolor=3D"transparent" style=3D"width:210px;height:30pt;v-text-anchor:mi=
+ddle;mso-fit-shape-to-text:false;mso-height-rule:exactly;"><v:textbox inset=
+=3D"0,0,0,0" style=3D"width:210px;height:40px;mso-fit-shape-to-text:false;m=
+so-line-height-rule:exactly;font-size:14px;"><table cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" height=3D"100%"><tr><td style=3D"height:auto;ms=
+o-line-height-rule:exactly;font-size:14px;padding-top:2px;" align=3D"center=
+" valign=3D"middle"><a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596=
+670/2711957/279068/062b0bf85f595e7ae663b80ea39fd819/-1/-1?attrs=3D0&amp;ord=
+er=3D3" style=3D"color:#339966;font-size:14px; font-family:Georgia, Times N=
+ew Roman, Courier, serif;text-decoration: none; font-weight: normal; font-s=
+tyle: normal;text-align:center;line-height:22px;vertical-align: middle; wor=
+d-break:break-all;color:#339966;text-decoration:none;mso-color-alt:#339966;=
+" target=3D"_blank">Continue Reading</a></td></tr></table></v:textbox></v:r=
+oundrect><![endif]-->
+<!--[if !mso]><!--><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse: separate;background: transparent;border-radius:20=
+px 20px 20px 20px;;border:1px solid #339966;"><tr><th height=3D"30" style=
+=3D"color:#339966;font-size:14px; font-family:Georgia, Times New Roman, Cou=
+rier, serif;text-decoration: none; font-weight: normal; font-style: normal;=
+text-align:center;line-height:22px;vertical-align: middle; word-break:break=
+-all;padding:5px 15px 5px 15px;"><a href=3D"https://api-esp-ap.piano.io/-c/=
+181/47223/596670/2711957/279068/062b0bf85f595e7ae663b80ea39fd819/-1/-1?attr=
+s=3D0&amp;order=3D3" style=3D"color:#339966;font-size:14px; font-family:Geo=
+rgia, Times New Roman, Courier, serif;text-decoration: none; font-weight: n=
+ormal; font-style: normal;text-align:center;line-height:22px;vertical-align=
+: middle; word-break:break-all;" target=3D"_blank">Continue Reading</a></th=
+></tr></table><!--<![endif]--></th></tr></table></th></tr></table></th></tr=
+></table></th></tr></table></th></tr></table></th></tr></table></th></tr><t=
+r class=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-line-height=
+:exactly;" height=3D"20">&nbsp;</th></tr></table></th><th class=3D"width-ze=
+ro " width=3D"50"></th></tr></table></th></tr></table></th></tr></tbody></t=
+able><style type=3D"text/css">@media all and (max-width: 599px) {
+    #block_596670 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 5px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596663" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;border:5px solid tra=
+nsparent;" bgcolor=3D"transparent"><tr><th class=3D"inner th_wrapper"><tabl=
+e class=3D"dynamic-static" width=3D"100%" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr cla=
+ss=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-line-height:exac=
+tly;" height=3D"10">&nbsp;</th></tr><tr class=3D"separator"><th><table widt=
+h=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center=
+" style=3D"margin: 0px;padding:0px;"><tr><th><table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin=
+: 0px;padding:0px;"><tr><th width=3D"100%" style=3D"border-top:3px solid #2=
+5bf51"></th></tr></table></th></tr></table></th></tr></table></th></tr></ta=
+ble></th></tr></table></th></tr></tbody></table><style type=3D"text/css">@m=
+edia all and (max-width: 599px) {
+    #block_596663 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596667" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"inner th_wrapper"><table class=3D"dynamic-static" wi=
+dth=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er" style=3D"margin: 0px;padding:0px;"><tr class=3D"show"><th style=3D"line=
+-height:0px;font-size:0px;mso-line-height:exactly;" height=3D"10">&nbsp;</t=
+h></tr><tr><th class=3D"width-100" valign=3D"top" width=3D"100%"><table wid=
+th=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cente=
+r" style=3D"background:transparent;margin: 0px;padding:0px;" bgcolor=3D"tra=
+nsparent"><tr><th><table width=3D"100%" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0" align=3D"center" style=3D"margin: 0px;padding:0px;"><tr><th c=
+lass=3D"logo" align=3D"center"><a href=3D"https://api-esp-ap.piano.io/-c/18=
+1/47223/596667/2711957/279068/16c75405f3944b6a1673a47114bc9941/-1/-1?attrs=
+=3D0&amp;order=3D0" style=3D"display: block;width: 100%;" target=3D"_blank"=
+><img src=3D"https://api-esp-ap.piano.io/-s/9f7dd842d3e7efd5a0a09ac826bd8c0=
+a" alt=3D"" style=3D"display: block; border:none; max-width: 30%"/></a></th=
+></tr></table></th></tr></table></th></tr></table></th></tr></table></th></=
+tr></table></th></tr></tbody></table><style type=3D"text/css">@media all an=
+d (max-width: 599px) {
+    #block_596667 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596668" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"width-zero " width=3D"200"></th><th class=3D"inner t=
+h_wrapper"><table class=3D"dynamic-static" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin: 0px;paddi=
+ng:0px;"><tr class=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-=
+line-height:exactly;" height=3D"18">&nbsp;</th></tr><tr><th class=3D"social=
+" align=3D"center" valign=3D"middle" style=3D"word-break: break-word;"><tab=
+le class=3D"fixedtable" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border-collapse:collapse; padding:0; margin:0; mso-table-lspace:0; m=
+so-table-rspace:0;"><tr><th valign=3D"top" style=3D"color:#000;font-size: 1=
+2px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decorat=
+ion: none; font-weight: normal; font-style: normal;text-align:center;"><a h=
+ref=3D"https://api-esp-ap.piano.io/-c/181/47223/596668/2711957/279068/ecd5e=
+8f056dd49d2f1367aeaad0f4e14/-1/-1?attrs=3D0&amp;order=3D0" style=3D"color:#=
+000;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-se=
+rif;text-decoration: none; font-weight: normal; font-style: normal;text-ali=
+gn:center;" target=3D"_blank"><img border=3D"0" alt=3D"" style=3D"display:i=
+nline-block;text-align:center;" width=3D"24" height=3D"24" src=3D"https://a=
+pi-esp-ap.piano.io/public/publishers/default4/email/images/social/fb-grey.p=
+ng"/><div style=3D"color:#000;font-size: 12px; font-family:Helvetica, Arial=
+, Tahoma, Verdana, sans-serif;text-decoration: none; font-weight: normal; f=
+ont-style: normal;text-align:center;"><img border=3D"0" alt=3D"" style=3D"d=
+isplay:block;" width=3D"10" height=3D"3" src=3D"https://api-esp-ap.piano.io=
+/public/publishers/default4/email/images/10.gif"/><div></div></div></a></th=
+><th width=3D"10"><img border=3D"0" alt=3D"" style=3D"display:block;" width=
+=3D"10" height=3D"10" src=3D"https://api-esp-ap.piano.io/public/publishers/=
+default4/email/images/10.gif"/></th><th valign=3D"top" style=3D"color:#000;=
+font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;=
+text-decoration: none; font-weight: normal; font-style: normal;text-align:c=
+enter;"><a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596668/2711957/=
+279068/a2db7a77bfbe9bac8f3c27276348fc31/-1/-1?attrs=3D0&amp;order=3D1" styl=
+e=3D"color:#000;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verd=
+ana, sans-serif;text-decoration: none; font-weight: normal; font-style: nor=
+mal;text-align:center;" target=3D"_blank"><img border=3D"0" alt=3D"" style=
+=3D"display:inline-block;text-align:center;" width=3D"24" height=3D"24" src=
+=3D"https://api-esp-ap.piano.io/public/publishers/default4/email/images/soc=
+ial/x-grey.png"/><div style=3D"color:#000;font-size: 12px; font-family:Helv=
+etica, Arial, Tahoma, Verdana, sans-serif;text-decoration: none; font-weigh=
+t: normal; font-style: normal;text-align:center;"><img border=3D"0" alt=3D"=
+" style=3D"display:block;" width=3D"10" height=3D"3" src=3D"https://api-esp=
+-ap.piano.io/public/publishers/default4/email/images/10.gif"/><div></div></=
+div></a></th><th width=3D"10"><img border=3D"0" alt=3D"" style=3D"display:b=
+lock;" width=3D"10" height=3D"10" src=3D"https://api-esp-ap.piano.io/public=
+/publishers/default4/email/images/10.gif"/></th><th valign=3D"top" style=3D=
+"color:#000;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana,=
+ sans-serif;text-decoration: none; font-weight: normal; font-style: normal;=
+text-align:center;"><a href=3D"https://api-esp-ap.piano.io/-c/181/47223/596=
+668/2711957/279068/14155ec910b4cb431329e8155fe70f15/-1/-1?attrs=3D0&amp;ord=
+er=3D2" style=3D"color:#000;font-size: 12px; font-family:Helvetica, Arial, =
+Tahoma, Verdana, sans-serif;text-decoration: none; font-weight: normal; fon=
+t-style: normal;text-align:center;" target=3D"_blank"><img border=3D"0" alt=
+=3D"" style=3D"display:inline-block;text-align:center;" width=3D"24" height=
+=3D"24" src=3D"https://api-esp-ap.piano.io/public/publishers/default4/email=
+/images/social/li-grey.png"/><div style=3D"color:#000;font-size: 12px; font=
+-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decoration: none=
+; font-weight: normal; font-style: normal;text-align:center;"><img border=
+=3D"0" alt=3D"" style=3D"display:block;" width=3D"10" height=3D"3" src=3D"h=
+ttps://api-esp-ap.piano.io/public/publishers/default4/email/images/10.gif"/=
+><div></div></div></a></th><th width=3D"10"><img border=3D"0" alt=3D"" styl=
+e=3D"display:block;" width=3D"10" height=3D"10" src=3D"https://api-esp-ap.p=
+iano.io/public/publishers/default4/email/images/10.gif"/></th><th valign=3D=
+"top" style=3D"color:#000;font-size: 12px; font-family:Helvetica, Arial, Ta=
+homa, Verdana, sans-serif;text-decoration: none; font-weight: normal; font-=
+style: normal;text-align:center;"><a href=3D"https://api-esp-ap.piano.io/-c=
+/181/47223/596668/2711957/279068/74309f7907fded104f677cf8b43ea992/-1/-1?att=
+rs=3D0&amp;order=3D3" style=3D"color:#000;font-size: 12px; font-family:Helv=
+etica, Arial, Tahoma, Verdana, sans-serif;text-decoration: none; font-weigh=
+t: normal; font-style: normal;text-align:center;" target=3D"_blank"><img bo=
+rder=3D"0" alt=3D"" style=3D"display:inline-block;text-align:center;" width=
+=3D"24" height=3D"24" src=3D"https://api-esp-ap.piano.io/public/publishers/=
+default4/email/images/social/ig-grey.png"/><div style=3D"color:#000;font-si=
+ze: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-de=
+coration: none; font-weight: normal; font-style: normal;text-align:center;"=
+><img border=3D"0" alt=3D"" style=3D"display:block;" width=3D"10" height=3D=
+"3" src=3D"https://api-esp-ap.piano.io/public/publishers/default4/email/ima=
+ges/10.gif"/><div></div></div></a></th><th width=3D"10"><img border=3D"0" a=
+lt=3D"" style=3D"display:block;" width=3D"10" height=3D"10" src=3D"https://=
+api-esp-ap.piano.io/public/publishers/default4/email/images/10.gif"/></th><=
+th valign=3D"top" style=3D"color:#000;font-size: 12px; font-family:Helvetic=
+a, Arial, Tahoma, Verdana, sans-serif;text-decoration: none; font-weight: n=
+ormal; font-style: normal;text-align:center;"><a href=3D"https://api-esp-ap=
+=2Epiano.io/-c/181/47223/596668/2711957=
+/279068/fc6e3bdc377d6305fc1069abe3148a=
+99/-1/-1?attrs=3D0&amp;order=3D4" style=3D"color:#000;font-size: 12px; font=
+-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decoration: none=
+; font-weight: normal; font-style: normal;text-align:center;" target=3D"_bl=
+ank"><img border=3D"0" alt=3D"" style=3D"display:inline-block;text-align:ce=
+nter;" width=3D"24" height=3D"24" src=3D"https://api-esp-ap.piano.io/public=
+/publishers/default4/email/images/social/telegram-grey.png"/><div style=3D"=
+color:#000;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, =
+sans-serif;text-decoration: none; font-weight: normal; font-style: normal;t=
+ext-align:center;"><img border=3D"0" alt=3D"" style=3D"display:block;" widt=
+h=3D"10" height=3D"3" src=3D"https://api-esp-ap.piano.io/public/publishers/=
+default4/email/images/10.gif"/><div></div></div></a></th></tr></table></th>=
+</tr></table></th><th class=3D"width-zero " width=3D"200"></th></tr></table=
+></th></tr></table></th></tr></tbody></table><style type=3D"text/css">@medi=
+a all and (max-width: 599px) {
+    #block_596668 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style><table class=3D"outer responsive-wrapper " width=3D"100%" id=3D"blo=
+ck_596669" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"backgr=
+ound-color: transparent;;table-layout: fixed;" align=3D"center" bgcolor=3D"=
+transparent"><tbody><tr><th align=3D"center" valign=3D"top"><table class=3D=
+"responsive-wrapper-inner" width=3D"700" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"margin:0 auto;table-layout: fixed;=
+"><tr><th class=3D"block-td"><table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center" style=3D"background-color:transpa=
+rent;border-collapse: separate;margin: 0px;padding:0px;" bgcolor=3D"transpa=
+rent"><tr><th class=3D"width-zero " width=3D"50"></th><th class=3D"inner th=
+_wrapper"><table class=3D"dynamic-static" width=3D"100%" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin: 0px;paddin=
+g:0px;"><tr class=3D"show"><th style=3D"line-height:0px;font-size:0px;mso-l=
+ine-height:exactly;" height=3D"20">&nbsp;</th></tr><tr><th align=3D"center"=
+><table class=3D"fixedtable" border=3D"0" align=3D"center" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"border-collapse:collapse; padding:0; margin:0;=
+ mso-table-lspace:0; mso-table-rspace:0;"><tr><th valign=3D"bottom" style=
+=3D"color:#7e7e7e;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Ve=
+rdana, sans-serif;text-decoration: underline; font-weight: normal; font-sty=
+le: normal;text-align:left;"><a href=3D"https://api-esp-ap.piano.io/publicp=
+ages/faq-and-feedback/en?userData=3DvGWwfXH8Tbweyf9EoVw4mCBvndD59ep24cLC.KE=
+7h25l9nKN_vxNUQVbMGTUS0ZIetnwc7tvaoLWaDNqZOsFjiW_FAoQO97yeh4bE9lq1mTQm5bPWm=
+Uhb_gC3IwCJpIFeBbjCEBY&amp;order=3D0" style=3D"display:block;color:#7e7e7e;=
+font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;=
+text-decoration: underline; font-weight: normal; font-style: normal;text-al=
+ign:left;" target=3D"_blank"><span style=3D"color:#7e7e7e;font-size: 12px; =
+font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decoration: =
+underline; font-weight: normal; font-style: normal;text-align:left;">Feedba=
+ck</span></a></th><th width=3D"10"><img border=3D"0" alt=3D"" style=3D"disp=
+lay:block;" width=3D"10" height=3D"10" src=3D"https://api-esp-ap.piano.io/p=
+ublic/publishers/default4/email/images/10.gif"/></th><th valign=3D"bottom">=
+</th><th width=3D"10"><img border=3D"0" alt=3D"" width=3D"10" height=3D"10"=
+ style=3D"display:block;" src=3D"https://api-esp-ap.piano.io/public/publish=
+ers/default4/email/images/10.gif"/></th><th valign=3D"bottom" style=3D"colo=
+r:#7e7e7e;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, s=
+ans-serif;text-decoration: underline; font-weight: normal; font-style: norm=
+al;text-align:left;"><a href=3D"https://api-esp-ap.piano.io/tracker/listsub=
+/publicpages/unsub/campaign/47223/user/2711957/sb/279068?sig=3D8300df10a8ba=
+279073b3107a21820735b69431d2eeb27056457c5eec171fba25&amp;order=3D1" style=
+=3D"display:block;color:#7e7e7e;font-size: 12px; font-family:Helvetica, Ari=
+al, Tahoma, Verdana, sans-serif;text-decoration: underline; font-weight: no=
+rmal; font-style: normal;text-align:left;" target=3D"_blank"><span style=3D=
+"color:#7e7e7e;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verda=
+na, sans-serif;text-decoration: underline; font-weight: normal; font-style:=
+ normal;text-align:left;">Unsubscribe</span></a></th><th width=3D"10"><img =
+border=3D"0" alt=3D"" style=3D"display:block;" width=3D"10" height=3D"10" s=
+rc=3D"https://api-esp-ap.piano.io/public/publishers/default4/email/images/1=
+0.gif"/></th><th valign=3D"bottom"></th><th width=3D"10"><img border=3D"0" =
+alt=3D"" width=3D"10" height=3D"10" style=3D"display:block;" src=3D"https:/=
+/api-esp-ap.piano.io/public/publishers/default4/email/images/10.gif"/></th>=
+<th valign=3D"bottom" style=3D"color:#7e7e7e;font-size: 12px; font-family:H=
+elvetica, Arial, Tahoma, Verdana, sans-serif;text-decoration: underline; fo=
+nt-weight: normal; font-style: normal;text-align:left;"><a href=3D"https://=
+api-esp-ap.piano.io/-c/181/47223/596669/2711957/279068/7c008ff75467a1f683e1=
+07ec04193451/-1/-1?attrs=3D0&amp;order=3D2" style=3D"display:block;color:#7=
+e7e7e;font-size: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-=
+serif;text-decoration: underline; font-weight: normal; font-style: normal;t=
+ext-align:left;" target=3D"_blank"><span style=3D"color:#7e7e7e;font-size: =
+12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-decora=
+tion: underline; font-weight: normal; font-style: normal;text-align:left;">=
+</span></a></th></tr></table></th></tr><tr class=3D"show"><th style=3D"line=
+-height:0px;font-size:0px;mso-line-height:exactly;" height=3D"20">&nbsp;</t=
+h></tr><tr><th align=3D"center"><table class=3D"fixedtable" border=3D"0" al=
+ign=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse=
+:collapse; padding:0; margin:0; mso-table-lspace:0; mso-table-rspace:0;"><t=
+r><th class=3D"copy" valign=3D"bottom"><span style=3D"color:#7e7e7e;font-si=
+ze: 12px; font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;text-de=
+coration: underline; font-weight: normal; font-style: normal;text-align:lef=
+t;text-decoration:none;text-align:center;display:inline-block;"></span></th=
+></tr></table></th></tr><tr class=3D"show"><th style=3D"line-height:0px;fon=
+t-size:0px;mso-line-height:exactly;" height=3D"20">&nbsp;</th></tr></table>=
+</th><th class=3D"width-zero " width=3D"50"></th></tr></table></th></tr></t=
+able></th></tr></tbody></table><style type=3D"text/css">@media all and (max=
+-width: 599px) {
+    #block_596669 .th_wrapper {
+        padding-top: 5px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+    }
+}
+
+</style></body></html>
+--7e8806b64e8a8123852aeb24f52c7c0522ac09b22c3f995cce9e3377c3bf--

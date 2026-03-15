@@ -1,0 +1,26 @@
+# Environments
+venv/
+env/
+.env
+
+# Google API Credentials (CRITICAL)
+data/gmail/credentials.json
+data/gmail/token.pickle
+
+# Databases
+data/*.db
+data/*.sqlite3
+
+# Python built-ins
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDEs
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db

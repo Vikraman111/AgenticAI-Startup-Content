@@ -7,20 +7,20 @@ class ScoringAgent:
         self.brain = LLMBrain()
 
     def run(self):
-        tasks = self.registry.fetch_batch(status='UNDERSTOOD')
+        tasks = self.registry.fetch_batch(status='UNDERSTOOD', limit=20)
         if not tasks: return
 
         print(f"⚖️  SCORING AGENT: Filtering {len(tasks)} items...")
         for task in tasks:
             # BUSINESS TREND ANALYSIS Prompt
             prompt = f"""
-            You are a Business Analyst. Score this article (0-100) on quality of BUSINESS TRENDS, MARKET INSIGHTS, and ACTIONABLE ANALYSIS.
+            You are a Strategy Consultant advising startup founders. Score this article (0-100) on the quality of its BUSINESS TRENDS, GROWTH STRATEGIES, and ACTIONABLE ADVICE.
             
             SCORING CRITERIA:
-            - 90-100: Game-changing market trends, novel industry shift, deep analysis with implications, patterns that affect multiple sectors.
-            - 70-89: Solid market analysis, interesting business patterns, good industry insights, startup strategy lessons.
-            - 50-69: Basic business news but limited insight, generic commentary.
-            - 0-49: Fluff, no real analysis, predictions without backing.
+            - 90-100: Deep strategic, actionable advice for startups, game-changing market trends, novel growth tactics, or clear patterns that affect multiple sectors.
+            - 70-89: Solid market analysis, interesting growth strategies, good industry insights, clear lessons from successful (or failed) startups.
+            - 50-69: Basic business news or high-level trends with limited actionable insight.
+            - 0-49: Routine funding rounds with no strategic context, PR announcements, fluff, or generic commentary.
             
             Title: {task['title']}
             Summary: {task['summary']}

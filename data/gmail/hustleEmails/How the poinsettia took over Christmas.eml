@@ -1,0 +1,2236 @@
+Delivered-To: shyams07@gmail.com
+Received: by 2002:a17:522:30c1:b0:62f:b21f:6b57 with SMTP id u1csp1334115pvg;
+        Sun, 21 Dec 2025 02:54:35 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFwpG+DrHUk1CdU/Y76ojVoGfMuwbs4SHK35T1R+hT3o1/3kRqSIsmAaAVIgJWoXv8IHhAf
+X-Received: by 2002:a05:6214:1cc5:b0:88a:2c78:d62d with SMTP id 6a1803df08f44-88d85caac55mr139503846d6.26.1766314474913;
+        Sun, 21 Dec 2025 02:54:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766314474; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BaDgThv/duiTrWSmUgksd0AlQ3lyXM71rP9XJhfuOQ49XHa6sLJ8AF+57pXHJo391a
+         Gx7/vWXDP4IOP7lJcCg95OiS0dIDjgz3aKmQKMl+XxECG/F24XDtI79j55vXt67Mgjco
+         SY5b6xLL6G7rkVDoS4jJhMe7+paY04ir6PyIx8MH8T76Ct1ngjAxlL4Azk/KcienXWp+
+         nQ2y5eRfM2s3OdQYwbHAuNYQD+lG+4dMmKYwQV4FPzpMfO/UPQUnihhLGVVSMTSKmiOE
+         XJRnYSGhviQfN/eT7U/cYh7mBy9aF6/z8wPIRexptaUAmggeR8T5vxzSQKCmUpcbi1rY
+         2n8g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:precedence:mime-version:subject
+         :message-id:to:reply-to:from:date:list-unsubscribe:dkim-signature
+         :dkim-signature;
+        bh=Xx3+UdoQVkQjcVlUeAQ88ke1owbljXTIY6lNwfIpxUE=;
+        fh=L9Pq+drjbGeEtrAQNZSRmpxQ+ME9iXW0EGrUbR1eMas=;
+        b=DynaB6Zfmp9bE1phZZHG0+85MQMqTi5lpJLLy7kElm/I57xQPYuqYA9bCSavVBYX3U
+         4QggGmxUMbjLpRlKV5on5uBhCLarWProojkdtAhATD3oNRw5XLKI9bE2+LPIrxR2g7qs
+         D1RGDN/G6MBylHw+I3njwPQ6X/6t5ZEaEOGp0NaIXYe9Oy8plAy/gTBrsiLs2LtPd/zM
+         viu/okVt9NcFax6Psey6yTdVHsIdI/MVkgow7Mv4U6Q4Gyfu3GDvGPVH1IjYIWfZPO0D
+         cwDaLBQP3bHkdmbz4r/U5RG7WRo8q+0jzlQdYi7ER8w1aCjY7uYg7c3eOqAt3KRl6w8S
+         /kuA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs2 header.b="XQE/8jv4";
+       dkim=pass header.i=@thehustle.co header.s=hs1-20627419 header.b=NoWw8Pvt;
+       spf=pass (google.com: domain of 1axb12v1jqdngsi95gz34w4cj5mvlvnk4q7wpi-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.77 as permitted sender) smtp.mailfrom="1axb12v1jqdngsi95gz34w4cj5mvlvnk4q7wpi-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Return-Path: <1axb12v1jqdngsi95gz34w4cj5mvlvnk4q7wpi-shyams07=gmail.com@20627419m.thehustle.co>
+Received: from bid487j.20627419m.thehustle.co (bid487j.20627419m.thehustle.co. [158.247.31.77])
+        by mx.google.com with ESMTPS id 6a1803df08f44-88d9999d8a4si87041666d6.606.2025.12.21.02.54.34
+        for <shyams07@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 21 Dec 2025 02:54:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of 1axb12v1jqdngsi95gz34w4cj5mvlvnk4q7wpi-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.77 as permitted sender) client-ip=158.247.31.77;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs2 header.b="XQE/8jv4";
+       dkim=pass header.i=@thehustle.co header.s=hs1-20627419 header.b=NoWw8Pvt;
+       spf=pass (google.com: domain of 1axb12v1jqdngsi95gz34w4cj5mvlvnk4q7wpi-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.77 as permitted sender) smtp.mailfrom="1axb12v1jqdngsi95gz34w4cj5mvlvnk4q7wpi-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Received: by 172.16.128.26 with SMTP id a0h5nnp5ez4m1sn6bru4cyvoiuammg6o2ld97trd78;
+        Sun, 21 Dec 2025 10:54:26 GMT
+DKIM-Signature: v=1; s=hs2; d=20627419m.thehustle.co; 
+        i=@20627419m.thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=Xx3+UdoQVkQjcVlUeAQ88ke1owbljXTIY6lNwfIpxUE=; 
+        b=XQE/8jv4jP0xQ6ArhJRRisbh6DceI55ocNXB+vOYkcSgfmLvHqObXnRVbF/Jqo
+         HjwqaMR5d/IGiYwagmgJ8DTTZXnXiW1ABc/Io6/E7vk1vTlpxPlZK18Fkzqztfa
+         JSMOIDith7YtWOqEuq3HSKZE0xGMczPCFjue6QtKsfllVW74r22CjP5rYO3BQoK
+         YOXqtJ553Jn3uoCupXgHgMud0KWEVNzw3sEt/rCCStZpbhsP1ZDPkO8/OPJFVws
+         kJfyTnr8SAdCnGdNZONmaiAWiQzHGHfE8fkaS8iAFK7igkDODobUIkPeq3wiqM/
+         I38mioTbczlNNih76S22LZ69cTaQ==; q=dns/txt; t=1766314466; 
+        x=1766577266;
+DKIM-Signature: v=1; s=hs1-20627419; d=thehustle.co; 
+        i=@thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=Xx3+UdoQVkQjcVlUeAQ88ke1owbljXTIY6lNwfIpxUE=; 
+        b=NoWw8Pvta8phtSoDFoNqBpQM6tN2KMXJ8BCumTBG8jbvEb+sQvmTbXEX57A2tA
+         SZgb1YfOl6uz2dVjDjOMGoM+dI7RS93jvsDk47kjvkV1MYLE+HIMcwpRd0HABDe
+         tM/8h9eUMj316NTo/kOT8kkIq9p1SxcElAIcldH/3+/D43CEsH5QfZuPnG7Uw7k
+         uBK699K073JPoZYfR+iZP5mQZg69r7nxHwwXZXdvfrBSF0+IidjJBd/Ln85pMup
+         b54xeQ01sUUWM8UB1o9gwkxhCNJoVBN9JexerL8YdsgVV0XREUlk7X2Dbw1g94N
+         MPNbRuJkhPr7fPApasqhjEQbkAxA==; q=dns/txt; t=1766314466; 
+        x=1766577266;
+Return-Path: <1axb12v1jqdngsi95gz34w4cj5mvlvnk4q7wpi-shyams07=gmail.com@20627419m.thehustle.co>
+X-HS-Cid: 1axft10rz0yr08mebg8gg9jh9tpedfe4lpuziu
+List-Unsubscribe: <mailto:1axdghppry0b5by5c9nlpy9448onmibrjrly6e-shyams07=gmail.com@20627419m.thehustle.co?subject=unsubscribe>, <https://media.hubspot.com/hs/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-zyW3_syzh2-mzZqW32y3-p4mkwpFW2F-Fzy1V0T-VW2PtBXx2nHtDvW3P0qKy4twCWhW4tjpqf3K8pfGW36y5_k4tG71fW2YJH984mj8w_W45xtyr2sSdnrW3JXvb72Hsz5WW2WHDM62RjGkDW4cv9Vy1QBfgZW1Xx42J3bkry1W3jly0h2HZ8jDW3NLS1B250sHQW3QLHqt3Sy6hyW41JfRb2xxBgNW2sBBrL4kKW7sW2vBnWq1ShxqNW3gcJfS2MBx1CW2FD1Vg30LN1SW3Zt3SC3Y0rxCW1NB0Y62FKpY8W2KHP1r4tFHVsW3R0J5s3XMPfSW4hLWk134HPWlW3gbltV23lB2zW2WN-WP47LxJpW3NGNX641qCWnW3jqL8J30K2CQW4kc1hL3CdJNdW47m7V44cSLkQW2TyMMl2WNC_2W41G5pk2F_288W3GRcGN2vKqlDW38115S3BNhY4W2CH47R1Zs6gYW2MQhFt4fFjNhW2YhyHH43HCSPW2YGz2S3K7-TsW22YwKn4fNqStW2sLpQ_2CtgqKW4pjn9Q3dqKdnW2w35wg36vCrGW43Jr-Y3Xy15zW30zyCX3VPdMkW21pDdJ1LnpzVW1NltCz47L3cDW2D0vjB38l7L0W3F7Xny1SjTHlW2MT-RY1Nl3XBW2MR4_S3z8jFyW2CvyPr3DZyDNW3VYyb44tCdRW0>
+Date: Sun, 21 Dec 2025 05:54:26 -0500
+From: The Hustle <news@thehustle.co>
+Reply-To: news@thehustle.co
+To: shyams07@gmail.com
+Message-ID: <1766314458519.f4148442-cb9a-47d2-b063-beaee65e600a@20627419m.thehustle.co>
+Subject: How the poinsettia took over Christmas
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1508119_2135570611.1766314466524"
+Precedence: bulk
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: aemkeh5:aigtj3jf:aidf:HubSpot
+
+------=_Part_1508119_2135570611.1766314466524
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+The story of America=E2=80=99s favorite holiday plant is rife with internat=
+ional politics, spoiled trade secrets, and a toppled monopoly.
+
+You've got 3 referrals, just 2 away from earning a Hustle candle. Check out=
+ all of our prizes here (https://store.thehustle.co/?_hsenc=3Dp2ANqtz-95Lgn=
+S0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7=
+LSrrHT_ovRVg&_hsmi=3D395167577 ) .
+
+Share your link:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqs=
+eNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovR=
+Vg&_hsmi=3D395167577
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTq=
+seNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ov=
+RVg&_hsmi=3D395167577 )
+
+Share The Hustle:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqs=
+eNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovR=
+Vg&_hsmi=3D395167577
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTq=
+seNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ov=
+RVg&_hsmi=3D395167577 )
+
+Check your referral progress & prizes here (https://thehustle.co/refer-the-=
+hustle?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1=
+qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+View in browser (https://media.hubspot.com/how-the-poinsettia-took-over-chr=
+istmas-2025?ecid=3DACsprvvsExpDLBkzOZY5doEJJlv6qDNEaPihyZ42fH4LU3c45xQAca2T=
+ggQhErMErxtJQNniJuPv&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxM=
+j8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+The Hustle by HubSpot Media (https://thehustle.co/?_hsenc=3Dp2ANqtz-95LgnS0=
+a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LS=
+rrHT_ovRVg&_hsmi=3D395167577 )
+
+Issue #375
+
+poinsettia-flowers-gif (https://thehustle.co/how-the-poinsettia-took-over-c=
+hristmas?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZs=
+e1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+Sunday, December 21, 2025
+
+How the poinsettia took over Christmas
+
+The story of America=E2=80=99s favorite holiday plant is rife with internat=
+ional politics, spoiled trade secrets, and a toppled monopoly.
+
+BY ZACHARY CROCKETT (https://x.com/zzcrockett?_hsenc=3Dp2ANqtz-95LgnS0a7aaV=
+TqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_=
+ovRVg&_hsmi=3D395167577 )
+
+The poinsettia plant is a ubiquitous Christmas staple.
+
+Every year, just after Thanksgiving, it emerges en masse at nurseries, big-=
+box retailers, fundraisers, and holiday parties.
+
+It=E2=80=99s one of the most popular plants in the world, with annual sales=
+ of ~90m units and a global retail impact of nearly $1B.
+
+But behind the beautiful, blood-red bracts of the poinsettia, there=E2=80=
+=99s a story rife with geopolitics, patent wars, a dethroned monopoly, and =
+complex supply chains.
+
+How did this Mexican shrub become America=E2=80=99s best-selling holiday pl=
+ant?
+
+To find out, The Hustle talked to poinsettia growers, breeders, salespeople=
+, and historians.
+
+poinsettias_youtube_thumbnail (https://www.youtube.com/watch?v=3DmjMNn7M5wb=
+E&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzE=
+lSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+Deep roots
+
+Indigenous to Southern Mexico, the poinsettia (or cuetlaxochitl) was first =
+used (https://www.canr.msu.edu/uploads/resources/pdfs/the_history_of_the_po=
+insettia.pdf?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9h=
+pMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) by 14th=
+-century Nahua people for dye and medicinal purposes.
+
+The plant=E2=80=99s brilliant red bracts =E2=80=94 which are leaves, not fl=
+owers =E2=80=94 were so revered by the Aztec emperor Montezuma that thousan=
+ds of them were transported to the high-altitude capital of Tenochtitlan ea=
+ch winter.
+
+After Spain colonized (https://www.history.com/topics/mexico/history-of-mex=
+ico?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKl=
+zElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577#:~:text=3DSpaniard=
+%20Hern%C3%A1n%20Cort%C3%A9s%20arrived%20at%20Veracruz%20in%201519.&text=3D=
+In%20May%201521%2C%20Cort%C3%A9s%20and,most%20of%20the%20indigenous%20popul=
+ation .) Mexico, Franciscan monks dubbed the plant flor de Nochebuena (=E2=
+=80=9CFlower of the Blessed Night=E2=80=9D) and began to showcase it in ann=
+ual Christmas processions.
+
+One of the first-known taxonomic illustrations of the poinsettia (Curtis=E2=
+=80=99s Botanical Magazine v.63; 1836)
+
+For the next few centuries, the plant was cultivated and celebrated in Mexi=
+co =E2=80=94 yet it remained obscure to the rest of the world.
+
+Then, along came Joel Poinsett.
+
+Poinsett, a wealthy Southern Unionist and slave owner, was appointed as the=
+ first US minister to Mexico (https://en.wikipedia.org/wiki/Joel_Roberts_Po=
+insett?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1=
+qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) .
+
+While there, he failed in an attempt to purchase Texas and became (https://=
+www.americanantiquarian.org/proceedings/44817295.pdf?_hsenc=3Dp2ANqtz-95Lgn=
+S0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7=
+LSrrHT_ovRVg&_hsmi=3D395167577 ) a persona non grata for meddling in the co=
+untry=E2=80=99s internal affairs.
+
+But on a trip to the Southern town of Taxco in 1828, just before he was he =
+recalled, he encountered the flor de Nochebuena and was so struck by it tha=
+t he shipped specimens back to the US.
+
+The plant =E2=80=94 which eventually became known to Westerners as the =E2=
+=80=9Cpoinsettia=E2=80=9D =E2=80=94 made its public American debut at a flo=
+wer show in Philadelphia and quickly became the talk of the town.
+
+In news reports at the time, it was described as (https://www.newspapers.co=
+m/image/465985592/?terms=3D%22poinsettia%22&match=3D1&_hsenc=3Dp2ANqtz-95Lg=
+nS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y=
+7LSrrHT_ovRVg&_hsmi=3D395167577 ) =E2=80=9Cthe showiest flower to yet be se=
+en=E2=80=9D and praised for having =E2=80=9Cthe most brilliant scarlet [lea=
+ves] ]ever produced in the vegetable or mineral kingdom.=E2=80=9D
+
+By the end of the 19th century, nurserymen were growing and distributing po=
+insettias for ~$0.25 ($8 today) at local markets.
+
+A portrait of Joel Roberts Poinsett superimposed over a background of red p=
+oinsettias. (https://www.youtube.com/watch?v=3Dkl1eJmw295g&_hsenc=3Dp2ANqtz=
+-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBa=
+trO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+Joel Roberts Poinsett (Library of Congress, Charles Fenderich; photo illust=
+ration by The Hustle)
+
+But several things worked against the poinsettia as a commercial entity.
+
+=E2=80=9CPerhaps no other plant or flower we handle=E2=80=A6 is short-lived=
+, wilts quicker, or is more disappointing to those who receive it,=E2=80=9D=
+ wrote (https://agris.fao.org/agris-search/search.do?recordID=3DGB201440177=
+3&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzE=
+lSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) Fritz Bahr, an ear=
+ly floriculturist.
+
+The plant would only last 2-3 days =E2=80=94 and its weak disposition meant=
+ that it couldn=E2=80=99t readily be transported en masse.
+
+It would take an enterprising family with a knack for marketing to help the=
+ poinsettia realize its full saleable potential.
+
+The =E2=80=98poinsettia prince=E2=80=99 and the rise of a monopoly
+
+In 1900, a German immigrant named Albert Ecke packed his bags for Fiji, whe=
+re he intended to open a health spa.
+
+En route, he made a pitstop in Los Angeles and chose to settle there instea=
+d =E2=80=94 a decision that would change the trajectory of agricultural his=
+tory.
+
+Ecke and his family established a dairy farm and a fruit orchard before eve=
+ntually selling cut flowers, including poinsettias. By 1909, the poinsettia=
+s were selling so well that he made them the focus of his entire business.
+
+His son, Paul Ecke, assumed the business in the 1920s and moved the operati=
+on to Encinitas, 25 miles north of San Diego.
+
+Ecke soon developed secret breeding techniques that vastly improved the dur=
+ability and aesthetics of poinsettias.
+
+In the wake of the Plant Patent Act of 1930 (https://en.wikipedia.org/wiki/=
+Plant_Patent_Act_of_1930?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9=
+dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D3951675=
+77 ) , which allowed breeders to protect their new cultivars, he registered=
+ dozens of his creations, staving off competitors and copycats.
+
+Paul Ecke Sr. with some of his harvest (The Paul Ecke Ranch, Inc. Business =
+Papers and Family Records, via CSU San Marcos archives)
+
+The specifics of Ecke=E2=80=99s prized breeding technique =E2=80=94 which h=
+e acquired from an amateur German gardener =E2=80=94 were guarded with the =
+intensity of the Coca-Cola recipe.
+
+=E2=80=9CNobody at the ranch knew the secret,=E2=80=9D his grandson, Paul E=
+cke III, later told the Los Angeles Times. =E2=80=9CMy grandfather, my dad,=
+ and their breeder knew, and it was done at the breeder=E2=80=99s home so n=
+obody could see.=E2=80=9D
+
+The result was a fuller, hardier plant with more branches =E2=80=94 a produ=
+ct equipped to endure the tribulations of consumerism.
+
+At the same time, under the leadership of Ecke=E2=80=99s son, Paul Jr., the=
+ company marketed the plant as the premier Christmas decoration, sending fr=
+ee samples to women=E2=80=99s magazines and making the rounds on prime-time=
+ TV programs like =E2=80=9CThe Tonight Show.=E2=80=9D
+
+By the 1990s, the family was selling 500k+ potted plants, and more than 25m=
+ cuttings =E2=80=94 baby sections used to produce new plants =E2=80=94 to o=
+ther growers on a royalty basis.
+
+At its peak, the company had a virtual monopoly on the US poinsettia market=
+, maintaining a 90% market share and 150+ patents (https://patents.justia.c=
+om/assignee/paul-ecke-ranch?page=3D16&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1P=
+KOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_h=
+smi=3D395167577 ) .
+
+=E2=80=9CThe Eckes of Southern California are to poinsettias what De Beers =
+of South Africa is to diamonds,=E2=80=9D one reporter later proclaimed.
+
+While competitors popped up, none could challenge the exposure, prominence,=
+ and rich IP of Ecke Ranch.
+
+That is, until the worst possible scenario came to fruition.
+
+Top: Three generations of the Ecke family (left to right): Paul Ecke III, P=
+aul Ecke Sr., and Paul Ecke Jr. (The Paul Ecke Ranch, Inc. Business Papers =
+and Family Records, via CSU San Marcos archives); Bottom: Paul Ecke Ranch i=
+n Encinitas (Tripadvisor)
+
+In 1992, a graduate student named John Dole got his hands on an Ecke cuttin=
+g and managed to reverse-engineer the company=E2=80=99s top-secret process =
+=E2=80=94 a method that involved grafting together 2 poinsettia plants.
+
+His published findings (https://journals.ashs.org/jashs/view/journals/jashs=
+/117/6/article-p972.xml?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9d=
+KxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D39516757=
+7 ) completely upended the poinsettia industry.
+
+=E2=80=9CYou don=E2=80=99t often see a situation in science where one paper=
+ makes a serious impact on the market,=E2=80=9D Dole, now an associate dean=
+ at North Carolina State University, told The Hustle. =E2=80=9CBut in this =
+case, it really did.=E2=80=9D
+
+Competition flooded in, sparking a =E2=80=9Cgolden age=E2=80=9D for poinset=
+tias:
+
+The industry=E2=80=99s main focus shifted from cultivation to breeding, and=
+ dozens of new color variations popped up =E2=80=94 hues of white, yellow, =
+neon green, and pink =E2=80=94 with names like =E2=80=9CPremium Picasso=E2=
+=80=9D and =E2=80=9CMonet Twilight.=E2=80=9D
+
+Big-box retailers also began to change the dynamic of the market.
+
+=E2=80=9CIn the earlier years, poinsettias were mostly sold at independent =
+garden centers and were thought of as an upscale plant,=E2=80=9D says Dole.=
+ =E2=80=9CBut when the mass marketers started selling them, that perception=
+ changed.=E2=80=9D
+
+Home Depot, Lowes, and Walmart began purchasing vast quantities of poinsett=
+ias and selling them as loss leaders for as little as $0.99 (https://thekra=
+zycouponlady.com/2021/12/02/1-clearance-poinsettias-at-lowes?_hsenc=3Dp2ANq=
+tz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVh=
+BatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) each.
+
+Zachary Crockett / The Hustle
+
+These changes pressured growers to ruthlessly cut overhead expenses to comp=
+ete, eventually ushering in an era of consolidation. Giant agriculture firm=
+s snatched up smaller outfits and shifted production overseas.
+
+After slowly watching its monopoly decline, Ecke =E2=80=94 the one-time kin=
+g of poinsettias =E2=80=94 sold its business (https://www.sandiegouniontrib=
+une.com/sdut-agriculture-ecke-ranch-sold-to-dutch-company-2012aug16-story.h=
+tml?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKl=
+zElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577#:~:text=3DEcke%20R=
+anch%2C%20the%20iconic%20Encinitas,marketing%20manager%20for%20Ecke%20Ranch=
+ .) to a Dutch conglomerate in 2012.
+
+It marked the end of an era =E2=80=94 and the beginning of a new, highly co=
+mplex, international pipeline.
+
+The modern economics of poinsettias
+
+Today, Ecke is owned by D=C3=BCmmen Orange, one of the largest plant breede=
+rs in the world.
+
+Rebecca Siemonsma, who worked at Ecke from 2004-2012 and now oversees D=C3=
+=BCmmen=E2=80=99s poinsettia operations, tells The Hustle that the company =
+sells around 50m of the plants each year =E2=80=94 more than half of the wo=
+rld=E2=80=99s supply.
+
+In other words, it=E2=80=99s likely that the poinsettias you see at your lo=
+cal Home Depot come from D=C3=BCmmen.
+
+The journey of a poinsettia plant looks something like so:
+
+Zachary Crockett / The Hustle
+
+According to Dole, the horticulture professor, soil regulations (https://ww=
+w.aphis.usda.gov/aphis/ourfocus/planthealth/import-information/permits/plan=
+t-pests/sa_soil?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5O=
+g9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) prev=
+ent the importation of potted poinsettias. Only cuttings are permitted =E2=
+=80=94 so the final stages of growing still happen in the US at major green=
+houses.
+
+Cuttings only sell for ~$0.30 each, but large firms like D=C3=BCmmen make m=
+oney by selling millions of them at a time.
+
+=E2=80=9CPoinsettias are a low-margin, high-volume business,=E2=80=9D says =
+Siemonsma. =E2=80=9CThey=E2=80=99ve become somewhat of an inexpensive commo=
+dity in the horticulture industry. But on a unit basis, they=E2=80=99re sti=
+ll near the top.=E2=80=9D
+
+This can make the economics a bit tricky for growers.
+
+For most growers, poinsettias aren=E2=80=99t a huge money maker; they=E2=80=
+=99re usually thrown into the mix for several practical reasons:
+
+- They=E2=80=99re the rare plant that can be grown during the late summer m=
+onths, and they allow growers to mitigate some of their fixed overhead cost=
+s during an otherwise stagnant season.
+- They allow growers to keep labor employed year-round, rather than just du=
+ring the busy spring months.
+
+Average wholesale prices for poinsettias have remained stagnant for several=
+ decades. Adjusted for inflation, they=E2=80=99ve declined considerably.
+
+Zachary Crockett / The Hustle
+
+But poinsettias have remained lucrative for some.
+
+Wenke Greenhouses is one of the 30 largest greenhouse operations in the US,=
+ with several million square feet of crops in Michigan and Georgia.
+
+The company started growing poinsettias in the mid-=E2=80=9980s. Today, it =
+produces ~200k annually, which are sold wholesale to Walmart, Lowes, church=
+es, and fundraisers.
+
+=E2=80=9CWe=E2=80=99ve had 2 great years,=E2=80=9D says Lorence Wenke, the =
+company=E2=80=99s long-time owner, who recently passed the business on to h=
+is daughter. =E2=80=9CPeople are staying indoors and plants are thriving ac=
+ross the board.=E2=80=9D
+
+Kevin Koeppler is the general manager at Sunbelt Greenhouses, a subsidiary =
+of Wenke Greenhouses based in Douglas, Georgia, where the poinsettias are g=
+rown.
+
+In a large spreadsheet shared with The Hustle, he broke down what the poins=
+ettia sector of the business looks like on the back end:
+
+Zachary Crockett / The Hustle
+
+Those are far better margins than most in the business =E2=80=94 but Koeppl=
+er says there are a myriad of things that can go wrong along the way.
+
+=E2=80=9CThere are always a few unexpected things that come up in agricultu=
+re,=E2=80=9D he says. =E2=80=9COne pest infestation might set you back $60k=
+ and wipe out most of your margins.=E2=80=9D
+
+COVID and ongoing supply chain issues have also put a dent in Koeppler=E2=
+=80=99s usual process.
+
+For instance, he used to import coconut coir =E2=80=94 the fibrous coconut =
+husks inside shells =E2=80=94 from Indonesia to mix into his soil. But in r=
+ecent years, he=E2=80=99s had to ditch it because shipping costs have ballo=
+oned from $2.1k to $21k per container.
+
+A fresh crop of poinsettias at Sunbelt Greenhouses in Douglas, Georgia (Sun=
+belt Greenhouses)
+
+One faction who feels they=E2=80=99ve been left out to dry in this booming =
+poinsettia market is Mexican growers.
+
+Though Mexico sells ~$12m (https://fronterasdesk.org/content/1643990/poinse=
+ttia-sales-struggle-bloom-mexico-during-pandemic?_hsenc=3Dp2ANqtz-95LgnS0a7=
+aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrr=
+HT_ovRVg&_hsmi=3D395167577 ) worth of poinsettia cuttings to the US market =
+every year, a century-old foreign soil restriction (https://gpnmag.com/news=
+/mexico-eyes-us-poinsettia-sales/?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3=
+lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=
+=3D395167577 ) prevents the country from selling its own native plant in po=
+tted form to US consumers. The Mexican Embassy has lobbied (https://www.des=
+eret.com/2004/12/18/19867408/mexico-sees-red-over-poinsettias?_hsenc=3Dp2AN=
+qtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFV=
+hBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577#ron-simmons-left-and-todd-kendall-p=
+ackage-poinsettias-at-diamonds-greenhouse-in-springville-thursday-workers-t=
+here-start-in-july-planting-8000-pots-of-the-mexican-plant ) to change thes=
+e restrictions with no luck.
+
+Some growers feel embittered that a plant with deep native roots is now pat=
+ented and controlled by foreign entities: Today, across the border, poinset=
+tismo is used as a derogatory term to describe a person who is arrogant and=
+ intrusive.
+
+But on US soil, the market =E2=80=94 and the name =E2=80=94 isn=E2=80=99t l=
+ikely to change.
+
+=E2=80=9CNothing says it=E2=80=99s Christmas time like a poinsettia,=E2=80=
+=9D says Wenke. =E2=80=9CAnd I think it=E2=80=99ll be that way for a long t=
+ime.=E2=80=9D
+
+Share & discuss this story on:
+
+Site (https://thehustle.co/how-the-poinsettia-took-over-christmas?_hsenc=3D=
+p2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmE=
+HZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+YouTube (https://www.youtube.com/@TheHustleChannel?_hsenc=3Dp2ANqtz-95LgnS0=
+a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LS=
+rrHT_ovRVg&_hsmi=3D395167577 )
+
+LinkedIn (https://www.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz-95Lg=
+nS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y=
+7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+Instagram (https://www.instagram.com/thehustledaily/?hl=3Den&_hsenc=3Dp2ANq=
+tz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVh=
+BatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+Today's email was brought to you by Katherine Laidlaw (https://x.com/klaidl=
+aw?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlz=
+ElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) , Mark Dent (http=
+s://x.com/mdent05?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E=
+5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) , =
+and Zachary Crockett (https://x.com/zzcrockett?_hsenc=3Dp2ANqtz-95LgnS0a7aa=
+VTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT=
+_ovRVg&_hsmi=3D395167577 ) , with help from Kaylee Jenzen.
+
+Was this email forwarded to you? Sign up here (https://thehustle.co/join/?u=
+tm_source=3Dthehustle&utm_medium=3Demail&utm_campaign=3Dfooter&_hsenc=3Dp2A=
+Nqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZF=
+VhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) .
+
+Subscribe to our other newsletters
+
+Expert insights: Masters in Marketing (https://blog.hubspot.com/masters-in-=
+marketing-subscribe?utm_source=3Demail&utm_campaign=3Dhustle&utm_medium=3Df=
+ooter&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1q=
+KlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )   |   Stay up-=
+to-date on AI:  Mindstream
+
+(https://www.mindstream.news/?utm_channel=3Demail&utm_source=3Dhustle&utm_m=
+edium=3Dfooter&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og=
+9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 )
+
+Follow The Hustle on YouTube (https://www.youtube.com/@TheHustleChannel?_hs=
+enc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_n=
+Fz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) , LinkedIn (https://www=
+.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3l=
+L08A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=
+=3D395167577 ) , and Instagram (https://www.instagram.com/thehustledaily/?h=
+l=3Den&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL08A6sG9dKxMj8E5Og9hpMZse1=
+qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D395167577 ) .
+
+HubSpot Media, 2 Canal Park, Cambridge, MA, 02141, USA, +1 888.482.7768
+
+Never want to hear from us again? Break our hearts and Unsubscribe (https:/=
+/media.hubspot.com/hs/preferences-center/en/page?data=3DW2nXS-N30h-z4W3X-lQ=
+x4fxqqFW3jfXHZ3ZvjRWW4mn0ky2TRHpwW36g9Vd3Cjv20W3K96S32MVqsPW36d2lC2vSTZCW2-=
+rGvq3_K9xbW4klVvt3QQpFBW3K7zjT4fjPJJW2Cwmqv47vFN4W384nM53g1hytW3T49Xc32y_H0=
+W45XF3G2KFK5kW3GSt9C1LCmDjW41D36m2CsxthW2sZwft3h-wZgW4hJt384phD0PW3dx3MV1Z7=
+6BVW3dvpHn4mC495W4t5BNB2xQJcvW2sT4WT49vLSCW258Jm63XMkS-W3JFTN44ms52wW2nBxzf=
+38sKS1W238B2T3ZGtqYW2HBDHg3JXQH2W41DpnD2MR33_W45TLrr3SPnHtW1Z0lCp30b_79W3_B=
+D-J3QZnqQW2THNbG3K75xYW1XlX5n1QxHdfW2-tRfR2Wq3tVW2nZ5Sd2sDfwVW4tf89F4rwpqGW=
+4pKxlR3LRGg5W3VtXYQ3ZMB4TW3zcDGy1XbcMPW3F5PQw4fhDdMW3P7Xqw2360N5W23ryNF3bzp=
+p-W2YGBZY3X-PldW2Rs-nc2r4stvW36w22M49z7fjW346pKC4mb0X_W3VRLJR1_7k1hW22TKcy4=
+hy7pnW3zjbP_2TsjWgW1Y-NJC25001cW3GK0pr45MWPvW2WDGCb3-0D0GW30tZVF38wfyrW1W-w=
+km1Bdtb6W1QyXFS4pqJ9ff1X9knt04&_hsenc=3Dp2ANqtz-95LgnS0a7aaVTqseNm1PKOI3lL0=
+8A6sG9dKxMj8E5Og9hpMZse1qKlzElSS_nFz-UmEHZFVhBatrO7y7LSrrHT_ovRVg&_hsmi=3D3=
+95167577 ) .
+------=_Part_1508119_2135570611.1766314466524
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>How the poinsettia took over Christmas</title>
+    <meta property=3D"og:title" content=3D"How the poinsettia took over Chr=
+istmas">
+    <meta name=3D"twitter:title" content=3D"How the poinsettia took over Ch=
+ristmas">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #FFFFFF;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://media.hubspot.com/how-the-poinsettia-took-over-christmas-2=
+025"><meta name=3D"robots" content=3D"noindex,follow"><!--[if !((mso)|(IE))=
+]><!-- --><style type=3D"text/css">@media only screen and (max-width:639px)=
+{img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stretch-cta .hs-=
+cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #eaf0f6 !important;border-right:1px solid #eaf0f6 !important;box-sizing:=
+border-box}
+.hse-border-bottom-m{border-bottom:1px solid #eaf0f6 !important}.hse-border=
+-top-m{border-top:1px solid #eaf0f6 !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-4{max-width:200px !important;width:200px !impor=
+tant}
+.moz-text-html .hse-section .hse-size-8{max-width:400px !important;width:40=
+0px !important}
+.moz-text-html .hse-section .hse-size-12{max-width:600px !important;width:6=
+00px !important}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-4{=
+max-width:200px !important;width:200px !important}
+.hse-section .hse-size-8{max-width:400px !important;width:400px !important}=
+.hse-section .hse-size-12{max-width:600px !important;width:600px !important=
+}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section_1766081182701 .hse-column-container{background-color:transparent !=
+important}
+#section_1766081182701 .hse-column-container{background-color:transparent !=
+important}
+}@media only screen and (max-width:639px){ #section-0 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-0 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-1 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-1 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-2 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-2 .hse-column-container{background-color:#fff !important} }@media =
+screen and (max-width:639px){.social-network-cell{display:inline-block}
+}@media only screen and (max-width:639px){ #section-3 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-3 .hse-column-container{background-color:#fff !important} }@media =
+only screen and (max-width:639px){.hse-body-wrapper-td{padding-bottom:20px =
+!important}
+#section-4 .hse-column-container{padding-top:0px !important;padding-bottom:=
+0px !important}
+#section-4 .hse-column-container{background-color:#fff !important} }</style=
+><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_main a[x=
+-apple-data-detectors]{color:inherit !important;text-decoration:none !impor=
+tant;font-size:inherit !important;font-family:inherit !important;font-weigh=
+t:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}
+.ShadowHTML p,.sh-modified-inline p{margin:0}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#FFFFFF" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Helvetica, Arial, sans-serif; font-size:16p=
+x; color:#192733; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#FFF=
+FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">The story of America=E2=80=99s favorite holiday plant is rife=
+ with international politics, spoiled trade secrets, and a toppled monopoly=
+.</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#ffffff" bgcolor=3D"#ffffff">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-brea=
+k:break-word; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1766081182701" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1766081182701_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17660812360231" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hm" style=3D"color: inh=
+erit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div style=3D"font-size: 14px; text=
+-align: center; line-height: 140%;">
+  <em>
+ =20
+    <span>You've got 3 referrals, just 2 away from earning a Hustle candle.=
+ Check out all of our <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d=
+2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQs2-ZW0W50kgx26lZ3ngV2lxZ=
+x4BrJTHW3ty0pj3ktjqVW5d7sgM2YMZsDN1jHXjmtTn5LW27T1TN7MtL1HW4rLWcq5cSH45VnR8=
+VN3-9TCQVwM-pw3Bz4k-W4NQ0-Y12PL8vW41G6vW6kLPdWW77-36C1p_sgTW3nDhnx3STvf4V_C=
+Dqj3YQs4LW5gHQft98FN1sW2SkW5D5N9gzWW7jdfkW3dBJn1f1WLKQg04" style=3D"color:#=
+192733; text-decoration:underline !important" data-hs-link-id=3D"2" data-hs=
+-link-id-v2=3D"v9PpzLyj" target=3D"_blank">prizes here</a>.</span>
+ =20
+ =20
+  <br>
+    <span style=3D"font-weight: bold; color: #bf2434;">Share your link:</sp=
+an>
+   =20
+      <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2r=
+PQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQM2-ZW0W5BW0B06lZ3nLVll0ly1nG_7GW3YsYx05R=
+-Ln6W2hfGS-27dr2FW7rydn152LLdwW2Mq1Sm1gsMjjVjLsnJ5fp1BjW21YgsB2s-QN5W8703r8=
+5pBlJ7W3WbHV27Zd-n8W5N0bDq3PbRx6W2gmGQZ4V4d48W3LJdCw1qJL9sW3FXqNs8tW_jkW64L=
+N5P60spjVW2vLLL_52TdnkW8-bhtJ66fdBVW6-x4nP6jKW1dVM9mPR1cQHY6dVgz0804" style=
+=3D"color:#192733; text-decoration:underline !important" data-hs-link-id=3D=
+"1" data-hs-link-id-v2=3D"Zygo4LuM" target=3D"_blank" data-contains-exactly=
+-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+ =20
+  </em>
+</div></div>
+<!--[if !mso]><!--><div id=3D"hs_cos_wrapper_module_17660814007382" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hd" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;display:n=
+one" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div s=
+tyle=3D"font-size: 11px; text-align: center; line-height: 130%">
+  <em>
+   =20
+      <span style=3D"font-weight: bold; color: #bf2434">Share The Hustle:</=
+span>
+      <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2r=
+PQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQM2-ZW0W5BW0B06lZ3mtW1-T0-n7HDwSLW7R-2Ls2=
+6hnN1W6x7wTG4z4nYdW7KhCM95KBH3DW692yCN45-DzMW2pXGQZ89WnhWW5MtgLV3SzQV7W8Gq-=
+g15PX8l_W6x68VB4GbD80W5gffhT9jR8dQVsG83C1LrfF9W556wcg77kW6qW46YZZM6qZrBcM_t=
+DK0Kq1T2W5ffQBx3KDyzDW7tPJjC302ZlnW1Dj5ys4NM0tVW4JVgT642qw4_f8F-fZP04" styl=
+e=3D"color:#192733; text-decoration:underline !important" data-hs-link-id=
+=3D"2" data-hs-link-id-v2=3D"dQWh244K" target=3D"_blank" data-contains-exac=
+tly-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+  </em>
+  <br>
+  <span>
+    Check your referral progress &amp; prizes <a href=3D"https://media.hubs=
+pot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQ=
+M2-ZW0W5BW0B06lZ3pGW6LqCCy5_-ynXW1bMx6f5JQGYHW1xdYtZ8HymK-W59t4-f8sCDpVVbl3=
+wR3hwv_RN4bTSW4Cvx5NW2vw-Tx4fBh82W5GHGxq8TTbJ6W2VN66f1P6dPBW3sS3qy87q1GHW6F=
+rjqp7w587dW5ByX3821ylCwW7klXnf4Jl2QZW8DpsS995P0-XW6lWT5V2Q0hvHW3-NGrL87RqrK=
+W5_7WV23LnKGGW46ntp81m0CxLf8PnZdd04" style=3D"color:#192733; text-decoratio=
+n:underline !important" data-hs-link-id=3D"3" data-hs-link-id-v2=3D"T/hBDVG=
+M" target=3D"_blank">here</a>
+  </span>
+</div></div><!--<![endif]-->
+<div id=3D"hs_cos_wrapper_module_17660811826992" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><div style=3D"overflow:hidden">
+  <table role=3D"presentation" class=3D"hse-pre-header hse-secondary" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"text-align:right; fo=
+nt-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496=
+d; margin-bottom:0; padding:0" align=3D"right">
+    <tbody>
+      <tr>
+        <td align=3D"right" valign=3D"top" style=3D"color:#192733; word-bre=
+ak:break-word; text-align:right; font-family:Arial, sans-serif; font-size:1=
+2px; padding:10px 0; margin-bottom:0; line-height:135%">
+          <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJ=
+Jl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQs4ZwpbW50kH_H6lZ3kVW8N7NPL8Y8XjjW3m4=
+nST4s5xxYW25LXK16-CP02W4RMVy72r4RJ_T5H3n7tb4snN6x1_k6W49NdW375J3g3gP94tW2pp=
+W2m7HdGF8W1-1D-Q8cr6L9W5MDhsn2YW4S1V4QMQp6tn3f3V_MBtJ4msQLYW5Xv8zv278Nw-W8r=
+yHm9762d0WW7qC6fP6bg2cWW1yMBS73ljBYVW3XnBTX3_2PgvW92l49s84cxb5V-gMcS2Ln2LmW=
+28JFd-88bSGzW2h6k4N8gztfXW1mqvqT8sCq6yV7dGYK3jRmJNW8S7rfs1J0WMnW7nXttf967_q=
+2W1l099b8ydb-mW8YTB8X6tTYqkW87TcJH16yKK8N5tDfv17ZzkWW33xKWJ12hJ8mN2SfNr2KD2=
+rFN42R7q-tKrgrf6pLVjd04" style=3D"color:#192733; font-weight:normal; text-d=
+ecoration:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-link-=
+id-v2=3D"kJJdgPOJ" target=3D"_blank">View in browser</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-0" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container hse-no-stack-row" style=3D"min-wid=
+th:280px; max-width:600px; margin:0 auto; border-collapse:separate; display=
+:table; width:100%; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" class=3D"hse-no-stack-row" width=3D"600=
+" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"400" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:400px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-8 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:400px; width:66.66%">
+  <div id=3D"hs_cos_wrapper_module-0-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;table-layout:fixed" data-hs-cos-general-typ=
+e=3D"widget" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper"=
+ role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"left" valign=3D"top" style=3D"font-family:Helvetica, Ari=
+al, sans-serif; color:#192733; word-break:break-word; text-align:left; padd=
+ing:10px 20px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl=
+2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQs2-ZW0W50kgx26lZ3kXW68B21j93gnJMW92ffX=
+B79fGYRW6DWFhY6fSVJpW5GZDjf7KXLdBW8kBw7z9lQ69CN47h_jwPntbLW6xdvGp4Wc5TlW6Xh=
+7pw5MBbgPW7g9Stm5-8ZlMW5qxxgd2SQFshW5lBS7553qFB7MS6kG-LDCQyW2_qLRD6MPBlLW8-=
+c48D5yq9G-W262jPj1KkcJ6W2dflvs56XKsBf1H4d_F04" target=3D"_blank" style=3D"c=
+olor:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"lAmjrZBz">
+        <img alt=3D"The Hustle by HubSpot Media" src=3D"https://media.hubsp=
+ot.com/hs-fs/hubfs/Critical_Template_Imagery/TheHustle_HSMedia_white_logo-p=
+ng-1.jpeg?width=3D360&amp;upscale=3Dtrue&amp;name=3DTheHustle_HSMedia_white=
+_logo-png-1.jpeg" style=3D"outline:none; text-decoration:none; border:none;=
+ max-width:100%; font-size:16px" width=3D"180" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"200" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:200px">
+<![endif]-->
+<div id=3D"column-0-1" class=3D"hse-column hse-size-4 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:200px; width:33.33%">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D"table-layout:fixed"><tbody><tr><td style=3D"f=
+ont-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; wor=
+d-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-0-1=
+-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module-0-1-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_=
+cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; li=
+ne-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"line-height:125%; font-weight:bold; text-align:r=
+ight" align=3D"right"><span style=3D"color: #ffffff;">Issue #375</span></p>=
+</div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-1-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentat=
+ion" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; color:#192733; word-break:break-word; text-align:center; =
+padding:0px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl=
+2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXR22-ZW0W69sMD-6lZ3kGW3hsCGf2C4wbgVtccsC=
+4qV36CN5RG-1ffHR-yW9g8W-N2jVD9mW25lxvS8cVFg_W2MW-yJ63FlT3W3byF975W1skqW3Z9h=
+RL1bN-gnN5c9b_DtZFTWW5ThJh23PfBnFW4scGvN66QNnHW3mjgPF1MYm7dVBGH568yL5MFW4dw=
+c-c5smYqnVQstsK35NRPZW66L1966_dp3tW5M_CND1qYyZkN7L7W0jRSgMGW8S3tGh1ZKSXnW3d=
+NnfX2fj3_Yf8WVXzC04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link=
+-id=3D"0" data-hs-link-id-v2=3D"1HFZjKup">
+        <img alt=3D"poinsettia-flowers-gif" src=3D"https://media.hubspot.co=
+m/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Dec%2021%202025/po=
+insettia-flowers-gif.gif?width=3D1200&amp;upscale=3Dtrue&amp;name=3Dpoinset=
+tia-flowers-gif.gif" style=3D"outline:none; text-decoration:none; border:no=
+ne; max-width:100%; font-size:16px" width=3D"600" align=3D"middle" class=3D=
+"stretch-on-mobile">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-1-0-=
+1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_co=
+s_wrapper_module-1-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_c=
+os_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; lin=
+e-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D=
+"rich_text"><p style=3D"line-height:125%; text-align:center; font-weight:bo=
+ld" align=3D"center"><span style=3D"color: #ffffff;">Sunday, December 21, 2=
+025</span></p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-2" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-2-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-2-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module-2-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos=
+_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-=
+height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"r=
+ich_text"><h1 style=3D"margin:0; font-size:30px; line-height:125%">&nbsp;</=
+h1>
+<h1 style=3D"margin:0; font-size:30px; line-height:125%"><span style=3D"col=
+or: #192733;">How the poinsettia took over Christmas</span></h1>
+<p style=3D"font-size:18px; line-height:125%">&nbsp;</p>
+<p style=3D"font-size:18px; line-height:125%"><span style=3D"color: #192733=
+;"><em>The story of America=E2=80=99s favorite holiday plant is rife with i=
+nternational politics, spoiled trade secrets, and a toppled monopoly.</em><=
+/span></p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold">&nbsp;</p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold"><br><span s=
+tyle=3D"color: #192733;">BY <a href=3D"https://media.hubspot.com/e3t/Ctc/UB=
++113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQs2-ZW0W50kgx26lZ3m=
+0W7XmvXJ4T4jd9W5VLRfJ2VTmKbVgFG4T6XvW-dW3JbmqX8QpbqqW3Rc5nc423pJhW6q21j_97X=
+rVCW1mH17_75gd9fN1j4h7hdtYzyW1N82gD1yr7C1W9fRyNB3vJHd_W2zbrQc46ZKWYW8S6kDr8=
+wGnQgN5PXDgtFc8kMW9d16Wz5q5q9ZVY_ch_3X-dVBW2WwbJf5bHdr8f2wZ_gC04" style=3D"=
+font-weight:bold; color:#192733; text-decoration:none !important" rel=3D"no=
+opener" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"CAzB/nO2" target=3D"_bl=
+ank">ZACHARY CROCKETT</a></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The poinsettia plant is a ubiquitous Christma=
+s staple.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Every year, just after Thanksgiving, it emerg=
+es en masse at nurseries, big-box retailers, fundraisers, and holiday parti=
+es.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It=E2=80=99s one of the most popular plants i=
+n the world, with annual sales of <span style=3D"font-weight: bold;">~90m u=
+nits</span> and a global retail impact of nearly <span style=3D"font-weight=
+: bold;">$1B</span>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But behind the beautiful, blood-red bracts of=
+ the poinsettia, there=E2=80=99s a story rife with geopolitics, patent wars=
+, a dethroned monopoly, and complex supply chains.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">How did this Mexican shrub become America=E2=
+=80=99s best-selling holiday plant?</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">To find out, <em>The Hustle</em> talked to po=
+insettia growers, breeders, salespeople, and historians.</p></div></div></t=
+d></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-1" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl=
+2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQM2-ZW0W5BW0B06lZ3l1W14Pynr2dKxycV-VrPH=
+5rRZ7VW8SvV5T6qltXrW3bG0NS7VV0s_W55vmZL4nRyPcN5yqrNgSkjs1W8Z8FR58QgvV0W8rSv=
+XX3x-cGjW7ysgsj7rVLM-W2TRkc-8LbZWYW3Q-13-2B5b4DW9fM8Vt6R2qhQW8F1gqm28MvRlW2=
+gYB3r2gqggwW5JW_vc6LjZPPW2t7rrr5sFl6wW5Zg1ds7k2xqGW4qM_9J2VBQZ-f890G3F04" t=
+arget=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link=
+-id-v2=3D"FZ/fuKVd">
+        <img alt=3D"poinsettias_youtube_thumbnail" src=3D"https://media.hub=
+spot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Dec%2021%20=
+2025/poinsettias_youtube_thumbnail.png?width=3D1160&amp;upscale=3Dtrue&amp;=
+name=3Dpoinsettias_youtube_thumbnail.png" style=3D"outline:none; text-decor=
+ation:none; border:none; max-width:100%; font-size:16px" width=3D"580" alig=
+n=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-2_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%">&nbsp;</p>
+<h2 style=3D"margin:0; line-height:125%; font-size:18px"><strong>Deep roots=
+</strong></h2>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Indigenous to Southern Mexico, the poinsettia=
+ (or <em>cuetlaxochitl</em>) was <a href=3D"https://media.hubspot.com/e3t/C=
+tc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXRF2-ZW0W7lCdLW=
+6lZ3kGVQn38k1ZzK0sW24v-KK5psvQ0MJ6GMt1NkFyW1_KGfx3fgy_3W80ccSf2T1NfyW7yQD6v=
+2Bg6zNW7nvQ4544D0ThW8H2xKJ4q9fX5W5vpGfV8k2LBcW8jcf8F7vYT7mN5xVDWLThZK9W6FcR=
+LV6gNlZrW1fRRkz8c9SBsW4RFZyv165dH_N6PGB7Bn7-jYW83NqJ38Y4jtnW2TGCFb3Wt0LvW2k=
+JrRh8G2PppW7j0l8D96MQ0CW3d9rp57R169cW2hS-Pd6vWsqgVFlBkp5bjm0MW9j05Fn1KdyGfN=
+4spw3K81JNYf6hvzvR04" target=3D"_blank" rel=3D"noopener noreferrer" style=
+=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Q4wxp1W+">fi=
+rst used</a> by 14th-century Nahua people for dye and medicinal purposes.</=
+p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The plant=E2=80=99s brilliant red bracts =E2=
+=80=94 which are leaves, not flowers =E2=80=94 were so revered by the Aztec=
+ emperor Montezuma that thousands of them were transported to the high-alti=
+tude capital of Tenochtitlan each winter.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">After Spain <a href=3D"https://media.hubspot.=
+com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXRY4Zw=
+pbW7Y9pgv6lZ3pyW46pb1y8sCTCcW2LdyvB3kHTpWW5Kbddp3FPMhhW6FnH_h7yn3BBW6XsJzs7=
+9dPh2W128XkZ9cp35bW3dX7t33tXp0GW5c1Yym2g4jYcW67RjRD7JM_QVN7tB_NJBR-FdW5wlHf=
+r4Xh789W6fcJNh5k-9n0W7jpPcW9krwl5W717pL25QLWmPW3B1TTJ2vRn05W3p5bjb91qr7LW5j=
+4Sd28XrL28W64v_5859T-ydN1kNblJRD2XjW2wr7L05zKxRqW2r7H7D8NKwZhW4Yf9v65n2DKcW=
+7zW2Md66BtjsW8LH_Bf7PQrWrW7jpyfr5VcZ_KW9dqsRx8JfcVmW758r9_40g9ljW2rDnB_8FT7=
+-dW6f-tGD8N7VJyW7mhJFw6-FmG4W69yVYy6CL4RtN1Nnthg2C5B5W75QKhq6ZjVBwW3nhT4G83=
+ZN67N12lr7M6cV44W4hnZCM1fJL1vW8KmW9P3f4qjTW2-kcVZ9hynvjW8v8P247Zfkv7W4bnlK9=
+1s_zYyN1lKpmnWqL8HW4tcmfr1RdgyZf68NZMd04" target=3D"_blank" rel=3D"noopener=
+ noreferrer" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-=
+v2=3D"ueqaNr/k">colonized</a> Mexico, Franciscan monks dubbed the plant <em=
+>flor de Nochebuena</em> (=E2=80=9CFlower of the Blessed Night=E2=80=9D) an=
+d began to showcase it in annual Christmas processions.</p></div></div></td=
+></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-3" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A botanical illustration of a poinsettia from 1836, sho=
+wing its large, vibrant red bracts and dark green leaves on a single stem."=
+ src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/D=
+aily%20Images/Dec%2021%202025/taxonomic_illustrations_of_the_poinsettia.png=
+?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dtaxonomic_illustrations_of_the_=
+poinsettia.png" style=3D"outline:none; text-decoration:none; max-width:100%=
+; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-4" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-4_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">One of the first-known taxonomic il=
+lustrations of the poinsettia (Curtis=E2=80=99s Botanical Magazine v.63; 18=
+36)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">For the next few centuries, the plant was cul=
+tivated and celebrated in Mexico =E2=80=94 yet it remained obscure to the r=
+est of the world.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Then, along came <strong>Joel Poinsett</stron=
+g>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Poinsett, a wealthy Southern Unionist and sla=
+ve owner, was appointed as the first <a href=3D"https://media.hubspot.com/e=
+3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXR22-ZW0W69=
+sMD-6lZ3k-N7J1xZgZ24L3W2L95Cw6wR_DKW53X-PM784jxPN5NvRFBHh2MtW8TTJhP7dstqqW8=
+ZYD_c1hr7DDW1VzkrV6lKcx8W3kM-gv8TZ8KbW2jf7Qp1FwyvCW47JnTx3NCTwzW79RG1M5Jkz1=
+YW356MQF4GGzxtW6C5JFp4pnD2XN19csBfWpTlxN3GNrBTStk3fW74LyXw311J-lW1vnm3f61xr=
+lZW4QygVG51f73FW6x3NxX2kWPQjW1L05M76S-KDkf4Pt3hY04" target=3D"_blank" rel=
+=3D"noopener noreferrer" style=3D"color:#192733" data-hs-link-id=3D"0" data=
+-hs-link-id-v2=3D"komPam0q">US minister to Mexico</a>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">While there, he failed in an attempt to purch=
+ase Texas and <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/=
+VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXR22-ZW0W69sMD-6lZ3k-N8y9Y867yKnFV=
+HZtD89l6DkGVYBn2w3WPx6GW1lvh3Z3QQJhhW3VM-rT6cfs-bW8mTQjG5xCmpLW4dM6H17_11Py=
+N6JHQGWSXrMCW1js0kl2lGwCJW1qHMMh4mXhmgW1PstpC365tGLW4sth7C8lTDgjVq8q5q2MkGj=
+YW86slQL2QXN1sW2l9SNZ15kqDQW79kfjZ8gvQCWW3JZ46s8LNyMYW1GBycH6H2Q3dW35vhTq2B=
+Cl3HW4BYZGF5kpDvWf7nhmbW04" target=3D"_blank" rel=3D"noopener noreferrer" s=
+tyle=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"U4KRkjBw=
+">became</a> a persona non grata for meddling in the country=E2=80=99s inte=
+rnal affairs.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But on a trip to the Southern town of Taxco i=
+n 1828, just before he was he recalled, he encountered the <em>flor de Noch=
+ebuena</em> and was so struck by it that he shipped specimens back to the U=
+S.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The plant =E2=80=94 which eventually became k=
+nown to Westerners as the =E2=80=9Cpoinsettia=E2=80=9D =E2=80=94 made its p=
+ublic American debut at a flower show in Philadelphia and quickly became th=
+e talk of the town.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In news reports at the time, it was described=
+ <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW=
+7JK80z6p4Z2sVmLt1V5HkyHtN5wYXRl2-ZW0W6N1vHY6lZ3nlW4ryrNQ5w-sB3W7fdR9N6p0M92=
+W6mM_Gl5z9W0TW8tTB5x5Tr9_zVmZRFC63V6LxW14Wr265_5jzKW7CJX3G2TZ69LW4gYm0t1VvY=
+ktVpVk7F2gdgMYW7zWm_J5vdZ80W83qmlD6dgXQXN4mDJd8rMhT4W8rGHFX2V_Fv1W4wbsvM2RG=
+4_TVZHcb18G4Jw1W17d1wR24DTFbW8WCYrN31_bvbW5gfQn58k0M1dW15ZYn62z5SKlW7pZLpg5=
+hS5ShW4-llr41k2j7-W24FCB791GRYWf41KS6804" target=3D"_blank" rel=3D"noopener=
+ noreferrer" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-=
+v2=3D"OBmuwlkY">as</a> =E2=80=9Cthe showiest flower to yet be seen=E2=80=9D=
+ and praised for having =E2=80=9Cthe most brilliant scarlet [leaves] ]ever =
+produced in the vegetable or mineral kingdom.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">By the end of the 19th century, nurserymen we=
+re growing and distributing poinsettias for <strong>~$0.25</strong> ($8 tod=
+ay) at local markets.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-5" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl=
+2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQM2-ZW0W5BW0B06lZ3kVW2z5Y6r8wmbZTW3nKSx=
+S7YXYvyW7yFcW151mn4xW6hW-Yy6W4DvdVd47gB5VvvRHW4b2ppk3TC1shW6Gr25T55KFwjW8hC=
+vFw6767JKVZKsXW6c_m_xW8nHcMg1VM8c9W2-5JXS1X7T14W6D7lgb9brXYHW3nl7Pj43ZWz2Ts=
+4J86RZwTTW7y7xPX4S16JWW6Kt7G021TW6bN3Gtg0r_J7PxW5lpT1K31PntCf7fBP_l04" targ=
+et=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id=
+-v2=3D"8cbhhUdd">
+        <img alt=3D"A portrait of Joel Roberts Poinsett superimposed over a=
+ background of red poinsettias." src=3D"https://media.hubspot.com/hs-fs/hub=
+fs/Daily%20Newsletter%20Images/Daily%20Images/Dec%2021%202025/Joel%20Robert=
+s%20Poinsett.png?width=3D1160&amp;upscale=3Dtrue&amp;name=3DJoel%20Roberts%=
+20Poinsett.png" style=3D"outline:none; text-decoration:none; border:none; m=
+ax-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-6" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-6_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Joel Roberts Poinsett (Library of C=
+ongress, Charles Fenderich; photo illustration by The Hustle)</span></em></=
+span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But several things worked against the poinset=
+tia as a commercial entity.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CPerhaps no other plant or flower we =
+handle=E2=80=A6 is short-lived, wilts quicker, or is more disappointing to =
+those who receive it,=E2=80=9D <a href=3D"https://media.hubspot.com/e3t/Ctc=
+/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXRl2-ZW0W6N1vHY6l=
+Z3lCW53h7sP3tTrz9VVtKDy3SyybLW4SRfS57Z2jnfW5pmBfK5V7ZT5W79WK7H2W_rn7W8Cddts=
+42Y3P0W4S_1f65jH2NdN3fmFdQJY5wXVL01LX5KKTrYW3MP1bX1RBMcwW9fJdQ815XSfxW7Ltjf=
+Q2bQDQqW1cXGqS4HHw1nW3kx1vb4mK1YkN23y1K7wpW1zW3GD2BQ32w8l9W46lFGG3jwksxN3lZ=
+8c0zsXv9W8jrgTp1J8vcdV1xmyq927Bq6W4vrf5v16F_VlW5-RqLK6qfhMhf2wll8M04" targe=
+t=3D"_blank" rel=3D"noopener noreferrer" style=3D"color:#192733" data-hs-li=
+nk-id=3D"0" data-hs-link-id-v2=3D"pS+JMdx4">wrote</a> Fritz Bahr, an early =
+floriculturist.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The plant would only last 2-3 days =E2=80=94 =
+and its weak disposition meant that it couldn=E2=80=99t readily be transpor=
+ted en masse.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It would take an enterprising family with a k=
+nack for marketing to help the poinsettia realize its full saleable potenti=
+al.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<h2 style=3D"margin:0; line-height:125%; font-size:18px"><strong>The =E2=80=
+=98poinsettia prince=E2=80=99 and the rise of a monopoly</strong></h2>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In 1900, a German immigrant named Albert Ecke=
+<strong> </strong>packed his bags for Fiji, where he intended to open a hea=
+lth spa.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">En route, he made a pitstop in Los Angeles an=
+d chose to settle there instead =E2=80=94 a decision that would change the =
+trajectory of agricultural history.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Ecke and his family established a dairy farm =
+and a fruit orchard before eventually selling cut flowers, including poinse=
+ttias. By 1909, the poinsettias were selling so well that he made them the =
+focus of his entire business.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">His son, <strong>Paul Ecke</strong>, assumed =
+the business in the 1920s and moved the operation to Encinitas, 25 miles no=
+rth of San Diego.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Ecke soon developed secret breeding technique=
+s that vastly improved the durability and aesthetics of poinsettias.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In the wake of the <a href=3D"https://media.h=
+ubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5w=
+YXR22-ZW0W69sMD-6lZ3kzW8KVmt34cCVcWVk8Rmb7jFVyWW2KVF1R4TNtcgN7KZCmZWYRM2W6V=
+tQnr3B096BW77b_dk6LGwvdMB0CtgjMHsfW6L2vvd5v1rfYW6Zt16Y1nfwSyN7K9s9Nxf_1WW4J=
+PCDV3NNg98VkXVwl2vgLfDW4hvk4Z3vyYN1W1j21S359fCybW25qmzW9491LJMrJLGHV5BV5W1S=
+xwJD7gVpp1W55h6hP2l9Wc0W4srRGd7gBYLYW8rqMgC7XjKXdf6fQgjj04" target=3D"_blan=
+k" rel=3D"noopener noreferrer" style=3D"color:#192733" data-hs-link-id=3D"0=
+" data-hs-link-id-v2=3D"6ef2fcP1">Plant Patent Act of 1930</a>, which allow=
+ed breeders to protect their new cultivars, he registered dozens of his cre=
+ations, staving off competitors and copycats.</p></div></div></td></tr></tb=
+ody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-7" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A photo of Paul Ecke Sr. standing among a dense harvest=
+ of red poinsettia plants." src=3D"https://media.hubspot.com/hs-fs/hubfs/Da=
+ily%20Newsletter%20Images/Daily%20Images/Dec%2021%202025/Paul_Ecke_Sr_%20po=
+insettia_harvest.png?width=3D1160&amp;upscale=3Dtrue&amp;name=3DPaul_Ecke_S=
+r_%20poinsettia_harvest.png" style=3D"outline:none; text-decoration:none; m=
+ax-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-8" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-8_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Paul Ecke Sr. with some of his harv=
+est (The Paul Ecke Ranch, Inc. Business Papers and Family Records, via CSU =
+San Marcos archives)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The specifics of Ecke=E2=80=99s prized breedi=
+ng technique =E2=80=94 which he acquired from an amateur German gardener =
+=E2=80=94 were guarded with the intensity of the Coca-Cola recipe.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CNobody at the ranch knew the secret,=
+=E2=80=9D his grandson, Paul Ecke III, later told the <em>Los Angeles Times=
+</em>. =E2=80=9CMy grandfather, my dad, and their breeder knew, and it was =
+done at the breeder=E2=80=99s home so nobody could see.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The result was a fuller, hardier plant with m=
+ore branches =E2=80=94 a product equipped to endure the tribulations of con=
+sumerism.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">At the same time, under the leadership of Eck=
+e=E2=80=99s son, Paul Jr., the company marketed the plant as the premier Ch=
+ristmas decoration, sending free samples to women=E2=80=99s magazines and m=
+aking the rounds on prime-time TV programs like =E2=80=9CThe Tonight Show.=
+=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">By the 1990s, the family was selling<strong> =
+500k+</strong> potted plants, and more than <strong>25m</strong> cuttings =
+=E2=80=94 baby sections used to produce new plants =E2=80=94 to other growe=
+rs on a royalty basis.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">At its peak, the company had a virtual monopo=
+ly on the US poinsettia market, maintaining a <strong>90% market share</str=
+ong> and 150+ <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/=
+VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXR22-ZW0W69sMD-6lZ3n1W97s7jV45zfms=
+W1pHyDH5lxgpLVLGzRC87ChRmW9b2bpx1mq_06W3mKl6r5Cy6g6N8GnNKyq9g8dVBdP0n1ndd_P=
+W3LgS5r5vZQPhW1VkV1K46R8_bN8xT8lJY8hkHW6F6wQ04CRsZsW2pC02755NCPVW27Qv5n4FpB=
+CxV7cyzZ44CNg7DP_VgNVxvTW3dVDrc5jf_ZmW6gvL2h6vbjb9W51XR-t2Nz_l0W55djhY5dbSz=
+lW4MCjlZ1CwQdRf7Rm-jM04" target=3D"_blank" rel=3D"noopener noreferrer" styl=
+e=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"bJfFvhIl">p=
+atents</a>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CThe Eckes of Southern California are=
+ to poinsettias what De Beers of South Africa is to diamonds,=E2=80=9D one =
+reporter later proclaimed.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">While competitors popped up, none could chall=
+enge the exposure, prominence, and rich IP of Ecke Ranch.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">That is, until the worst possible scenario ca=
+me to fruition.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-9" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Top: Three generations of the Ecke family=E2=80=94Paul =
+III, Paul Sr., and Paul Jr.=E2=80=94posed together in a greenhouse. Bottom:=
+ An aerial view of the Paul Ecke Ranch in Encinitas with flower fields in t=
+he foreground." src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%20Newsle=
+tter%20Images/Daily%20Images/Dec%2021%202025/Ecke_Family_and_ranch.png?widt=
+h=3D1160&amp;upscale=3Dtrue&amp;name=3DEcke_Family_and_ranch.png" style=3D"=
+outline:none; text-decoration:none; max-width:100%; font-size:16px" width=
+=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-10" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-10_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Top: Three generations of the Eck=
+e family (left to right): Paul Ecke III, Paul Ecke Sr., and Paul Ecke Jr. (=
+The Paul Ecke Ranch, Inc. Business Papers and Family Records, via CSU San M=
+arcos archives); Bottom: Paul Ecke Ranch in Encinitas (Tripadvisor)</span><=
+/em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In 1992, a graduate student named <strong>Joh=
+n Dole</strong> got his hands on an Ecke cutting and managed to reverse-eng=
+ineer the company=E2=80=99s top-secret process =E2=80=94 a method that invo=
+lved grafting together 2 poinsettia plants.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">His <a href=3D"https://media.hubspot.com/e3t/=
+Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXRl2-ZW0W6N1vH=
+Y6lZ3lXW6ytJhW4NY5gYW1yKrXF3bmTnCN721znFbBqf9W2tVFHR711t6jN8GnL--QdNsYW5nNn=
+L55ST14_W7msCdr3QR_zZW7yHDd_5qLW8LW5ZT9Cr3q1BHMW8pg8bZ436Y56W9kSsm34jWkYJN8=
+Fr0x4fY62dW4wG6-P4HM_P1N3yf-ckYrmQQW27ZW7r7wB0cZW17l4BT6lYK6PW4d6vYR6rmt73N=
+3H1ksH_lWsRW6H1Gxq94pH6XW1C-mts3_XnmgW1DfPRM56yDgHN14JcvCw9QPyf772d0j04" ta=
+rget=3D"_blank" rel=3D"noopener noreferrer" style=3D"color:#192733" data-hs=
+-link-id=3D"0" data-hs-link-id-v2=3D"559cmCEK">published findings</a> compl=
+etely upended the poinsettia industry.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CYou don=E2=80=99t often see a situat=
+ion in science where one paper makes a serious impact on the market,=E2=80=
+=9D Dole, now an associate dean at North Carolina State University, told <e=
+m>The Hustle</em>. =E2=80=9CBut in this case, it really did.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Competition flooded in, sparking a =E2=80=9Cg=
+olden age=E2=80=9D for poinsettias:</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The industry=E2=80=99s main focus shifted fro=
+m cultivation to breeding, and dozens of <strong>new color variations</stro=
+ng> popped up =E2=80=94 hues of white, yellow, neon green, and pink =E2=80=
+=94 with names like =E2=80=9CPremium Picasso=E2=80=9D and =E2=80=9CMonet Tw=
+ilight.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Big-box retailers</strong> also began=
+ to change the dynamic of the market.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CIn the earlier years, poinsettias we=
+re mostly sold at independent garden centers and were thought of as an upsc=
+ale plant,=E2=80=9D says Dole. =E2=80=9CBut when the mass marketers started=
+ selling them, that perception changed.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Home Depot, Lowes, and Walmart began purchasi=
+ng vast quantities of poinsettias and selling them as <strong>loss leaders<=
+/strong> for as little as <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+1=
+13/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXRl2-ZW0W6N1vHY6lZ3nBW=
+2pM08j3n52FjW64d_Hq90BrVhW1mqSp17FQFr6W6DsFtd8jy6M8W2Fh1C-4FYQ23W1Qzdbl3ZrG=
+k5W1sxBCz8bF61hW1zJQy82Z5yq3N19NzF3LS7_9W7M-cg54t82D0W76KMk_1XRMZ5W8bpKJ56W=
+WM1ZN7T-pZ-6t7ynVnNqz_5Q5x2PW66Dk9M54J7_SW2P_V9r5k9RPLN7RrcflkYwj-W8P5yhW45=
+GCfJVz2tbN4HSvDtW7jKm7J1kSclLW1PJDZ87FbSC0W1W19cn585KDZf1cc5C-04" target=3D=
+"_blank" rel=3D"noopener noreferrer" style=3D"color:#192733" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"t2N/BvjR">$0.99</a> each.</p></div></div></td=
+></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-11" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A dual-axis chart showing poinsettia sales and units fr=
+om 1975 to 2005. Units sold (bar) peaked around 60m in 2000, while dollar s=
+ales (line) rose to nearly $250m." src=3D"https://media.hubspot.com/hs-fs/h=
+ubfs/Daily%20Newsletter%20Images/Daily%20Images/Dec%2021%202025/poinsettia_=
+sales_in_US.png?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dpoinsettia_sales=
+_in_US.png" style=3D"outline:none; text-decoration:none; max-width:100%; fo=
+nt-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-12" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-12_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Zachary Crockett / The Hustle</sp=
+an></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">These changes pressured growers to ruthlessly=
+ cut overhead expenses to compete, eventually ushering in an era of consoli=
+dation. Giant agriculture firms snatched up smaller outfits and <strong>shi=
+fted production overseas</strong>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">After slowly watching its monopoly decline, E=
+cke =E2=80=94 the one-time king of poinsettias =E2=80=94 <a href=3D"https:/=
+/media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5=
+HkyHtN5wYXRl4ZwpbW6N1X8z6lZ3lzW1R1-bf8zKGMXW14V_sz45tTX2W1LryDs4VtBq7W8zwFV=
+55nyHRhW8t1zwN6N85fcW4L97ql1GmyX1V_zWfz3-Vg9GW2wdJ2Z80FqDNW4Ykkqd42sgsmN8ZR=
+n3QWphnDF3vHHB9K2XSN8RPPM46NYd7N6H6HXv8NdCtW1GCFWd6PkY6ZW3F5WRd6qKQQRW4X30K=
+163wYH9W2kjqKG19h4V-W80GF7h11twGVW87TZzw94YTHcW9cHWmq2g-swBN4X4ldzNzHT-W57D=
+HC_8pSbzKW5zvHxt4qB-q0W22nt654b5pz_W7Mq9f24BhSYZW2sDdbb2Y0WRMW8jGNp67N3srlW=
+1NcLNK3xWk0HW63wP-S82ZQt1W1jdz5_5kcdHPW2NywYN48y_dMVdHvPZ7XMSkbW2blHx95ZlHd=
+cN94wq7NWdwZxW3Q5RfB449X7SW4-CHSF2lv0JzW31blWZ2jZYnrV5HwHn4z0Mfkf5PRd8004" =
+target=3D"_blank" rel=3D"noopener noreferrer" style=3D"color:#192733" data-=
+hs-link-id=3D"0" data-hs-link-id-v2=3D"YLmjcEpD">sold its business</a> to a=
+ Dutch conglomerate in 2012.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It marked the end of an era =E2=80=94 and the=
+ beginning of a new, highly complex, international pipeline.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<h2 style=3D"margin:0; line-height:125%; font-size:18px"><strong>The modern=
+ economics of poinsettias</strong></h2>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Today, Ecke is owned by <strong>D=C3=BCmmen O=
+range</strong>, one of the largest plant breeders in the world.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Rebecca Siemonsma</strong>, who worke=
+d at Ecke from 2004-2012 and now oversees D=C3=BCmmen=E2=80=99s poinsettia =
+operations, tells <em>The Hustle</em> that the company sells around <strong=
+>50m </strong>of the plants each year =E2=80=94 more than half of the world=
+=E2=80=99s supply.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In other words, it=E2=80=99s likely that the =
+poinsettias you see at your local Home Depot come from D=C3=BCmmen.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The journey of a poinsettia plant looks somet=
+hing like so:</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-13" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"An infographic outlines the poinsettia supply chain: Ce=
+ntral American cuttings are shipped to US stations , rooted , grown for 4 m=
+onths , and sold via retail agreements." src=3D"https://media.hubspot.com/h=
+s-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Dec%2021%202025/suppl=
+y_chain_poinsettia_plant.png?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dsup=
+ply_chain_poinsettia_plant.png" style=3D"outline:none; text-decoration:none=
+; max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-14" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-14_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Zachary Crockett / The Hustle</sp=
+an></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">According to Dole, the horticulture professor=
+, <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6r=
+W7JK80z6p4Z2sVmLt1V5HkyHtN5wYXRY2-ZW0W7Y8-PT6lZ3lVW5g04FW6GQ954W8gmHP15rGvc=
+bW6Ll70b2kF7L9W7lmGdz51SCYYW8xKgqw5yjLcrW460Ybn9dKXVbW97cKyD5PT6LVW5MksXk56=
+LRxTW3697BF7FT3hkW5cc4SH23X3_nW1mPX1t5N9xkKW1h6rH73fC1NLW8X1bGp4F4vnBW3kM8l=
+_4MybDSW1L_WfN1hrxM_W3QDQkn21DlCdVrmbXr1VCyhwN1fXQNsdRCHhN60WZcVbXFBQW39zFw=
+_2Zdwf7W3y5p-P5GJqNBW56Mznh1FxfJsW9hCLK53m5_-xN61vWm4KX9Q8W3RHxWs8k_0Q2V--X=
+R24ht4v-dsYcjH04" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"co=
+lor:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"5xirnxvz">soil reg=
+ulations</a> prevent the importation of potted poinsettias. Only cuttings a=
+re permitted =E2=80=94 so the final stages of growing still happen in the U=
+S at major greenhouses.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Cuttings only sell for <strong>~$0.30</strong=
+> each, but large firms like D=C3=BCmmen make money by selling millions of =
+them at a time.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CPoinsettias are a <strong>low-margin=
+, high-volume </strong>business,=E2=80=9D says Siemonsma. =E2=80=9CThey=E2=
+=80=99ve become somewhat of an inexpensive commodity in the horticulture in=
+dustry. But on a unit basis, they=E2=80=99re still near the top.=E2=80=9D</=
+p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">This can make the economics a bit tricky for =
+growers.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">For most growers, poinsettias aren=E2=80=99t =
+a huge money maker; they=E2=80=99re usually thrown into the mix for several=
+ practical reasons:</p>
+<ol style=3D"line-height:125%">
+<li>They=E2=80=99re the rare plant that can be grown during the late summer=
+ months, and they allow growers to mitigate some of their fixed overhead co=
+sts during an otherwise stagnant season.</li>
+<li>They allow growers to keep labor employed year-round, rather than just =
+during the busy spring months.</li>
+</ol>
+<p style=3D"line-height:125%">Average wholesale prices for poinsettias have=
+ remained stagnant for several decades. Adjusted for inflation, they=E2=80=
+=99ve declined considerably.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-15" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A line graph comparing actual vs. inflation-adjusted wh=
+olesale prices for poinsettias from 1990 to 2020. The inflation-adjusted pr=
+ice (dashed line) shows a steady decline from $8 to nearly $4.44." src=3D"h=
+ttps://media.hubspot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Im=
+ages/Dec%2021%202025/Avg_wholesale_price_poinsettias.png?width=3D1160&amp;u=
+pscale=3Dtrue&amp;name=3DAvg_wholesale_price_poinsettias.png" style=3D"outl=
+ine:none; text-decoration:none; max-width:100%; font-size:16px" width=3D"58=
+0" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-16" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-16_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Zachary Crockett / The Hustle</sp=
+an></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But poinsettias have remained lucrative for s=
+ome.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Wenke Greenhouses is one of the 30 largest gr=
+eenhouse operations in the US, with several million square feet of crops in=
+ Michigan and Georgia.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The company started growing poinsettias in th=
+e mid-=E2=80=9980s. Today, it produces <strong>~200k</strong> annually, whi=
+ch are sold wholesale to Walmart, Lowes, churches, and fundraisers.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CWe=E2=80=99ve had 2 great years,=E2=
+=80=9D says <strong>Lorence Wenke</strong>, the company=E2=80=99s long-time=
+ owner, who recently passed the business on to his daughter. =E2=80=9CPeopl=
+e are staying indoors and plants are thriving across the board.=E2=80=9D</p=
+>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Kevin Koeppler</strong> is the genera=
+l manager at Sunbelt Greenhouses, a subsidiary of Wenke Greenhouses based i=
+n Douglas, Georgia, where the poinsettias are grown.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In a large spreadsheet shared with <em>The Hu=
+stle</em>, he broke down what the poinsettia sector of the business looks l=
+ike on the back end:</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-17" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A cost breakdown table for a single poinsettia, showing=
+ Total Costs ($5.52), Avg. Wholesale Price ($7.25), and Profit ($1.73). To =
+the right, an illustration of Santa Claus holding a stack of poinsettias." =
+src=3D"https://media.hubspot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Da=
+ily%20Images/Dec%2021%202025/poinsettias_cost_breakdown.png?width=3D1160&am=
+p;upscale=3Dtrue&amp;name=3Dpoinsettias_cost_breakdown.png" style=3D"outlin=
+e:none; text-decoration:none; max-width:100%; font-size:16px" width=3D"580"=
+ align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-18" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-18_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Zachary Crockett / The Hustle</sp=
+an></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Those are far better margins than most in the=
+ business =E2=80=94 but Koeppler says there are a myriad of things that can=
+ go wrong along the way.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CThere are always a few unexpected th=
+ings that come up in agriculture,=E2=80=9D he says. =E2=80=9COne pest infes=
+tation might set you back $60k and wipe out most of your margins.=E2=80=9D<=
+/p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">COVID and ongoing supply chain issues have al=
+so put a dent in Koeppler=E2=80=99s usual process.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">For instance, he used to import coconut coir =
+=E2=80=94 the fibrous coconut husks inside shells =E2=80=94 from Indonesia =
+to mix into his soil. But in recent years, he=E2=80=99s had to ditch it bec=
+ause shipping costs have ballooned from $2.1k to $21k per container.</p></d=
+iv></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-19" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Workers at Sunbelt Greenhouses in Georgia tending to a =
+vast, floor-level crop of blooming red poinsettias." src=3D"https://media.h=
+ubspot.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Dec%2021%=
+202025/poinsettias_Sunbelt_Greenhouses_Douglas_Georgia.png?width=3D1160&amp=
+;upscale=3Dtrue&amp;name=3Dpoinsettias_Sunbelt_Greenhouses_Douglas_Georgia.=
+png" style=3D"outline:none; text-decoration:none; max-width:100%; font-size=
+:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-20" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-20_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">A fresh crop of poinsettias at Su=
+nbelt Greenhouses in Douglas, Georgia (Sunbelt Greenhouses)</span></em></sp=
+an></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">One faction who feels they=E2=80=99ve been le=
+ft out to dry in this booming poinsettia market is Mexican growers.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Though Mexico sells <a href=3D"https://media.=
+hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5=
+wYXRY2-ZW0W7Y8-PT6lZ3nSW3RxN702bT8XmW2rvRxZ4QMCYWW8gNh5d6Pgg4NW5bqLfY6mCHY0=
+W691QqB1JYfSJW6x1j9c4cj9w7W4-9PP_8CtZSdW8NtyG_1QWP7nW5TkcD55KbJM6W5ghgVk74k=
+BHXW4nCSH-8tPgx0W93Hr5N40q7_cW7ZFx7t6YpRXkW8Rp7gX32gMc5W2rc2hD9lmZJzW8gk36_=
+5x8knhW87qKdY4Y5yD1W7HnD5j6S7VnnW42vBqj3z3v34W91LTzG1r9HnDW3yrjCj4xhkdrW2d5=
+0pL40X-ynW3DtB0M24fQMlW4GlTR-4KhqvlW3DNMDR7fFr5HW5fSCDk11DQg0f1DZ8N204" tar=
+get=3D"_blank" rel=3D"noopener noreferrer" style=3D"color:#192733" data-hs-=
+link-id=3D"0" data-hs-link-id-v2=3D"nBd9btqA">~$12m</a> worth of poinsettia=
+ cuttings to the US market every year, a century-old <a href=3D"https://med=
+ia.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyH=
+tN5wYXR22-ZW0W69sMD-6lZ3mLV4WRPz7n0yXgW5n-Sqq8CYqglW5wJF5t6Fb_rgW57BlXh95WW=
+Q2W3M33hb35LZY0W7-ch3r6m2TnkW4D-J2P5_qrTgW2g6s9L9jNM9tW3K2mtY79s47SW7LN5cy8=
+3FDB4W6yj9ZN82t8vrW1rSsmX4wLCv2W8N3Jm_6wFrM6W2Z60n43hy-_kW1_ChSc7_gG4vW7tkk=
+PC4TkRZxW5dXWf06SL_XTW7566v54wkk7wW3YL-mc3nF61mW8G5Ygx3CzHgZf4_swcl04" targ=
+et=3D"_blank" rel=3D"noopener noreferrer" style=3D"color:#192733" data-hs-l=
+ink-id=3D"0" data-hs-link-id-v2=3D"7ZPFxw5M">foreign soil restriction</a> p=
+revents the country from selling its own native plant in potted form to US =
+consumers. The Mexican Embassy has <a href=3D"https://media.hubspot.com/e3t=
+/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXSd4ZwpbW8wM7=
+ks6lZ3lSW1qpdbl4T2fdjVRSnwj8DhNc6N9gpGBqZYZbRN4dtTM7zyCFGVchh59888WgPW948St=
+76VYl-7Vr_Zrs59WR4VW1v_Cw06qxMjNN2CkVHCSbbxqW9kPv6h2dVVJbN5tv7dBhVLd7W815wZ=
+C4MHFW8N7lW926wMyWMW3NbpKj4F9yb4N7VqG2DGMdKSW5g96B46N50nxW7WTf641BnB5YW3tG3=
+vM14k8Y_W8M12736BzJqfN5vfR-0bmW6fW2sxjbV9fnHyLW6Vzk3b6kcs7FW32Lmq15Mfjm2W7B=
+BRq31VmC5BW82Qgn759CmQyN7rz0mjWZ6z9W4knyH490LMzJW5DJx_h2x1nzzN3ZsW8l-qfXbM2=
+QLkWnwLmHW8Y7zNt5lgM_zW2603GB3SS765W73SSdc6x8RjlW6PZKBP33KXVyW9hMxSS592DtyV=
+mChBp3k-XxyW1tz1Bh8_1XrbW8_htv54xhgVXW2VhRjB7csHvyMFgJs-lLt1ZW38fcL34gt1cCW=
+3h642S7l69BsW14fPRm5P_tV9W8bjyFF39gwmXf7S1Np604" target=3D"_blank" rel=3D"n=
+oopener noreferrer" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-l=
+ink-id-v2=3D"yvHXoeaQ">lobbied</a> to change these restrictions with no luc=
+k.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Some growers feel embittered that a plant wit=
+h deep native roots is now patented and controlled by foreign entities: Tod=
+ay, across the border, <em>poinsettismo</em> is used as a derogatory term t=
+o describe a person who is arrogant and intrusive.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">But on US soil, the market =E2=80=94 and the =
+name =E2=80=94 isn=E2=80=99t likely to change.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CNothing says it=E2=80=99s Christmas =
+time like a poinsettia,=E2=80=9D says Wenke. =E2=80=9CAnd I think it=E2=80=
+=99ll be that way for a long time.=E2=80=9D</p></div></div></td></tr></tbod=
+y></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-3" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-3-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"non=
+e" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align=
+:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px"><div id=3D"hs_cos_wrapper_module-3-0-1" cla=
+ss=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" styl=
+e=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos=
+-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrap=
+per_module-3-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wra=
+pper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-heig=
+ht: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_=
+text"><p style=3D"text-align:center; font-size:26px; line-height:150%" alig=
+n=3D"center">Share &amp; discuss this story on:</p></div></div></td></tr></=
+tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-3-0-=
+2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"p=
+resentation" align=3D"center" style=3D"width: auto; text-align: center; mar=
+gin: 0 auto; " class=3D"hs_cos_wrapper_type_social_module">
+  <tbody>
+    <tr>
+      <td class=3D"social-network-cell" align=3D"center" style=3D"font-fami=
+ly:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-break:=
+break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXR22-ZW0W69sMD-6lZ3l0W2j_kjY3ShX=
+lsW8n7_Cl4Nv4LHW70TsGJ4NJPfNW2K85_C18W6mHW8BWBnK28R-QHW3fPMN92J_H7WW48K42n2=
+SX3L3W3hJsxP8wyYC6N6JFBZwMH5q1W9gSdl67QK6xYVJyRMj49Bgb8W78pF0F40vc9kW8pKS2G=
+3T3wp7W17F2bD3n7D8dW2RTChG4JdsS0W8vVbcj80SlSbW8t5H-48v2yLLW3nVNGF7ss6QlW6s9=
+6yQ8Mg6BwW5jK4QJ1hLrVJf6tGbgd04" style=3D"color:#00a4bd; text-decoration:no=
+ne !important" data-hs-link-id=3D"1" data-hs-link-id-v2=3D"BSzH6WI/" target=
+=3D"_blank"><img src=3D"https://media.hubspot.com/hs-fs/hubfs/Critical_Temp=
+late_Imagery/H.png?height=3D80&amp;upscale=3Dtrue&amp;name=3DH.png" alt=3D"=
+Site" height=3D"40" style=3D"outline:none; text-decoration:none; border:non=
+e; width:auto!important; height:40px!important; vertical-align:middle" vali=
+gn=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQM2-ZW0W5BW0B06lZ3n4W6VWm793WgT=
+lZN6hrq612vTVKW4yC0Gw3q9Q68W6GXflb2zRLJ5W6M93Pv7SfYVZW46lg-w94SBVHW6v-y5p5x=
+YRN0W3v4JWn6CKlZrVfJKTB7JjCRLW7Q0kPs8p-wsBN1l5S4Ljvm0kW4D6mPv5f8Sf7W52wrQX2=
+nQs1JW4wcb_J6jkjhGW2wb9j94bCwrgW7BLMdB6rPz-rN54MvPY3DRFtW6f7rV7391Vy4f5bplj=
+C04" style=3D"color:#00a4bd; text-decoration:none !important" data-hs-link-=
+id=3D"0" data-hs-link-id-v2=3D"BhKHpnJa" target=3D"_blank"><img src=3D"http=
+s://media.hubspot.com/hs/hsstatic/TemplateAssets/static-1.262/img/hs_defaul=
+t_template_images/modules/Follow+Me+-+Email/youtube_circle_color.png" alt=
+=3D"YouTube" height=3D"40" style=3D"outline:none; text-decoration:none; bor=
+der:none; width:auto!important; height:40px!important; vertical-align:middl=
+e" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQM2-ZW0W5BW0B06lZ3ltW2VhLbC3H5c=
+ynW4Zvxxr4dPz_YW2n5TY85W4XKnW91YT386mzk7bW39WZS28qM5plW1fp1Mx5R79k4W8bPy5b6=
+BFvWFW56B0jj3zW68tW1Vqrk17nD0CQW6B1vYf7KRdj1W94VkJD9hBwh0N5xX02hn93f4W1wNw1=
+b95T_dBW8BSSw745HY4yW60k4py1l3V-PW7gzGwL8rXTxTW7xwwFl7Kdc6YW6VZHSg7-qMvFf6P=
+r38x04" style=3D"color:#00a4bd; text-decoration:none !important" data-hs-li=
+nk-id=3D"0" data-hs-link-id-v2=3D"hMx6vuQx" target=3D"_blank"><img src=3D"h=
+ttps://media.hubspot.com/hs/hsstatic/TemplateAssets/static-1.262/img/hs_def=
+ault_template_images/modules/Follow+Me+-+Email/linkedin_circle_color.png" a=
+lt=3D"LinkedIn" height=3D"40" style=3D"outline:none; text-decoration:none; =
+border:none; width:auto!important; height:40px!important; vertical-align:mi=
+ddle" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf0=
+4/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXR22-ZW0W69sMD-6lZ3ljW5d03X82SNG=
+1sW2BjRJG4Sv0WkW8S6lLf41f236W1Qf8Td8X0g0-W1crVJV6KhgN3N92n9FTK55qsW6kbSjd6C=
+sBCBW9d9Tpg63g4myW6gQ1JC6k5sN8VSPj1t1l1kzyW5_YDVf7ZRTrBW3j2Ppt34V1wXW85G5G2=
+7D554xW4FdScf3H_h7gW3G9c_M5M4fFDVmqr6N7tpY_QW1KrKkx22X3NqV9P0BC5YS1ymMtT70x=
+dcSm1W8ZGT_r1dhhq8f911Kds04" style=3D"color:#00a4bd; text-decoration:none !=
+important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Bzlwbvlf" target=3D"=
+_blank"><img src=3D"https://media.hubspot.com/hs/hsstatic/TemplateAssets/st=
+atic-1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/instagr=
+am_circle_color.png" alt=3D"Instagram" height=3D"40" style=3D"outline:none;=
+ text-decoration:none; border:none; width:auto!important; height:40px!impor=
+tant; vertical-align:middle" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-3" cl=
+ass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" sty=
+le=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-co=
+s-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"none" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align:to=
+p" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-4" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-4-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:5px 10px"><div id=3D"hs_cos_wrapper_module-4-=
+0-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modu=
+le" style=3D"color: inherit; font-size: inherit; line-height: inherit;" dat=
+a-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_=
+cos_wrapper_module-4-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs=
+_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; l=
+ine-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"text-align:center; font-size:14px; line-height:1=
+25%" align=3D"center"><span style=3D"font-family: Helvetica, Arial, sans-se=
+rif;"><span style=3D"color: #192733;">Today's email was brought to you by <=
+a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7J=
+K80z6p4Z2sVmLt1V5HkyHtN5wYXQs2-ZW0W50kgx26lZ3kyVRCx9w8PjjQ7W3BhgnJ4VXTzDW5m=
+Mq-N8hnHDlV_W5NJ6n0mHlW7r0qTN7xSqMrW4JJfCz38TNR9W3LHpnm6tTClHW8527Pp2H9jXlW=
+8ZFbXY2NtcsWW9lG4kc6xFF16W5kKClP9l2_7RW4VLhxs3GDK_7W4xfDjW7CZN4RW3C1Kcv6vCR=
+YLVWHLwV2pH7-rW3Vlmcs4WccV9f3KdL5q04" rel=3D"noopener" style=3D"color:#1927=
+33" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"oE73l/qS" target=3D"_blank"=
+>Katherine Laidlaw</a>, <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113=
+/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQs2-ZW0W50kgx26lZ3m9W7N=
+Rm2R1bgmZcW2D7nv12K-tt2W6dMDBP2sz80dW7vxqsF3VJBCQW2l0Gwr1tX1zFW99dXCH712ynn=
+N7X1s13S58YyW47Dpjz4671QLW7pxWmC8fP7nsW3Y0q7t8x1-tVN39shcvnZbM0W219k1V6nSt9=
+1W763J8J8YCCZqVqHS3M9938DjW1wvMPt5pm0WkW1y6QJL3bMgh9dg9H1204" rel=3D"noopen=
+er" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"dEM=
+dBBbn" target=3D"_blank">Mark Dent</a>, and <a href=3D"https://media.hubspo=
+t.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQs2=
+-ZW0W50kgx26lZ3m5N8ZH5g_cMNrkW90y0_B7jSPlLW1pbKsm6HYdS9W5qP_0R8npBZCW5yfj8F=
+48pRfgW7xYv2S6gYVCQW6djqZ_4_YNsvW1Dx4Yk7tWfmgW8ZhLBH839fGBW6NV7fB8hDH78N23D=
+TlKJC1XcW3gk_Xh6WdJmNW8R2Jq63qb8pwW1xMSxg6j37R9N6sfD469jQ4JW3zlBB92WkQZwf4s=
+qx4M04" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"1" data=
+-hs-link-id-v2=3D"yNQl0aGU" target=3D"_blank">Zachary Crockett</a>, with he=
+lp from Kaylee Jenzen.</span></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter">&nbsp;</p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-family: Helvetica, Arial, sans-serif; color: #00=
+0000;"><span style=3D"color: #192733;">Was this email forwarded to you? Sig=
+n up <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rP=
+Q6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXRF2-Z-MW7lCdLW6lZ3p7Vx3w3k8B2VYgW5frjxB11L=
+KDtW6JDr5F935yLLW1x_t3K6__mBnW99LG2W3Hf6gvW2D84bz8cKHX0W4M_74k1-xw_7W10NMg9=
+4yByT6W4Mfz0d5jyCfcW8ytDl-6HW03YW8c4LCT7hHgSdW5-fkFj6RBWLKW3K5vP84V1BMCW2lq=
+LYW8StG4FW19lLlk9dSc0MW6y9L7627Z-NpN7rWZ7NWf0kfW7RYsZH1T7bz0W6z4CD93VHsRHW3=
+zVQJS6czT2bW4zyqvm13qlx1W9bnx-b4277FDW6M_cvg6G6W6-W3qRR9D1Ysc3Vdz-4YH04" re=
+l=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-i=
+d-v2=3D"nmcX5Hpp" target=3D"_blank">here</a>.</span></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;"><br><strong>Subscri=
+be to our other newsletters</strong><strong><br></strong>Expert insights: <=
+a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7J=
+K80z6p4Z2sVmLt1V5HkyHtN5wYXRl3hCZYW6N1vHY6lZ3n6W2h-k6w2jKTryW5nc9Ld7rcrhFW6=
+5gkt57dwLvqW5tmVjy7rd_JdV28Pdl58n6bHW8fpH4Y8L8ddGW8LhSf096n7RfW6RlKLp6T7y77=
+W6xmnwt1_G7HnW4vz7jc8w6FMwW8JQcNl7MS-k_W8X7Bbk5Zfkd8VnNDxj4RS7W1VcJm_14Dnyc=
+qN9jWyq2pc2nVW3LQtF940FNprW799vSm389xWBMmKdMtNdqHXW1tdcTp4t_3n9W4qWs_22m87s=
+0W4vbNFN46rx8-W5Bq18z90nNFKf1Jmvtv04" style=3D"color:#192733" rel=3D"noopen=
+er" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"x5vRlAoK" target=3D"_blank"=
+><em><span style=3D"text-decoration: underline;">Masters in Marketing</span=
+></em></a>&nbsp; | &nbsp; Stay up-to-date on AI: <a href=3D"https://media.h=
+ubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5w=
+YXR23dh8WW69sMD-6lZ3p5W48JMmp1W9__tW5tymgK4_qdCMW9chtT76gsWf0W7cGkFz7CzR4FW=
+6Cvy0L7T-GBkVldvgx25cYNWV7GP-24XvrnZW1HzLsf3S-32QW6t7l1p9j3gnVVYh66K7R8CVkN=
+7dkYVrpB1rKW4Nlx0K3NzLp6W5tz_-b6fgX3_W2T0M8L8R_0gWW39Ghm671Kd-MW2MlRWJ2_Hy_=
+PW6L6B-J5Ph4VmW5lhjBV48DmSKW4WF1Jb2-j19LW50RDxl7ND-Rbf5VkFLq04" style=3D"co=
+lor:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"fB+Qb5IE" target=
+=3D"_blank"> <em><span style=3D"text-decoration: underline;">Mindstream</sp=
+an></em><em><span style=3D"text-decoration: underline;"><br><br></span></em=
+></a></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;">Follow <em>The Hust=
+le</em> on <a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/VXd=
+JJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQM2-ZW0W5BW0B06lZ3pbW2jmzPq6T6_7hW5m=
+2MtJ295G8tW8GWRyN1m9KH0W5Ryv_d1JzhxDW2VYCCC3mZFxHW9bjzwt5clVYLW1b624v2DVWTW=
+W7r1_r29d43gNW8GdfRd6bbxnRW3HnxK98vrL32VCHDYz4CfznmW7Rb4xy8B24SCW1GKNbq5hML=
+fjW951YKh8sW6-bMn_STGySMMvW44GZpR2QbNJPW7qFXlT668PCnW3dMX2q6x2-mHf5Z_50404"=
+ style=3D"color:#192733" rel=3D"noopener" data-hs-link-id=3D"1" data-hs-lin=
+k-id-v2=3D"e97Sa5iX" target=3D"_blank"><span style=3D"text-decoration: unde=
+rline;">YouTube</span></a>,&nbsp;<a href=3D"https://media.hubspot.com/e3t/C=
+tc/UB+113/d2q-Vf04/VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXQM2-ZW0W5BW0B0=
+6lZ3lVW6rxSlB6rv5B1W7bbPvG3ZvTdpW84QLj644HBS2W7DwHVF1QVkfgW5wJ8L32nmYwSV8gq=
+X-50lPrYW4BnJWm22kYCHW2-tVRH7g6WpmW23rmv21_K_PkW2j96SZ8h8gH0W8PKgF_2Z2K99W9=
+hrlfb44czWyW1HCKS78h379SW5vsHHG8rJqrkW6xpwBs61Ds2_N4lbyfMXBXfKN6Pb8Js6htZKW=
+1DSvZD8kF4Lzf2MW5hF04" rel=3D"noopener" style=3D"color:#192733" data-hs-lin=
+k-id=3D"1" data-hs-link-id-v2=3D"w0Kb7DPn" target=3D"_blank">LinkedIn</a>,&=
+nbsp;and&nbsp;<a href=3D"https://media.hubspot.com/e3t/Ctc/UB+113/d2q-Vf04/=
+VXdJJl2rPQ6rW7JK80z6p4Z2sVmLt1V5HkyHtN5wYXR22-ZW0W69sMD-6lZ3l1W65tV6t9f68z_=
+W7_mtGc4HhJpSW66VQF21vfxRsW5Mjv_T5QKTP0W8KPj2q57CKvhW7dlkgG6MgKL9W6VzkGS8P1=
+_K1W2pWLMx4QXcnWW8VJ4DB7YNgCjVq6MGc2cXkhfW8ZTXf62cgY1DW1Q-hsZ7vjc-YVQhqgn98=
+_S0KW8-5KNQ9hwNtwW6W6vKW80xpMfW6PVkhx66-KswW3zYTkr4t9g-bW7bs6ZM5PGr5KMsqwtW=
+zQVLmW3QCdk66Y8pZDf2KF5wb04" style=3D"color:#192733" rel=3D"noopener" data-=
+hs-link-id=3D"1" data-hs-link-id-v2=3D"SS6chJVN" target=3D"_blank"><span st=
+yle=3D"text-decoration: underline;">Instagram</span></a>.</span></p></div><=
+/div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:0px 5px 10px"><div id=3D"hs_cos_wrapper_module-4=
+-0-1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mod=
+ule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" da=
+ta-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"presentation" class=3D"hse-footer hse-secondary" width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-serif; font-s=
+ize:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; font-size:16px; color:#192733; word-break:break-word; tex=
+t-align:center; margin-bottom:0; line-height:135%; padding:10px 20px">
+          <p style=3D"font-size: 11px; line-height: 150%; font-weight: bold=
+;"><span style=3D"font-family: Helvetica, Arial, sans-serif;">HubSpot Media=
+, 2 Canal Park, Cambridge, MA, 02141,&nbsp;USA, +1 888.482.7768</span></p>
+<p style=3D"font-size: 11px; line-height: 150%; font-weight: bold;"><span s=
+tyle=3D"font-family: Helvetica, Arial, sans-serif;">Never want to hear from=
+ us again? Break our hearts and <a  href=3D"https://media.hubspot.com/hs/pr=
+eferences-center/en/page?data=3DW2nXS-N30h-z4W3X-lQx4fxqqFW3jfXHZ3ZvjRWW4mn=
+0ky2TRHpwW36g9Vd3Cjv20W3K96S32MVqsPW36d2lC2vSTZCW2-rGvq3_K9xbW4klVvt3QQpFBW=
+3K7zjT4fjPJJW2Cwmqv47vFN4W384nM53g1hytW3T49Xc32y_H0W45XF3G2KFK5kW3GSt9C1LCm=
+DjW41D36m2CsxthW2sZwft3h-wZgW4hJt384phD0PW3dx3MV1Z76BVW3dvpHn4mC495W4t5BNB2=
+xQJcvW2sT4WT49vLSCW258Jm63XMkS-W3JFTN44ms52wW2nBxzf38sKS1W238B2T3ZGtqYW2HBD=
+Hg3JXQH2W41DpnD2MR33_W45TLrr3SPnHtW1Z0lCp30b_79W3_BD-J3QZnqQW2THNbG3K75xYW1=
+XlX5n1QxHdfW2-tRfR2Wq3tVW2nZ5Sd2sDfwVW4tf89F4rwpqGW4pKxlR3LRGg5W3VtXYQ3ZMB4=
+TW3zcDGy1XbcMPW3F5PQw4fhDdMW3P7Xqw2360N5W23ryNF3bzpp-W2YGBZY3X-PldW2Rs-nc2r=
+4stvW36w22M49z7fjW346pKC4mb0X_W3VRLJR1_7k1hW22TKcy4hy7pnW3zjbP_2TsjWgW1Y-NJ=
+C25001cW3GK0pr45MWPvW2WDGCb3-0D0GW30tZVF38wfyrW1W-wkm1Bdtb6W1QyXFS4pqJ9ff1X=
+9knt04&amp;_hsenc=3Dp2ANqtz-8vEYAoUCDywbk-tRa2rOBHYEI187C0mm2HBSrIBgmjY_gfB=
+aGVayMyAY4e2SZ5a-A9FdKDDesa9arxV0QJv2LNoMhWHQ&amp;_hsmi=3D395167577" rel=3D=
+"noopener" data-unsubscribe=3D"true" style=3D"color:#00a4bd" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"kDnPxijp" target=3D"_blank"><span style=3D"co=
+lor: #192733; text-decoration: underline !important;">Unsubscribe</span></a=
+>.</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://media.hubspot.com/e3t/Cto/UB+113/d2q-Vf04/VXdJJl2rPQ6rW=
+7JK80z6p4Z2sVmLt1V5HkyHtW5wYXBr3D35Mg192" alt=3D"" width=3D"1" height=3D"1"=
+ border=3D"0" style=3D"display:none!important;min-height:1px!important;widt=
+h:1px!important;border-width:0!important;margin-top:0!important;margin-bott=
+om:0!important;margin-right:0!important;margin-left:0!important;padding-top=
+:0!important;padding-bottom:0!important;padding-right:0!important;padding-l=
+eft:0!important"></body></html>
+------=_Part_1508119_2135570611.1766314466524--
+

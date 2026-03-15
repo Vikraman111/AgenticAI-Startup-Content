@@ -1,0 +1,2243 @@
+Delivered-To: shyams07@gmail.com
+Received: by 2002:a17:522:b38d:b0:64a:133e:e77c with SMTP id g13csp1227791pvz;
+        Sun, 1 Feb 2026 02:44:57 -0800 (PST)
+X-Received: by 2002:ad4:5d62:0:b0:894:8311:d3f2 with SMTP id 6a1803df08f44-894ea0e55efmr122970276d6.55.1769942697314;
+        Sun, 01 Feb 2026 02:44:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1769942697; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kTVMCp8ZjjuKB7Pz/BeI0x53Mf3ulnZ7cCs4z5LF/SDRHrHPf1oDz8sepk+ceXs/n8
+         YhiBIA5jEKUAqBGRosJhydNd0WzQZJT7WcRnyJ4DFLTiBXjIpTB71P16ewZm07zrZHyd
+         EWpAwpwwYORM+DM40OO0+3iuHe2KbfwctO5dDJcj70YaE879B4gWEtZYu1ME0YCGpNqt
+         Q+S4qjFjR9XUeY/Y9hMdRIeo/paYuNkmEH5UxDdOLOuif5eeT6C9YMgSSJJbMmVkKuOj
+         grI7gmuuOiu4jkhrQEwRBOSV8uBm49Np160U6et0yyxfadAzgrvzFDqp26WOB1lBQDuJ
+         cbug==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:precedence:mime-version:subject
+         :message-id:to:reply-to:from:date:list-unsubscribe:dkim-signature
+         :dkim-signature;
+        bh=Sg/nCCcFnSIvP8ekO1NVuALLWNhQARQl2SC9+mZbwXk=;
+        fh=L9Pq+drjbGeEtrAQNZSRmpxQ+ME9iXW0EGrUbR1eMas=;
+        b=Ip3jMUPUDtkX/hYb0s3KM/80ECc/BnqAfYkYCNm+VDlInsqfActotqcDgyd39OzY2z
+         9/b6Ln3nRnVEYBl2KWCU00AIhyPqvf23XilVDgmD8giNKEDVhDty+beOcXxOLlXWGRM+
+         I25llk0DlfOpGPmAG+7nRnzwI3mn9DlvGJqy4GKKTPTjGNSzjTtHTKt1PxGRr3dD/f6d
+         R/T/vKmQ1CB7Cl+bIh7SJeMzNp6h0rlnITUmgLYCqNB4dxqll+7iJn3ow50rGQY2tYOE
+         y6oLZ9kjA1D3Vk+CapBbNwI++EmUWrthstBlXADeq+NlW7mFpBxYN8G3shjNJdkpFgqi
+         e9VA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs1 header.b=xxL4ZHYg;
+       dkim=pass header.i=@thehustle.co header.s=hs2-20627419 header.b=XYJj0duN;
+       spf=pass (google.com: domain of 1axbwxfkjc6namnefxwatb78sp0o6z9somuxqu-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.187 as permitted sender) smtp.mailfrom="1axbwxfkjc6namnefxwatb78sp0o6z9somuxqu-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Return-Path: <1axbwxfkjc6namnefxwatb78sp0o6z9somuxqu-shyams07=gmail.com@20627419m.thehustle.co>
+Received: from bid49al.20627419m.thehustle.co (bid49al.20627419m.thehustle.co. [158.247.31.187])
+        by mx.google.com with ESMTPS id 6a1803df08f44-894d382f609si139177656d6.536.2026.02.01.02.44.57
+        for <shyams07@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 01 Feb 2026 02:44:57 -0800 (PST)
+Received-SPF: pass (google.com: domain of 1axbwxfkjc6namnefxwatb78sp0o6z9somuxqu-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.187 as permitted sender) client-ip=158.247.31.187;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@20627419m.thehustle.co header.s=hs1 header.b=xxL4ZHYg;
+       dkim=pass header.i=@thehustle.co header.s=hs2-20627419 header.b=XYJj0duN;
+       spf=pass (google.com: domain of 1axbwxfkjc6namnefxwatb78sp0o6z9somuxqu-shyams07=gmail.com@20627419m.thehustle.co designates 158.247.31.187 as permitted sender) smtp.mailfrom="1axbwxfkjc6namnefxwatb78sp0o6z9somuxqu-shyams07=gmail.com@20627419m.thehustle.co";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=thehustle.co
+Received: by 172.16.128.26 with SMTP id a0h5nnp5ez4m1s6m3xvtdqscvmpxwpc8d1xegrmgui;
+        Sun, 1 Feb 2026 10:44:47 GMT
+DKIM-Signature: v=1; s=hs1; d=20627419m.thehustle.co; 
+        i=@20627419m.thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=Sg/nCCcFnSIvP8ekO1NVuALLWNhQARQl2SC9+mZbwXk=; 
+        b=xxL4ZHYgR7Bggn2MGD5WH3BnmcUwkh9LeTWq7OYRzsadm5uUO0+iItj6n2mVKx
+         W5bkK9sfw0r0dJnV78wD7jsRQtuSXnmWGnqX4VxVFXWNFRDGjWQfYNPKHmJ9Wi8
+         prlsMrUXE/cQtUxMr/m+0JWUPl4DFmW60rL5Xqxjx+O7Q6LyGD2467UQt8pi/Fe
+         8KVTjOLER2as1xMu2OuxAsrAFkeERkFUYTti3CYnJF8E8iK08mN6OebjUfOuZIW
+         gmwVYVBxaiJZtjHKaAPfjCgmfG2MEtW2FZbHLBvak24JKCK/60gD8iaWZ4zF0jk
+         iTlMFOGgMTDiACv2rkiloRq2VMEw==; q=dns/txt; t=1769942687; 
+        x=1770205487;
+DKIM-Signature: v=1; s=hs2-20627419; d=thehustle.co; 
+        i=@thehustle.co; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=Sg/nCCcFnSIvP8ekO1NVuALLWNhQARQl2SC9+mZbwXk=; 
+        b=XYJj0duNyj++/xJl0g2nj+RYLkaltnie4wWpdcpaIYgYCzHZdLZ19/fMwRWvaB
+         MQkw3onK+phuSPC0j7zYtnbeVwB0fUZktSOCdOozxCHHicXDD9TlstNwG5bXvpD
+         RVFg9oymdDxl+gA56Tb1yaG8TwORsSAvfKMoy3tkZTtMeNelszNx3c8aL/C6gWf
+         H9UF2idDUm5bBOaEGhnxeBQfk8NDDsKppsjd7LTEw5l/a4t3bV18/Zbm0cPUbSI
+         dBIchEFNRnPbahIRbYl0fN6084HpL9FcMfq2qyFVVYICMevAId3XUdKJG6wNfnJ
+         fMajKTmiYl7LShJ2z+7AcurITEEA==; q=dns/txt; t=1769942687; 
+        x=1770205487;
+Return-Path: <1axbwxfkjc6namnefxwatb78sp0o6z9somuxqu-shyams07=gmail.com@20627419m.thehustle.co>
+X-HS-Cid: 1axe3kwcc66b8ip6imiu293eh19fwbsh9dtqhi
+List-Unsubscribe: <mailto:1axc0z2qst2pyd6tsqylqmab32lawene1nf2mu-shyams07=gmail.com@20627419m.thehustle.co?subject=unsubscribe>, <https://blog2.hubspot.com/hs/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-zMW238Xcw1BGMF6W49LMfQ2FDSJjW3DSkQ-3y-RjfW1_lwpr2xN9LBW23qc0M3QSzkDW3ghqRP3DMhXQW4fFhCZ4cswnjW4pjWnK4pBSQ8W1Sv2Dv2WHF8rW3JXR5d4kH0n3W4pkK5R2vNKhSW3_WdqV3z3llYW3C2GXt4mH_tMW3297dg1XdLN5W3QD1lV2FsHPNW3yZxff3g0RxBW348_7s3XNyD7W2RDD973zb26VW250p4h1L8hlBW384kCn47DcZ_W4rhQ1f2YfsP6W43Yjkk43xKWBW1NCcDZ2w1T7_W2YCfjG3JRpzBW2RswQv362rf9W3FfmB81_385-W3jfXCs4cGhxSW3M9rfB30G6czW1QC2cg23lWZCW47m_NG2FG-PpW3P8MDy49n4BPW2sSLcP21gy4sW4cJTYf1_nDJ9W1Lnlvw20Yb9NW2HDDzy2sNYdzW233__q4fn_1RW2MVnqs21lGgrW2YKVvD3VWq-pW1NB14V1BpFk9W2vTLWR1V25CfW4cNxFL4m75QlW1Q49RL3bq0BnW2FC9xq30bbMbW3j4N4c1XghwCW2xJMT13W3xmpW47nj6J3_LVfqW2YslW83N-Ss-W2RSmWc3XLZ3cW4mt0261Bp9XqW1ZvD6P1_r3ypW2WhkSt4ksk3_W2HFyx049RLZnW3QNQrm2sRSndW1_39fL2y23t70>
+Date: Sun, 1 Feb 2026 05:44:47 -0500
+From: The Hustle <news@thehustle.co>
+Reply-To: news@thehustle.co
+To: shyams07@gmail.com
+Message-ID: <1769942685378.167a9ee9-3061-4ba1-a954-3341f5c59b3c@20627419m.thehustle.co>
+Subject: Why American cities pay over $3,000 for one trash can
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1079512_1037449171.1769942687414"
+Precedence: bulk
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: aemkeh5:aigw75y4:aipuz:HubSpot
+
+------=_Part_1079512_1037449171.1769942687414
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+High-tech, designer trash bins are popular with local governments. But many=
+ people just want a regular can on the corner.=E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD
+
+You've got 3 referrals, just 2 away from earning a Hustle candle. Check out=
+ all of our prizes here (https://store.thehustle.co/?_hsenc=3Dp2ANqtz-8VLCy=
+vaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdc=
+SXap_2ylEnrQ&_hsmi=3D401329326 ) .
+
+Share your link:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJ=
+fNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEn=
+rQ&_hsmi=3D401329326
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJ=
+JfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylE=
+nrQ&_hsmi=3D401329326 )
+
+Share The Hustle:
+
+https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJ=
+fNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEn=
+rQ&_hsmi=3D401329326
+(https://thehustle.co/join?ref=3D6c97628a49&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJ=
+JfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylE=
+nrQ&_hsmi=3D401329326 )
+
+Check your referral progress & prizes here (https://thehustle.co/refer-the-=
+hustle?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9G=
+dSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 )
+
+View in browser (https://marketingagainstthegrain.com/why-american-cities-p=
+ay-over-3000-for-one-trash-can?ecid=3DACsprvvDHlgnS3Xi3VpDjnuzo0LeryldZJgAq=
+1GdjkvISE4ouj-ipBlmcBdhYNGUgtOat1z8t2qS&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNq=
+U64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&=
+_hsmi=3D401329326 )
+
+The Hustle by HubSpot Media (https://thehustle.co/?_hsenc=3Dp2ANqtz-8VLCyva=
+ZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSX=
+ap_2ylEnrQ&_hsmi=3D401329326 )
+
+Issue #379
+
+A digital collage showing two raccoons scavenging through litter on a sidew=
+alk next to a wooden-slatted trash can in a park. (https://thehustle.co/ori=
+ginals/why-american-cities-pay-over-3000-for-one-trash-can?_hsenc=3Dp2ANqtz=
+-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64=
+jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 )
+
+Sunday, February 1, 2025
+
+Why American cities pay over $3,000 for one trash can
+
+High-tech, designer trash bins are popular with local governments. But many=
+ people just want a regular can on the corner.
+
+BY MARK DENT (https://x.com/mdent05?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64Y=
+yjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsm=
+i=3D401329326 )
+
+High-tech, designer trash bins are popular with local governments. But many=
+ people just want a regular can on the corner.
+
+When Danny Sauter campaigned door-to-door in northeastern San Francisco in =
+2024, he expected that residents would be united over concerns about homele=
+ssness and housing costs. But a surprising issue kept popping up: trash can=
+s.
+
+Though San Francisco has ~3k of them on its infamously grimy sidewalks, ple=
+nty of residents felt like there weren=E2=80=99t enough.
+
+=E2=80=9CPeople would say, =E2=80=98I can walk 10 blocks without seeing a t=
+rash can,=E2=80=99 or =E2=80=98there used to be a trash can on this corner =
+for five years, and then it disappeared overnight,=E2=80=99=E2=80=9D says S=
+auter, who won election as District 3 supervisor.
+
+Early last year, he requested that the city put 1.5k more cans in his distr=
+ict. He knows it won=E2=80=99t solve everything but believes a strategy of =
+=E2=80=9Cmore trash cans and more pickups=E2=80=9D would create a cleaner e=
+nvironment.
+
+Public trash cans are a messy problem for American cities. Some municipalit=
+ies believe that having fewer trash cans reduces litter. And some spend upw=
+ards of $3k for a single trash can, believing premium designs and technolog=
+y will solve their problems, only for residents to report similar cleanline=
+ss issues as before.
+
+What would seem to be a simple concept =E2=80=94 placing enough bins in wal=
+kable, trafficked areas and servicing them frequently =E2=80=94 is a fraugh=
+t endeavor, one that feeds into the growing belief (https://www.pewresearch=
+.org/short-reads/2024/04/11/americans-rate-their-federal-state-and-local-go=
+vernments-less-positively-than-a-few-years-ago/?_hsenc=3Dp2ANqtz-8VLCyvaZG4=
+ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_=
+2ylEnrQ&_hsmi=3D401329326 ) that the government can=E2=80=99t get things do=
+ne.
+
+Why are public trash cans so complicated and expensive?
+
+Walt Disney, Tokyo, and Gavin Newsom
+
+Start a conversation with somebody who is interested in trash, and they=E2=
+=80=99re likely to bring up one of two places where there practically isn=
+=E2=80=99t any: Disney World or Tokyo.
+
+Legend has it that Walt Disney researched customer behavior at amusement pa=
+rks and concluded that deploying trash cans every 30 feet discouraged litte=
+ring, leading to an abundance of trash cans on Disney properties. The Magic=
+ Kingdom has an underground trash compacting system (https://www.waste360.c=
+om/waste-reduction/a-look-at-walt-disney-world-s-underground-trash-tubes?_h=
+senc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUM=
+SvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) , and Travel + Leisure=
+ once reported (https://www.mentalfloss.com/entertainment/disney/litter-dis=
+ney-world?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaIm=
+t9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) that all e=
+mployees, from custodians to Cinderella actresses, are required to pick up =
+any piece of litter they come upon.
+
+Walt Disney World=E2=80=99s Magic Kingdom. Notice the two trash cans close =
+to each other on the left. (Gary Hershorn/Getty Images)
+
+Tokyo, relative to America=E2=80=99s large cities, is spotless, too. But un=
+like Disney World it has very few public trash cans, a policy resulting, in=
+ part, from a doomsday cult using sarin in plastic bags during a 1995 attac=
+k (https://psmag.com/environment/trash-cans-are-coming-back-to-japan/?_hsen=
+c=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvO=
+zrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) .
+
+=E2=80=9CI have colleagues here at Public Works who go on vacation in Japan=
+ and, to the T, every one of them who's come back the first thing they say =
+is not, =E2=80=98I just saw beautiful mountains or went to a tea house,=E2=
+=80=99=E2=80=9D says Rachel Gordon, director of policy and communications f=
+or the San Francisco Public Works department. =E2=80=9CIt's like, =E2=80=98=
+Oh my God, there's no litter on the street, and there are no garbage cans.=
+=E2=80=99=E2=80=9D
+
+Nineteen years ago in San Francisco, then-mayor Gavin Newsom took a page fr=
+om the Tokyo playbook. As part of an anti-litter initiative, San Francisco =
+started removing public trash cans, a few hundred at first but eventually m=
+ore than 33% of the city=E2=80=99s total, bringing its number from ~5k to ~=
+3k.
+
+Residents complained, but Newsom insisted (https://www.newspapers.com/image=
+/462389548/?match=3D1&terms=3D%22san%20francisco%22%20and%20%22trash%20can%=
+22%20and%20%22newsom%22&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG=
+4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D40132932=
+6 ) that having a large quantity of trash cans at regular intervals led to =
+illegal dumping by households and businesses. Fewer trash cans would discou=
+rage this practice, he believed, and allow more space for pedestrians with =
+handheld trash.
+
+Resident satisfaction with the city=E2=80=99s cleanliness has stayed roughl=
+y the same (https://sfcontroller.org/sites/default/files/FileCenter/Documen=
+ts/6652-2015%20City%20Survey_final.pdf?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU=
+64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_=
+hsmi=3D401329326 ) in surveys since Newsom=E2=80=99s trash can cull, althou=
+gh with grades in the C+ range, San Francisco isn=E2=80=99t earning any com=
+parisons to Tokyo.
+
+Gavin Newsom=E2=80=99s mayoral administration led an initiative to reduce t=
+he number of San Francisco=E2=80=99s trash cans. (Michael Macor/The San Fra=
+ncisco Chronicle via Getty Images)
+
+Other cities have discovered that removing trash cans made things worse.
+
+- After the New York City Transit Authority removed bins at a few dozen sta=
+tions from 2011 to 2014, an audit found (https://www.osc.ny.gov/files/audit=
+s/2018-01/SGA-2015-14s29.pdf?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3=
+ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401=
+329326 ) that at stations where receptacles were removed the average amount=
+ of bags needed for collecting litter increased 3.2% and average track fire=
+s increased 33%.
+- Philadelphia tested out (https://www.phila.gov/media/20210312102943/ZWI-t=
+rash-receptacle-placement-study-2017.pdf?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfN=
+qU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ=
+&_hsmi=3D401329326 ) various numbers of trash receptacles at select parks a=
+nd commercial corridors, measuring the amount of waste, litter, and staff h=
+ours needed for pickup. It found that more trash cans correlated with less =
+litter and fewer trash cans correlated with more litter. (The Philadelphia =
+Citizen opined on the discovery with the headline =E2=80=9CWater is Wet.=E2=
+=80=9D (https://thephiladelphiacitizen.org/water-is-wet/?_hsenc=3Dp2ANqtz-8=
+VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jH=
+JwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) )
+
+Syon Bhanot, a Swarthmore University behavioral and public economist who he=
+lped with the research in Philadelphia, says the city ran the experiment be=
+cause, as in San Francisco, significant amounts of litter in Philly come fr=
+om =E2=80=9Cshort dumping,=E2=80=9D when people illegally unload garbage in=
+ public areas.
+
+Bhanot says social norms can influence behavior around waste and litter. Fo=
+r instance, if people expect consistent curbside trash pickup, they might h=
+ave less incentive to illegally dump a bag next to a public trash receptacl=
+e in the middle of the week, reducing the need for receptacles. (Since 2024=
+, Philadelphia has employed (https://whyy.org/articles/twice-weekly-trash-c=
+ollection-expansion-philadelphia/?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64Yyj=
+XH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=
+=3D401329326 ) twice-weekly trash pickups in several neighborhoods.)
+
+The incentive to litter also comes down to a cultural expectation about wha=
+t others condone, Bhanot says.
+
+And Tokyo-like expectations don=E2=80=99t exist in most American cities. =
+=E2=80=9CI=E2=80=99d like us to be a bit more of a tidy, polite culture, bu=
+t we=E2=80=99re not there yet,=E2=80=9D Sauter says. That=E2=80=99s why he=
+=E2=80=99d like San Francisco to add more trash cans.
+
+While San Francisco has more bins per capita than New York City and less-de=
+nse California cities like San Jose, it lags behind Washington, DC, which h=
+as ~6.6k total trash cans and is often considered one of America=E2=80=99s =
+cleanest cities.
+
+The Hustle
+
+Portland, Oregon, facing similar complaints (https://www.kgw.com/article/ne=
+ws/local/portlands-cleaning-more-trash-of-the-streets-than-ever-but-you-wou=
+ldnt-know-it/283-11640c78-e3d7-4af1-98ce-ae882c72c931?_hsenc=3Dp2ANqtz-8VLC=
+yvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwd=
+cSXap_2ylEnrQ&_hsmi=3D401329326 ) as San Francisco, nearly doubled (https:/=
+/www.kgw.com/article/news/local/city-adds-public-trash-cans-nw-portland/283=
+-15f93188-f456-449f-901b-bcd1042a46f9?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU6=
+4YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_h=
+smi=3D401329326 ) its trash can total from 2016 to 2025, from 750 to ~1.4k,=
+ focusing on neighborhoods outside the central city. It expects to have ~1.=
+7k bins when the expansion is complete.
+
+San Francisco, for now, is keeping its number of trash cans roughly the sam=
+e while introducing a new model.
+
+Paying a trash can premium
+
+In December 2022, after years of expensive development, testing, public fee=
+dback, and the fraud conviction of a former Public Works director, San Fran=
+cisco announced it had settled on a trash can of the future to replace its =
+aging fleet: the Slim Silhouette.
+
+A stainless steel container with circular openings on its front side for ga=
+rbage and recycling, it beat out cutting-edge designs such as the Bear Save=
+r and Salt & Pepper (https://sfpublicworks.org/trashcanredesign?_hsenc=3Dp2=
+ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5l=
+ZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) . The city paid ~$19k to build =
+the prototype and reached a deal with a contractor to manufacture the trash=
+ cans for ~$1.4k each. That doesn=E2=80=99t include installation costs or s=
+ensors that will provide an alert when the bins are full.
+
+A Slim Silhouette rendering. (San Francisco Public Works)
+
+It=E2=80=99s not an unusual price. Portland=E2=80=99s new trash cans cost ~=
+$2k each. Washington, DC=E2=80=99s are ~1.5k. New York City has started rep=
+lacing its longtime green mesh receptacles with $1.1k designer Better Bins =
+(https://www.nyc.gov/site/dsny/collection/containerization/litter-basket-of=
+-the-future.page?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse=
+2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) tha=
+t cost more than 2x as much.
+
+New York City=E2=80=99s Sanitation Department claims the Better Bins are le=
+akproof and rat-resistant. A department spokesperson says they=E2=80=99ll l=
+ast on the streets longer than the green mesh cans.
+
+San Francisco tested out a generic $630 wire mesh trash can but chose the S=
+lim Silhouette because it found the Silhouette=E2=80=99s opening, with a sn=
+orkel design, was better at preventing rummaging and its stainless steel bo=
+dy was easier to maintain. (It also costs less than the current models in u=
+se by the Public Works Department.)
+
+The eye-popping price of these modern trash cans has little to do with perm=
+itting and red tape, like stories of $1.7m public toilets (https://thehustl=
+e.co/the-fight-to-build-more-public-bathrooms-in-america?_hsenc=3Dp2ANqtz-8=
+VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jH=
+JwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) . Thoughtful designs are more expensiv=
+e, and many cities believe it=E2=80=99s necessary to pay the premium.
+
+=E2=80=9CIf we could use the $600 baskets, if they did what we needed them =
+to do=E2=80=A6 and didn=E2=80=99t become more of a nuisance, we would have =
+bought those,=E2=80=9D Gordon says. =E2=80=9CThat=E2=80=99s what we were ho=
+ping would work.=E2=80=9D
+
+She adds, =E2=80=9CThere=E2=80=99s never going to be a perfect garbage can.=
+=E2=80=9D
+
+The Hustle
+
+Yet premium models don=E2=80=99t always accomplish the goals sought by the =
+cities that buy them.
+
+Several years ago, Tacoma, Washington, tested out smart trash cans made by =
+Bigbelly, a popular brand that offers solar energy-powered bins with a comp=
+acting feature, software connection, and a sensor that goes off when bins a=
+re full. Besides the high upfront cost, the city dealt with software fees a=
+nd solar panel theft and found the compaction didn=E2=80=99t reduce service=
+ costs.
+
+Tacoma has replaced the smart trash cans with non-compacting models by Bigb=
+elly and Storr that cost less than half as much.
+
+=E2=80=9CUltimately, we moved away from solar compaction because the math s=
+imply didn't add up for our specific needs,=E2=80=9D says city spokesperson=
+ Maria Lee, over email. =E2=80=9CWe found that a simple, fully enclosed can=
+ prevents litter just as effectively.=E2=80=9D
+
+Since Philadelphia went premium in the late 2000s and early 2010s, its tras=
+h cans have been a point of contention among residents and politicians.
+
+As part of an effort to reduce trash service expenses, the city=E2=80=99s S=
+anitation Department installed ~1.1k compacting BigBelly trash cans. They c=
+ost ~$3.7k each and replaced standard $100 wire baskets, according to the P=
+hiladelphia City Controller (https://controller.phila.gov/wp-content/upload=
+s/2018/06/BigbellyReport_June2017.pdf?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU6=
+4YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_h=
+smi=3D401329326 ) . Because of anticipated lower service costs, the city ex=
+pected savings of $13m over 10 years compared to the wire baskets.
+
+The Hustle
+
+The Controller=E2=80=99s Office found that the city never conducted a cost-=
+benefit analysis to verify any savings. A former director of Philadelphia=
+=E2=80=99s Zero Litter and Waste Cabinet later wrote (https://thephiladelph=
+iacitizen.org/how-to-fix-philly-trash-problem/?_hsenc=3Dp2ANqtz-8VLCyvaZG4i=
+pyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2=
+ylEnrQ&_hsmi=3D401329326 ) that the Sanitation Department didn=E2=80=99t in=
+tegrate the Bigbelly=E2=80=99s sensor system, so the alerts for full bins j=
+ust went =E2=80=9Cinto the ether.=E2=80=9D
+
+A Philadelphia Sanitation Department spokesperson declined an interview but=
+ said in an emailed statement that Bigbelly trash cans in the city=E2=80=99=
+s core were emptied once or twice per week, compared to five times per week=
+ for prior trash can models, allowing them to coordinate pickups with regul=
+ar trash services.
+
+Terrill Haigler, a former sanitation worker in Philadelphia, often comes ac=
+ross Bigbellies that are overflowing or damaged. And he says that there are=
+n=E2=80=99t nearly enough, especially in neighborhoods outside the heart of=
+ the city.
+
+=E2=80=9CI believe that Philly is in a trash can desert,=E2=80=9D he says.
+
+So he bought his own inexpensive trash cans.
+
+Wandering the trash can desert
+
+While working for the city, Haigler began posting on social media as Ya Fav=
+ Trashman (https://www.instagram.com/trash2treasure_21/?hl=3Den&_hsenc=3Dp2=
+ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5l=
+ZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) , sharing details about life as=
+ a sanitation worker and advocating for cleaner streets. He started his own=
+ private waste collection business in 2021.
+
+And last year Haigler decided to do something about Philadelphia=E2=80=99s =
+lack of trash cans.
+
+Using grant money, Haigler started a pilot program to put five public trash=
+ cans in a North Philadelphia neighborhood. By January, four months into th=
+e program, his crew had collected ~4.5 tons of trash. He says neighbors and=
+ business owners call if they=E2=80=99re overflowing before pickup days and=
+ sometimes store the garbage until the crew can get it.
+
+=E2=80=9CYou start to activate the community,=E2=80=9D he says. =E2=80=9CTh=
+ey=E2=80=99re taking pride.=E2=80=9D
+
+Terrill Haigler has tested out inexpensive trash cans in areas of North Phi=
+ladelphia. (Courtesy of Haigler/Ya Fav Trashman Instagram)
+
+Most of the trash has been coffee cups, soda bottles, and plastic bags fill=
+ed with dog poop =E2=80=94 not the materials that you=E2=80=99d expect from=
+ illegal short dumping.
+
+The experiment has also been affordable. The cans, 55-gallon metal drums, c=
+ost ~$150 each, he says. Haigler pays two workers $100 a week to empty the =
+cans on Tuesdays and Fridays.
+
+He hopes to receive more grant money to expand the program, so that Philade=
+lphia can =E2=80=9Cdo it like Disney=E2=80=9D and have affordable trash can=
+s everywhere.
+
+=E2=80=9CIt doesn=E2=80=99t have to be,=E2=80=9D he says, =E2=80=9Ca $3,000=
+ trash can.=E2=80=9D
+
+Little victories
+
+Meanwhile, in San Francisco, the $1.4k Slim Silhouettes are expected to fin=
+ally hit sidewalks this summer. If the new models prove as rummage-resistan=
+t and easy to maintain as intended, Rachel Gordon says San Francisco=E2=80=
+=99s Public Works Department may expand the number of trash cans in the cit=
+y.
+
+Supervisor Danny Sauter still wants more trash cans in his district. (Tayfu=
+n Coskun/Anadolu via Getty Images)
+
+And Danny Sauter, the city=E2=80=99s District 3 supervisor, has notched at =
+least one win in his quest toward adding 1.5k new trash cans in his distric=
+t.
+
+In the Italian-American North Beach neighborhood, with a bevy of pizza rest=
+aurants, residents and businesses complained that a single pizza box could =
+back up a trash can because of its awkward shape and lead people to throw l=
+itter on the sidewalk.
+
+So Sauter found a bespoke solution: two bins specially designed for collect=
+ing pizza boxes.
+
+Only 1,498 more trash cans to go.
+
+Share & discuss this story on:
+
+Site (https://thehustle.co/originals/why-american-cities-pay-over-3000-for-=
+one-trash-can?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pz=
+vaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 )
+
+YouTube (https://www.youtube.com/@TheHustleChannel?_hsenc=3Dp2ANqtz-8VLCyva=
+ZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSX=
+ap_2ylEnrQ&_hsmi=3D401329326 )
+
+LinkedIn (https://www.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz-8VLC=
+yvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwd=
+cSXap_2ylEnrQ&_hsmi=3D401329326 )
+
+Instagram (https://www.instagram.com/thehustledaily/?hl=3Den&_hsenc=3Dp2ANq=
+tz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA=
+64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 )
+
+Today's email was brought to you by Mark Dent (https://x.com/mdent05?_hsenc=
+=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOz=
+rxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) , and Zachary Crockett (ht=
+tps://x.com/zzcrockett?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4=
+KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326=
+ ) , with help from Kaylee Jenzen.
+
+Was this email forwarded to you? Sign up here (https://thehustle.co/join/?u=
+tm_source=3Dthehustle&utm_medium=3Demail&utm_campaign=3Dfooter&_hsenc=3Dp2A=
+Nqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZ=
+dA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) .
+
+Subscribe to our other newsletters
+
+Expert insights: Marketing Against the Grain (https://marketingagainstthegr=
+ain.com/subscribe?utm_source=3Demail&utm_campaign=3Dhustle&utm_medium=3Dfoo=
+ter&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSj=
+AGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 )   |   Stay up-to=
+-date on AI:  Mindstream
+
+(https://www.mindstream.news/?utm_channel=3Demail&utm_source=3Dhustle&utm_m=
+edium=3Dfooter&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2p=
+zvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 )
+
+Follow The Hustle on YouTube (https://www.youtube.com/@TheHustleChannel?_hs=
+enc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMS=
+vOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) , LinkedIn (https://www=
+.linkedin.com/company/thehustle/?_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjX=
+H5C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=
+=3D401329326 ) , and Instagram (https://www.instagram.com/thehustledaily/?h=
+l=3Den&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5C3ejzsG4KEbmse2pzvaImt9G=
+dSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D401329326 ) .
+
+HubSpot Media, 2 Canal Park, Cambridge, MA, 02141, USA, +1 888.482.7768
+
+Never want to hear from us again? Break our hearts and Unsubscribe (https:/=
+/blog2.hubspot.com/hs/preferences-center/en/page?data=3DW2nXS-N30h-SvW2qG-G=
+R4kD02ZW2y4bh_47w2VfW2FRj0K2WzQ52W347DRT38lXK1W2p9zZh3b9wbJW3gv8k92vQn9XW3y=
+Nxf225lg5bW366FJP1_5fn4W45MW9t4t6mW_W22_Lmt362qQcW49ltfJ3g2484W22XHk_1XnDn2=
+W3NR2T81_2L_NW3C7JVR2RTZH1W2xQCsW1LzPLTW45ykQH3GZHDXW4kpNJm1LqrpKW1--6FQ3W3=
+CzyW3NNxJC32qTbcW2Krrmw25d3lPW2zPcSn43TBLxW1ZdTMD2MxFbKW2MSg1g2qM22zW1Xvrvj=
+2sTwWwW3yZw-Z49xYyxW4kGy0R3JX3WKW329B5m2-BxB2W3b1HB22sT6FVW1YW-DM3XHyckW1Vw=
+nBy2r6wJBW2r1spy1_2J46W2KyMf343XVHwW1Vs6Xm24TWhTW1BGn-11Y-LqrW41QWx31VtqK_W=
+41twN_1VjCxkW4fJfXX3N-P1_W41QtfX1XfybvW254CR93__97gW1_nB3c2FCGPgW47VQs51Nl3=
+XVW4rxg6L2KVbm1W3BVCnp3C6vXMW2PMBmd3P0XRzW20Z4nG217sY1W3_v_T02HV1H4W3H7MqT4=
+plX8BW3_VlML32rgtXW41Y8Kg4ms5jWW2s_Cwd3C6xf3W1S4kKj4fRfdNW4cs2--1Vk2BZW2qRf=
+gx4hqTJKW2B0FL23LBLNtf4r8h8104&_hsenc=3Dp2ANqtz-8VLCyvaZG4ipyJJfNqU64YyjXH5=
+C3ejzsG4KEbmse2pzvaImt9GdSjAGFmUMSvOzrxj5lZdA64jHJwdcSXap_2ylEnrQ&_hsmi=3D4=
+01329326 ) .
+------=_Part_1079512_1037449171.1769942687414
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>Why American cities pay over $3,000 for one trash can</title>
+    <meta property=3D"og:title" content=3D"Why American cities pay over $3,=
+000 for one trash can">
+    <meta name=3D"twitter:title" content=3D"Why American cities pay over $3=
+,000 for one trash can">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #FFFFFF;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://marketingagainstthegrain.com/why-american-cities-pay-over-=
+3000-for-one-trash-can"><meta name=3D"robots" content=3D"noindex,follow"><!=
+--[if !((mso)|(IE))]><!-- --><style type=3D"text/css">@media only screen an=
+d (max-width:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.=
+hs-stretch-cta .hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #eaf0f6 !important;border-right:1px solid #eaf0f6 !important;box-sizing:=
+border-box}
+.hse-border-bottom-m{border-bottom:1px solid #eaf0f6 !important}.hse-border=
+-top-m{border-top:1px solid #eaf0f6 !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-4{max-width:200px !important;width:200px !impor=
+tant}
+.moz-text-html .hse-section .hse-size-8{max-width:400px !important;width:40=
+0px !important}
+.moz-text-html .hse-section .hse-size-12{max-width:600px !important;width:6=
+00px !important}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-4{=
+max-width:200px !important;width:200px !important}
+.hse-section .hse-size-8{max-width:400px !important;width:400px !important}=
+.hse-section .hse-size-12{max-width:600px !important;width:600px !important=
+}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section_1769810106615 .hse-column-container{background-color:transparent !=
+important}
+#section_1769810106615 .hse-column-container{background-color:transparent !=
+important}
+}@media only screen and (max-width:639px){ #section-0 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-0 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-1 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-1 .hse-column-container{background-color:#192733 !important} }@med=
+ia only screen and (max-width:639px){ #section-2 .hse-column-container{padd=
+ing-top:0px !important;padding-bottom:0px !important}
+#section-2 .hse-column-container{background-color:#fff !important} }@media =
+screen and (max-width:639px){.social-network-cell{display:inline-block}
+}@media only screen and (max-width:639px){ #section-3 .hse-column-container=
+{padding-top:0px !important;padding-bottom:0px !important}
+#section-3 .hse-column-container{background-color:#fff !important} }@media =
+only screen and (max-width:639px){.hse-body-wrapper-td{padding-bottom:20px =
+!important}
+#section-4 .hse-column-container{padding-top:0px !important;padding-bottom:=
+0px !important}
+#section-4 .hse-column-container{background-color:#fff !important} }</style=
+><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_main a[x=
+-apple-data-detectors]{color:inherit !important;text-decoration:none !impor=
+tant;font-size:inherit !important;font-family:inherit !important;font-weigh=
+t:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}
+.ShadowHTML p,.sh-modified-inline p{margin:0}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#FFFFFF" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Helvetica, Arial, sans-serif; font-size:16p=
+x; color:#192733; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#FFF=
+FFF;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">High-tech, designer trash bins are popular with local governm=
+ents. But many people just want a regular can on the corner.=E2=80=87=CD=8F=
+ =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD &nbsp;
+</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#ffffff" bgcolor=3D"#ffffff">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-brea=
+k:break-word; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1769810106615" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1769810106615_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17698101460131" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hm" style=3D"color: inh=
+erit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div style=3D"font-size: 14px; text=
+-align: center; line-height: 140%;">
+  <em>
+ =20
+    <span>You've got 3 referrals, just 2 away from earning a Hustle candle.=
+ Check out all of our <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/=
+UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqsK2_3wqW5BW0B06l=
+Z3krW50TDPZ2ldV4JW7d7WYb5l1VFtW85kJT07VMHF0W1YpDh9378KgYW6r1XCM8pS48PW6z2sk=
+93yNp_dW4cp38h2-pvRvW7V3zXg5Nm2yJW7QP2fG2-djsnW37txqf3r0NmvVYKCVC2PjMsLW99-=
+3Sn48P5qGW2YMRBr5qtNd2VHCW7B2xHb6GW2X0_XR3rYcXzW2D1VK74ThnwBN370-KwsfXXsW2Q=
+rxTl3GSDJgf8PZkVb04" style=3D"color:#192733; text-decoration:underline !imp=
+ortant" data-hs-link-id=3D"2" data-hs-link-id-v2=3D"v9PpzLyj" target=3D"_bl=
+ank">prizes here</a>.</span>
+ =20
+ =20
+  <br>
+    <span style=3D"font-weight: bold; color: #bf2434;">Share your link:</sp=
+an>
+   =20
+      <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/=
+VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3l2W7PrtQK7dKzj=
+4W88Dbkl87rDrXW1JPtGr83tNfQW5zL8y44nl_pxVhFL-Z7czc4KW5J-4NM31lJ85W1n7s8N4rd=
+VFLW6dM9vc4YPcj-W70YzDw8fnY-1W8vz95s1dfvxlW2LJB167Lv2W1W10cpF13tW5DZN7W0FJ-=
+hdcFPW8Kzhsn4gbjbSW3pD13Y6srY7KW1gb8gp6fWZhLW4yWFlB59NvXCW6yHP281ddJfFVdTWy=
+64DNg2yN6k966mKTxc0f4Gh3T804" style=3D"color:#192733; text-decoration:under=
+line !important" data-hs-link-id=3D"1" data-hs-link-id-v2=3D"Zygo4LuM" targ=
+et=3D"_blank" data-contains-exactly-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+ =20
+  </em>
+</div></div>
+<!--[if !mso]><!--><div id=3D"hs_cos_wrapper_module_17698101531402" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module hs-hd" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;display:n=
+one" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div s=
+tyle=3D"font-size: 11px; text-align: center; line-height: 130%">
+  <em>
+   =20
+      <span style=3D"font-weight: bold; color: #bf2434">Share The Hustle:</=
+span>
+      <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/=
+VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3mqMcDyXw-yFyTW=
+5BxKm86hS6WcW7Pn9JY6M49lfW68QlsQ99BM3dN9h08pP5DMJxW3vYCCK4XJv1YW7rSZ4M5jBtQ=
+RW4Wr11v6-7wTNW4ZFnRz3kcYn1W2-nsBP17MjyRW6wCqsV2M1pR0W1dNmCm1dmfbjW7xhlfP4V=
+KRvrVfnbhW7Zsh2jW5KQ0857MBBqLW861Sgd83lPtcW27FJD_53SWQ1W3vmC0T718n_LN2gwZCb=
+dpybmW1GTfCr4cbDhff7R0nwz04" style=3D"color:#192733; text-decoration:underl=
+ine !important" data-hs-link-id=3D"2" data-hs-link-id-v2=3D"dQWh244K" targe=
+t=3D"_blank" data-contains-exactly-one-token=3D"true">
+        https://thehustle.co/join?ref=3D6c97628a49
+      </a>
+   =20
+  </em>
+  <br>
+  <span>
+    Check your referral progress &amp; prizes <a href=3D"https://d2q-Vf04.n=
+a1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_=
+z10N74Pqt02_3wqW69sMD-6lZ3mWVWtRw01L__5MN4nPkdWD537NW4PMJ8j3NXrfmW5qlBBN5Hr=
+MNkW5XyLYz3t9dL8W7bf8Tr2Txm3sW86BqmZ7pydZfW8qh4ZK2s6dWhW2H0VB06f7S4qW46lNqf=
+2xf8JgW5q9BfF6rvKY_W36d_--3gt7gpW7CK_YJ5styG1W77qzW87jvDsVW6Q5nKW7PqsRMW14z=
+pYL8Q7fBqW8q8DpH34swQ_W741SKp8ltF5pW3m38yk4_tSzsW8fQbcG6X4MD4f36Fpsd04" sty=
+le=3D"color:#192733; text-decoration:underline !important" data-hs-link-id=
+=3D"3" data-hs-link-id-v2=3D"T/hBDVGM" target=3D"_blank">here</a>
+  </span>
+</div></div><!--<![endif]-->
+<div id=3D"hs_cos_wrapper_module_17698101066142" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><div style=3D"overflow:hidden">
+  <table role=3D"presentation" class=3D"hse-pre-header hse-secondary" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"text-align:right; fo=
+nt-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496=
+d; margin-bottom:0; padding:0" align=3D"right">
+    <tbody>
+      <tr>
+        <td align=3D"right" valign=3D"top" style=3D"color:#192733; word-bre=
+ak:break-word; text-align:right; font-family:Arial, sans-serif; font-size:1=
+2px; padding:10px 0; margin-bottom:0; line-height:135%">
+          <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-V=
+f04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt04ZD0CW69t95C6lZ3p4W2DyJ5S7=
+dvh_2N1fdfQBDXZ_5W7z7Flk1HHrdzW2ZpPX1347D8CW6QNkhz6LBk60N4VjftnBJWZFW6DY8vc=
+8NWNCpW6sl1z_6tDhTPW3kQbff89yX2JVF6GMN4H-st9W3Hn7bH7d5kDcW1_DWJW2PLL8GW1SpT=
+hk110ytbW10QL_j2x9bHBW14nrZt9bnzxLVTMPhw7lVPN_W5FdBwY32ps8dN8sZKX5Mw1HJW2XY=
+WZ38rnrzxW8yXSSK52-qM3W6J3kKb75BRdlW7ycddV7zv9QpW6GZ0gM6KR7HJW6hG0Xw3gtX7XN=
+2WKD4KGzhV5W6q9WK32lwzpDW72bGfX5CQB9DW7Q5zxQ63xj62W7Jyjbj13WbkcVFp2Rg27B15g=
+W7bnRQ81YYcpyW3Tr2VN4BRzMyN8pxqrXnZ5pcW6fQfP43nJ_TPW3kw2hS2shm3CN6N0Ld36XgD=
+sf45FhgW04" style=3D"color:#192733; font-weight:normal; text-decoration:und=
+erline; font-style:normal" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"zbCJ=
+Y1d1" target=3D"_blank">View in browser</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-0" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container hse-no-stack-row" style=3D"min-wid=
+th:280px; max-width:600px; margin:0 auto; border-collapse:separate; display=
+:table; width:100%; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" class=3D"hse-no-stack-row" width=3D"600=
+" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"400" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:400px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-8 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:400px; width:66.66%">
+  <div id=3D"hs_cos_wrapper_module-0-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;table-layout:fixed" data-hs-cos-general-typ=
+e=3D"widget" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper"=
+ role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"left" valign=3D"top" style=3D"font-family:Helvetica, Ari=
+al, sans-serif; color:#192733; word-break:break-word; text-align:left; padd=
+ing:10px 20px; font-size:0px">
+        <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf0=
+4/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqsK2_3wqW5BW0B06lZ3mWW5FZ_wy6Jm=
+Y83W8-H9PS4TYncMM1XmXbKsBXsW1Cjbmp6GDFljW8wq_7L2JJ4dJN2KvbFmm48x7W6v8q523qm=
+XFhW9kHLHj7qr02xW5VsvVT3y0PQHW3DmWcc47xnTFW8hPDcY90bXr7W7Vw4kg4sk0W0W2_ng4B=
+81-wtFW6WxZ9p3bfvTnVsTBGM3Vs343W4HwZH_7ygSYvN2zYczyJGghNW8cshdq4WG454f3yG0k=
+Y04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-h=
+s-link-id-v2=3D"lAmjrZBz">
+        <img alt=3D"The Hustle by HubSpot Media" src=3D"https://marketingag=
+ainstthegrain.com/hs-fs/hubfs/Critical_Template_Imagery/TheHustle_HSMedia_w=
+hite_logo-png-1.jpeg?width=3D360&amp;upscale=3Dtrue&amp;name=3DTheHustle_HS=
+Media_white_logo-png-1.jpeg" style=3D"outline:none; text-decoration:none; b=
+order:none; max-width:100%; font-size:16px" width=3D"180" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"200" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:200px">
+<![endif]-->
+<div id=3D"column-0-1" class=3D"hse-column hse-size-4 hse-no-stack" style=
+=3D"display:table-cell; vertical-align:top; max-width:200px; width:33.33%">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D"table-layout:fixed"><tbody><tr><td style=3D"f=
+ont-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; wor=
+d-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-0-1=
+-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module-0-1-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_=
+cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; li=
+ne-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"line-height:125%; font-weight:bold; text-align:r=
+ight" align=3D"right"><span style=3D"color: #ffffff;">Issue #379</span></p>=
+</div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#192733" bgcolor=3D"#192733">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#192733">
+      <tr style=3D"background-color:#192733;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-1-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentat=
+ion" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; color:#192733; word-break:break-word; text-align:center; =
+padding:0px; font-size:0px">
+        <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf0=
+4/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqtC2_3wqW7lCdLW6lZ3lCW9fMmMs4Rv=
+9QHN3dL_bjvYl1mW4bM5QK70xH8yW6s6nNJ429q11W79xjfc5zG52YW4-LP4W4_kDPvW7jFmH72=
+Br4zMW1Pt8yV8qM3yYN4mhSvW8Wx--Vk6n8-5H35vtW92rPzD2pn9JqV3Jf7X6tCgnqW2x3SpY3=
+R63NHV4SScv3-vQMMW4wFM5B99RkkvW3Bfq2s4BQhHvW6mjPy17FvGQ2W5Rl75675P0KZN3P0_w=
+m6V4sRW1hv92m3XvRHDW8qSJzP2nhvCyW72mtmr34txbfW25cWs44y6sk1W25Sh3W2bcGTFf8K7=
+rJT04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data=
+-hs-link-id-v2=3D"egyStHFK">
+        <img alt=3D"A digital collage showing two raccoons scavenging throu=
+gh litter on a sidewalk next to a wooden-slatted trash can in a park." src=
+=3D"https://marketingagainstthegrain.com/hs-fs/hubfs/Daily%20Newsletter%20I=
+mages/Daily%20Images/Feb%201%202026/trash-can-gif.gif?width=3D1200&amp;upsc=
+ale=3Dtrue&amp;name=3Dtrash-can-gif.gif" style=3D"outline:none; text-decora=
+tion:none; border:none; max-width:100%; font-size:16px" width=3D"600" align=
+=3D"middle" class=3D"stretch-on-mobile">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-1-0-=
+1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_co=
+s_wrapper_module-1-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_c=
+os_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; lin=
+e-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D=
+"rich_text"><p style=3D"line-height:125%; text-align:center; font-weight:bo=
+ld" align=3D"center"><span style=3D"color: #ffffff;">Sunday, February 1,&nb=
+sp;2025</span></p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-2" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-2-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-2-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module-2-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos=
+_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-=
+height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"r=
+ich_text"><h1 style=3D"margin:0; font-size:30px; line-height:125%">&nbsp;</=
+h1>
+<h1 style=3D"margin:0; font-size:30px; line-height:125%"><span style=3D"col=
+or: #192733;">Why American cities pay over $3,000 for one trash can</span><=
+/h1>
+<p style=3D"font-size:18px; line-height:125%">&nbsp;</p>
+<p style=3D"font-size:18px; line-height:125%"><span style=3D"color: #192733=
+;"><em>High-tech, designer trash bins are popular with local governments. B=
+ut many people just want a regular can on the corner.</em></span></p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold">&nbsp;</p>
+<p style=3D"font-size:13px; line-height:125%; font-weight:bold"><br><span s=
+tyle=3D"color: #192733;">BY <a href=3D"https://d2q-Vf04.na1.hubspotlinks.co=
+m/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqsK2_3wqW5B=
+W0B06lZ3m-W4Hv1JD7l_NNgW9kc8VM88QRP4VwX9Vr4jBx3pV60xln6lkFxVW3JKkBr5t5f9xW5=
+f-VNR15cT8LW6QZCly5h2LjNN1HrR3PPQ7K6W3_B9Vp5TP7wHW6KfB4k7PnDgzW1-vB-C6TF7Jx=
+N2XZXccVpDH1W89x5Pg6qCTLpVRc9gs5BsZhTW5HGCDm3gZKXWW7DXkK23jZDlJW6dZvfs6Znfw=
+7W1dWCz_7sqG1Wf8cwjXY04" style=3D"font-weight:bold; color:#192733; text-dec=
+oration:none !important" rel=3D"noopener" data-hs-link-id=3D"0" data-hs-lin=
+k-id-v2=3D"dEMdBBbn" target=3D"_blank">MARK DENT</a></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><em>High-tech, designer trash bins are popula=
+r with local governments. But many people just want a regular can on the co=
+rner.</em></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">When <strong>Danny Sauter</strong> campaigned=
+ door-to-door in northeastern San Francisco in 2024, he expected that resid=
+ents would be united over concerns about homelessness and housing costs. Bu=
+t a surprising issue kept popping up: trash cans.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Though San Francisco has ~3k of them on its i=
+nfamously grimy sidewalks, plenty of residents felt like there weren=E2=80=
+=99t enough.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CPeople would say, =E2=80=98I can wal=
+k 10 blocks without seeing a trash can,=E2=80=99 or =E2=80=98there used to =
+be a trash can on this corner for five years, and then it disappeared overn=
+ight,=E2=80=99=E2=80=9D says Sauter, who won election as District 3 supervi=
+sor.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Early last year, he requested that the city p=
+ut <strong>1.5k more cans </strong>in his district. He knows it won=E2=80=
+=99t solve everything but believes a strategy of =E2=80=9Cmore trash cans a=
+nd more pickups=E2=80=9D would create a cleaner environment.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Public trash cans are a messy problem for Ame=
+rican cities. Some municipalities believe that having <em>fewer</em> trash =
+cans reduces litter. And some spend upwards of <strong>$3k</strong> for a s=
+ingle trash can, believing premium designs and technology will solve their =
+problems, only for residents to report similar cleanliness issues as before=
+.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">What would seem to be a simple concept =E2=80=
+=94 placing enough bins in walkable, trafficked areas and servicing them fr=
+equently =E2=80=94 is a fraught endeavor, one that feeds into <a href=3D"ht=
+tps://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp=
+2q7Qm5W2bnPc75J_z10N74Pqsq4ZD0CW50kH_H6lZ3kCW7xHkcS29SK-vW6mFyg03HycT7W52f2=
+1l51wwQMW64_VNq2WT2nQVmWy0l1skSSCW4QXPy73jSDSfW67_RJM6dzX95W6lmKsm3r5JLqV-j=
+Pp54c_YfBW4SRx1d5pS0RkW8hZKH_6blPz2W2b8gNd4YKhjtW5KV76Z13WmdwW5gVpRZ2CdcCKW=
+5hB9Hy1RhtvWW3rkZHK1bLfm-W7yYlLT58jCPlW65bdvK57vs_MW5kW9kT2HN53HW33VYtl216w=
+DJW8Z_cY83B-cYDW6z0JL53RHjjVN8pGbBB9K4yDW1yFsvQ8GHvT3W7ZzQ096pKGJhW4BVbLZ4B=
+bX6MW3Csk-k8mbJZXVXTbwd8p6VZ-W1SrbQ_1xJNXHW5w78lF32BdMBN6sPMVhrV87MN3dYLp-3=
+nYS0f8PzgDF04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-i=
+d-v2=3D"TehDDKCh" target=3D"_blank">the growing belief</a> that the governm=
+ent can=E2=80=99t get things done.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Why are public trash cans so complicated and =
+expensive?</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<h2 style=3D"margin:0; line-height:125%; font-size:18px">Walt Disney, Tokyo=
+, and Gavin Newsom</h2>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Start a conversation with somebody who is int=
+erested in trash, and they=E2=80=99re likely to bring up one of two places =
+where there practically isn=E2=80=99t any: Disney World or Tokyo.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Legend has it that Walt Disney researched cus=
+tomer behavior at amusement parks and concluded that deploying trash cans e=
+very 30 feet discouraged littering, leading to an abundance of trash cans o=
+n Disney properties. The Magic Kingdom has <a href=3D"https://d2q-Vf04.na1.=
+hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10=
+N74PqtW2_3wqW7Y8-PT6lZ3lPV8cK1b953XshW2qwzSx5B5zYnW1nrr8J7LrxXsW2cGc8H8ShGZ=
+VW9bXMrk6v0GPqW8KSSLr1HzptlW556J137k4YFCVRDCTP35PyQVW5LccPZ8RyqfrW1n4Ykp1Hd=
+HdcW65C2Xf1xHxHZW5PSZhk57_tgrVDHW6N4nc8dmW1-3VKT1HrcnjW3C2n4K7bJWJVW6CZDc93=
+3gHgsW22CkmT7Wsl82W4DZTCy8Cc9jCW1fBMqC8FQxLRW4JFtkC6v364CW4McV2H6yL4LcN210B=
+8LdLz4gV-RP456GZx3SVZntLP33PDlrW2hKQ3_1fWHWYW3t_0J17RcpfHf2GQ3wP04" style=
+=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"zmeN5Dhi" ta=
+rget=3D"_blank">an underground trash compacting system</a>, and <em>Travel =
++ Leisure</em> <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/=
+d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqtC2_3wqW7lCdLW6lZ3mxW7V=
+HNnj5jtm6-VW88SM17H4HWW853tJQ79XPCxW5PSV3_3q9C3mN6k7LX_5SYNqW17YZ931bx1-_Vr=
+Dv3f1YmQF-W5tTmRF6vmMWlN2fryn3zr-YhW6rBQmS8qM8MXW5hmv8Z6s6kq4W2YsQBC55gM6kV=
+RK-4R6-qtnVW1smh9426CdMQW7dG8g_67nHx5N2sh21yhpnczW1RhK6649JGwMW18Qnx08Rzg7p=
+W3RzbkP153Tm1W88wHCK2zwSZKN6Y7Q7j4MR60W8_wrS61453c0W5RS3DK1qvnK3W6WMdk48ntK=
+Vbf30mKL604" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-=
+v2=3D"8WVbaEwH" target=3D"_blank">once reported</a> that all employees, fro=
+m custodians to Cinderella actresses, are required to pick up any piece of =
+litter they come upon.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-1" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A crowded street leading to Cinderella Castle at Walt D=
+isney World's Magic Kingdom, featuring two brown trash cans placed close to=
+gether." src=3D"https://marketingagainstthegrain.com/hs-fs/hubfs/Daily%20Ne=
+wsletter%20Images/Daily%20Images/Feb%201%202026/sunday-trash-can-Disney-Mag=
+ic-Kingdom.jpg?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dsunday-trash-can-=
+Disney-Magic-Kingdom.jpg" style=3D"outline:none; text-decoration:none; max-=
+width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-2_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Walt Disney World=E2=80=99s Magic K=
+ingdom. Notice the two trash cans close to each other on the left. (Gary He=
+rshorn/Getty Images)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Tokyo, relative to America=E2=80=99s large ci=
+ties, is spotless, too. But unlike Disney World it has very few public tras=
+h cans, a policy resulting, in part, from a doomsday cult <a href=3D"https:=
+//d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Q=
+m5W2bnPc75J_z10N74Pqtj2_3wqW6N1vHY6lZ3kBN4tgwzDswlQjW4zgKMj2BQQDzW6TQ5Q18G7=
+2WDW38rv5h1KvVLvW4Hzl9G2GlQ47W5SRxtL4P9lg8W5x2R255Yffx4W5BGJNn5rr0J1W8D9yJ3=
+41ZwPkN3447ZSD0RH7W6qlvCt5MyK13N9bSBpWnwCjQW7Dd3tS8J1DvkV5SY8m31-S1QW8g4qVY=
+416BqzN3HgcBSQpVghW3NqRg05BxjBMW4ssv8_7-1sWrW9hY-Jz5LqVnxVVbwDK8jq3chW3w109=
+c1q1RQJW55jKBv7H8kFRf8lYR0004" style=3D"color:#192733" data-hs-link-id=3D"0=
+" data-hs-link-id-v2=3D"8cMXsSG9" target=3D"_blank">using sarin in plastic =
+bags during a 1995 attack</a>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CI have colleagues here at Public Wor=
+ks who go on vacation in Japan and, to the T, every one of them who's come =
+back the first thing they say is not, =E2=80=98I just saw beautiful mountai=
+ns or went to a tea house,=E2=80=99=E2=80=9D says <strong>Rachel Gordon</st=
+rong>, director of policy and communications for the San Francisco Public W=
+orks department. =E2=80=9CIt's like, =E2=80=98Oh my God, there's no litter =
+on the street, and there are no garbage cans.=E2=80=99=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Nineteen years ago in San Francisco, then-may=
+or <strong>Gavin Newsom</strong> took a page from the Tokyo playbook. As pa=
+rt of an anti-litter initiative, San Francisco started removing public tras=
+h cans, a few hundred at first but eventually more than 33% of the city=E2=
+=80=99s total, bringing its number from <strong>~5k to ~3k</strong>.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Residents complained, but Newsom <a href=3D"h=
+ttps://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rG=
+p2q7Qm5W2bnPc75J_z10N74Pqvv2_3wqW95jsWP6lZ3nJW630lZC2hSMS3W1ky470200HMGW58C=
+_xb8WLVNWW689r6N5TjnFRW1rRvgy1YZ81sVgTJJC7zCqqgW1wsRyl8nMhBYW8h0N3Y7pr4DBVz=
+chvW1d_Qr-W87yhLR8z988FW709mKZ4DcJwpN3xh3lhB47NVN63_JbBSQ9d_W79LZYV6MLcs0N7=
+DhVrbG2SGLW6vXcxZ1XbpnlW5ZQzpq3xFHPwN5_RzYsdkxDMV_X3yZ99GFsJN88hhRGZ0tVDW51=
+PxXc48fh13W759v9z2NR80JN58tRdXpH47JW4Rgfpl8PYzGxW75D8yT7Rdv8cW2ZlXnv6mTJhSN=
+2YLpl8hqJHTW7qqhcj8SlSKFN8fr4FkXsd3PW8dXwLQ6rZm0bf3M8PWs04" style=3D"color:=
+#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"VAt2yLnO" target=3D"_b=
+lank">insisted</a> that having a large quantity of trash cans at regular in=
+tervals led to illegal dumping by households and businesses. Fewer trash ca=
+ns would discourage this practice, he believed, and allow more space for pe=
+destrians with handheld trash.</p>
+<p style=3D"line-height:125%"><br>Resident satisfaction with the city=E2=80=
+=99s cleanliness has <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/U=
+B+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqvb2_3wqW8wLKSR6lZ=
+3m9W7Y3rtZ2XvJ3wVWVykh8xbsJqW5D001h84Qw4yN34wkC59W6McW30YV5j6-1nd3W4RZT5H83=
+bMVhW4vqJrf4h3VrWN8VYLpDm6R20W6_g8323zW5yvW3vHVY_805KbTVN212C2dzgz3W1HHlXY3=
+JvwswW726fnB7-SMQ5W4DHNVT6M1Mn_W5Mhpn155Bh-jW6hZXjy3YR2NsW6SBsfB7Wfkb-W4qnR=
+X12VvNm4W5dCV0k5wjSC4W4Z_P9-5GWLPwVtYBvv4yktQnW7_dnj77LGp6BW4FvynK8QqLwBW1P=
+7QVD4_w00dW2l1xyq8k3nlmW9kwqtk1rMXMZN2Q8pY7L0hQ5W19HGDs74sxCzf5bT2j804" sty=
+le=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"8Pg/mWvT" =
+target=3D"_blank">stayed roughly the same</a> in surveys since Newsom=E2=80=
+=99s trash can cull, although with grades in the C+ range, San Francisco is=
+n=E2=80=99t earning any comparisons to Tokyo.&nbsp;</p></div></div></td></t=
+r></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-3" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Gavin Newsom speaking into a microphone while pointing =
+off-camera during his time as mayor of San Francisco." src=3D"https://marke=
+tingagainstthegrain.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Ima=
+ges/Feb%201%202026/trash-can-Gavin-Newsom.jpg?width=3D1160&amp;upscale=3Dtr=
+ue&amp;name=3Dtrash-can-Gavin-Newsom.jpg" style=3D"outline:none; text-decor=
+ation:none; max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-4" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-4_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">Gavin Newsom=E2=80=99s mayoral admi=
+nistration led an initiative to reduce the number of San Francisco=E2=80=99=
+s trash cans. (Michael Macor/The San Francisco Chronicle via Getty Images)<=
+/span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Other cities have discovered that removing tr=
+ash cans made things worse.</p>
+<ul style=3D"line-height:125%">
+<li aria-level=3D"1">After the New York City Transit Authority removed bins=
+ at a few dozen stations from 2011 to 2014, an audit <a href=3D"https://d2q=
+-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2b=
+nPc75J_z10N74Pqtj2_3wqW6N1vHY6lZ3lxW5Rk5609l13SkW8THXp92KXDZ9W4KcXCc8PHdLmW=
+3SgPS84Cf0flW4yNWdl4LCFFVW39JL7H8Gpj15W5Gc08D1b2kmcW1D_SXF4q6tzxW2k4FNB6XTP=
+Q4W2gB7S42PGF-pVyGfc17Cn1MrW5Vfr1P44jS8xW39Wk9T7LV-GdVd7_jb4vhdMQW4k0fX13fq=
+jPhW4Pfydy75JFz4W1LXtDr1RlktXW3MdBG73DJ36VW610L-P5LYrJSW21J2w428y-jpN32M6wM=
+hVcpPW3QkzCs3pNvhrf8kg4mg04" style=3D"color:#192733" data-hs-link-id=3D"0" =
+data-hs-link-id-v2=3D"v8O9VU2k" target=3D"_blank">found</a> that at station=
+s where receptacles were removed the average amount of bags needed for coll=
+ecting litter increased <strong>3.2%</strong> and average track fires incre=
+ased <strong>33%</strong>.&nbsp;&nbsp;</li>
+<li aria-level=3D"1">Philadelphia <a href=3D"https://d2q-Vf04.na1.hubspotli=
+nks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqtW2_=
+3wqW7Y8-PT6lZ3pHW7VpnY895BzSfW3yf3hh1NTPv6VpCR5Q62C1N_W1ghFZN8QMWkKW2mJbz03=
+nSj66W8vPs7L3YqDT7W2qKxzK70LCMvW7q_sZv3t01btW35fQ-r3Pr4ZWW71pLmV5b1kt0W6pnF=
+kv2cxxy5W60SSj-8KbdRsW344YY018XX-zW9kfbVs1HtfqVN6w9H-WCgql1W65YnFc2NXnpqW4Q=
+F3fF4z2_HTW7YcVXy6HlbqBW4-JC7v1b0lqBW1DhWxB4Gj4gQW2w-Mpt6dvkr9W3cVXp14nhWwj=
+W2HbkfK5GB12yN7CwsrXKXSyFN63Yndc8RdyjW4-sFpC8bTHFtf1Xhtcl04" style=3D"color=
+:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Y/BC7N3S" target=3D"_=
+blank">tested out</a> various numbers of trash receptacles at select parks =
+and commercial corridors, measuring the amount of waste, litter, and staff =
+hours needed for pickup. It found that more trash cans correlated with less=
+ litter and fewer trash cans correlated with more litter. (<em>The Philadel=
+phia Citizen</em> opined on the discovery <a href=3D"https://d2q-Vf04.na1.h=
+ubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N=
+74Pqt02_3wqW69sMD-6lZ3pyW28-1Vz6Blr8LW80010w4JQtDbW1k18xv8QxnbfW2Yb0q36hT6j=
+3W164kK136RkBDW5hyQCD6vhxQvW5TwXnM8VvXXdVy__Dt1fgRlHW3VPNWs1Gq4wgW3V2Z721gW=
+YbRW3s__572_y9nCW1ZTGdY3zDS4LV8zMlr6Szp9ZW3y518x6Vm5xnN67ZHzlB5fflM34HRhjst=
+V_N7ftrxymTwM2W8J11y_77KDFtW82VMKY94Ppx6W6NDzYB8z2l5gf2tD99T04" style=3D"co=
+lor:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"DV2n9/dJ" target=
+=3D"_blank">with the headline =E2=80=9CWater is Wet.=E2=80=9D</a>)</li>
+</ul>
+<p style=3D"line-height:125%"><strong>Syon Bhanot</strong>, a Swarthmore Un=
+iversity behavioral and public economist who helped with the research in Ph=
+iladelphia, says the city ran the experiment because, as in San Francisco, =
+significant amounts of litter in Philly come from =E2=80=9Cshort dumping,=
+=E2=80=9D when people illegally unload garbage in public areas.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Bhanot says social norms can influence behavi=
+or around waste and litter. For instance, if people expect consistent curbs=
+ide trash pickup, they might have less incentive to illegally dump a bag ne=
+xt to a public trash receptacle in the middle of the week, reducing the nee=
+d for receptacles. (Since 2024, Philadelphia <a href=3D"https://d2q-Vf04.na=
+1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z=
+10N74PqtC2_3wqW7lCdLW6lZ3lxW8NkVbZ8N4l8lW1YhZTB6ZyhjsW1vvpTF3r2pVpW2VZxg92M=
+SdY6W2D29wB6XJTN7N8pgDPqM1kyGW7_BC1G8t__lFW7GYpMX4p9QsmW4fqf4K5cTW8lW37wzZz=
+539kZrW6zDGrq84b9PYW4q5vZ17RSsfMW7BdF794VL1pjW5C8c6d6WZ5X4W2cTW9r2NqSSSVBKh=
+4b3QhpxRW858rXj4_HzCsW2ZCmsb5fyzHYW8Sz7Bf6rgq1WW6bV3J-5gP-zwVGN85D89x9nnW6b=
+vWx380W4X7W5g3BBG6GHCBkW5pqvQY97P3Nxf4hR0zx04" style=3D"color:#192733" data=
+-hs-link-id=3D"0" data-hs-link-id-v2=3D"NhJpBsBu" target=3D"_blank">has emp=
+loyed</a> twice-weekly trash pickups in several neighborhoods.)</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The incentive to litter also comes down to a =
+cultural expectation about what others condone, Bhanot says.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">And Tokyo-like expectations don=E2=80=99t exi=
+st in most American cities. =E2=80=9CI=E2=80=99d like us to be a bit more o=
+f a tidy, polite culture, but we=E2=80=99re not there yet,=E2=80=9D Sauter =
+says. That=E2=80=99s why he=E2=80=99d like San Francisco to add more trash =
+cans.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">While San Francisco has more bins per capita =
+than New York City and less-dense California cities like San Jose, it lags =
+behind Washington, DC, which has <strong>~6.6k total trash cans</strong> an=
+d is often considered one of America=E2=80=99s cleanest cities.</p></div></=
+div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-5" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A bar chart titled &quot;Which city has the most trash =
+cans?&quot; showing Washington, DC at 94 cans per 10k residents, followed b=
+y San Francisco (36), NYC (27), Portland (22), and San Jose (15) ." src=3D"=
+https://marketingagainstthegrain.com/hs-fs/hubfs/Daily%20Newsletter%20Image=
+s/Daily%20Images/Feb%201%202026/trash-can-most-cans-by-city.png?width=3D116=
+0&amp;upscale=3Dtrue&amp;name=3Dtrash-can-most-cans-by-city.png" style=3D"o=
+utline:none; text-decoration:none; max-width:100%; font-size:16px" width=3D=
+"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-6" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-6_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">The Hustle</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Portland, Oregon, <a  href=3D"https://d2q-Vf0=
+4.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc7=
+5J_z10N74PqsK4ZD0CW5BWr2F6lZ3n4W2FMC_67PDKMRW7k_wKY4033HMW3bRg946f2BbdW4NLJ=
+5_5_tZ9kW4bdgkz7fX-qtW4lPvnm4Y1_J5W2rZpK_4j0_tgVk9gxk54M7fMW5C-Tpg2xZL11W4J=
+DqrY57w0chW3d12Nq3tyfPXVcf1tB1mBM7DVZYCmP7nXmFxW614R-j2c_6FGN5qv50_Kb8R0W8B=
+KVJT7HKZDtW1h-Tbs20czltW39yKkF17z_8CW7L6TqL2M5_5WW2LtVYc4C34PjW6rH-Fj4V-FJ1=
+W9kCznJ5kLwScW99t83x5zWp4lN308Fm9-4mWMW1LdPGR8nGFs-W1P1yKS2TgTk5W6WTyjk4SSK=
+RvW3BQhS95_9YW_W1pHRK685dB0FV7T5qm4nsG5QW7Lsrn25ZdXjVW4wN15h8HpNz_W2FpDzj2V=
+trNkW1_dsTc1zR5_yf6TzK5P04" style=3D"color:#192733" data-hs-link-id=3D"0" d=
+ata-hs-link-id-v2=3D"WqgHW+Xb" target=3D"_blank">facing similar complaints<=
+/a> as San Francisco, <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/=
+UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqvv2_3wqW95jsWP6l=
+Z3mSW5PKnWL2tKN9-W5FZ5Lk7xYbMBN17_fHlgv1WXW5XhGv51XkQtcW50Z7WY3wGyJQW5L61Rw=
+3nghWKW5TFF686VnytqW7_3CpS1GvkyQW8fqSTw2PlPv2VHw9D09f6pkQN5b2bhTRqmZ2N1zpxH=
+n-Sjx_W7FS6bz5T0gmpW3zVQx684F5s5W8WFk1L7cXnvvW6hl-MW5jXYvSVfjr8Y4vw0PwV_Kwp=
+H3sHjkBW6cx-TX6HHNYZVQj2d16D2lPXW7lftbS4Y8_gwW3mkD3N5QVqs0W6sjf6c7XJBn2W5ZP=
+r6L2FJJZgW8Zq_X-1PQ8XgMXCltTm5-x1W38mT404CWfM9W8n25x31zpvdPVkxwMv7RLNVdN30G=
+S8M94_Drf2hyq4M04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-li=
+nk-id-v2=3D"RUBSnDre" target=3D"_blank">nearly doubled</a> its trash can to=
+tal from 2016 to 2025, from 750 to ~1.4k, focusing on neighborhoods outside=
+ the central city. It expects to have ~1.7k bins when the expansion is comp=
+lete.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">San Francisco, for now, is keeping its number=
+ of trash cans roughly the same while introducing a new model.<br><br></p>
+<h2 style=3D"margin:0; line-height:125%; font-size:18px">Paying a trash can=
+ premium</h2>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In December 2022, after years of expensive de=
+velopment, testing, public feedback, and the fraud conviction of a former P=
+ublic Works director, San Francisco announced it had settled on a trash can=
+ of the future to replace its aging fleet: the Slim Silhouette.</p>
+<p style=3D"line-height:125%"><br>A stainless steel container with circular=
+ openings on its front side for garbage and recycling, it beat out cutting-=
+edge <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/V=
+VxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3nDW3ClpSQ5yX0JG=
+W8q-00Q8KB_H-W4r3D5V3PLRNlW6MgpR32zPRQ3W6j66-X2mVbwdW4SgJ_J899j3jW8frlf84x1=
+28VW38M4c18_hd8XN3S40pD2RYSzW97tRPZ3-mM_4W61NScs8_kx4bW8Q_SCd5lFPFcW2nG_mt4=
+Vdq5KW7NYKXz1-bPjYW7xY2Cf7Y3k9SW6Hslkf6jNZ5XW2VCTVr7gtJCRW7y2Pr67mJgrGW4_xN=
+7R1pxj4dW33zjzs3khHHqf1b3Ptb04" style=3D"color:#192733" data-hs-link-id=3D"=
+0" data-hs-link-id-v2=3D"8oV2yf8o" target=3D"_blank">designs such as the Be=
+ar Saver and Salt &amp; Pepper</a>. The city paid <span style=3D"font-weigh=
+t: bold;">~$19k</span> to build the prototype and reached a deal with a con=
+tractor to manufacture the trash cans for <span style=3D"font-weight: bold;=
+">~$1.4k each</span>. That doesn=E2=80=99t include installation costs or se=
+nsors that will provide an alert when the bins are full.&nbsp; &nbsp;<span =
+style=3D"font-size: 12px; color: #000000;"> </span></p></div></div></td></t=
+r></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-7" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A digital rendering of the &quot;Slim Silhouette&quot; =
+trash can, a sleek stainless steel bin with two circular openings, position=
+ed in a public plaza." src=3D"https://marketingagainstthegrain.com/hs-fs/hu=
+bfs/Daily%20Newsletter%20Images/Daily%20Images/Feb%201%202026/trash-can-Sli=
+m-silhouette.jpg?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dtrash-can-Slim-=
+silhouette.jpg" style=3D"outline:none; text-decoration:none; max-width:100%=
+; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-8" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mo=
+dule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" d=
+ata-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"h=
+s_cos_wrapper_module-2-0-8_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget =
+hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit;=
+ line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-typ=
+e=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #192733=
+;"><em><span style=3D"font-size: 12px;">A Slim Silhouette rendering. (San F=
+rancisco Public Works)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">It=E2=80=99s not an unusual price. Portland=
+=E2=80=99s new trash cans cost <strong>~$2k</strong> each. Washington, DC=
+=E2=80=99s are <strong>~1.5k</strong>. New York City has started replacing =
+its longtime green mesh receptacles with <strong>$1.1k</strong> designer <a=
+ href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x=
+5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqtW2_3wqW7Y8-PT6lZ3mwW6sV0Y94JbHwtVq2c1c5=
+6d763W7pQ4xp2z6yTZW6z0lgT1JL94MW6wrPh245YmfLW2hfVqG1BGKrcN71dwqc6LZvBW4w6s2=
+t2Y_VXsW9b1sjG30wP42W1jn0m23Tl8YJW6R4_GW8hkG6DW3NDSPg3kCzjVW28_Cl_3FC-mHW6w=
+lGDT8nb50XW6F8rdk3sXYqXW1Gb5Vz7BR7X0W699VbZ1vl7SjW3T2yXz8j6hcBW3HmcQs42H2r-=
+W4VqSTF4p3KQwW4LWzFp32G_pRW8vv2Gp13gVkZW3dMnTy3VTmnqW7Twgpj2-n7xDN4Y8mdR51V=
+K6N1vRZ-3Bl4shf94jxV604" style=3D"color:#192733" data-hs-link-id=3D"0" data=
+-hs-link-id-v2=3D"fR/OgMYo" target=3D"_blank">Better Bins</a> that cost mor=
+e than 2x as much.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">New York City=E2=80=99s Sanitation Department=
+ claims the Better Bins are leakproof and rat-resistant. A department spoke=
+sperson says they=E2=80=99ll last on the streets longer than the green mesh=
+ cans.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">San Francisco tested out a generic $630 wire =
+mesh trash can but chose the Slim Silhouette because it found the Silhouett=
+e=E2=80=99s opening, with a snorkel design, was better at preventing rummag=
+ing and its stainless steel body was easier to maintain. (It also costs les=
+s than the current models in use by the Public Works Department.)</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The eye-popping price of these modern trash c=
+ans has little to do with permitting and red tape, <a href=3D"https://d2q-V=
+f04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnP=
+c75J_z10N74PqtC2_3wqW7lCdLW6lZ3myW3XXDLd4LdD8VN5YZxw874XjFW5R7Gnk8kbR4NW14R=
+1q051zC3GN9kGxNLQFFy5W1q236Y6jnqMnW16_rhW90KGMCW1H_jm52kDxkcW8XyFnL5D53l_W2=
+xs2Vq4XstnCW7VfKck5RN7t6W8CL59x4HlWBVN85tRB9Bz8cSVx1K6l6gtDSzN1xKK_QLs5xsW7=
+Fjqcx1Lz2_DW49tR-J8hGbMZW4Vf-K46Sb3X0N5Pjb5nFnC9vW9cZCJr16g2GXW25FSFv7ndQ1y=
+V3Zl8k3G656rVMKvtV7wqPTYVdwxjQ8l5Gw7f6dwDpK04" style=3D"color:#192733" data=
+-hs-link-id=3D"0" data-hs-link-id-v2=3D"Bz2wSCJB" target=3D"_blank">like st=
+ories of $1.7m public toilets</a>. Thoughtful designs are more expensive, a=
+nd many cities believe it=E2=80=99s necessary to pay the premium.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><span style=3D"color: #222222;">=E2=80=9CIf w=
+e could use the $600 baskets, if they did what we needed them to do=E2=80=
+=A6 and didn=E2=80=99t become more of a nuisance, we would have bought thos=
+e,=E2=80=9D Gordon says. =E2=80=9CThat=E2=80=99s what we were hoping would =
+work.=E2=80=9D</span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">She adds, =E2=80=9CThere=E2=80=99s never goin=
+g to be a perfect garbage can.=E2=80=9D</p></div></div></td></tr></tbody></=
+table>
+<div id=3D"hs_cos_wrapper_module-2-0-9" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentatio=
+n" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"A flowchart comparing trash can costs, ranging from a $=
+125 Chicago wire basket to a $4,800 Bigbelly Smart Max ." src=3D"https://ma=
+rketingagainstthegrain.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20=
+Images/Feb%201%202026/trashcan-public-cost.png?width=3D1160&amp;upscale=3Dt=
+rue&amp;name=3Dtrashcan-public-cost.png" style=3D"outline:none; text-decora=
+tion:none; max-width:100%; font-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-10" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-10_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">The Hustle</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Yet premium models don=E2=80=99t always accom=
+plish the goals sought by the cities that buy them.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Several years ago, Tacoma, Washington, tested=
+ out smart trash cans made by Bigbelly, a popular brand that offers solar e=
+nergy-powered bins with a compacting feature, software connection, and a se=
+nsor that goes off when bins are full. Besides the high upfront cost, the c=
+ity dealt with software fees and solar panel theft and found the compaction=
+ didn=E2=80=99t reduce service costs.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Tacoma has replaced the smart trash cans with=
+ non-compacting models by Bigbelly and Storr that cost less than half as mu=
+ch.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CUltimately, we moved away from solar=
+ compaction because the math simply didn't add up for our specific needs,=
+=E2=80=9D says city spokesperson <strong>Maria Lee</strong>, over email. =
+=E2=80=9CWe found that a simple, fully enclosed can prevents litter just as=
+ effectively.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Since Philadelphia went premium in the late 2=
+000s and early 2010s, its trash cans have been a point of contention among =
+residents and politicians.</p>
+<p style=3D"line-height:125%"><br>As part of an effort to reduce trash serv=
+ice expenses, the city=E2=80=99s Sanitation Department installed ~1.1k comp=
+acting BigBelly trash cans. They cost <span style=3D"font-weight: bold;">~$=
+3.7k</span> each and replaced standard <span style=3D"font-weight: bold;">$=
+100</span> wire baskets, <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/C=
+tc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqtW2_3wqW7Y8-P=
+T6lZ3p9W5l7rKV7fm-35W1cdZnS4RC2lPW8BKg9N1wwgktW2GnHC631B3PFMrTqTKzlbDpW42w8=
+RN7n4H4cW7Jm82C213twxW8HCbhW5jYqKYW2DJpXF4R1hP4V7j_4v7Pxj0yW329RHM5wGwM4W4c=
+ZmgY5pSr6LW49dzFX8k3QXlW4C-kL46zPS0NW6LBhCY6dt-X4W1yF_6r46shWtN2XGY8Mt4XX5W=
+3My9s76kk637W6rpFSt8KB8glW2JgtS375-YZLW68r_bG1Tlwv1W2V9gPJ91d0JTVh5mtK6lLxb=
+4W7JWFM_7PHVb2W1vL7d45p6qbhW4Gvqmp8H8rDbf2dgbFx04" style=3D"color:#192733" =
+data-hs-link-id=3D"0" data-hs-link-id-v2=3D"0LDAWiAL" target=3D"_blank">acc=
+ording to the Philadelphia City Controller</a>. Because of anticipated lowe=
+r service costs, the city expected savings of <span style=3D"font-weight: b=
+old;">$13m</span> over 10 years compared to the wire baskets.</p></div></di=
+v></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-11" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"An infographic showing that one $3,700 BigBelly solar t=
+rash compactor is equivalent in cost to 37 standard $100 wire baskets." src=
+=3D"https://marketingagainstthegrain.com/hs-fs/hubfs/Daily%20Newsletter%20I=
+mages/Daily%20Images/Feb%201%202026/trash-can-philly-can.png?width=3D1160&a=
+mp;upscale=3Dtrue&amp;name=3Dtrash-can-philly-can.png" style=3D"outline:non=
+e; text-decoration:none; max-width:100%; font-size:16px" width=3D"580" alig=
+n=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-12" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-12_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">The Hustle</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The Controller=E2=80=99s Office found that th=
+e city never conducted a cost-benefit analysis to verify any savings. A for=
+mer director of Philadelphia=E2=80=99s Zero Litter and Waste Cabinet <a hre=
+f=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDD=
+W5W-rGp2q7Qm5W2bnPc75J_z10N74PqtC2_3wqW7lCdLW6lZ3nDN6GmwQK_YZ44VQxrKS67WgLW=
+W7ycfQN2n2y4mVWgQj76f7rJDW27sFBr2pL1VLW4T3X2S99cfT7W40GMK97QHKSBN2SCzGVZmGq=
+bW1rq8xd57qDw6N4KKxg65MxzkW4vd4V26g13gbW2bRNy_6y6ftwVWr0cK73FkBgW69kBmx7vgZ=
+hyW7Gnbw141N7zsW88vWRg26FRs5W4dylZ-6hjTl9W2-C1nJ8x6VrJW3V1vLG7zxhRQW7lzftH7=
+d59H2W6GXSqG5cNRKHW5YvLVw1vvyzGW850dbq72CKYlW6wWZPR81nf4Jf8snP5P04" style=
+=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"QH2EY30P" ta=
+rget=3D"_blank">later wrote</a> that the Sanitation Department didn=E2=80=
+=99t integrate the Bigbelly=E2=80=99s sensor system, so the alerts for full=
+ bins just went =E2=80=9Cinto the ether.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">A Philadelphia Sanitation Department spokespe=
+rson declined an interview but said in an emailed statement that Bigbelly t=
+rash cans in the city=E2=80=99s core were emptied once or twice per week, c=
+ompared to five times per week for prior trash can models, allowing them to=
+ coordinate pickups with regular trash services.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%"><strong>Terrill Haigler</strong>, a former sa=
+nitation worker in Philadelphia, often comes across Bigbellies that are ove=
+rflowing or damaged. And he says that there aren=E2=80=99t nearly enough, e=
+specially in neighborhoods outside the heart of the city.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CI believe that Philly is in a trash =
+can desert,=E2=80=9D he says.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">So he bought his own inexpensive trash cans.<=
+/p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<h2 style=3D"margin:0; line-height:125%; font-size:18px">Wandering the tras=
+h can desert</h2>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">While working for the city, Haigler began pos=
+ting on social media as <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ct=
+c/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-=
+6lZ3ppW7NwqV67cw_MGW1JR53q3VYGS0SJYc3htTxjW2NvWwF1rcG5tW8TPSf43GLJxxW7VQQ_7=
+126Dm2W4bP3ns7B7ZpxW3Nsw886_Qzn3W2XKQW67zfRwGW4czyp06KWPVYW6G4BNt3fZb72N7TW=
+Cw63282vW6QvbY23r2jfpW8g9ZTh7JVyf2W7WBSJZ4ZS8hqW1CVxwX4cZ1y2W6912tp4z0Y8DW6=
+gf05-7vDrh4W6C7xl91cwr25W9cByh28rbvRtf6Xqv2d04" style=3D"color:#192733" dat=
+a-hs-link-id=3D"0" data-hs-link-id-v2=3D"H/sVHmob" target=3D"_blank">Ya Fav=
+ Trashman</a>, sharing details about life as a sanitation worker and advoca=
+ting for cleaner streets. He started his own private waste collection busin=
+ess in 2021.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">And last year Haigler decided to do something=
+ about Philadelphia=E2=80=99s lack of trash cans.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Using grant money, Haigler started a pilot pr=
+ogram to put five public trash cans in a North Philadelphia neighborhood. B=
+y January, four months into the program, his crew had collected ~4.5 tons o=
+f trash. He says neighbors and business owners call if they=E2=80=99re over=
+flowing before pickup days and sometimes store the garbage until the crew c=
+an get it.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CYou start to activate the community,=
+=E2=80=9D he says. =E2=80=9CThey=E2=80=99re taking pride.=E2=80=9D</p></div=
+></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-13" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"Terrill Haigler, known as &quot;Ya Fav Trashman,&quot; =
+standing in a yellow beanie and Adidas hoodie in front of a pile of trash b=
+ags." src=3D"https://marketingagainstthegrain.com/hs-fs/hubfs/Daily%20Newsl=
+etter%20Images/Daily%20Images/Feb%201%202026/trash-can-sunday-Terrill_Haigl=
+er.jpg?width=3D1160&amp;upscale=3Dtrue&amp;name=3Dtrash-can-sunday-Terrill_=
+Haigler.jpg" style=3D"outline:none; text-decoration:none; max-width:100%; f=
+ont-size:16px" width=3D"580" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-14" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-14_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Terrill Haigler has tested out in=
+expensive trash cans in areas of North Philadelphia. (Courtesy of Haigler/Y=
+a Fav Trashman Instagram)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Most of the trash has been coffee cups, soda =
+bottles, and plastic bags filled with dog poop =E2=80=94 not the materials =
+that you=E2=80=99d expect from illegal short dumping.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">The experiment has also been affordable. The =
+cans, 55-gallon metal drums, cost <strong>~$150</strong> each, he says. Hai=
+gler pays two workers $100 a week to empty the cans on Tuesdays and Fridays=
+.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">He hopes to receive more grant money to expan=
+d the program, so that Philadelphia can =E2=80=9Cdo it like Disney=E2=80=9D=
+ and have affordable trash cans everywhere.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">=E2=80=9CIt doesn=E2=80=99t have to be,=E2=80=
+=9D he says, =E2=80=9Ca $3,000 trash can.=E2=80=9D</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<h2 style=3D"margin:0; line-height:125%; font-size:18px">Little victories</=
+h2>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Meanwhile, in San Francisco, the $1.4k Slim S=
+ilhouettes are expected to finally hit sidewalks this summer. If the new mo=
+dels prove as rummage-resistant and easy to maintain as intended, Rachel Go=
+rdon says San Francisco=E2=80=99s Public Works Department may expand the nu=
+mber of trash cans in the city.</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-2-0-15" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentati=
+on" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Helvetica, Arial, sans-serif; color:#192733; word-break:break-word;=
+ text-align:center; padding:10px 10px 0px; font-size:0px">
+        <img alt=3D"District 3 Supervisor Danny Sauter speaking outdoors in=
+to a microphone with his hand gesturing." src=3D"https://marketingagainstth=
+egrain.com/hs-fs/hubfs/Daily%20Newsletter%20Images/Daily%20Images/Feb%201%2=
+02026/trash-can-sunday-Danny-Sauter.jpg?width=3D1160&amp;upscale=3Dtrue&amp=
+;name=3Dtrash-can-sunday-Danny-Sauter.jpg" style=3D"outline:none; text-deco=
+ration:none; max-width:100%; font-size:16px" width=3D"580" align=3D"middle"=
+>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px 10px 10px"><div id=3D"hs_cos_wrapper_module-=
+2-0-16" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_m=
+odule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" =
+data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"=
+hs_cos_wrapper_module-2-0-16_" class=3D"hs_cos_wrapper hs_cos_wrapper_widge=
+t hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inheri=
+t; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-t=
+ype=3D"rich_text"><p style=3D"line-height:125%"><span style=3D"color: #1927=
+33;"><em><span style=3D"font-size: 12px;">Supervisor Danny Sauter still wan=
+ts more trash cans in his district. (Tayfun Coskun/Anadolu via Getty Images=
+)</span></em></span></p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">And Danny Sauter, the city=E2=80=99s District=
+ 3 supervisor, has notched at least one win in his quest toward adding 1.5k=
+ new trash cans in his district.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">In the Italian-American North Beach neighborh=
+ood, with a bevy of pizza restaurants, residents and businesses complained =
+that a single pizza box could back up a trash can because of its awkward sh=
+ape and lead people to throw litter on the sidewalk.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">So Sauter found a bespoke solution: two bins =
+specially designed for collecting pizza boxes.</p>
+<p style=3D"line-height:125%">&nbsp;</p>
+<p style=3D"line-height:125%">Only 1,498 more trash cans to go.</p></div></=
+div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-3" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-3-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-0"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"non=
+e" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align=
+:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:5px"><div id=3D"hs_cos_wrapper_module-3-0-1" cla=
+ss=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" styl=
+e=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos=
+-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrap=
+per_module-3-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wra=
+pper_type_rich_text" style=3D"color: inherit; font-size: inherit; line-heig=
+ht: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_=
+text"><p style=3D"text-align:center; font-size:26px; line-height:150%" alig=
+n=3D"center">Share &amp; discuss this story on:</p></div></div></td></tr></=
+tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-3-0-=
+2" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module=
+" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-=
+hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"p=
+resentation" align=3D"center" style=3D"width: auto; text-align: center; mar=
+gin: 0 auto; " class=3D"hs_cos_wrapper_type_social_module">
+  <tbody>
+    <tr>
+      <td class=3D"social-network-cell" align=3D"center" style=3D"font-fami=
+ly:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-break:=
+break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113=
+/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqtC2_3wqW7lCdLW6lZ3lgN9=
+ftLT0bdcl-W7WnQ2-1v_TldW2hHLr83B2CnpW5XY6NH6hrccJW3hpXgS423nTqW19xxM455b-3T=
+W8rSmSc6gYRs9Mz4FMrMhwmxW3stQSD5Jmc1wVMwlGj8-R0qdW53g6H_7x3VpxW6qkdBV54Zfwc=
+W32SPlZ4Zt3WkN5J3JYFjCtTHN24TllF1KwvXW6QpR-k48lkhrW5QVVc84H2GzvN8mwrwBK855p=
+W2tsLSX44jlhCN5hFM7Fy2DH6W4Nr30J3hDVcpVQ31RL1JxKv8VwZcKf8DxPW3W6lHLv-6jWJWs=
+f3Wg1bj04" style=3D"color:#00a4bd; text-decoration:none !important" data-hs=
+-link-id=3D"1" data-hs-link-id-v2=3D"LpW88G7Z" target=3D"_blank"><img src=
+=3D"https://marketingagainstthegrain.com/hs-fs/hubfs/Critical_Template_Imag=
+ery/H.png?height=3D80&amp;upscale=3Dtrue&amp;name=3DH.png" alt=3D"Site" hei=
+ght=3D"40" style=3D"outline:none; text-decoration:none; border:none; width:=
+auto!important; height:40px!important; vertical-align:middle" valign=3D"mid=
+dle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113=
+/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3pVW8=
+GKLjP3W0-M-V3zzyG3-2PSpVcnMFR59zKdHN7m6Hm4PQxjyV4nWv180KK92W3QWvRv6dMp8gW4z=
+wVnP4Q7bWHW6HZXTX3cz3YRW7fnWlC1XKQH6W5sXNR62j3yTyW10Zy_C6dR50dW5BfJPZ5-J9W4=
+W2cCGcm7P2gkfW4BvztW5VngmRW1h86Zb8hJ_X7W73fJXK8SJ51PW6RD8yf54xygZVrFHWJ4rL3=
+h2W3C6Txg7K0nk2W6ybY8l4T5CqFf37MqDF04" style=3D"color:#00a4bd; text-decorat=
+ion:none !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"BhKHpnJa" =
+target=3D"_blank"><img src=3D"https://hs-20627419.f.hubspotemail.net/hs/hss=
+tatic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/Fo=
+llow+Me+-+Email/youtube_circle_color.png" alt=3D"YouTube" height=3D"40" sty=
+le=3D"outline:none; text-decoration:none; border:none; width:auto!important=
+; height:40px!important; vertical-align:middle" valign=3D"middle" width=3D"=
+auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113=
+/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3msW8=
+2L_2j7V1qQ7W1xv7pG1YNgZlW5M6VJt3DLT2vW4MyrPZ2_17tYW9lXwPh6JGy9kN6CpBX5WxtM3=
+W3swBmH2R_PD1W7tCddr7lP4GBW5f0qJ07-h7sxW1qgHdc7-y3PSW5G6xcL4Sq5-0Vt1MJQ9k8-=
+MVVL5Bgt7vwfY4W7jqdsj5y_1CsV46Hg967NXH6W7L9WCJ7bVwzRW5RWqxS3v9rzNW6YcWY73Gr=
+7SNW17kr7294bJ4HW3vqgWQ8tshpbf29k3Pj04" style=3D"color:#00a4bd; text-decora=
+tion:none !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"hMx6vuQx"=
+ target=3D"_blank"><img src=3D"https://hs-20627419.f.hubspotemail.net/hs/hs=
+static/TemplateAssets/static-1.262/img/hs_default_template_images/modules/F=
+ollow+Me+-+Email/linkedin_circle_color.png" alt=3D"LinkedIn" height=3D"40" =
+style=3D"outline:none; text-decoration:none; border:none; width:auto!import=
+ant; height:40px!important; vertical-align:middle" valign=3D"middle" width=
+=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word-b=
+reak:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#=
+192733; word-break:break-word; padding:8px 15px; line-height:1; vertical-al=
+ign:middle" valign=3D"middle">
+                <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113=
+/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3pcW7=
+Wxnsk2Rv-6lW25WdrP7G72mmW65rKr943Rmb8W16Qm4G6cRh3RW8RTZsr3NRYgRW14LD7Z7vMVp=
+HVP6s3v1_t6lHW7s8hxn7-hH92VS7XHr26zRtVW6NyjMK4qgPlYW1SvHbL855W_ZW2x9bJk1hQ3=
+w_W39bQwl3YTkkcW859TFs5cnC9kW45GwCS1XNbGTW6TM09B417q0nVHj04y97xLFxW5Trh9X2Q=
+WH4mW2G0M_K2h1kbKW49nn705gf_xhf3dBfb804" style=3D"color:#00a4bd; text-decor=
+ation:none !important" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"Bzlwbvlf=
+" target=3D"_blank"><img src=3D"https://hs-20627419.f.hubspotemail.net/hs/h=
+sstatic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/=
+Follow+Me+-+Email/instagram_circle_color.png" alt=3D"Instagram" height=3D"4=
+0" style=3D"outline:none; text-decoration:none; border:none; width:auto!imp=
+ortant; height:40px!important; vertical-align:middle" valign=3D"middle" wid=
+th=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:10px"><div id=3D"hs_cos_wrapper_module-3-0-3" cl=
+ass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" sty=
+le=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-co=
+s-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"none" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-align:to=
+p" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Helvetica, Arial, sans-serif;=
+ color:#192733; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #eaf0f6;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #eaf0f6;wid=
+th:580px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-4" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; margin:0 auto; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-4-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; w=
+ord-break:break-word; padding:5px 10px"><div id=3D"hs_cos_wrapper_module-4-=
+0-0" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modu=
+le" style=3D"color: inherit; font-size: inherit; line-height: inherit;" dat=
+a-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_=
+cos_wrapper_module-4-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs=
+_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inherit; l=
+ine-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=
+=3D"rich_text"><p style=3D"text-align:center; font-size:14px; line-height:1=
+25%" align=3D"center"><span style=3D"font-family: Helvetica, Arial, sans-se=
+rif;"><span style=3D"color: #192733;">Today's email was brought to you by <=
+a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8=
+x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqsK2_3wqW5BW0B06lZ3kQW46s1lf23ccwtM7cCFG=
+67pP8W7bS_8g6clzj_W8ZJGj95SlbGWW85C-1J5Z9RzQW5-Sn0m3ZTrM4W2Lmlnj5JTlJPW4ZRg=
+7T6kNlj4W96LDNM1WqXkFW6cvQRz3X3cZgW2QkLX63Jq8FDW1W0Stl3JVjqFW7X1fpF4vQPl4W8=
+bJM9d7JnK1VW3m8LvC7yf0DSW7bgdGd2_HM5YN4Pww3cc_TvDMSzJQ3js7qVf1VB_5604" rel=
+=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"1" data-hs-link-id=
+-v2=3D"om1TgbZS" target=3D"_blank">Mark Dent</a>, and <a href=3D"https://d2=
+q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2=
+bnPc75J_z10N74PqsK2_3wqW5BW0B06lZ3p_VyFzvK2JLP-9W3YSw0r5Fl4QjW89rscH8Jpfx0W=
+5BlSs58jPwmtVsQq1K6ZjQy2W9d4bml6LYTSTW6Q30YG7N5vkgW2wDyrC5ZvTZrW3FSzp75PGh3=
+yW5LwXpH2hDvW6W9d8dn89m5S9VW7YWsvD93qlmKW2W21xl5Nh9dBV3wSSW3YR0xLW3hhBDb52J=
+MmDW93w9Bj72RdjrW2t6jK-5Yrw24N8bmwN9mY9KVf44m2BK04" rel=3D"noopener" style=
+=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"CAzB/nO2" ta=
+rget=3D"_blank">Zachary Crockett</a>, with help from Kaylee Jenzen.</span><=
+/span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter">&nbsp;</p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-family: Helvetica, Arial, sans-serif; color: #00=
+0000;"><span style=3D"color: #192733;">Was this email forwarded to you? Sig=
+n up <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/V=
+VxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqtW2_3C8W7Y8-PT6lZ3n6W7KWM476zxh2j=
+W7tvYlg1HJxFSW5lS_4p15zlNJW348xkL4m9DQnW43Ygt06xt4DNV7rjhT2JKspkW6XTkFm2QZL=
+b8Vyypl687vr5kVHXHZt4n1KkNW33rTSB4ry0lBW3YDmxg5jFJ2jW4rmYpH4-vpqsW7b0HjP8Z8=
+9-pW5n81Zk4Y9ChHW5RkPpY7DL1S0W8Zz69T2ftBxkW1RV0w_42wFHJW76KSn24jW6sTW2M1tby=
+9frJwVN7P9bFc6H-5VW16sNsV3n2ZCqW2kGrZm5J45DbW1NlLCx7MvbXWV7t7_Q2V6RQfW2b8sY=
+J6fk-5XW60Tp7r5t108Nf7FzxcT04" rel=3D"noopener" style=3D"color:#192733" dat=
+a-hs-link-id=3D"0" data-hs-link-id-v2=3D"nmcX5Hpp" target=3D"_blank">here</=
+a>.</span></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;"><br><strong>Subscri=
+be to our other newsletters</strong><strong><br></strong>Expert insights: <=
+a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8=
+x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74PqtC3hKBlW7lCdLW6lZ3kZW8H5ZWF4f3r79W54mHv=
+h9fL37WW7NyKdW3R0mTbW8jPB798FhX-tN8pHWcLxGPnpW1q-tqd5d0Yg4W4Mt0Zq7RKFbXVJG0=
+gW6gPKbNW4Qkf6q5W8GNGN1YnP7TrpkKbW92CcQW8PjLnGW2h_Pls5Tjl18W3lw8zr90MH_tW74=
+kg652cBws2N9dcWqZR2JnSW9dKdbD8H6YhPW9jnPm95VS5qrW9lm6c15vxQ4GW7gqqh71V-XjFW=
+8Yzvw892w4FMW1KtP1P5nPMwGVLBp-X318Jy9N4N4L5SpqhcnW91kcQQ26wqL5f6K6lNF04" st=
+yle=3D"color:#192733" rel=3D"noopener" data-hs-link-id=3D"0" data-hs-link-i=
+d-v2=3D"5lzKc1ko" target=3D"_blank"><em>Marketing Against the Grain</em></a=
+>&nbsp; | &nbsp; Stay up-to-date on AI: <a href=3D"https://d2q-Vf04.na1.hub=
+spotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74=
+Pqtj3dnPjW6N1vHY6lZ3njW2gsqsC3XqS5qW4SnY527tFD0gW6h9h9W99PGsnW4NQKym5kKNSHW=
+4CB-qZ83MRnhW7MRwBR5H0RL0W1wQLwf7Q3RZrW6VQ9D98j7NNhW8yKjCS4BkMB1W1L-1N852WN=
+bVW49PbWk9lx48DW2049fb1YKFZyVKrvKt1ZHcWYVKLnvw69mjyvW6jG-8s17Q32-W2kvn6c78m=
+gnKW6W-L2M5ZXf3DW7YbYsZ3Dxn_rW6hFxp36jF5cVVsMlDY4ch8KtW3G5C__1wh6WgW6xCBjQ7=
+t_--ff4210hz04" style=3D"color:#192733" data-hs-link-id=3D"0" data-hs-link-=
+id-v2=3D"fB+Qb5IE" target=3D"_blank"> <em><span style=3D"text-decoration: u=
+nderline;">Mindstream</span></em><em><span style=3D"text-decoration: underl=
+ine;"><br><br></span></em></a></span></p>
+<p style=3D"text-align:center; font-size:14px; line-height:125%" align=3D"c=
+enter"><span style=3D"font-size: 14px; color: #192733;">Follow <em>The Hust=
+le</em> on <a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-=
+Vf04/VVxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3p3W2l18Hn=
+94Ts5lW4B3ldy5jWylQF22G9H-h55QW7KLmkG55M3p9W3N6vtS2v6LQcN2lv9LkHxhHXW4BS7th=
+3ScXKsW4f4F8f5R4GPgVSstLh1tDcMXW52pHfP8_vrGXW6-grgP7Q3LrSW8KFGwM2JyYQ6W7QW5=
+L_68hcx9W3N-HxF806Ls4W49N22c5gQftdN1BnjkW8xKcLW3XBD3n6HgGpTW5QzPnV1p7bHJW4M=
+sSKm9jmWm5W2CQCpj6mlrFzf3Mnnv-04" style=3D"color:#192733" rel=3D"noopener" =
+data-hs-link-id=3D"1" data-hs-link-id-v2=3D"e97Sa5iX" target=3D"_blank"><sp=
+an style=3D"text-decoration: underline;">YouTube</span></a>,&nbsp;<a href=
+=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/VVxthC8x5rDDW=
+5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3lrW1K2MNw8GZc-pW2RV6J-2KQws=
+zVKKMTS6FKtlVW5fvlrR67jYCzN3t45SmRMWMcW823sP14Ps93DW7sfzck7KV384N5kZ3f9-pV1=
+8N2NRRp9RnRhKW7rYTb34RSp6WVTxn8Q5R7WDRVfzWJz1PJjNyW389GJ26jBkJvW5G4ZRS10gzV=
+-W2h0rx21hBJ4wW628n567FHXnxN3ZTQzMk2P4SW5ZWcnQ2RRbRxW6X0-q04PxChvW8f1HFv830=
+l3Jf4nVX3l04" rel=3D"noopener" style=3D"color:#192733" data-hs-link-id=3D"1=
+" data-hs-link-id-v2=3D"w0Kb7DPn" target=3D"_blank">LinkedIn</a>,&nbsp;and&=
+nbsp;<a href=3D"https://d2q-Vf04.na1.hubspotlinks.com/Ctc/UB+113/d2q-Vf04/V=
+VxthC8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10N74Pqt02_3wqW69sMD-6lZ3prW6cpwwV4XFh3Z=
+W2wVMC-31tqhQM3F9wtqJ9wvW3bs4kd4vNC49W3KQ_Cr18mvSyW7CZdGG2McydmW6YBThB6Jj5_=
+KVb9L996HLwklW4fHKQt6RMXMzVRjPy16-1z29W6BVtV78MLYv7N8Vrk-DXlvlRW41yqwD7JfSz=
+JW55z7Rt6tbm3_W8x91xt2WMkpdW2xVWNC6MkcdTW8lBq2w40MmjMW8FsGHk251nXxN78T0c9SB=
+XKqW3QCHJm4xqM-Yf9hvFg404" style=3D"color:#192733" rel=3D"noopener" data-hs=
+-link-id=3D"1" data-hs-link-id-v2=3D"SS6chJVN" target=3D"_blank"><span styl=
+e=3D"text-decoration: underline;">Instagram</span></a>.</span></p></div></d=
+iv></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Helvetica, Arial, sans-serif; font-size:16px; color:#192733; word=
+-break:break-word; padding:0px 5px 10px"><div id=3D"hs_cos_wrapper_module-4=
+-0-1" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_mod=
+ule" style=3D"color: inherit; font-size: inherit; line-height: inherit;" da=
+ta-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=
+=3D"presentation" class=3D"hse-footer hse-secondary" width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-serif; font-s=
+ize:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Helvetica, A=
+rial, sans-serif; font-size:16px; color:#192733; word-break:break-word; tex=
+t-align:center; margin-bottom:0; line-height:135%; padding:10px 20px">
+          <p style=3D"font-size: 11px; line-height: 150%; font-weight: bold=
+;"><span style=3D"font-family: Helvetica, Arial, sans-serif;">HubSpot Media=
+, 2 Canal Park, Cambridge, MA, 02141,&nbsp;USA, +1 888.482.7768</span></p>
+<p style=3D"font-size: 11px; line-height: 150%; font-weight: bold;"><span s=
+tyle=3D"font-family: Helvetica, Arial, sans-serif;">Never want to hear from=
+ us again? Break our hearts and <a  href=3D"https://blog2.hubspot.com/hs/pr=
+eferences-center/en/page?data=3DW2nXS-N30h-SvW2qG-GR4kD02ZW2y4bh_47w2VfW2FR=
+j0K2WzQ52W347DRT38lXK1W2p9zZh3b9wbJW3gv8k92vQn9XW3yNxf225lg5bW366FJP1_5fn4W=
+45MW9t4t6mW_W22_Lmt362qQcW49ltfJ3g2484W22XHk_1XnDn2W3NR2T81_2L_NW3C7JVR2RTZ=
+H1W2xQCsW1LzPLTW45ykQH3GZHDXW4kpNJm1LqrpKW1--6FQ3W3CzyW3NNxJC32qTbcW2Krrmw2=
+5d3lPW2zPcSn43TBLxW1ZdTMD2MxFbKW2MSg1g2qM22zW1Xvrvj2sTwWwW3yZw-Z49xYyxW4kGy=
+0R3JX3WKW329B5m2-BxB2W3b1HB22sT6FVW1YW-DM3XHyckW1VwnBy2r6wJBW2r1spy1_2J46W2=
+KyMf343XVHwW1Vs6Xm24TWhTW1BGn-11Y-LqrW41QWx31VtqK_W41twN_1VjCxkW4fJfXX3N-P1=
+_W41QtfX1XfybvW254CR93__97gW1_nB3c2FCGPgW47VQs51Nl3XVW4rxg6L2KVbm1W3BVCnp3C=
+6vXMW2PMBmd3P0XRzW20Z4nG217sY1W3_v_T02HV1H4W3H7MqT4plX8BW3_VlML32rgtXW41Y8K=
+g4ms5jWW2s_Cwd3C6xf3W1S4kKj4fRfdNW4cs2--1Vk2BZW2qRfgx4hqTJKW2B0FL23LBLNtf4r=
+8h8104&amp;_hsenc=3Dp2ANqtz-81FQdlZi4KMrL10hdLfzQ0wRNOVhy78KuY0gqRVPWcA-ahm=
+60G-xG7fgabj_C-yVK_huX_Z5yxMVSC88KX6pxgIsx6_A&amp;_hsmi=3D401329326" rel=3D=
+"noopener" data-unsubscribe=3D"true" style=3D"color:#00a4bd" data-hs-link-i=
+d=3D"0" data-hs-link-id-v2=3D"kDnPxijp" target=3D"_blank"><span style=3D"co=
+lor: #192733; text-decoration: underline !important;">Unsubscribe</span></a=
+>.</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://d2q-Vf04.na1.hubspotlinks.com/Cto/UB+113/d2q-Vf04/VVxth=
+C8x5rDDW5W-rGp2q7Qm5W2bnPc75J_z10W74Pqdq8fYH232V01" alt=3D"" width=3D"1" he=
+ight=3D"1" border=3D"0" style=3D"display:none!important;min-height:1px!impo=
+rtant;width:1px!important;border-width:0!important;margin-top:0!important;m=
+argin-bottom:0!important;margin-right:0!important;margin-left:0!important;p=
+adding-top:0!important;padding-bottom:0!important;padding-right:0!important=
+;padding-left:0!important"></body></html>
+------=_Part_1079512_1037449171.1769942687414--
+
