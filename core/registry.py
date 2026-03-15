@@ -72,7 +72,7 @@ class Registry:
 
     def fetch_batch(self, status, limit=10):
         cursor = self.conn.cursor()
-        cursor.execute("SELECT * FROM artifacts WHERE status = ? LIMIT ?", (status, limit))
+        cursor.execute("SELECT * FROM artifacts WHERE status = ? ORDER BY score DESC LIMIT ?", (status, limit))
         cols = [description[0] for description in cursor.description]
         return [dict(zip(cols, row)) for row in cursor.fetchall()]
 

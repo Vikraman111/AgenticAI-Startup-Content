@@ -1,6 +1,7 @@
 import sys
 import os
 import sqlite3
+import argparse
 
 # --- PATH FIX: Allow importing from parent directory ---
 # This adds the project root folder to Python's search path
@@ -9,13 +10,17 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 DB_PATH = "data/agent_registry.db"
 
-def export_posts():
+def export_posts(limit=None):
     try:
         conn = sqlite3.connect(DB_PATH, check_same_thread=False)
         cursor = conn.cursor()
         
         # Only fetch items that have a final_post generated
-        cursor.execute("SELECT title, score, url, final_post FROM artifacts WHERE final_post IS NOT NULL AND final_post != '' ORDER BY score DESC")
+        query = "SELECT title, score, url, final_post FROM artifacts WHERE final_post IS NOT NULL AND final_post != '' ORDER BY score DESC"
+        if limit:
+            query += f" LIMIT {limit}"
+            
+        cursor.execute(query)
         
         items = cursor.fetchall()
         
@@ -40,4 +45,8 @@ def export_posts():
         print(f"❌ Database Error: {e}")
 
 if __name__ == "__main__":
-    export_posts()
+    parser = argparse.ArgumentParser(description="Export finalized LinkedIn posts.")
+    parser.add_argument("--limit", type=int, help="Number of posts to display. If not provided, displays all generated posts.", default=5)
+    args = parser.parse_args()
+    
+    export_posts(limit=args.limit)
