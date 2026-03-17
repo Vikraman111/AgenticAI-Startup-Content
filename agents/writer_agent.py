@@ -1,6 +1,11 @@
+import sys
+import os
+
+# Add project root to path so we can import 'core'
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from core.registry import Registry
 from core.llm_brain import LLMBrain
-
 class WriterAgent:
     def __init__(self):
         self.registry = Registry()
@@ -11,13 +16,7 @@ class WriterAgent:
         print(f"✍️ WRITER AGENT: Drafting content for {len(tasks)} items...")
 
         for task in tasks:
-            #story-telling narative
-            #hook statement start
-            # simple english and engaging language
-            # written like a founder and to be in a human style
-            # There should be an insight or a learning or good take away for the reader
-            #insights can be like how they found out the market gap, what they did differently, what risks identified how they mitigated it, their uniqueness, positioning and their success component
-            # The audience/ reader profile will be business leaders entreprenuers, startup founders and aspiring founders -- 1
+            # The audience/ reader profile will be business leaders entrepreneurs, startup founders and aspiring founders -- 1
             # Word limit - Ideal - 180 - Max limit - 225 Min - 150
             prompt = f"""
 Write a LinkedIn post based on the business insight provided.
@@ -25,7 +24,7 @@ Write a LinkedIn post based on the business insight provided.
 
 **MANDATORY STRICT RULES** 
 
-- Ensure small paragraphs are maininted and word limit is not exceeded. The content should be a mix of bulletin points whenever needed along with a short paragraph style content to ensure easy readibility and promote engagement.
+- Ensure small paragraphs are maintained and word limit is not exceeded. The content should be a mix of bulletin points whenever needed along with a short paragraph style content to ensure easy readability and promote engagement.
 - Have catchy headers for bulletin points along with an emoji and bolded start (not to be done every paragraph but whenever it feels required).
 - Do not mention attention grabbing  opening, just have a nice opening thats it.
 - Optimize content for the best readability and engagement.
@@ -57,7 +56,7 @@ AUDIENCE
 - Business leaders
 - Entrepreneurs
 - Startup founders
-- Aspiring Entreprenuers
+- Aspiring Entrepreneurs
 
 STRUCTURE
 1. Hook statement (attention-grabbing opening)
@@ -77,6 +76,10 @@ Business Breakdown: {task['strategic_insight']}
 """
             post_content = self.brain.think(prompt, "You are an elite B2B Ghostwriter for startup founders and investors.")
             
+            if not post_content:
+                print(f"   ⚠️ Skipping {task['title']} due to LLM error.")
+                continue
+
             print(f"   Drafted post for: {task['title']}")
             print("-" * 20)
             print(post_content[:100] + "...") 
@@ -84,5 +87,15 @@ Business Breakdown: {task['strategic_insight']}
             
             self.registry.update_artifact(task['id'], {
                 "final_post": post_content,
-                "status": "INSIGHTS_READY" # Kept as INSIGHTS_READY for testing purposes
+                "status": "WRITTEN"
             })
+
+if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Run the Writer Agent directly.")
+    parser.add_argument("--limit", type=int, default=5, help="Number of posts to generate.")
+    args = parser.parse_args()
+    
+    agent = WriterAgent()
+    agent.run(limit=args.limit)

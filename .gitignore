@@ -6,6 +6,7 @@ env/
 # Google API Credentials (CRITICAL)
 data/gmail/credentials.json
 data/gmail/token.pickle
+firebase_publishing/firebase_service_account.json
 
 # Databases
 data/*.db
