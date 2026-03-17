@@ -63,6 +63,15 @@ def fetch_written_posts_from_local_db(limit=None):
     return rows
 
 
+def mark_local_post_synced(article_id):
+    """Updates local SQLite status to 'FIREBASE_SYNCED' to avoid re-fetching."""
+    conn = sqlite3.connect(LOCAL_DB_PATH, check_same_thread=False)
+    cursor = conn.cursor()
+    cursor.execute("UPDATE artifacts SET status = 'FIREBASE_SYNCED' WHERE id = ?", (article_id,))
+    conn.commit()
+    conn.close()
+
+
 def sync_posts_to_firebase(limit=None, force=False):
     """
     Reads WRITTEN posts from local SQLite DB and pushes them to Firestore.
@@ -97,6 +106,9 @@ def sync_posts_to_firebase(limit=None, force=False):
                 if existing_doc.exists:
                     print(f"   ⏭️  Already in Firebase: {post['title'][:60]}...")
                     stats["skipped"] += 1
+                    
+                    # Update local DB so it doesn't get fetched next time
+                    mark_local_post_synced(article_id)
                     continue
 
             # Build the Firestore document
@@ -120,6 +132,9 @@ def sync_posts_to_firebase(limit=None, force=False):
             collection_ref.document(article_id).set(firestore_doc)
             print(f"   ✅ Synced: {post['title'][:60]}... (Score: {post.get('score', 'N/A')})")
             stats["synced"] += 1
+            
+            # Update local DB so it doesn't get fetched next time
+            mark_local_post_synced(article_id)
 
         except Exception as e:
             print(f"   ❌ Error syncing '{post.get('title', 'Unknown')}': {e}")
@@ -131,30 +146,26 @@ def sync_posts_to_firebase(limit=None, force=False):
 
 def list_firebase_posts(status_filter=None, limit=10):
     """
-    Lists posts stored in Firebase Firestore.
-
-    Args:
-        status_filter: Filter by posting_status (e.g., "NOT_POSTED", "POSTED")
-        limit: Max number of posts to return
+    Lists posts stored in Firebase Firestore, sorting by score entirely locally 
+    to prevent Firebase Composite Index requirement errors.
     """
-    from google.cloud.firestore_v1 import Query as FsQuery
+    from google.cloud.firestore_v1.base_query import FieldFilter
 
     db = get_firestore_client()
     collection_ref = db.collection(POSTS_COLLECTION)
-
-    query = collection_ref.order_by("score", direction=FsQuery.DESCENDING)
-
+    
     if status_filter:
-        query = query.where("posting_status", "==", status_filter)
+        query = collection_ref.where(filter=FieldFilter("posting_status", "==", status_filter))
+    else:
+        query = collection_ref
 
-    query = query.limit(limit)
-    docs = query.stream()
+    docs = list(query.stream())
+    posts = [doc.to_dict() for doc in docs]
+    
+    # Sort locally in Python
+    posts.sort(key=lambda x: x.get("score", 0), reverse=True)
 
-    posts = []
-    for doc in docs:
-        posts.append(doc.to_dict())
-
-    return posts
+    return posts[:limit]
 
 
 def display_firebase_posts(status_filter=None, limit=10):
@@ -164,9 +175,10 @@ def display_firebase_posts(status_filter=None, limit=10):
     db = get_firestore_client()
     collection_ref = db.collection(POSTS_COLLECTION)
 
+    from google.cloud.firestore_v1.base_query import FieldFilter
     # Build query
     if status_filter:
-        query = collection_ref.where("posting_status", "==", status_filter).limit(limit)
+        query = collection_ref.where(filter=FieldFilter("posting_status", "==", status_filter)).limit(limit)
     else:
         query = collection_ref.limit(limit)
 
@@ -205,9 +217,9 @@ def update_post_status(article_id, new_status):
 
     Args:
         article_id: The document ID (article hash)
-        new_status: New status string ("NOT_POSTED", "QUEUED", "POSTED")
+        new_status: New status string ("NOT_POSTED", "QUEUED", "POSTED", "REJECTED")
     """
-    valid_statuses = ["NOT_POSTED", "QUEUED", "POSTED"]
+    valid_statuses = ["NOT_POSTED", "QUEUED", "POSTED", "REJECTED"]
     if new_status not in valid_statuses:
         print(f"❌ Invalid status '{new_status}'. Must be one of: {valid_statuses}")
         return False
@@ -232,27 +244,23 @@ def update_post_status(article_id, new_status):
 def get_next_post_to_publish():
     """
     Gets the highest-scored NOT_POSTED article from Firebase.
-    This is the function your future backend will call to pick the next post
-    to push to Google Sheets → Zapier → LinkedIn.
-
-    Returns:
-        dict or None
+    Sorted locally in Python to bypass Firebase Composite Index errors.
     """
+    from google.cloud.firestore_v1.base_query import FieldFilter
     db = get_firestore_client()
     collection_ref = db.collection(POSTS_COLLECTION)
 
-    query = (
-        collection_ref
-        .where("posting_status", "==", "NOT_POSTED")
-        .order_by("score", direction="DESCENDING")
-        .limit(1)
-    )
-
+    query = collection_ref.where(filter=FieldFilter("posting_status", "==", "NOT_POSTED"))
+    
     docs = list(query.stream())
     if not docs:
         print("📭 No NOT_POSTED articles available.")
         return None
 
-    post = docs[0].to_dict()
+    posts = [doc.to_dict() for doc in docs]
+    # Sort in Python by score descending
+    posts.sort(key=lambda x: x.get("score", 0), reverse=True)
+    
+    post = posts[0]
     print(f"📌 Next post to publish: {post.get('title', 'Untitled')} (Score: {post.get('score', 'N/A')})")
     return post

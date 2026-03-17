@@ -7,8 +7,11 @@ env/
 data/gmail/credentials.json
 data/gmail/token.pickle
 firebase_publishing/firebase_service_account.json
+google_sheets_credentials.json
 
 # Databases
+*.db
+*.sqlite3
 data/*.db
 data/*.sqlite3
 
