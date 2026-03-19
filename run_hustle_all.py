@@ -32,7 +32,8 @@ def run_extraction():
     print("\nNext steps:")
     print("   1. python3 run_understanding.py")
     print("   2. python3 run_scoring.py")
-    print("   3. python3 tools/review_dashboard.py\n")
+    print("   3. python3 run_insights.py")
+    print("   4. python3 run_writer.py\n")
     
     return True
 

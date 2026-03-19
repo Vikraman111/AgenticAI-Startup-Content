@@ -35,64 +35,77 @@ def get_sheets_client():
         print(f"❌ Error authenticating with Google Sheets: {e}")
         return None
 
-def publish_queued_posts():
-    """Checks Firebase for QUEUED posts and appends them to the Google Sheet."""
-    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🔍 Checking for QUEUED posts in Firebase...")
+def process_posts(status_filter, target_sheet_name, terminal_status):
+    """General function to move posts from Firebase to a specific Google Sheet."""
+    print(f"\n[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🔍 Checking for {status_filter} posts in Firebase...")
     
-    queued_posts = list_firebase_posts(status_filter="QUEUED", limit=50)
+    posts = list_firebase_posts(status_filter=status_filter, limit=50)
     
-    if not queued_posts:
-        print("📭 No QUEUED posts found.")
+    if not posts:
+        print(f"📭 No {status_filter} posts found.")
         return
 
-    print(f"🚀 Found {len(queued_posts)} posts to publish!")
+    print(f"🚀 Found {len(posts)} posts to process for {target_sheet_name}!")
     
     client = get_sheets_client()
     if not client:
         return
 
     try:
-        sheet = client.open_by_key(SHEET_ID).sheet1
+        spreadsheet = client.open_by_key(SHEET_ID)
         
-        # Check if header exists, if not, create it
+        # Open or create the target worksheet
+        try:
+            sheet = spreadsheet.worksheet(target_sheet_name)
+        except gspread.exceptions.WorksheetNotFound:
+            print(f"📁 Creating new worksheet: {target_sheet_name}")
+            sheet = spreadsheet.add_worksheet(title=target_sheet_name, rows="100", cols="20")
+        
+        # Check if header exists
         if not sheet.get_all_values():
-            sheet.append_row(["Date Published", "Score", "Title", "URL", "LinkedIn Post Body"])
+            sheet.append_row(["Date Logged", "Score", "Title", "URL", "Content"])
 
-        for post in queued_posts:
+        for post in posts:
             article_id = post.get("article_id")
             title = post.get("title", "")
             score = post.get("score", 0)
             url = post.get("url", "")
-            final_post = post.get("final_post", "")
+            content = post.get("final_post", "")
             date_str = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-            print(f"📝 Appending row: {title[:50]}...")
+            print(f"📝 Logging to {target_sheet_name}: {title[:50]}...")
             
             # Append to sheet
-            sheet.append_row([date_str, score, title, url, final_post])
+            sheet.append_row([date_str, score, title, url, content])
             
-            # Mark as POSTED in Firebase
-            update_post_status(article_id, "POSTED")
-            print(f"✅ Successfully published and marked as POSTED.")
+            # Mark terminal status in Firebase
+            update_post_status(article_id, terminal_status)
+            print(f"✅ Successfully processed and marked as {terminal_status}.")
             
     except Exception as e:
-        print(f"❌ Error during publishing: {str(e)}")
-        import traceback
-        traceback.print_exc()
+        print(f"❌ Error during processing {status_filter}: {str(e)}")
+
+def run_publisher_cycle():
+    """Runs one full cycle of publishing Approved and archiving Rejected posts."""
+    # 1. Process QUEUED -> Sheet1 (POSTED)
+    process_posts(status_filter="QUEUED", target_sheet_name="Sheet1", terminal_status="POSTED")
+    
+    # 2. Process REJECTED -> Sheet2 (REJECTED_ARCHIVED)
+    process_posts(status_filter="REJECTED", target_sheet_name="Sheet2", terminal_status="REJECTED_ARCHIVED")
 
 if __name__ == "__main__":
     print("🛰️ Google Sheets Publisher is starting...")
     print(f"📊 Target Sheet ID: {SHEET_ID}")
     
     # Run once immediately
-    publish_queued_posts()
+    run_publisher_cycle()
     
     # Then loop every 60 seconds
     print("\n⏳ Entering background loop (checking every 60s)... Press Ctrl+C to stop.")
     while True:
         try:
             time.sleep(60)
-            publish_queued_posts()
+            run_publisher_cycle()
         except KeyboardInterrupt:
             print("\n👋 Stopping Publisher.")
             break

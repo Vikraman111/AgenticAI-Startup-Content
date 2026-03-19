@@ -211,15 +211,19 @@ def display_firebase_posts(status_filter=None, limit=10):
         print(f"\n{'=' * 80}\n")
 
 
+def update_local_artifact_status(article_id, new_status):
+    """Updates the status of an article in the local SQLite database."""
+    conn = sqlite3.connect(LOCAL_DB_PATH, timeout=30, check_same_thread=False)
+    cursor = conn.cursor()
+    cursor.execute("UPDATE artifacts SET status = ? WHERE id = ?", (new_status, article_id))
+    conn.commit()
+    conn.close()
+
 def update_post_status(article_id, new_status):
     """
     Updates the posting_status of a specific post in Firestore.
-
-    Args:
-        article_id: The document ID (article hash)
-        new_status: New status string ("NOT_POSTED", "QUEUED", "POSTED", "REJECTED")
     """
-    valid_statuses = ["NOT_POSTED", "QUEUED", "POSTED", "REJECTED"]
+    valid_statuses = ["NOT_POSTED", "QUEUED", "POSTED", "REJECTED", "REJECTED_ARCHIVED"]
     if new_status not in valid_statuses:
         print(f"❌ Invalid status '{new_status}'. Must be one of: {valid_statuses}")
         return False
@@ -237,8 +241,29 @@ def update_post_status(article_id, new_status):
         update_data["posted_at"] = datetime.utcnow()
 
     doc_ref.update(update_data)
+    
+    # Also update local DB for consistency
+    update_local_artifact_status(article_id, new_status)
+    
     print(f"✅ Updated post '{article_id[:16]}...' status to: {new_status}")
     return True
+
+def find_article_by_prefix(prefix):
+    """
+    Finds the full article document in Firebase that starts with a given prefix.
+    Used for stateless Telegram callbacks where full 64-char IDs don't fit.
+    """
+    db = get_firestore_client()
+    collection_ref = db.collection(POSTS_COLLECTION)
+    
+    # We query for IDs that are >= prefix and < prefix + high-char
+    # This is how Firestore handles 'starts with' queries
+    query = collection_ref.where("article_id", ">=", prefix).where("article_id", "<", prefix + "\uf8ff").limit(1)
+    
+    docs = list(query.stream())
+    if not docs:
+        return None
+    return docs[0].to_dict()
 
 
 def get_next_post_to_publish():

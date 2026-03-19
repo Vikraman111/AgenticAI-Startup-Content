@@ -15,6 +15,7 @@ def run_scoring():
     agent.run()
     
     print("\n✅ Scoring complete.")
+    print("👉 Next Step: python3 run_insights.py")
 
 if __name__ == "__main__":
     run_scoring()

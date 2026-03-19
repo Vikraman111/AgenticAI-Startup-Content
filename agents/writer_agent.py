@@ -16,63 +16,34 @@ class WriterAgent:
         print(f"✍️ WRITER AGENT: Drafting content for {len(tasks)} items...")
 
         for task in tasks:
-            # The audience/ reader profile will be business leaders entrepreneurs, startup founders and aspiring founders -- 1
-            # Word limit - Ideal - 180 - Max limit - 225 Min - 150
+            # Clean up the source name (e.g., 'TechCrunch_Crawler' -> 'TechCrunch')
+            source = task.get('source_module', 'Unknown').split('_')[0].strip()
+            
             prompt = f"""
-Write a LinkedIn post based on the business insight provided.
+Write a high-impact LinkedIn post based on the business insight provided.
 
+**MANDATORY STYLE RULES**
+- **MAX 1 SENTENCE PER PARAGRAPH**. Use frequent line breaks.
+- Use a "Founder/Investor" tone: reflective, data-driven, yet conversational.
+- NO fluff or corporate-speak (avoid: "leverage", "robust", "synergy", "game-changer").
+- Use bold headers for key sections.
+- Use relevant emojis sparingly but effectively to highlight points.
 
-**MANDATORY STRICT RULES** 
+**WORD LIMITS**
+- Minimum: 120 words
+- Maximum: 200 words
+- Ideal: 160 words (excluding credits)
 
-- Ensure small paragraphs are maintained and word limit is not exceeded. The content should be a mix of bulletin points whenever needed along with a short paragraph style content to ensure easy readability and promote engagement.
-- Have catchy headers for bulletin points along with an emoji and bolded start (not to be done every paragraph but whenever it feels required).
-- Do not mention attention grabbing  opening, just have a nice opening thats it.
-- Optimize content for the best readability and engagement.
-
-CONTENT STYLE
-- Write in a strong storytelling narrative.
-- Start with a powerful hook statement in the first line.
-- Use simple English
-- Highly engaging language.
-- The tone must feel like it is written by a founder sharing a business insight.
-- The writing must sound human and natural, not robotic or like a news report.
-
-CONTENT RULES
-- DO NOT copy the article text or sentences.
-- Have shorter paragraphs and bulleted points for ease of reading.
-- The content must be fact-oriented and based only on the insight provided.
-- Do NOT fabricate or assume information not present in the breakdown.
-- Frame the post as a strategic business insight or founder lesson.
-
-INSIGHT REQUIREMENTS
-The post must clearly highlight at least one of the following:
-- How the company identified a market gap
-- What they did differently from competitors
-- A key risk they identified and how they mitigated it
-- Their unique positioning
-- The key success factor behind their growth
-
-AUDIENCE
-- Business leaders
-- Entrepreneurs
-- Startup founders
-- Aspiring Entrepreneurs
-
-STRUCTURE
-1. Hook statement (attention-grabbing opening)
-2. Short narrative explaining the situation
-3. Strategic insight or lesson from the case
-4. Clear takeaway for founders
-
-WORD LIMIT
-- Ideal: 180 words
-- Minimum: 150 words
-- Maximum: 225 words
-
-For reference, the founder's previous articles define the tone and writing style. Follow that tone (founder-like, reflective, and insight-driven), but still strictly follow all the structure and rules mentioned above.
+**STRUCTURE**
+1. **Hook**: A provocative or counter-intuitive first line.
+2. **The Context**: 2-3 single-sentence paragraphs explaining the situation.
+3. **Strategic Breakdown**: Use a bulleted list with bolded category names.
+4. **Founder Advice**: One-sentence direct takeaway.
+5. **Engagement**: A tactical question for the audience.
+6. **Source Credits**: At the very end, add the line "Credits: {source}" (Example: Credits: Forbes). No URLs.
 
 Topic: {task['title']}
-Business Breakdown: {task['strategic_insight']}
+Business Case Study: {task['strategic_insight']}
 """
             post_content = self.brain.think(prompt, "You are an elite B2B Ghostwriter for startup founders and investors.")
             

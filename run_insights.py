@@ -15,6 +15,7 @@ def run_insights():
     agent.run()
     
     print("\n✅ Insights extraction complete.")
+    print("👉 Next Step: python3 run_writer.py")
 
 if __name__ == "__main__":
     run_insights()

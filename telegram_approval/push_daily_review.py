@@ -52,16 +52,20 @@ def push_approval_request():
 
     post = posts[0]
     
-    # Create the Interactive Buttons
+    # Create the Interactive Buttons (Stateless via prefixes)
+    prefix = post["article_id"][:16]
     markup = InlineKeyboardMarkup()
     markup.row_width = 2
     markup.add(
-        InlineKeyboardButton("✅ Approve", callback_data="approve"),
-        InlineKeyboardButton("⏭️ Show Next", callback_data="skip"),
+        InlineKeyboardButton("✅ Approve", callback_data=f"apr:{prefix}"),
+        InlineKeyboardButton("⏭️ Next", callback_data=f"nxt:{prefix}"),
     )
     markup.add(
-        InlineKeyboardButton("🗑️ Reject", callback_data="reject"),
-        InlineKeyboardButton("🛑 Stop Reviewing", callback_data="stop")
+        InlineKeyboardButton("🗑️ Reject", callback_data=f"rej:{prefix}"),
+        InlineKeyboardButton("⬅️ Prev", callback_data=f"prv:{prefix}"),
+    )
+    markup.add(
+        InlineKeyboardButton("🛑 Stop", callback_data="stop")
     )
     
     message = get_post_message(post)
