@@ -10,7 +10,8 @@ from bs4 import BeautifulSoup
 import re
 from email.mime.text import MIMEText
 
-SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
+# Required scopes for reading and marking as read
+SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 CREDENTIALS_PATH = 'data/gmail/credentials.json'
 TOKEN_PATH = 'data/gmail/token.pickle'
 

@@ -8,8 +8,16 @@ DB_PATH = "data/agent_registry.db"
 class Registry:
     
     def __init__(self):
-        self.conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+        # Added timeout to prevent "database is locked" during concurrent access
+        self.conn = sqlite3.connect(DB_PATH, timeout=30, check_same_thread=False)
+        self.enable_wal_mode()
         self.create_tables()
+
+    def enable_wal_mode(self):
+        """Enables Write-Ahead Logging for better concurrency."""
+        cursor = self.conn.cursor()
+        cursor.execute("PRAGMA journal_mode=WAL")
+        self.conn.commit()
 
     def create_tables(self):
         cursor = self.conn.cursor()

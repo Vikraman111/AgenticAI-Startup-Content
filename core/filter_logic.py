@@ -25,8 +25,9 @@ class SmartFilter:
         SUMMARY: {summary[:200]}
         
         CRITERIA:
-        - YES: Actionable business advice, growth tactics, market trends, industry shifts, company strategy changes, consumer behavior patterns, economic analysis, business innovations.
-        - NO: Pure funding/raise announcements without deeper strategy, lifestyle products, sports, entertainment, politics, general celebrity news.
+        - YES: Actionable business advice, growth tactics, market trends, strategy shifts, innovation, market gaps, leadership lessons, failed startup post-mortems.
+        - LOW PRIORITY: Pure funding/raise announcements (Unless they include a significant pivot or industry-changing strategy).
+        - NO: Consumer lifestyle products, sports, entertainment, general politics, celebrity gossip.
         
         ANSWER ONLY in JSON format: {{"relevant": true/false, "reason": "short explanation"}}
         """

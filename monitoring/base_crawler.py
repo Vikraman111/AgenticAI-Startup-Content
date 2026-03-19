@@ -11,7 +11,13 @@ class BaseCrawler:
         self.name = name
         self.registry = Registry()
         self.filter = SmartFilter() # Now using LLM
-        self.headers = {'User-Agent': 'Mozilla/5.0...'}
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1'
+        }
 
     def _generate_id(self, url):
         return hashlib.sha256(url.encode()).hexdigest()
@@ -43,10 +49,11 @@ class BaseCrawler:
 
     def _extract_and_save(self, url, title):
         try:
-            page = requests.get(url, headers=self.headers, timeout=10)
+            # Increased timeout to 30s for slow sites like Entrepreneur
+            page = requests.get(url, headers=self.headers, timeout=30)
             content = trafilatura.extract(page.text, include_comments=False, include_tables=False)
             
-            if content and len(content) > 300:
+            if content and len(content) > 100:
                 self.registry.register_artifact(
                     url=url,
                     content=content,
@@ -54,5 +61,8 @@ class BaseCrawler:
                     title=title
                 )
                 print(f"      💾 Saved to database.")
+            else:
+                reason = "Content too short" if content else "Extraction returned null"
+                print(f"      ⏭️  Skipped: {reason} ({len(content) if content else 0} chars)")
         except Exception as e:
             print(f"      ❌ Extraction Error: {e}")
