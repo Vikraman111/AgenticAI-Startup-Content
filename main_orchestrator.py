@@ -11,6 +11,8 @@ from run_understanding import run_understanding
 from run_scoring import run_scoring
 from run_insights import run_insights
 from run_writer import run_writer
+from core.tracker import TokenTracker
+from tools.cost_calc import calculate_costs
 
 def purge_junk():
     """Remove low-quality/junk articles from database."""
@@ -19,9 +21,14 @@ def purge_junk():
         cursor = conn.cursor()
         
         # Delete anything containing lifestyle keywords
-        junk_words = ['mattress', 'shaver', 'sunscreen', 'walmart', 'exfoliator']
+        junk_words = [
+            'mattress', 'shaver', 'sunscreen', 'walmart', 'exfoliator', 
+            'best deals', 'gift guide', 'shampoo', 'skincare', 'fitness', 
+            'celebrity', 'recipe', 'diet', 'gadgets', 'amazon deals', 
+            'shopping guide', 'target', 'holiday gift'
+        ]
         for word in junk_words:
-            cursor.execute("DELETE FROM artifacts WHERE title LIKE ?", (f'%{word}%',))
+            cursor.execute("DELETE FROM artifacts WHERE title LIKE ? OR raw_content LIKE ?", (f'%{word}%', f'%{word}%'))
         
         conn.commit()
         removed = conn.total_changes
@@ -37,11 +44,10 @@ def purge_junk():
 def run_pipeline(stages=None):
     """
     Run the complete pipeline or selected stages.
-    
-    Args:
-        stages: List of stages to run. If None, runs all.
-                Options: 'monitor', 'understand', 'score', 'insights', 'writer'
     """
+    
+    # RESET TRACKER for new run
+    TokenTracker.reset()
     
     if stages is None:
         stages = ['monitor', 'understand', 'score', 'insights', 'writer']
@@ -53,24 +59,33 @@ def run_pipeline(stages=None):
     
     try:
         if 'monitor' in stages:
+            TokenTracker.set_stage("Monitor")
             run_monitoring()
             purge_junk()
         
         if 'understand' in stages:
+            TokenTracker.set_stage("Understand")
             run_understanding()
         
         if 'score' in stages:
+            TokenTracker.set_stage("Score")
             run_scoring()
         
         if 'insights' in stages:
+            TokenTracker.set_stage("Insights")
             run_insights()
         
         if 'writer' in stages:
+            TokenTracker.set_stage("Writer")
             run_writer()
         
         print("\n" + "="*80)
         print("✅ PIPELINE COMPLETE!")
         print("="*80)
+        
+        # SHOW COSTS
+        calculate_costs()
+        
         print("\n📊 View results with: python3 tools/review_dashboard.py\n")
         
     except KeyboardInterrupt:

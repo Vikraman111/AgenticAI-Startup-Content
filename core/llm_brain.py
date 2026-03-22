@@ -1,47 +1,67 @@
-import ollama
+import os
 import json
 import sys
+from openai import OpenAI
+from dotenv import load_dotenv
+from core.tracker import TokenTracker
+
+# Load environment variables
+load_dotenv()
 
 class LLMBrain:
-    def __init__(self, model="mistral"):
-        self.model_name = model
-        print(f"🏠 LLM BRAIN: Using Local Ollama ( {self.model_name} )")
-        self._check_ollama()
-
-    def _check_ollama(self):
-        """Verify Ollama is running before proceeding."""
-        try:
-            ollama.list()
-        except Exception as e:
-            print("\n❌ CRITICAL ERROR: Ollama is not running!")
-            print("   Please start Ollama in a separate terminal:")
-            print("   $ ollama serve\n")
+    def __init__(self, default_model="gpt-4o-mini"):
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            print("\n❌ CRITICAL ERROR: OPENAI_API_KEY not found in .env!")
+            print("   Please add your key: OPENAI_API_KEY=sk-xxxx\n")
             sys.exit(1)
+            
+        self.client = OpenAI(api_key=api_key)
+        self.default_model = default_model
+        # print(f"🌐 LLM BRAIN: Connected to OpenAI (Default: {self.default_model})")
 
-    def think(self, prompt, system_role="You are a helpful AI assistant."):
+    def think(self, prompt, system_role="You are a helpful AI assistant.", model=None):
+        """Standard text completion."""
+        target_model = model if model else self.default_model
         try:
-            # Ollama chat
-            response = ollama.chat(model=self.model_name, messages=[
-                {'role': 'system', 'content': system_role},
-                {'role': 'user', 'content': prompt},
-            ])
-            return response['message']['content']
+            response = self.client.chat.completions.create(
+                model=target_model,
+                messages=[
+                    {"role": "system", "content": system_role},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.7
+            )
+            
+            # Log usage
+            usage = response.usage
+            TokenTracker.log_usage(target_model, usage.prompt_tokens, usage.completion_tokens)
+            
+            return response.choices[0].message.content
         except Exception as e:
-            print(f"\n❌ Ollama Error: {e}")
+            print(f"\n❌ OpenAI Error: {e}")
             return None
 
-    def think_json(self, prompt, system_role):
-        """Forces JSON output."""
-        full_prompt = prompt + "\n\nIMPORTANT: Return ONLY valid JSON. No Markdown formatting or preamble."
-        response = self.think(full_prompt, system_role)
-        if not response: 
-            return {}
+    def think_json(self, prompt, system_role, model=None):
+        """Forces JSON output using OpenAI's response_format."""
+        target_model = model if model else self.default_model
         try:
-            # Clean up markdown if LLM adds it
-            clean = response.replace("```json", "").replace("```", "").strip()
-            if clean.startswith("```"):
-                clean = clean.strip("`").strip()
-            return json.loads(clean)
+            response = self.client.chat.completions.create(
+                model=target_model,
+                messages=[
+                    {"role": "system", "content": system_role},
+                    {"role": "user", "content": prompt},
+                ],
+                response_format={"type": "json_object"},
+                temperature=0
+            )
+            
+            # Log usage
+            usage = response.usage
+            TokenTracker.log_usage(target_model, usage.prompt_tokens, usage.completion_tokens)
+            
+            content = response.choices[0].message.content
+            return json.loads(content)
         except Exception as e:
-            print(f"⚠️ JSON Parse Error: {e}")
+            print(f"⚠️ OpenAI JSON Error: {e}")
             return {}

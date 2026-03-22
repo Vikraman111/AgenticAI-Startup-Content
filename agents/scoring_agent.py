@@ -10,31 +10,45 @@ class ScoringAgent:
         tasks = self.registry.fetch_batch(status='UNDERSTOOD', limit=20)
         if not tasks: return
 
-        print(f"⚖️  SCORING AGENT: Filtering {len(tasks)} items...")
+        print(f"⚖️  SCORING AGENT: Rating {len(tasks)} items...")
         for task in tasks:
-            # BUSINESS TREND ANALYSIS Prompt
+            # QUALITY FOCUS Prompt
             prompt = f"""
-            You are a Strategy Consultant advising startup founders. Score this article (0-100) on the quality of its BUSINESS TRENDS, GROWTH STRATEGIES, and ACTIONABLE ADVICE.
-            
-            SCORING CRITERIA:
-            - 90-100: Deep strategic, actionable advice for startups, game-changing market trends, novel growth tactics, or clear patterns that affect multiple sectors.
-            - 70-89: Solid market analysis, interesting growth strategies, good industry insights, clear lessons from successful (or failed) startups.
-            - 50-69: Basic business news or high-level trends with limited actionable insight.
-            - 0-49: Routine funding rounds with no strategic context, PR announcements, fluff, or generic commentary.
-            
-            Title: {task['title']}
-            Summary: {task['summary']}
-            
-            Return JSON ONLY: {{"score": <int>, "reason": "<string>"}}
+            Identify the strategic intelligence in this article for a business founder/investor. 
+            Article Title: {task['title']}
+            Content Summary: {task['summary']}
+
+            Rate the following on a scale of 0 to 10:
+            1. STRATEGIC_INSIGHT: Does it detail 'The Why' behind a success or failure? Does it explain a complex tactic (e.g., SEO arbitrage, unique supply chain pivot)?
+            2. NOVELTY: Is this a unique insight or a market gap that others haven't seen? (10=Unique/Rare, 0=Common News)
+            3. ACTIONABILITY: Could a founder take this specific strategy and apply it today?
+
+            CRITICAL SCORING RULES:
+            - Standard PR/Funding/Hiring: MAX 3 points.
+            - Deep Dive/Case Study: MIN 7 points.
+            - Filler/Generic advice: MAX 2 points.
+
+            Return JSON ONLY: {{
+                "strategic_insight": <int>, 
+                "novelty": <int>, 
+                "actionable": <int>, 
+                "reasoning": "<string if this scored > 70 or < 30>"
+            }}
             """
             
-            result = self.brain.think_json(prompt, "You are a business analyst focused on market trends.")
-            score = result.get('score', 0)
+            result = self.brain.think_json(prompt, "You are a professional business strategist.")
             
-            print(f"   Score: {score} | {task['title'][:40]}...")
+            # Weighted calculation: (Insight*4) + (Novelty*3) + (Actionable*3) = Max 100
+            s = result.get('strategic_insight', 0)
+            n = result.get('novelty', 0)
+            a = result.get('actionable', 0)
+            
+            final_score = (s * 4) + (n * 3) + (a * 3)
+            
+            print(f"   Score: {final_score}/100 | {task['title'][:40]}...")
             
             self.registry.update_artifact(task['id'], {
-                "score": score,
-                "relevance_reasoning": result.get('reason', ''),
+                "score": final_score,
+                "relevance_reasoning": result.get('reasoning', ''),
                 "status": "SCORED"
             })

@@ -136,13 +136,27 @@ class Registry:
             
             # 4. Content Quality signals - Max 25 points
             title = article.get('title', '').lower()
-            business_keywords = [
-                'market', 'trend', 'growth', 'strategy', 'innovation', 'tactic',
-                'revenue', 'startup', 'founder', 'framework', 'scale', 'playbook',
-                'expansion', 'launch', 'partnership', 'lessons', 'advice', 'guide'
+            
+            # STRATEGY BOOST (High signal)
+            strategy_words = [
+                'strategy', 'playbook', 'framework', 'pivot', 'business model',
+                'growth tactics', 'unit economics', 'market gap', 'innovation',
+                'merger', 'acquisition', 'ipo', 'founder lessons', 'how we built',
+                'lessons learned', 'case study', 'deep dive', 'analysis'
             ]
-            keyword_matches = sum(1 for kw in business_keywords if kw in title)
-            score += min(25, keyword_matches * 3)
+            
+            # LISTICLE PENALTY (Low signal/filler)
+            junk_indicators = [
+                'best', 'top 10', 'top 5', 'gift guide', 'deals', 'review',
+                'how to watch', 'live stream', 'promo code', 'coupons'
+            ]
+            
+            # Weighted calculation
+            strategy_matches = sum(1 for kw in strategy_words if kw in title)
+            junk_matches = sum(1 for kw in junk_indicators if kw in title)
+            
+            score += (strategy_matches * 5)
+            score -= (junk_matches * 10)
             
             return score
         

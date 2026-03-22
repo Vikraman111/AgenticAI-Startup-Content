@@ -45,7 +45,11 @@ Write a high-impact LinkedIn post based on the business insight provided.
 Topic: {task['title']}
 Business Case Study: {task['strategic_insight']}
 """
-            post_content = self.brain.think(prompt, "You are an elite B2B Ghostwriter for startup founders and investors.")
+            post_content = self.brain.think(
+                prompt=prompt, 
+                system_role="You are an elite B2B Ghostwriter for startup founders and investors.",
+                model="gpt-4o-mini"
+            )
             
             if not post_content:
                 print(f"   ⚠️ Skipping {task['title']} due to LLM error.")
