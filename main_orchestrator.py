@@ -83,10 +83,22 @@ def run_pipeline(stages=None):
         print("✅ PIPELINE COMPLETE!")
         print("="*80)
         
+        # SHOW WINNERS
+        from core.registry import Registry
+        reg = Registry()
+        top_articles = reg.fetch_top_scored(limit=20)
+        
+        if top_articles:
+            print("\n🏆 TOP 20 ARTICLES FOUND:")
+            for art in top_articles:
+                print(f"   [{art['score']}] {art['title'][:70]}...")
+                print(f"       🔗 Link: {art['url']}")
+        
         # SHOW COSTS
+        print("\n" + "-"*50)
         calculate_costs()
         
-        print("\n📊 View results with: python3 tools/review_dashboard.py\n")
+        print("\n📊 View full dashboard with: python3 tools/review_dashboard.py\n")
         
     except KeyboardInterrupt:
         print("\n\n⚠️  Pipeline interrupted by user.")

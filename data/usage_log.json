@@ -1,1267 +1,1549 @@
 {
-    "prompt_tokens": 90830,
-    "completion_tokens": 14016,
-    "total_tokens": 104846,
+    "prompt_tokens": 6681,
+    "completion_tokens": 629,
+    "total_tokens": 7310,
     "calls": [
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 330,
-            "c_tokens": 39
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 24,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
             "model": "gpt-4o-mini",
-            "p_tokens": 361,
-            "c_tokens": 46
+            "p_tokens": 294,
+            "c_tokens": 54
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 24,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 7,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 19,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
             "model": "gpt-4o-mini",
-            "p_tokens": 342,
-            "c_tokens": 51
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 348,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 348,
-            "c_tokens": 49
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 44
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 370,
-            "c_tokens": 50
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 375,
-            "c_tokens": 44
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 367,
-            "c_tokens": 49
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 402,
-            "c_tokens": 50
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 412,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 430,
-            "c_tokens": 51
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 401,
-            "c_tokens": 48
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 418,
-            "c_tokens": 46
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 403,
+            "p_tokens": 316,
             "c_tokens": 57
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 391,
-            "c_tokens": 49
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 396,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 405,
-            "c_tokens": 46
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 384,
-            "c_tokens": 48
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 322,
-            "c_tokens": 41
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 331,
-            "c_tokens": 48
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 331,
-            "c_tokens": 41
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 322,
-            "c_tokens": 42
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 320,
-            "c_tokens": 48
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 321,
-            "c_tokens": 43
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 317,
-            "c_tokens": 46
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 353,
-            "c_tokens": 46
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 366,
-            "c_tokens": 45
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 46
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 350,
-            "c_tokens": 40
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 352,
-            "c_tokens": 40
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 347,
-            "c_tokens": 46
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 371,
-            "c_tokens": 44
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 369,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 333,
-            "c_tokens": 45
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 371,
-            "c_tokens": 39
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 345,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 352,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 371,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 44
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 344,
-            "c_tokens": 37
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 362,
-            "c_tokens": 37
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 360,
-            "c_tokens": 49
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 43
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 347,
-            "c_tokens": 41
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 352,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 356,
-            "c_tokens": 44
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 356,
-            "c_tokens": 49
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 347,
-            "c_tokens": 48
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 340,
-            "c_tokens": 46
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 362,
-            "c_tokens": 52
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 361,
-            "c_tokens": 41
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 351,
-            "c_tokens": 45
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 367,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 339,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 41
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 368,
-            "c_tokens": 43
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 354,
-            "c_tokens": 42
-        },
-        {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 50
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 345,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
             "model": "gpt-4o-mini",
-            "p_tokens": 334,
-            "c_tokens": 49
+            "p_tokens": 311,
+            "c_tokens": 67
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 349,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 360,
-            "c_tokens": 49
+            "model": "text-embedding-3-small",
+            "p_tokens": 20,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 344,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 20,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
             "model": "gpt-4o-mini",
-            "p_tokens": 352,
-            "c_tokens": 43
+            "p_tokens": 310,
+            "c_tokens": 54
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 43
+            "model": "text-embedding-3-small",
+            "p_tokens": 22,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 362,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 362,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 23,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 348,
-            "c_tokens": 38
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 354,
-            "c_tokens": 48
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 50
+            "model": "text-embedding-3-small",
+            "p_tokens": 26,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 358,
-            "c_tokens": 39
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 340,
-            "c_tokens": 45
+            "model": "text-embedding-3-small",
+            "p_tokens": 22,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 372,
-            "c_tokens": 50
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 348,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 351,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 23,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 340,
-            "c_tokens": 39
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 355,
-            "c_tokens": 50
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 336,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 349,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 351,
-            "c_tokens": 48
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 353,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 26,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 361,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 20,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 355,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 348,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 365,
-            "c_tokens": 48
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 355,
-            "c_tokens": 58
+            "model": "text-embedding-3-small",
+            "p_tokens": 20,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 349,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 363,
-            "c_tokens": 58
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 39
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 358,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 52
+            "model": "text-embedding-3-small",
+            "p_tokens": 19,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 372,
-            "c_tokens": 53
+            "model": "text-embedding-3-small",
+            "p_tokens": 23,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 352,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 347,
-            "c_tokens": 49
+            "model": "text-embedding-3-small",
+            "p_tokens": 7,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 347,
-            "c_tokens": 45
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 342,
-            "c_tokens": 50
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 349,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
             "model": "gpt-4o-mini",
-            "p_tokens": 340,
+            "p_tokens": 304,
             "c_tokens": 55
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 344,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 7,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 7,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 22,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 23,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 26,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 21,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 20,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 22,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 26,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 22,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 23,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 26,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 26,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
             "model": "gpt-4o-mini",
-            "p_tokens": 344,
-            "c_tokens": 47
+            "p_tokens": 314,
+            "c_tokens": 71
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 30,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 27,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 6,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 29,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 30,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 20,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 24,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 21,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 23,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 6,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 20,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 28,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 25,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 23,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 19,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 24,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 19,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 22,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 21,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 22,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 21,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 21,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 21,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 24,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 8,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 20,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
+        },
+        {
+            "stage": "Monitor",
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
             "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 47
+            "p_tokens": 302,
+            "c_tokens": 72
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 354,
-            "c_tokens": 50
+            "model": "text-embedding-3-small",
+            "p_tokens": 6,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 341,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 338,
-            "c_tokens": 43
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 349,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 345,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 348,
-            "c_tokens": 50
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 336,
-            "c_tokens": 45
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 354,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 7,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 344,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 345,
-            "c_tokens": 56
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 342,
-            "c_tokens": 54
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 359,
-            "c_tokens": 53
+            "model": "text-embedding-3-small",
+            "p_tokens": 30,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 352,
-            "c_tokens": 51
+            "model": "text-embedding-3-small",
+            "p_tokens": 35,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 351,
-            "c_tokens": 43
+            "model": "text-embedding-3-small",
+            "p_tokens": 18,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 348,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 40,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 360,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 345,
-            "c_tokens": 48
+            "model": "text-embedding-3-small",
+            "p_tokens": 19,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 344,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 339,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 354,
-            "c_tokens": 48
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 352,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 9,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 329,
-            "c_tokens": 50
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 352,
-            "c_tokens": 41
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 353,
-            "c_tokens": 40
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 363,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 343,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 358,
-            "c_tokens": 48
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 362,
-            "c_tokens": 40
+            "model": "text-embedding-3-small",
+            "p_tokens": 26,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 351,
-            "c_tokens": 52
+            "model": "text-embedding-3-small",
+            "p_tokens": 19,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 49
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 347,
-            "c_tokens": 54
+            "model": "text-embedding-3-small",
+            "p_tokens": 27,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 358,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 356,
-            "c_tokens": 41
+            "model": "text-embedding-3-small",
+            "p_tokens": 15,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 340,
-            "c_tokens": 39
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 354,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 21,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 333,
-            "c_tokens": 54
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 357,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 22,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 349,
-            "c_tokens": 55
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 351,
-            "c_tokens": 39
+            "model": "text-embedding-3-small",
+            "p_tokens": 19,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 345,
-            "c_tokens": 43
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 353,
-            "c_tokens": 48
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 345,
-            "c_tokens": 41
+            "model": "text-embedding-3-small",
+            "p_tokens": 14,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 346,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 355,
-            "c_tokens": 46
+            "model": "text-embedding-3-small",
+            "p_tokens": 11,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 343,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 19,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 341,
-            "c_tokens": 49
+            "model": "text-embedding-3-small",
+            "p_tokens": 16,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 349,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 348,
-            "c_tokens": 40
+            "model": "text-embedding-3-small",
+            "p_tokens": 12,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 342,
-            "c_tokens": 44
+            "model": "text-embedding-3-small",
+            "p_tokens": 17,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 351,
-            "c_tokens": 42
+            "model": "text-embedding-3-small",
+            "p_tokens": 21,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 358,
-            "c_tokens": 47
+            "model": "text-embedding-3-small",
+            "p_tokens": 13,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 334,
-            "c_tokens": 49
+            "model": "text-embedding-3-small",
+            "p_tokens": 7,
+            "c_tokens": 0
         },
         {
             "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 337,
-            "c_tokens": 40
+            "model": "text-embedding-3-small",
+            "p_tokens": 10,
+            "c_tokens": 0
         },
         {
-            "stage": "Monitor",
-            "model": "gpt-4o-mini",
-            "p_tokens": 340,
-            "c_tokens": 47
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1383,
-            "c_tokens": 150
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1124,
-            "c_tokens": 166
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1051,
-            "c_tokens": 149
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1058,
-            "c_tokens": 143
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1224,
-            "c_tokens": 185
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 988,
-            "c_tokens": 159
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1145,
-            "c_tokens": 160
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1117,
-            "c_tokens": 165
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1298,
-            "c_tokens": 172
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1174,
-            "c_tokens": 166
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1065,
-            "c_tokens": 163
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1083,
-            "c_tokens": 176
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1282,
-            "c_tokens": 158
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 939,
-            "c_tokens": 154
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1164,
-            "c_tokens": 154
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 924,
-            "c_tokens": 178
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1186,
-            "c_tokens": 176
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 1070,
-            "c_tokens": 156
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 907,
-            "c_tokens": 176
-        },
-        {
-            "stage": "Understand",
-            "model": "gpt-4o-mini",
-            "p_tokens": 796,
-            "c_tokens": 161
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 414,
-            "c_tokens": 95
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 430,
-            "c_tokens": 81
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 406,
-            "c_tokens": 114
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 430,
-            "c_tokens": 102
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 440,
-            "c_tokens": 110
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 410,
-            "c_tokens": 83
-        },
-        {
-            "stage": "Score",
+            "stage": "Writer",
             "model": "gpt-4o-mini",
             "p_tokens": 402,
-            "c_tokens": 85
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 409,
-            "c_tokens": 110
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 426,
-            "c_tokens": 91
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 410,
-            "c_tokens": 96
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 429,
-            "c_tokens": 87
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 424,
-            "c_tokens": 84
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 425,
-            "c_tokens": 96
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 417,
-            "c_tokens": 92
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 412,
-            "c_tokens": 91
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 433,
-            "c_tokens": 110
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 394,
-            "c_tokens": 97
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 413,
-            "c_tokens": 94
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 418,
-            "c_tokens": 92
-        },
-        {
-            "stage": "Score",
-            "model": "gpt-4o-mini",
-            "p_tokens": 398,
-            "c_tokens": 85
-        },
-        {
-            "stage": "Insights",
-            "model": "gpt-4o-mini",
-            "p_tokens": 386,
-            "c_tokens": 115
-        },
-        {
-            "stage": "Insights",
-            "model": "gpt-4o-mini",
-            "p_tokens": 382,
-            "c_tokens": 107
-        },
-        {
-            "stage": "Insights",
-            "model": "gpt-4o-mini",
-            "p_tokens": 378,
-            "c_tokens": 129
-        },
-        {
-            "stage": "Insights",
-            "model": "gpt-4o-mini",
-            "p_tokens": 397,
-            "c_tokens": 121
-        },
-        {
-            "stage": "Insights",
-            "model": "gpt-4o-mini",
-            "p_tokens": 398,
-            "c_tokens": 123
-        },
-        {
-            "stage": "Writer",
-            "model": "gpt-4o-mini",
-            "p_tokens": 410,
-            "c_tokens": 204
-        },
-        {
-            "stage": "Writer",
-            "model": "gpt-4o-mini",
-            "p_tokens": 396,
-            "c_tokens": 166
-        },
-        {
-            "stage": "Writer",
-            "model": "gpt-4o-mini",
-            "p_tokens": 419,
-            "c_tokens": 184
-        },
-        {
-            "stage": "Writer",
-            "model": "gpt-4o-mini",
-            "p_tokens": 425,
-            "c_tokens": 175
-        },
-        {
-            "stage": "Writer",
-            "model": "gpt-4o-mini",
-            "p_tokens": 407,
-            "c_tokens": 180
+            "c_tokens": 199
         }
     ]
 }

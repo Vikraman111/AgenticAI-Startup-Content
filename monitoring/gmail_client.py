@@ -46,23 +46,23 @@ class GmailClient:
         self.service = discovery.build('gmail', 'v1', credentials=creds)
         print("✅ Gmail authenticated successfully!")
     
-    def fetch_emails(self, sender_email='news@thehustle.co', max_results=10, unread_only=False):
+    def fetch_emails(self, sender_email='news@thehustle.co', max_results=10, unread_only=False, newer_than=None):
         """
-        Fetch emails from specific sender.
+        Fetch emails with advanced filtering.
         
         Args:
             sender_email: Email address to fetch from
             max_results: Maximum number of emails to fetch
             unread_only: Whether to fetch only unread emails
-        
-        Returns:
-            List of email dicts with metadata and content
+            newer_than: Gmail interval like '30d', '1y' etc.
         """
         try:
             # Search for emails from sender
             query = f"from:{sender_email}"
             if unread_only:
                 query += " is:unread"
+            if newer_than:
+                query += f" newer_than:{newer_than}"
                 
             results = self.service.users().messages().list(
                 userId='me',

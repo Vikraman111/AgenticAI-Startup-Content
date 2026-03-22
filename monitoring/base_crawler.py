@@ -27,42 +27,57 @@ class BaseCrawler:
         try:
             feed = feedparser.parse(rss_url)
             for entry in feed.entries:
-                url = entry.link
-                title = entry.title
+                url, title = entry.link, entry.title
                 summary = entry.get('summary', '')
 
+                # 1. DB CHECK (Zero cost)
                 if self.registry.exists(self._generate_id(url)):
+                    # Optional: print(f"   ⏩ Duplicate: {title[:50]}...")
                     continue
 
-                # The LLM Gatekeeper
-                is_relevant, _ = self.filter.is_relevant(title, summary)
+                # 2. SEMANTIC TITLE MATCH (Very Cheap Pass)
+                # Lowered threshold to 0.28 based on diagnostic results
+                strategic_score = self.filter.get_strategic_score(title)
+                if strategic_score < 0.28:
+                    print(f"   📈 Low Relevance ({int(strategic_score*100)}%): {title[:55]}...")
+                    continue
+
+                print(f"   👀 Potential: {title[:60]}...")
+
+                # 3. SCRAPE & VALIDATE (Zero Token Cost)
+                content = self._extract_content(url)
+                if not content or len(content) < 300:
+                    print(f"      ⏭️  Skipped: Content too short ({len(content) if content else 0} chars)")
+                    continue
+
+                # 4. FINAL AI VALIDATION (High Intelligence)
+                is_relevant, confidence = self.filter.is_relevant(title, content[:500])
                 
                 if is_relevant:
-                    print(f"   ✅ MATCH: {title[:60]}...")
-                    self._extract_and_save(url, title)
+                    print(f"      🔥 MATCH ({confidence}%): {title[:50]}...")
+                    self.registry.register_artifact(
+                        url=url,
+                        content=content,
+                        source_module=self.name,
+                        title=title
+                    )
                 else:
-                    # Optional: print(f"   🗑️ Skipped: {title[:40]}")
+                    print(f"      🗑️  Trash Alert: {title[:50]}...")
                     continue
 
         except Exception as e:
             print(f"   ⚠️ Feed Error: {e}")
 
-    def _extract_and_save(self, url, title):
+    def _extract_content(self, url):
+        """Fetches and extracts clean text from a URL."""
         try:
-            # Increased timeout to 30s for slow sites like Entrepreneur
+            # Increased timeout for reliability
             page = requests.get(url, headers=self.headers, timeout=30)
             content = trafilatura.extract(page.text, include_comments=False, include_tables=False)
             
             if content and len(content) > 100:
-                self.registry.register_artifact(
-                    url=url,
-                    content=content,
-                    source_module=self.name,
-                    title=title
-                )
-                print(f"      💾 Saved to database.")
-            else:
-                reason = "Content too short" if content else "Extraction returned null"
-                print(f"      ⏭️  Skipped: {reason} ({len(content) if content else 0} chars)")
+                return content
+            return None
         except Exception as e:
             print(f"      ❌ Extraction Error: {e}")
+            return None

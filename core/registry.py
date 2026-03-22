@@ -39,6 +39,17 @@ class Registry:
             )
         ''')
         self.conn.commit()
+
+    def fetch_top_scored(self, limit=5):
+        """Fetch the current leaderboard of scored articles."""
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT * FROM artifacts WHERE status = 'SCORED' ORDER BY score DESC LIMIT ?", (limit,))
+        cols = [description[0] for description in cursor.description]
+        return [dict(zip(cols, row)) for row in cursor.fetchall()]
+
+    def __del__(self):
+        self.conn.close()
+        
     def exists(self, uid):
         """Checks if the article ID already exists in the database."""
         cursor = self.conn.cursor()

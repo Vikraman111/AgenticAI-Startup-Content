@@ -65,3 +65,19 @@ class LLMBrain:
         except Exception as e:
             print(f"⚠️ OpenAI JSON Error: {e}")
             return {}
+    def get_embedding(self, text, model="text-embedding-3-small"):
+        """Generates a semantic vector (embedding) for a piece of text (very cheap)."""
+        try:
+            # Clean text slightly (OpenAI recommendation)
+            text = text.replace("\n", " ")
+            response = self.client.embeddings.create(input=[text], model=model)
+            
+            # Log usage (embeddings are also tracked)
+            # 1 token roughly equals 4 chars in OpenAI's calculation
+            usage = response.usage
+            TokenTracker.log_usage(model, usage.prompt_tokens, 0) # No completion tokens for embeddings
+            
+            return response.data[0].embedding
+        except Exception as e:
+            print(f"⚠️ Embedding Error: {e}")
+            return None

@@ -21,6 +21,21 @@ def run_monitoring():
     print("📡 MONITORING STAGE: Content Extraction from RSS Feeds")
     print("="*80 + "\n")
     
+    from core.registry import Registry
+    reg = Registry()
+    
+    # 🧪 Check for Deep Scan (Empty DB)
+    cursor = reg.conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM artifacts")
+    count = cursor.fetchone()[0]
+    
+    if count == 0:
+        print("🚀 FIRST RUN DETECTED: Starting Deep Historical Scan (30 Days)...")
+        from monitoring.deep_sitemap_crawler import DeepSitemapCrawler
+        deep_crawler = DeepSitemapCrawler()
+        deep_crawler.run()
+        print("\n✅ Deep Historical Scan Complete. Proceeding with Live Feeds...")
+
     crawlers = [
         TechCrunchCrawler(),
         CrunchbaseCrawler(),

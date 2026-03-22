@@ -20,30 +20,33 @@ class ScoringAgent:
 
             Rate the following on a scale of 0 to 10:
             1. STRATEGIC_INSIGHT: Does it detail 'The Why' behind a success or failure? Does it explain a complex tactic (e.g., SEO arbitrage, unique supply chain pivot)?
-            2. NOVELTY: Is this a unique insight or a market gap that others haven't seen? (10=Unique/Rare, 0=Common News)
-            3. ACTIONABILITY: Could a founder take this specific strategy and apply it today?
-
-            CRITICAL SCORING RULES:
-            - Standard PR/Funding/Hiring: MAX 3 points.
-            - Deep Dive/Case Study: MIN 7 points.
-            - Filler/Generic advice: MAX 2 points.
-
-            Return JSON ONLY: {{
-                "strategic_insight": <int>, 
-                "novelty": <int>, 
-                "actionable": <int>, 
-                "reasoning": "<string if this scored > 70 or < 30>"
-            }}
-            """
+        You are a **Strategy Consultant** advising startup founders. Score this article (**0-100**) 
+        on the quality of its BUSINESS TRENDS, GROWTH STRATEGIES, and ACTIONABLE ADVICE.
+        
+        ARTICLE TITLE: {task['title']}
+        CONTENT SUMMARY: {task['summary']}
+        
+        SCORING CRITERIA (from e2e-local):
+        - **90-100**: Deep strategic, actionable advice for startups, game-changing market trends, or clear growth patterns.
+        - **70-89**: Solid market analysis, interesting growth strategies, clear lessons from successful startups.
+        - **50-69**: Basic business news or high-level trends with limited actionable insight.
+        - **0-49**: Routine funding rounds with no strategic context, PR announcements, or fluff.
+        
+        Format your response as a JSON object:
+        {{
+            "score": integer,
+            "reasoning": "brief explanation"
+        }}
+        """
             
-            result = self.brain.think_json(prompt, "You are a professional business strategist.")
-            
-            # Weighted calculation: (Insight*4) + (Novelty*3) + (Actionable*3) = Max 100
-            s = result.get('strategic_insight', 0)
-            n = result.get('novelty', 0)
-            a = result.get('actionable', 0)
-            
-            final_score = (s * 4) + (n * 3) + (a * 3)
+            try:
+                result = self.brain.think_json(prompt, "You are a professional business strategy consultant.")
+                final_score = result.get('score', 0)
+                reasoning = result.get('reasoning', "N/A")
+            except Exception as e:
+                print(f"Error scoring task {task['id']}: {e}")
+                final_score = 0
+                reasoning = "Error in scoring"
             
             print(f"   Score: {final_score}/100 | {task['title'][:40]}...")
             

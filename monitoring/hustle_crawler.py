@@ -64,11 +64,31 @@ class HustleCrawler:
         return articles
 
     def run(self):
-        print(f"\n[{self.source_name}] Fetching unread emails...")
-        emails = self.gmail_client.fetch_emails(sender_email='news@thehustle.co', max_results=10, unread_only=True)
+        # 🧪 Check if we should do a Deep Scan (Empty DB)
+        cursor = self.registry.conn.cursor()
+        cursor.execute("SELECT COUNT(*) FROM artifacts")
+        count = cursor.fetchone()[0]
+        
+        is_deep_scan = count == 0
+        
+        if is_deep_scan:
+            print(f"\n[{self.source_name}] 🧪 EMPTY DATABASE DETECTED. Starting Deep Scan (Last 30 days)...")
+            emails = self.gmail_client.fetch_emails(
+                sender_email='news@thehustle.co', 
+                max_results=150, 
+                unread_only=False, 
+                newer_than='30d'
+            )
+        else:
+            print(f"\n[{self.source_name}] Fetching unread emails...")
+            emails = self.gmail_client.fetch_emails(
+                sender_email='news@thehustle.co', 
+                max_results=10, 
+                unread_only=True
+            )
         
         if not emails:
-            print("❌ No new emails found!")
+            print("❌ No emails found!")
             return
         
         print(f"✅ Found {len(emails)} emails\n")
@@ -88,10 +108,15 @@ class HustleCrawler:
             
             # Register articles
             for article in articles:
-                is_relevant, _ = self.filter_logic.is_relevant(article['title'], article['content'][:200])
+                sim_score = self.filter_logic.get_strategic_score(article['title'])
+                if sim_score < 0.28:
+                    print(f"      📈 Low Relevance ({int(sim_score*100)}%): {article['title'][:40]}...")
+                    continue
+                
+                is_relevant, confidence = self.filter_logic.is_relevant(article['title'], article['content'][:200])
                 
                 if not is_relevant:
-                    print(f"      🗑️ Filtered: {article['title'][:40]}")
+                    print(f"      🗑️  Trash Alert: {article['title'][:40]}...")
                     continue
                 
                 success = self.registry.register_artifact(
@@ -103,9 +128,9 @@ class HustleCrawler:
                 
                 if success:
                     registered_articles += 1
-                    print(f"      ✅ Registered: {article['title'][:40]}")
+                    print(f"      🔥 MATCH ({confidence}%): {article['title'][:40]}")
                 else:
-                    print(f"      ⏭️ Duplicate: {article['title'][:40]}")
+                    print(f"      ⏭️  Duplicate: {article['title'][:40]}")
             
             total_articles += len(articles)
             
